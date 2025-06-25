@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1118</width>
-    <height>830</height>
+    <width>1219</width>
+    <height>496</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(173, 173, 173);</string>
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
       <string/>

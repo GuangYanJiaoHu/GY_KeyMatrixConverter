@@ -9,6 +9,10 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    GY_FunctionUi/GY_AnimationSettingUi.cpp \
+    GY_FunctionUi/GY_ConvertBinFile.cpp \
+    GY_FunctionUi/GY_GenerateBinFile.cpp \
+    GY_FunctionUi/GY_KeyboardSettingUi.cpp \
     GY_KeyboardDrawLayout/GY_KeyboardDrawLayout.cpp \
     GY_Tools/GY_KeyboardTools.cpp \
     GY_Tools/WindowsHook/GY_KeyboardHook.cpp \
@@ -16,12 +20,20 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    GY_FunctionUi/GY_AnimationSettingUi.h \
+    GY_FunctionUi/GY_ConvertBinFile.h \
+    GY_FunctionUi/GY_GenerateBinFile.h \
+    GY_FunctionUi/GY_KeyboardSettingUi.h \
     GY_KeyboardDrawLayout/GY_KeyboardDrawLayout.h \
     GY_Tools/GY_KeyboardTools.h \
     GY_Tools/WindowsHook/GY_KeyboardHook.h \
     mainwindow.h
 
 FORMS += \
+    GY_FunctionUi/GY_AnimationSettingUi.ui \
+    GY_FunctionUi/GY_ConvertBinFile.ui \
+    GY_FunctionUi/GY_GenerateBinFile.ui \
+    GY_FunctionUi/GY_KeyboardSettingUi.ui \
     GY_KeyboardDrawLayout/GY_KeyboardDrawLayout.ui \
     mainwindow.ui
 

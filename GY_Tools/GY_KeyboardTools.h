@@ -21,7 +21,6 @@
     default:    break;
     }
 
-
 */
 
 
@@ -92,6 +91,8 @@ public:
         int _Row;                               //键盘组成结构行数
         int _Col;                               //键盘组成列数
         int _ButtonCount;                       //按键总数量 行*列 = 总数量
+        int _MaxWidth;                          //键盘最大宽度
+        int _MaxHeight;                         //键盘最大高度
         KeyboardType _KeyboardType;             //键盘类型配列
     };
     //键盘每个按键的详细信息

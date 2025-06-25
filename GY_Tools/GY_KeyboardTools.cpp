@@ -17,6 +17,8 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
     keyboardLayout._Col = 14;               //14列
     keyboardLayout._KeyboardType = KeyboardType::_Keyboard_60_CN_; //60配列键盘
     keyboardLayout._ButtonCount = keyboardLayout._Row * keyboardLayout._Col;
+    keyboardLayout._MaxWidth = 279; //根据键盘最大 X + 边框得来
+    keyboardLayout._MaxHeight = 91; //根据键盘最大 Y + 边框得来
 
     MapKeyboard.insert( 0, KeyboardButtonInfo{QPoint(  7.00, 7), QRect(  0.00, 0, 14, 14),                "~", 192, 0, 0, keyboardLayout});
     MapKeyboard.insert( 1, KeyboardButtonInfo{QPoint( 26.05, 7), QRect( 19.05, 0, 14, 14),                "1",  49, 0, 0, keyboardLayout});

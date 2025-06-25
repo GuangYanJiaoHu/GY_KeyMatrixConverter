@@ -14,8 +14,6 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
 
@@ -32,17 +30,16 @@ public:
     QTabWidget *tabWidget;
     QWidget *tab;
     QGridLayout *gridLayout_3;
-    QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents;
-    QPushButton *pushButton_KeyCheck;
+    QWidget *widget_KeyboardSetting;
     QWidget *tab_2;
     QGridLayout *gridLayout_4;
-    QScrollArea *scrollArea_2;
-    QWidget *scrollAreaWidgetContents_2;
+    QWidget *widget_Animation;
     QWidget *tab_3;
     QGridLayout *gridLayout_5;
-    QScrollArea *scrollArea_3;
-    QWidget *scrollAreaWidgetContents_3;
+    QWidget *widget_GenerateBinFile;
+    QWidget *tab_4;
+    QGridLayout *gridLayout_6;
+    QWidget *widget_ConvertBinFile;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -56,7 +53,7 @@ public:
         gridLayout->setObjectName("gridLayout");
         widget_keyboardLayout = new QWidget(centralwidget);
         widget_keyboardLayout->setObjectName("widget_keyboardLayout");
-        widget_keyboardLayout->setMinimumSize(QSize(0, 300));
+        widget_keyboardLayout->setMinimumSize(QSize(0, 350));
         widget_keyboardLayout->setStyleSheet(QString::fromUtf8("background-color: rgb(147, 147, 147);"));
 
         gridLayout->addWidget(widget_keyboardLayout, 0, 0, 1, 1);
@@ -69,57 +66,53 @@ public:
         tabWidget->setObjectName("tabWidget");
         QFont font;
         font.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
-        font.setPointSize(11);
+        font.setPointSize(10);
         font.setBold(true);
         tabWidget->setFont(font);
         tab = new QWidget();
         tab->setObjectName("tab");
         gridLayout_3 = new QGridLayout(tab);
         gridLayout_3->setObjectName("gridLayout_3");
-        scrollArea = new QScrollArea(tab);
-        scrollArea->setObjectName("scrollArea");
-        scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 881, 326));
-        pushButton_KeyCheck = new QPushButton(scrollAreaWidgetContents);
-        pushButton_KeyCheck->setObjectName("pushButton_KeyCheck");
-        pushButton_KeyCheck->setGeometry(QRect(30, 30, 131, 41));
-        scrollArea->setWidget(scrollAreaWidgetContents);
+        gridLayout_3->setContentsMargins(0, 0, 0, 0);
+        widget_KeyboardSetting = new QWidget(tab);
+        widget_KeyboardSetting->setObjectName("widget_KeyboardSetting");
 
-        gridLayout_3->addWidget(scrollArea, 0, 0, 1, 1);
+        gridLayout_3->addWidget(widget_KeyboardSetting, 0, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
         gridLayout_4 = new QGridLayout(tab_2);
         gridLayout_4->setObjectName("gridLayout_4");
-        scrollArea_2 = new QScrollArea(tab_2);
-        scrollArea_2->setObjectName("scrollArea_2");
-        scrollArea_2->setWidgetResizable(true);
-        scrollAreaWidgetContents_2 = new QWidget();
-        scrollAreaWidgetContents_2->setObjectName("scrollAreaWidgetContents_2");
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 881, 326));
-        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        widget_Animation = new QWidget(tab_2);
+        widget_Animation->setObjectName("widget_Animation");
 
-        gridLayout_4->addWidget(scrollArea_2, 0, 0, 1, 1);
+        gridLayout_4->addWidget(widget_Animation, 0, 0, 1, 1);
 
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
         gridLayout_5 = new QGridLayout(tab_3);
         gridLayout_5->setObjectName("gridLayout_5");
-        scrollArea_3 = new QScrollArea(tab_3);
-        scrollArea_3->setObjectName("scrollArea_3");
-        scrollArea_3->setWidgetResizable(true);
-        scrollAreaWidgetContents_3 = new QWidget();
-        scrollAreaWidgetContents_3->setObjectName("scrollAreaWidgetContents_3");
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 881, 326));
-        scrollArea_3->setWidget(scrollAreaWidgetContents_3);
+        gridLayout_5->setContentsMargins(0, 0, 0, 0);
+        widget_GenerateBinFile = new QWidget(tab_3);
+        widget_GenerateBinFile->setObjectName("widget_GenerateBinFile");
 
-        gridLayout_5->addWidget(scrollArea_3, 0, 0, 1, 1);
+        gridLayout_5->addWidget(widget_GenerateBinFile, 0, 0, 1, 1);
 
         tabWidget->addTab(tab_3, QString());
+        tab_4 = new QWidget();
+        tab_4->setObjectName("tab_4");
+        gridLayout_6 = new QGridLayout(tab_4);
+        gridLayout_6->setObjectName("gridLayout_6");
+        gridLayout_6->setContentsMargins(0, 0, 0, 0);
+        widget_ConvertBinFile = new QWidget(tab_4);
+        widget_ConvertBinFile->setObjectName("widget_ConvertBinFile");
+
+        gridLayout_6->addWidget(widget_ConvertBinFile, 0, 0, 1, 1);
+
+        tabWidget->addTab(tab_4, QString());
 
         gridLayout_2->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -143,10 +136,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton_KeyCheck->setText(QCoreApplication::translate("MainWindow", "\345\274\200\345\220\257\346\214\211\351\224\256\346\243\200\346\265\213", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "\351\224\256\347\233\230\346\265\213\350\257\225", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "\351\224\256\347\233\230\350\256\276\347\275\256", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "\345\212\250\347\224\273\346\223\215\344\275\234", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "bin\346\226\207\344\273\266\347\224\237\346\210\220", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Bin\346\226\207\344\273\266\347\224\237\346\210\220", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Bin\346\226\207\344\273\266\350\275\254\346\215\242", nullptr));
     } // retranslateUi
 
 };

@@ -20,7 +20,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>300</height>
+        <height>350</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -36,7 +36,7 @@
          <property name="font">
           <font>
            <family>微软雅黑</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -45,38 +45,23 @@
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
-           <string>键盘测试</string>
+           <string>键盘设置</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_3">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item row="0" column="0">
-            <widget class="QScrollArea" name="scrollArea">
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
-             <widget class="QWidget" name="scrollAreaWidgetContents">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>881</width>
-                <height>326</height>
-               </rect>
-              </property>
-              <widget class="QPushButton" name="pushButton_KeyCheck">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>30</y>
-                 <width>131</width>
-                 <height>41</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>开启按键检测</string>
-               </property>
-              </widget>
-             </widget>
-            </widget>
+            <widget class="QWidget" name="widget_KeyboardSetting" native="true"/>
            </item>
           </layout>
          </widget>
@@ -85,46 +70,64 @@
            <string>动画操作</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item row="0" column="0">
-            <widget class="QScrollArea" name="scrollArea_2">
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
-             <widget class="QWidget" name="scrollAreaWidgetContents_2">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>881</width>
-                <height>326</height>
-               </rect>
-              </property>
-             </widget>
-            </widget>
+            <widget class="QWidget" name="widget_Animation" native="true"/>
            </item>
           </layout>
          </widget>
          <widget class="QWidget" name="tab_3">
           <attribute name="title">
-           <string>bin文件生成</string>
+           <string>Bin文件生成</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item row="0" column="0">
-            <widget class="QScrollArea" name="scrollArea_3">
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
-             <widget class="QWidget" name="scrollAreaWidgetContents_3">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>881</width>
-                <height>326</height>
-               </rect>
-              </property>
-             </widget>
-            </widget>
+            <widget class="QWidget" name="widget_GenerateBinFile" native="true"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>Bin文件转换</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget_ConvertBinFile" native="true"/>
            </item>
           </layout>
          </widget>

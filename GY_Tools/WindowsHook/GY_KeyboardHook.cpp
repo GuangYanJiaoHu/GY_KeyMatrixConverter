@@ -490,7 +490,11 @@ LRESULT CALLBACK keyProc(int nCode,WPARAM wParam, LPARAM lParam){
         break;
     case 161:   //right Shift
         keyInfo.Key = "right Shift";
-        keyInfo.KeyState = Hook->KeyState(hookStruct->flags, 0);
+        if(hookStruct->flags == 1){         //数字键盘回车按下
+            keyInfo.KeyState = true;
+        }else if(hookStruct->flags == 129){ //数字键盘回车抬起
+            keyInfo.KeyState = false;
+        }
         break;
     case 188:   //<,
         keyInfo.Key = "<";

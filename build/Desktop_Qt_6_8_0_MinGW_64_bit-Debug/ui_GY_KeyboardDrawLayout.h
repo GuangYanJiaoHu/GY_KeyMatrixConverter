@@ -27,13 +27,13 @@ public:
     {
         if (GY_KeyboardDrawLayout->objectName().isEmpty())
             GY_KeyboardDrawLayout->setObjectName("GY_KeyboardDrawLayout");
-        GY_KeyboardDrawLayout->resize(1118, 830);
+        GY_KeyboardDrawLayout->resize(1219, 496);
         gridLayout = new QGridLayout(GY_KeyboardDrawLayout);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(GY_KeyboardDrawLayout);
         label->setObjectName("label");
-        label->setStyleSheet(QString::fromUtf8("background-color: rgb(173, 173, 173);"));
+        label->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
