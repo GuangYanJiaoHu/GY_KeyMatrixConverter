@@ -14,6 +14,7 @@
 #include <QFileDevice>
 #include <QFile>
 #include <QFileDialog>
+#include <QMessageBox>
 namespace Ui {
 class GY_KeyboardDrawLayout;
 }
