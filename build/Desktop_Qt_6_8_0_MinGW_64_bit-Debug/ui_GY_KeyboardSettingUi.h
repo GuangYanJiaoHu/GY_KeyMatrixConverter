@@ -195,6 +195,7 @@ public:
         gridLayout_2->setObjectName("gridLayout_2");
         pushButton_ClearKeyboard = new QPushButton(scrollAreaWidgetContents);
         pushButton_ClearKeyboard->setObjectName("pushButton_ClearKeyboard");
+        pushButton_ClearKeyboard->setMinimumSize(QSize(0, 50));
 
         gridLayout_2->addWidget(pushButton_ClearKeyboard, 3, 0, 1, 1);
 
@@ -306,7 +307,7 @@ public:
         pushButton->setText(QCoreApplication::translate("GY_KeyboardSettingUi", "\345\217\221\351\200\201", nullptr));
         label_KeyboardType_4->setText(QCoreApplication::translate("GY_KeyboardSettingUi", "\351\224\256\347\233\230\344\272\256\345\272\246\350\260\203\346\225\264\357\274\232", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("GY_KeyboardSettingUi", "\347\225\214\351\235\242\351\205\215\347\275\256", nullptr));
-        pushButton_ClearKeyboard->setText(QCoreApplication::translate("GY_KeyboardSettingUi", "\346\270\205\347\251\272\346\214\211\351\224\256\346\243\200\346\265\213", nullptr));
+        pushButton_ClearKeyboard->setText(QCoreApplication::translate("GY_KeyboardSettingUi", "\345\210\235\345\247\213\345\214\226(\346\270\205\347\251\272)\346\214\211\351\224\256\346\243\200\346\265\213", nullptr));
         checkBox_KeyCheck->setText(QCoreApplication::translate("GY_KeyboardSettingUi", "\346\214\211\351\224\256\346\243\200\346\265\213\345\212\237\350\203\275", nullptr));
         checkBox_Hook->setText(QCoreApplication::translate("GY_KeyboardSettingUi", "\351\224\256\347\233\230\345\205\250\345\261\200\351\222\251\345\255\220", nullptr));
         checkBox_KeyPressTime->setText(QCoreApplication::translate("GY_KeyboardSettingUi", "\346\214\211\351\224\256\346\227\266\351\227\264\346\230\276\347\244\272", nullptr));

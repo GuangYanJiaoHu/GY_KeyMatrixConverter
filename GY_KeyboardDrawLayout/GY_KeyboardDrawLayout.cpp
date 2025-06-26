@@ -18,13 +18,17 @@ GY_KeyboardDrawLayout::GY_KeyboardDrawLayout(QWidget *parent)
     Hook = new GY_KeyboardHook;
     connect(Hook, &GY_KeyboardHook::signalKeyPress,   this, &GY_KeyboardDrawLayout::slotKeyPress);
     connect(Hook, &GY_KeyboardHook::signalKeyRelease, this, &GY_KeyboardDrawLayout::slotKeyRelease);
-    Hook->installHook(Hook);        //安装键盘检测模块
-    Hook->setGlobalHotKey(false);    //默认开启钩子
+    Hook->installHook(Hook);                                    //安装键盘检测模块
+    Hook->setGlobalHotKey(false);                               //默认开启钩子
 
     //默认内容
-    this->keboardLayoutSize = 3; //默认缩放比例为1
-    this->keyboardCheck = false; //默认不开启键盘检测功能
-    this->setKeyboardType(GY_KeyboardTools::_Keyboard_60_CN_);//初始化键盘配列为60配列
+    this->keboardLayoutSize = 3;                                //默认缩放比例为1
+    this->keyboardCheck = false;                                //默认不开启键盘检测功能
+    this->isCustomizeDraw = false;                              //默认不开启自定义绘制动画
+    this->dynamicPixmapSize = QPoint(100, 100);                 //默认动态动画大小为100x100
+    this->setKeyboardType(GY_KeyboardTools::_Keyboard_60_CN_);  //默认初始化键盘配列为60配列
+
+    //键盘绘制
     this->setDrawKeyborderLayout();
     QTimer::singleShot(20,this,[=](){   this->setDrawKeyborderLayout();   }); //这里在第一次绘制后必须要在重新绘制一次，不然大小会有问题。
     this->show();
@@ -82,7 +86,7 @@ void GY_KeyboardDrawLayout::setDrawKeyborderLayout()
     QPainter painter(&pixmap);
     pixmap.fill(QColor(0, 0, 0));  // 背景色修改
     foreach (auto item, mapKeyboardInfo) {
-        setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, Qt::white, item._KeyName, Qt::yellow);
+        this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, Qt::white, item._KeyName, Qt::yellow);
     }
     ui->label->setPixmap(pixmap);   // 更新到窗口部件上
 }
@@ -92,8 +96,9 @@ void GY_KeyboardDrawLayout::slotKeyboardSettingClearKey()
     QPixmap pixmap(ui->label->size());
     QPainter painter(&pixmap);
     pixmap.fill(QColor(0, 0, 0));  // 背景色修改
-    foreach (auto item, mapKeyboardInfo) {
-        setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, Qt::white, item._KeyName, Qt::yellow);
+    for(QMap<int, GY_KeyboardTools::KeyboardButtonInfo>::iterator item = mapKeyboardInfo.begin(); item != mapKeyboardInfo.end(); ++item){
+        item.value()._KeyCustomizeColor = Qt::black;
+        this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, Qt::white, item.value()._KeyName, Qt::yellow);
     }
     ui->label->setPixmap(pixmap);   // 更新到窗口部件上
 }
@@ -193,8 +198,8 @@ void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation)
             this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow);
         }
     }else{                          //动态动画
-        QImage newImage = image.scaled(100, 100, Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列-100x100大小后续改成用户可调节的大小方式-对图片整体方法符合键盘尺寸
-        QImage drawImage= image.scaled(100 * keboardLayoutSize, 100 * keboardLayoutSize, Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列-100x100大小后续改成用户可调节的大小方式-对图片整体方法符合键盘尺寸
+        QImage newImage = image.scaled(this->dynamicPixmapSize.x(), this->dynamicPixmapSize.y(), Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列-100x100大小后续改成用户可调节的大小方式-对图片整体方法符合键盘尺寸
+        QImage drawImage= image.scaled(this->dynamicPixmapSize.x() * keboardLayoutSize, this->dynamicPixmapSize.y() * keboardLayoutSize, Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列-100x100大小后续改成用户可调节的大小方式-对图片整体方法符合键盘尺寸
         QPoint newImageCenterPoint(drawImage.size().width() / 2, drawImage.size().height() / 2);                                                                      //图片的中心点计算
         QPoint keyCenterPoint(this->dynamicSimulatePos._KeyCenterPoint.x() * keboardLayoutSize, this->dynamicSimulatePos._KeyCenterPoint.y() * keboardLayoutSize);  //按键的中心点计算
         //显示底图
@@ -284,7 +289,7 @@ void GY_KeyboardDrawLayout::slotAnimationDynamicExport(QStringList path)
 {
     QColor lightColor = QImage(path.at(0)).pixelColor(1,1);
     QList<QImage> pixmapBackground;
-    foreach(auto item, path){   pixmapBackground.append(QImage(item).scaled(100, 100, Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); }   //将图片存入pixmap中
+    foreach(auto item, path){   pixmapBackground.append(QImage(item).scaled(this->dynamicPixmapSize.x(), this->dynamicPixmapSize.y(), Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); }   //将图片存入pixmap中
     QFile file(QFileDialog::getSaveFileName(this,"", "动态动画", "动态动画(*.dya);;所有文件 (*);")); //static Animation
     if(!file.open(QFileDevice::WriteOnly | QIODevice::Text)) return;
 
@@ -316,15 +321,58 @@ void GY_KeyboardDrawLayout::slotAnimationDynamicExport(QStringList path)
     file.close();
     QMessageBox::information(this,"动态动画导出","动态动画导出完成");
 }
+//自定义图案绘制
+void GY_KeyboardDrawLayout::slotCustomizeAnimationIsDraw(bool isDraw)
+{
+    this->isCustomizeDraw = isDraw;
+}
+
+void GY_KeyboardDrawLayout::slotAnimationDynamicPixmapSize(QPoint size)
+{
+    this->dynamicPixmapSize = size;
+}
 //鼠标点击事件
 void GY_KeyboardDrawLayout::mousePressEvent(QMouseEvent *event)
 {
+    if(this->isCustomizeDraw){
+        QPoint pos = (event->pos() - QPoint(keyboardMove, keyboardMove)) / this->keboardLayoutSize;
+        if(event->button() == Qt::LeftButton){
+            for(QMap<int, GY_KeyboardTools::KeyboardButtonInfo>::iterator item = mapKeyboardInfo.begin(); item != mapKeyboardInfo.end(); ++item){
+                if(item.value()._Keyborders.contains(pos)){         //左键点击
+                    QPixmap pixmap(ui->label->size());
+                    QPainter painter(&pixmap);
+                    painter.drawPixmap(0, 0, ui->label->pixmap());  //绘制原始图片
+                    item.value()._KeyCustomizeColor = Qt::red;
+                    this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, item.value()._KeyCustomizeColor, item.value()._KeyName, Qt::yellow, true, true, item.value()._KeyCustomizeColor);
+                    ui->label->setPixmap(pixmap);                   //更新到窗口部件上
+                    break;
+                }
+            }
+        }else if(event->button() == Qt::RightButton){               //右键点击
+            QPixmap pixmap(ui->label->size());
+            QPainter painter(&pixmap);
+            pixmap.fill(QColor(0, 0, 0));  // 背景色修改
+            for(QMap<int, GY_KeyboardTools::KeyboardButtonInfo>::iterator item = mapKeyboardInfo.begin(); item != mapKeyboardInfo.end(); ++item){
+                if(item.value()._Keyborders.contains(pos)){
+                    item.value()._KeyCustomizeColor = Qt::black;    //初始化黑色
+                }
+                if(item.value()._KeyCustomizeColor == Qt::black){
+                    this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, Qt::white, item.value()._KeyName, Qt::yellow);
+                }else{
+                    this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, Qt::white, item.value()._KeyName, Qt::yellow, true, true, item.value()._KeyCustomizeColor);
+                }
+            }
+            ui->label->setPixmap(pixmap);   // 更新到窗口部件上
+        }
+
+
+    }
+
     if(this->isDynamicSimulationPos){
         this->isDynamicSimulationPos = false;
         QPoint pos = (event->pos() - QPoint(keyboardMove, keyboardMove)) / this->keboardLayoutSize;
         for(QMap<int, GY_KeyboardTools::KeyboardButtonInfo>::iterator item = mapKeyboardInfo.begin(); item != mapKeyboardInfo.end(); ++item){
             if(item.value()._Keyborders.contains(pos)){
-                qDebug() << "包含："<< pos;
                 this->dynamicSimulatePos = item.value();
                 emit signalKeyboardDrawLayoutUpdateSimulatePos();
                 return;
@@ -401,7 +449,6 @@ void GY_KeyboardDrawLayout::slotKeyPress(GY_KeyboardHook::KeyInfo key)
 //键盘抬起事件
 void GY_KeyboardDrawLayout::slotKeyRelease(GY_KeyboardHook::KeyInfo key)
 {
-    qDebug() << key.KeyValue;
     if(!this->keyboardCheck){
         return;
     }

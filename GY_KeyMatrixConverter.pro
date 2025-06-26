@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    GY_FunctionUi/GY_AnimationCustomize.cpp \
     GY_FunctionUi/GY_AnimationSettingUi.cpp \
     GY_FunctionUi/GY_ConvertBinFile.cpp \
     GY_FunctionUi/GY_GenerateBinFile.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    GY_FunctionUi/GY_AnimationCustomize.h \
     GY_FunctionUi/GY_AnimationSettingUi.h \
     GY_FunctionUi/GY_ConvertBinFile.h \
     GY_FunctionUi/GY_GenerateBinFile.h \
@@ -30,6 +32,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
+    GY_FunctionUi/GY_AnimationCustomize.ui \
     GY_FunctionUi/GY_AnimationSettingUi.ui \
     GY_FunctionUi/GY_ConvertBinFile.ui \
     GY_FunctionUi/GY_GenerateBinFile.ui \

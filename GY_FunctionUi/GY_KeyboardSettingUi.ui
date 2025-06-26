@@ -216,8 +216,14 @@
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="3" column="0">
            <widget class="QPushButton" name="pushButton_ClearKeyboard">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
             <property name="text">
-             <string>清空按键检测</string>
+             <string>初始化(清空)按键检测</string>
             </property>
            </widget>
           </item>

@@ -35,9 +35,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticSendSimulateSpeed, keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticSendSimulateSpeed);      //静态键盘下发模拟速度
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicSendSimulateSpeed,keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicSendSimulateSpeed);     //动态键盘下发模拟速度
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicUpdateSimulatePos,keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicUpdateSimulatePos);     //更改动态动画模拟按键位置
+    connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticExport,            keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticExport);                 //静态动画导出
+    connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicExport,           keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicExport);                //动态动画导出
+    connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicPixmapSize,       keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicPixmapSize);            //动态动画导出
     connect(keyboardDrawLayout, &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutUpdateSimulatePos,animationSettingUi, &GY_AnimationSettingUi::slotKeyboardDrawLayoutUpdateSimulatePos); //更改模拟位置完成
-    connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticExport, keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticExport);                            //静态动画导出
-    connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicExport,keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicExport);                           //动态动画导出
     QVBoxLayout *layout3 = new QVBoxLayout(ui->widget_Animation);
     layout3->addWidget(animationSettingUi);
     layout3->setContentsMargins(0, 0, 0, 0);
@@ -53,6 +54,15 @@ MainWindow::MainWindow(QWidget *parent)
     QVBoxLayout *layout5 = new QVBoxLayout(ui->widget_ConvertBinFile);
     layout5->addWidget(convertBinFile);
     layout5->setContentsMargins(0, 0, 0, 0);
+
+    //自定义动画
+    animationCustomize = new GY_AnimationCustomize();
+    connect(animationCustomize, &GY_AnimationCustomize::signalCustomizeAnimationIsDraw, keyboardDrawLayout, GY_KeyboardDrawLayout::slotCustomizeAnimationIsDraw);   //自定义图案绘制
+    connect(animationCustomize, &GY_AnimationCustomize::signalCustomizeClearKey,        keyboardDrawLayout, GY_KeyboardDrawLayout::slotKeyboardSettingClearKey);    //清空绘制
+
+    QVBoxLayout *layout6 = new QVBoxLayout(ui->widget_Customize);
+    layout6->addWidget(animationCustomize);
+    layout6->setContentsMargins(0, 0, 0, 0);
 
 }
 

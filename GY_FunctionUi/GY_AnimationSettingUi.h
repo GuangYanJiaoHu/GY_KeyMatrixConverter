@@ -38,10 +38,12 @@ private slots:
     void on_horizontalSlider_DynamicUi_valueChanged(int value);         //动态动画界面速度模拟 - 给控件显示专用
     void on_horizontalSlider_DynamicSend_valueChanged(int value);       //动态动画键盘下发速度模拟 - 给控件显示专用
     void on_pushButton_DynamicUpdateSimulatePos_clicked();              //更改动态动画模拟按键位置
-
-    void on_pushButton_StaticExport_clicked();
-
-    void on_pushButton_DynamicExport_clicked();
+    void on_pushButton_StaticExport_clicked();                          //静态动画导出
+    void on_pushButton_DynamicExport_clicked();                         //动态动画导出
+    void on_horizontalSlider_PixmapWidth_valueChanged(int value);       //调整图片宽度 - 滑块
+    void on_spinBox_PixmapWidth_valueChanged(int arg1);                 //调整图片宽度
+    void on_horizontalSlider_PixmapHeight_valueChanged(int value);      //调整图片高度 - 滑块
+    void on_spinBox_PixmapHeight_valueChanged(int arg1);                //调整图片高度
 
 signals:
     void signalAnimationStaticSimulate(QString path, QStringList listStaticPictureName, bool isStart);      //静态动画模拟
@@ -55,6 +57,7 @@ signals:
     void signalAnimationDynamicUpdateSimulatePos();                     //动态动画更改模拟位置
     void signalAnimationStaticExport(QStringList path);                 //静态动画导出
     void signalAnimationDynamicExport(QStringList path);                //动态动画导出
+    void signalAnimationDynamicPixmapSize(QPoint size);                 //动态动画图片尺寸调整
 
 private:
     Ui::GY_AnimationSettingUi *ui;

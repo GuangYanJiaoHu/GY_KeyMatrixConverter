@@ -40,6 +40,9 @@ public:
     QWidget *tab_4;
     QGridLayout *gridLayout_6;
     QWidget *widget_ConvertBinFile;
+    QWidget *tab_5;
+    QGridLayout *gridLayout_7;
+    QWidget *widget_Customize;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -113,6 +116,16 @@ public:
         gridLayout_6->addWidget(widget_ConvertBinFile, 0, 0, 1, 1);
 
         tabWidget->addTab(tab_4, QString());
+        tab_5 = new QWidget();
+        tab_5->setObjectName("tab_5");
+        gridLayout_7 = new QGridLayout(tab_5);
+        gridLayout_7->setObjectName("gridLayout_7");
+        widget_Customize = new QWidget(tab_5);
+        widget_Customize->setObjectName("widget_Customize");
+
+        gridLayout_7->addWidget(widget_Customize, 0, 0, 1, 1);
+
+        tabWidget->addTab(tab_5, QString());
 
         gridLayout_2->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -127,7 +140,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -140,6 +153,7 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "\345\212\250\347\224\273\346\223\215\344\275\234", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Bin\346\226\207\344\273\266\347\224\237\346\210\220", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Bin\346\226\207\344\273\266\350\275\254\346\215\242", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_5), QCoreApplication::translate("MainWindow", "\350\207\252\345\256\232\344\271\211\345\212\250\347\224\273", nullptr));
     } // retranslateUi
 
 };

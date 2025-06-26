@@ -182,7 +182,7 @@ void GY_AnimationSettingUi::on_pushButton_StaticExport_clicked()
     emit signalAnimationStaticExport(path);
 }
 
-//静态动画导出
+//动态动画导出
 void GY_AnimationSettingUi::on_pushButton_DynamicExport_clicked()
 {
     if(ui->lineEdit_DynamicReadPath->text().isEmpty()){
@@ -193,5 +193,31 @@ void GY_AnimationSettingUi::on_pushButton_DynamicExport_clicked()
         path.append(ui->lineEdit_DynamicReadPath->text() + "/" + item);
     }
     emit signalAnimationDynamicExport(path);
+}
+
+//调整图片宽度
+void GY_AnimationSettingUi::on_horizontalSlider_PixmapWidth_valueChanged(int value)
+{
+    ui->spinBox_PixmapWidth->setValue(value);
+    emit signalAnimationDynamicPixmapSize(QPoint(value,ui->horizontalSlider_PixmapHeight->value()));
+}
+
+//调整图片宽度
+void GY_AnimationSettingUi::on_spinBox_PixmapWidth_valueChanged(int arg1)
+{
+    ui->horizontalSlider_PixmapWidth->setValue(arg1);
+}
+
+//调整图片高度
+void GY_AnimationSettingUi::on_horizontalSlider_PixmapHeight_valueChanged(int value)
+{
+    ui->spinBox_PixmapHeight->setValue(value);
+    emit signalAnimationDynamicPixmapSize(QPoint(ui->horizontalSlider_PixmapWidth->value(), value));
+}
+
+//调整图片高度
+void GY_AnimationSettingUi::on_spinBox_PixmapHeight_valueChanged(int arg1)
+{
+    ui->horizontalSlider_PixmapHeight->setValue(arg1);
 }
 
