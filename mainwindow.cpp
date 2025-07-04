@@ -23,7 +23,6 @@ MainWindow::MainWindow(QWidget *parent)
     layout2->addWidget(keyboardSettingUi);
     layout2->setContentsMargins(0, 0, 0, 0);
 
-
     //创建键盘动画模拟界面
     animationSettingUi = new GY_AnimationSettingUi(ui->widget_Animation);
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticSimulate,          keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticSimulate);               //静态动画模拟

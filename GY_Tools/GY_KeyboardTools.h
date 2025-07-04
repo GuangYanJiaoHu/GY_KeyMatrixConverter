@@ -104,6 +104,7 @@ public:
         int _KeyPressCount;                     //按键计数
         int _KeyPressTime;                      //按键时间
         QColor _KeyCustomizeColor;              //自定义按键颜色
+        QString _KeyValueJson;                  //json当中key的value值
         struct KeyboardLayout _KeyboardLayout;  //键盘按键结构
     };
 
