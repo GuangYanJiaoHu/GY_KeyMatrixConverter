@@ -69,7 +69,7 @@
             </property>
             <layout class="QGridLayout" name="gridLayout_12">
              <property name="verticalSpacing">
-              <number>0</number>
+              <number>7</number>
              </property>
              <item row="0" column="0">
               <widget class="QWidget" name="widget_2" native="true">
@@ -80,6 +80,12 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_3">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_StaticReadPath">
                   <property name="maximumSize">
@@ -119,6 +125,12 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_4">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_StaticOnlySimulate">
                   <property name="maximumSize">
@@ -154,6 +166,12 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_7">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <property name="horizontalSpacing">
                  <number>7</number>
                 </property>
@@ -195,6 +213,18 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_8">
+                <property name="leftMargin">
+                 <number>11</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>11</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item row="1" column="0">
                  <widget class="QLabel" name="label_StaticSend">
                   <property name="text">
@@ -335,21 +365,36 @@
              </rect>
             </property>
             <layout class="QGridLayout" name="gridLayout_14">
-             <property name="horizontalSpacing">
+             <property name="spacing">
               <number>7</number>
-             </property>
-             <property name="verticalSpacing">
-              <number>0</number>
              </property>
              <item row="7" column="0">
               <widget class="QWidget" name="widget_10" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
-                 <height>80</height>
+                 <height>16777215</height>
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_15">
+                <property name="leftMargin">
+                 <number>11</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>11</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <property name="horizontalSpacing">
                  <number>0</number>
                 </property>
@@ -387,7 +432,7 @@
                    </size>
                   </property>
                   <property name="text">
-                   <string>ms</string>
+                   <string>PX</string>
                   </property>
                  </widget>
                 </item>
@@ -438,7 +483,7 @@
                    </size>
                   </property>
                   <property name="text">
-                   <string>ms</string>
+                   <string>PX</string>
                   </property>
                  </widget>
                 </item>
@@ -463,6 +508,12 @@
                 </item>
                 <item row="0" column="2">
                  <widget class="QSpinBox" name="spinBox_PixmapWidth">
+                  <property name="minimumSize">
+                   <size>
+                    <width>75</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="minimum">
                    <number>100</number>
                   </property>
@@ -473,6 +524,12 @@
                 </item>
                 <item row="1" column="2">
                  <widget class="QSpinBox" name="spinBox_PixmapHeight">
+                  <property name="minimumSize">
+                   <size>
+                    <width>75</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="minimum">
                    <number>100</number>
                   </property>
@@ -493,6 +550,18 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_13">
+                <property name="leftMargin">
+                 <number>11</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>11</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item row="0" column="2">
                  <widget class="QLabel" name="label_DynamicUiMs">
                   <property name="minimumSize">
@@ -589,6 +658,12 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_9">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_DynamicReadPath">
                   <property name="maximumSize">
@@ -628,6 +703,12 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_11">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <property name="horizontalSpacing">
                  <number>7</number>
                 </property>
@@ -669,6 +750,12 @@
                 </size>
                </property>
                <layout class="QGridLayout" name="gridLayout_10">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item row="0" column="1">
                  <widget class="QComboBox" name="comboBox_DynamicOnlySimulate"/>
                 </item>

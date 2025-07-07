@@ -31,17 +31,58 @@
     <item row="1" column="0">
      <widget class="QWidget" name="widget_tools" native="true">
       <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item row="0" column="0">
         <widget class="QTabWidget" name="tabWidget">
          <property name="font">
           <font>
            <family>微软雅黑</family>
-           <pointsize>10</pointsize>
+           <pointsize>12</pointsize>
            <bold>true</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QTabWidget::pane {
+            border: 1px solid #C0C0C0;
+           background: white;
+        }
+        /* 未选中的标签页样式*/
+        QTabBar::tab {
+            background: #E0E0E0;
+            color: black;
+            border: 1px solid #C0C0C0;
+            border-bottom-color: #C0C0C0;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            min-width: 6ex;
+            padding: 2px;
+        }
+        /*选中的标签页样式*/
+        QTabBar::tab:selected {
+            background: #FF0000;
+            color: white;
+            border-color: #4A86E8;
+            border-bottom-color: #4A86E8;
+        }
+        /*鼠标悬停的标签页样式*/
+        QTabBar::tab:!selected:hover {
+            background: #6AA1F8;
+            color: white;
+        }</string>
+         </property>
          <property name="currentIndex">
-          <number>4</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">

@@ -65,13 +65,42 @@ public:
         widget_tools->setObjectName("widget_tools");
         gridLayout_2 = new QGridLayout(widget_tools);
         gridLayout_2->setObjectName("gridLayout_2");
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
         tabWidget = new QTabWidget(widget_tools);
         tabWidget->setObjectName("tabWidget");
         QFont font;
         font.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
-        font.setPointSize(10);
+        font.setPointSize(12);
         font.setBold(true);
         tabWidget->setFont(font);
+        tabWidget->setStyleSheet(QString::fromUtf8("QTabWidget::pane {\n"
+"            border: 1px solid #C0C0C0;\n"
+"           background: white;\n"
+"        }\n"
+"        /* \346\234\252\351\200\211\344\270\255\347\232\204\346\240\207\347\255\276\351\241\265\346\240\267\345\274\217*/\n"
+"        QTabBar::tab {\n"
+"            background: #E0E0E0;\n"
+"            color: black;\n"
+"            border: 1px solid #C0C0C0;\n"
+"            border-bottom-color: #C0C0C0;\n"
+"            border-top-left-radius: 4px;\n"
+"            border-top-right-radius: 4px;\n"
+"            min-width: 6ex;\n"
+"            padding: 2px;\n"
+"        }\n"
+"        /*\351\200\211\344\270\255\347\232\204\346\240\207\347\255\276\351\241\265\346\240\267\345\274\217*/\n"
+"        QTabBar::tab:selected {\n"
+"            background: #FF0000;\n"
+"            color: white;\n"
+"            border-color: #4A86E8;\n"
+"            border-bottom-color: #4A86E8;\n"
+"        }\n"
+"        /*\351\274\240\346\240\207\346\202\254\345\201\234\347\232\204\346\240\207\347\255\276\351\241\265\346\240\267\345"
+                        "\274\217*/\n"
+"        QTabBar::tab:!selected:hover {\n"
+"            background: #6AA1F8;\n"
+"            color: white;\n"
+"        }"));
         tab = new QWidget();
         tab->setObjectName("tab");
         gridLayout_3 = new QGridLayout(tab);
@@ -140,7 +169,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

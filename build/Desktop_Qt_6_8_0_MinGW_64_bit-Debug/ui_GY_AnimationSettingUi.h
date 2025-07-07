@@ -127,12 +127,13 @@ public:
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 406, 490));
         gridLayout_12 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_12->setObjectName("gridLayout_12");
-        gridLayout_12->setVerticalSpacing(0);
+        gridLayout_12->setVerticalSpacing(7);
         widget_2 = new QWidget(scrollAreaWidgetContents);
         widget_2->setObjectName("widget_2");
         widget_2->setMaximumSize(QSize(16777215, 50));
         gridLayout_3 = new QGridLayout(widget_2);
         gridLayout_3->setObjectName("gridLayout_3");
+        gridLayout_3->setContentsMargins(-1, 0, -1, 0);
         label_StaticReadPath = new QLabel(widget_2);
         label_StaticReadPath->setObjectName("label_StaticReadPath");
         label_StaticReadPath->setMaximumSize(QSize(70, 16777215));
@@ -158,6 +159,7 @@ public:
         widget_3->setMaximumSize(QSize(16777215, 50));
         gridLayout_4 = new QGridLayout(widget_3);
         gridLayout_4->setObjectName("gridLayout_4");
+        gridLayout_4->setContentsMargins(-1, 0, -1, 0);
         label_StaticOnlySimulate = new QLabel(widget_3);
         label_StaticOnlySimulate->setObjectName("label_StaticOnlySimulate");
         label_StaticOnlySimulate->setMaximumSize(QSize(70, 16777215));
@@ -183,6 +185,7 @@ public:
         gridLayout_7 = new QGridLayout(widget_4);
         gridLayout_7->setObjectName("gridLayout_7");
         gridLayout_7->setHorizontalSpacing(7);
+        gridLayout_7->setContentsMargins(-1, 0, -1, 0);
         pushButton_StaticStart = new QPushButton(widget_4);
         pushButton_StaticStart->setObjectName("pushButton_StaticStart");
         pushButton_StaticStart->setMinimumSize(QSize(0, 50));
@@ -203,6 +206,7 @@ public:
         widget_8->setMaximumSize(QSize(16777215, 80));
         gridLayout_8 = new QGridLayout(widget_8);
         gridLayout_8->setObjectName("gridLayout_8");
+        gridLayout_8->setContentsMargins(11, 0, 11, 0);
         label_StaticSend = new QLabel(widget_8);
         label_StaticSend->setObjectName("label_StaticSend");
 
@@ -274,15 +278,16 @@ public:
         scrollAreaWidgetContents_2->setObjectName("scrollAreaWidgetContents_2");
         scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 405, 490));
         gridLayout_14 = new QGridLayout(scrollAreaWidgetContents_2);
+        gridLayout_14->setSpacing(7);
         gridLayout_14->setObjectName("gridLayout_14");
-        gridLayout_14->setHorizontalSpacing(7);
-        gridLayout_14->setVerticalSpacing(0);
         widget_10 = new QWidget(scrollAreaWidgetContents_2);
         widget_10->setObjectName("widget_10");
-        widget_10->setMaximumSize(QSize(16777215, 80));
+        widget_10->setMinimumSize(QSize(0, 0));
+        widget_10->setMaximumSize(QSize(16777215, 16777215));
         gridLayout_15 = new QGridLayout(widget_10);
         gridLayout_15->setObjectName("gridLayout_15");
         gridLayout_15->setHorizontalSpacing(0);
+        gridLayout_15->setContentsMargins(11, 0, 11, 0);
         label_DynamicSend_2 = new QLabel(widget_10);
         label_DynamicSend_2->setObjectName("label_DynamicSend_2");
         label_DynamicSend_2->setMinimumSize(QSize(40, 0));
@@ -331,6 +336,7 @@ public:
 
         spinBox_PixmapWidth = new QSpinBox(widget_10);
         spinBox_PixmapWidth->setObjectName("spinBox_PixmapWidth");
+        spinBox_PixmapWidth->setMinimumSize(QSize(75, 30));
         spinBox_PixmapWidth->setMinimum(100);
         spinBox_PixmapWidth->setMaximum(400);
 
@@ -338,6 +344,7 @@ public:
 
         spinBox_PixmapHeight = new QSpinBox(widget_10);
         spinBox_PixmapHeight->setObjectName("spinBox_PixmapHeight");
+        spinBox_PixmapHeight->setMinimumSize(QSize(75, 30));
         spinBox_PixmapHeight->setMinimum(100);
         spinBox_PixmapHeight->setMaximum(400);
 
@@ -351,6 +358,7 @@ public:
         widget_9->setMaximumSize(QSize(16777215, 80));
         gridLayout_13 = new QGridLayout(widget_9);
         gridLayout_13->setObjectName("gridLayout_13");
+        gridLayout_13->setContentsMargins(11, 0, 11, 0);
         label_DynamicUiMs = new QLabel(widget_9);
         label_DynamicUiMs->setObjectName("label_DynamicUiMs");
         label_DynamicUiMs->setMinimumSize(QSize(50, 0));
@@ -401,6 +409,7 @@ public:
         widget_5->setMaximumSize(QSize(16777215, 50));
         gridLayout_9 = new QGridLayout(widget_5);
         gridLayout_9->setObjectName("gridLayout_9");
+        gridLayout_9->setContentsMargins(-1, 0, -1, 0);
         label_DynamicReadPath = new QLabel(widget_5);
         label_DynamicReadPath->setObjectName("label_DynamicReadPath");
         label_DynamicReadPath->setMaximumSize(QSize(70, 16777215));
@@ -427,6 +436,7 @@ public:
         gridLayout_11 = new QGridLayout(widget_7);
         gridLayout_11->setObjectName("gridLayout_11");
         gridLayout_11->setHorizontalSpacing(7);
+        gridLayout_11->setContentsMargins(-1, 0, -1, 0);
         pushButton_DynamicStart = new QPushButton(widget_7);
         pushButton_DynamicStart->setObjectName("pushButton_DynamicStart");
         pushButton_DynamicStart->setMinimumSize(QSize(0, 50));
@@ -447,6 +457,7 @@ public:
         widget_6->setMaximumSize(QSize(16777215, 50));
         gridLayout_10 = new QGridLayout(widget_6);
         gridLayout_10->setObjectName("gridLayout_10");
+        gridLayout_10->setContentsMargins(-1, 0, -1, 0);
         comboBox_DynamicOnlySimulate = new QComboBox(widget_6);
         comboBox_DynamicOnlySimulate->setObjectName("comboBox_DynamicOnlySimulate");
 
@@ -508,8 +519,8 @@ public:
         label_StaticUiMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\346\200\201\345\212\250\347\224\273", nullptr));
         label_DynamicSend_2->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\233\276\351\253\230\357\274\232", nullptr));
-        label_PixmapWidth->setText(QCoreApplication::translate("GY_AnimationSettingUi", "ms", nullptr));
-        label_PixmapHeight->setText(QCoreApplication::translate("GY_AnimationSettingUi", "ms", nullptr));
+        label_PixmapWidth->setText(QCoreApplication::translate("GY_AnimationSettingUi", "PX", nullptr));
+        label_PixmapHeight->setText(QCoreApplication::translate("GY_AnimationSettingUi", "PX", nullptr));
         label_DynamicUi_2->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\233\276\345\256\275\357\274\232", nullptr));
         label_DynamicUiMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
         label_DynamicSend->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\351\224\256\347\233\230\344\270\213\345\217\221\351\200\237\345\272\246\357\274\232", nullptr));

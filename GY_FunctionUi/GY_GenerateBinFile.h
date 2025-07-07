@@ -15,6 +15,9 @@ public:
     explicit GY_GenerateBinFile(QWidget *parent = nullptr);
     ~GY_GenerateBinFile();
 
+private slots:
+    void on_pushButton_keyMaxorMinValue_clicked();
+
 private:
     Ui::GY_GenerateBinFile *ui;
 };

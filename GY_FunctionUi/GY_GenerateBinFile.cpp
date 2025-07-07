@@ -12,3 +12,9 @@ GY_GenerateBinFile::~GY_GenerateBinFile()
 {
     delete ui;
 }
+//确认按键默认值
+void GY_GenerateBinFile::on_pushButton_keyMaxorMinValue_clicked()
+{
+
+}
+

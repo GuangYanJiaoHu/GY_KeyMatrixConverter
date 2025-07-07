@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>908</width>
-    <height>553</height>
+    <width>1104</width>
+    <height>511</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,6 +26,9 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
+   <property name="verticalSpacing">
+    <number>7</number>
+   </property>
    <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
      <layout class="QGridLayout" name="gridLayout">
@@ -41,6 +44,9 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
+      <property name="spacing">
+       <number>7</number>
+      </property>
       <item row="0" column="0">
        <widget class="QScrollArea" name="scrollArea">
         <property name="widgetResizable">
@@ -51,9 +57,19 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>906</width>
-           <height>551</height>
+           <width>1102</width>
+           <height>509</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
           <property name="leftMargin">
@@ -68,13 +84,49 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item row="0" column="0">
+          <item row="2" column="0">
            <widget class="QTabWidget" name="tabWidget">
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei UI</family>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTabWidget::pane {
+            border: 1px solid #C0C0C0;
+           background: white;
+        }
+        /* 未选中的标签页样式*/
+        QTabBar::tab {
+            background: #E0E0E0;
+            color: black;
+            border: 1px solid #C0C0C0;
+            border-bottom-color: #C0C0C0;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            min-width: 6ex;
+            padding: 2px;
+        }
+        /*选中的标签页样式*/
+        QTabBar::tab:selected {
+            background: #4A86E8;
+            color: white;
+            border-color: #4A86E8;
+            border-bottom-color: #4A86E8;
+        }
+        /*鼠标悬停的标签页样式*/
+        QTabBar::tab:!selected:hover {
+            background: #6AA1F8;
+            color: white;
+        }</string>
+            </property>
             <property name="tabPosition">
-             <enum>QTabWidget::TabPosition::West</enum>
+             <enum>QTabWidget::TabPosition::North</enum>
             </property>
             <property name="tabShape">
-             <enum>QTabWidget::TabShape::Triangular</enum>
+             <enum>QTabWidget::TabShape::Rounded</enum>
             </property>
             <property name="currentIndex">
              <number>0</number>
@@ -92,6 +144,27 @@
              <bool>false</bool>
             </property>
             <widget class="QWidget" name="tab">
+             <property name="styleSheet">
+              <string notr="true">
+
+QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: rgb(7, 193, 96);
+	border-radius:5px;  /*圆角*/
+}
+
+QPushButton:hover{
+	color: rgb(200, 200, 174);
+	background-color: rgb(27, 213, 116);
+	border-radius:5px;  /*圆角*/
+} 
+
+QPushButton:pressed{
+	color: rgb(0, 0, 0);
+	background-color: rgb(7, 193, 96);
+	border-radius:5px;  /*圆角*/
+} </string>
+             </property>
              <attribute name="title">
               <string>动画排序</string>
              </attribute>
@@ -108,8 +181,80 @@
               <property name="bottomMargin">
                <number>0</number>
               </property>
+              <property name="horizontalSpacing">
+               <number>7</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>1</number>
+              </property>
               <item row="0" column="0">
+               <widget class="QWidget" name="widget_2" native="true">
+                <layout class="QGridLayout" name="gridLayout_14">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QLineEdit" name="lineEdit">
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="inputMask">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>开机动画地址</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QPushButton" name="pushButton">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>150</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>11</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>开机动画文件</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0">
                <widget class="QScrollArea" name="scrollArea_3">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
                 <property name="widgetResizable">
                  <bool>true</bool>
                 </property>
@@ -118,11 +263,422 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>868</width>
-                   <height>535</height>
+                   <width>1098</width>
+                   <height>435</height>
                   </rect>
                  </property>
+                 <layout class="QGridLayout" name="gridLayout_8">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="1">
+                   <widget class="QScrollArea" name="scrollArea_4">
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>360</width>
+                       <height>433</height>
+                      </rect>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_10">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item row="1" column="0">
+                       <widget class="QListWidget" name="listWidget_Dynamic">
+                        <property name="frameShape">
+                         <enum>QFrame::Shape::Box</enum>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0">
+                       <widget class="QFrame" name="frame_4">
+                        <property name="frameShape">
+                         <enum>QFrame::Shape::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Shadow::Raised</enum>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_9">
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="lineEdit_DynamicPath">
+                           <property name="font">
+                            <font>
+                             <family>微软雅黑</family>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>动态动画地址</string>
+                           </property>
+                           <property name="echoMode">
+                            <enum>QLineEdit::EchoMode::Normal</enum>
+                           </property>
+                           <property name="readOnly">
+                            <bool>true</bool>
+                           </property>
+                           <property name="placeholderText">
+                            <string/>
+                           </property>
+                           <property name="clearButtonEnabled">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QPushButton" name="pushButton_Dynamic">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>25</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>25</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>微软雅黑</family>
+                             <pointsize>12</pointsize>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>读取动态动画文件</string>
+                           </property>
+                           <property name="flat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="Line" name="line_4">
+                           <property name="styleSheet">
+                            <string notr="true">background-color: rgb(63, 133, 255);</string>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Orientation::Horizontal</enum>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QScrollArea" name="scrollArea_5">
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents_5">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>359</width>
+                       <height>433</height>
+                      </rect>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_12">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item row="0" column="0">
+                       <widget class="QFrame" name="frame_5">
+                        <property name="frameShape">
+                         <enum>QFrame::Shape::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Shadow::Raised</enum>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_11">
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_Static">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>25</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>25</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>微软雅黑</family>
+                             <pointsize>12</pointsize>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton#pushButton_Static{
+	color: rgb(255, 255, 255);
+	background-color: rgb(7, 193, 96);
+	border-radius:5px;  /*圆角*/
+}
+
+QPushButton#pushButton_Static:hover{
+	color: rgb(200, 200, 174);
+	background-color: rgb(27, 213, 116);
+	border-radius:5px;  /*圆角*/
+} 
+QPushButton#pushButton_Static:pressed{
+	color: rgb(0, 0, 0);
+	background-color: rgb(7, 193, 96);
+	border-radius:5px;  /*圆角*/
+} </string>
+                           </property>
+                           <property name="text">
+                            <string>读取静态动画文件</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QLineEdit" name="lineEdit_StaticPath">
+                           <property name="font">
+                            <font>
+                             <family>微软雅黑</family>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>静态动画地址</string>
+                           </property>
+                           <property name="readOnly">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="Line" name="line_3">
+                           <property name="styleSheet">
+                            <string notr="true">background-color: rgb(63, 133, 255);</string>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Orientation::Horizontal</enum>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QListWidget" name="listWidget_Static">
+                        <property name="styleSheet">
+                         <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::Shape::Box</enum>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QScrollArea" name="scrollArea_6">
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents_6">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>359</width>
+                       <height>433</height>
+                      </rect>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_13">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item row="0" column="0">
+                       <widget class="QFrame" name="frame_6">
+                        <property name="frameShape">
+                         <enum>QFrame::Shape::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Shadow::Raised</enum>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_22">
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <item row="0" column="1">
+                          <widget class="QPushButton" name="pushButton_Deep">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>25</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>25</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>微软雅黑</family>
+                             <pointsize>12</pointsize>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>读取深度动画文件</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="lineEdit_DeepPath">
+                           <property name="font">
+                            <font>
+                             <family>微软雅黑</family>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>深度动画地址</string>
+                           </property>
+                           <property name="frame">
+                            <bool>true</bool>
+                           </property>
+                           <property name="dragEnabled">
+                            <bool>false</bool>
+                           </property>
+                           <property name="readOnly">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="Line" name="line_5">
+                           <property name="styleSheet">
+                            <string notr="true">background-color: rgb(63, 133, 255);</string>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Orientation::Horizontal</enum>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QListWidget" name="listWidget_Deep">
+                        <property name="styleSheet">
+                         <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::Shape::Box</enum>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="Line" name="line_2">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(63, 133, 255);</string>
+                </property>
+                <property name="lineWidth">
+                 <number>1</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
                </widget>
               </item>
              </layout>
@@ -157,8 +713,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>868</width>
-                   <height>535</height>
+                   <width>1098</width>
+                   <height>468</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_7">
@@ -469,6 +1025,13 @@
                      </item>
                      <item row="8" column="0">
                       <widget class="QPushButton" name="pushButton_keyMaxorMinValue">
+                       <property name="font">
+                        <font>
+                         <family>微软雅黑</family>
+                         <pointsize>12</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="text">
                         <string>确认按键默认值</string>
                        </property>
