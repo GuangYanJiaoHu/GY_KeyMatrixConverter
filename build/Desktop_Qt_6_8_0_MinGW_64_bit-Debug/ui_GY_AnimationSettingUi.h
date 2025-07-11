@@ -110,16 +110,40 @@ public:
         gridLayout->setContentsMargins(0, 0, 0, 0);
         widget = new QWidget(GY_AnimationSettingUi);
         widget->setObjectName("widget");
+        QFont font;
+        font.setPointSize(9);
+        widget->setFont(font);
+        widget->setStyleSheet(QString::fromUtf8("\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(7, 193, 96);\n"
+"	border-radius:10px;  /*\345\234\206\350\247\222*/\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(200, 200, 174);\n"
+"	background-color: rgb(27, 213, 116);\n"
+"	border-radius:10px;  /*\345\234\206\350\247\222*/\n"
+"} \n"
+"\n"
+"QPushButton:pressed{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(7, 193, 96);\n"
+"	border-radius:10px;  /*\345\234\206\350\247\222*/\n"
+"} "));
         gridLayout_2 = new QGridLayout(widget);
         gridLayout_2->setObjectName("gridLayout_2");
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
         groupBox = new QGroupBox(widget);
         groupBox->setObjectName("groupBox");
+        groupBox->setFont(font);
         groupBox->setAlignment(Qt::AlignmentFlag::AlignCenter);
         gridLayout_5 = new QGridLayout(groupBox);
         gridLayout_5->setObjectName("gridLayout_5");
         scrollArea_Static = new QScrollArea(groupBox);
         scrollArea_Static->setObjectName("scrollArea_Static");
+        scrollArea_Static->setFont(font);
         scrollArea_Static->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOn);
         scrollArea_Static->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
@@ -137,6 +161,11 @@ public:
         label_StaticReadPath = new QLabel(widget_2);
         label_StaticReadPath->setObjectName("label_StaticReadPath");
         label_StaticReadPath->setMaximumSize(QSize(70, 16777215));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font1.setPointSize(10);
+        font1.setBold(true);
+        label_StaticReadPath->setFont(font1);
 
         gridLayout_3->addWidget(label_StaticReadPath, 0, 0, 1, 1);
 
@@ -148,6 +177,8 @@ public:
 
         pushButton_StaticReadPath = new QPushButton(widget_2);
         pushButton_StaticReadPath->setObjectName("pushButton_StaticReadPath");
+        pushButton_StaticReadPath->setMinimumSize(QSize(60, 0));
+        pushButton_StaticReadPath->setFont(font1);
 
         gridLayout_3->addWidget(pushButton_StaticReadPath, 0, 2, 1, 1);
 
@@ -163,16 +194,23 @@ public:
         label_StaticOnlySimulate = new QLabel(widget_3);
         label_StaticOnlySimulate->setObjectName("label_StaticOnlySimulate");
         label_StaticOnlySimulate->setMaximumSize(QSize(70, 16777215));
+        label_StaticOnlySimulate->setFont(font1);
 
         gridLayout_4->addWidget(label_StaticOnlySimulate, 0, 0, 1, 1);
 
         comboBox_StaticOnlySimulate = new QComboBox(widget_3);
         comboBox_StaticOnlySimulate->setObjectName("comboBox_StaticOnlySimulate");
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font2.setPointSize(11);
+        font2.setBold(true);
+        comboBox_StaticOnlySimulate->setFont(font2);
 
         gridLayout_4->addWidget(comboBox_StaticOnlySimulate, 0, 1, 1, 1);
 
         checkBox_StaticSend = new QCheckBox(widget_3);
         checkBox_StaticSend->setObjectName("checkBox_StaticSend");
+        checkBox_StaticSend->setFont(font1);
 
         gridLayout_4->addWidget(checkBox_StaticSend, 0, 2, 1, 1);
 
@@ -189,12 +227,14 @@ public:
         pushButton_StaticStart = new QPushButton(widget_4);
         pushButton_StaticStart->setObjectName("pushButton_StaticStart");
         pushButton_StaticStart->setMinimumSize(QSize(0, 50));
+        pushButton_StaticStart->setFont(font1);
 
         gridLayout_7->addWidget(pushButton_StaticStart, 0, 0, 1, 1);
 
         pushButton_StaticExport = new QPushButton(widget_4);
         pushButton_StaticExport->setObjectName("pushButton_StaticExport");
         pushButton_StaticExport->setMinimumSize(QSize(0, 50));
+        pushButton_StaticExport->setFont(font1);
 
         gridLayout_7->addWidget(pushButton_StaticExport, 0, 2, 1, 1);
 
@@ -209,11 +249,13 @@ public:
         gridLayout_8->setContentsMargins(11, 0, 11, 0);
         label_StaticSend = new QLabel(widget_8);
         label_StaticSend->setObjectName("label_StaticSend");
+        label_StaticSend->setFont(font1);
 
         gridLayout_8->addWidget(label_StaticSend, 1, 0, 1, 1);
 
         label_StaticUi = new QLabel(widget_8);
         label_StaticUi->setObjectName("label_StaticUi");
+        label_StaticUi->setFont(font1);
 
         gridLayout_8->addWidget(label_StaticUi, 0, 0, 1, 1);
 
@@ -292,6 +334,7 @@ public:
         label_DynamicSend_2->setObjectName("label_DynamicSend_2");
         label_DynamicSend_2->setMinimumSize(QSize(40, 0));
         label_DynamicSend_2->setMaximumSize(QSize(40, 16777215));
+        label_DynamicSend_2->setFont(font1);
 
         gridLayout_15->addWidget(label_DynamicSend_2, 1, 0, 1, 1);
 
@@ -331,6 +374,7 @@ public:
         label_DynamicUi_2->setObjectName("label_DynamicUi_2");
         label_DynamicUi_2->setMinimumSize(QSize(40, 0));
         label_DynamicUi_2->setMaximumSize(QSize(40, 16777215));
+        label_DynamicUi_2->setFont(font1);
 
         gridLayout_15->addWidget(label_DynamicUi_2, 0, 0, 1, 1);
 
@@ -368,11 +412,13 @@ public:
 
         label_DynamicSend = new QLabel(widget_9);
         label_DynamicSend->setObjectName("label_DynamicSend");
+        label_DynamicSend->setFont(font1);
 
         gridLayout_13->addWidget(label_DynamicSend, 1, 0, 1, 1);
 
         label_DynamicUi = new QLabel(widget_9);
         label_DynamicUi->setObjectName("label_DynamicUi");
+        label_DynamicUi->setFont(font1);
 
         gridLayout_13->addWidget(label_DynamicUi, 0, 0, 1, 1);
 
@@ -413,6 +459,7 @@ public:
         label_DynamicReadPath = new QLabel(widget_5);
         label_DynamicReadPath->setObjectName("label_DynamicReadPath");
         label_DynamicReadPath->setMaximumSize(QSize(70, 16777215));
+        label_DynamicReadPath->setFont(font1);
 
         gridLayout_9->addWidget(label_DynamicReadPath, 0, 0, 1, 1);
 
@@ -424,6 +471,8 @@ public:
 
         pushButton_DynamicReadPath = new QPushButton(widget_5);
         pushButton_DynamicReadPath->setObjectName("pushButton_DynamicReadPath");
+        pushButton_DynamicReadPath->setMinimumSize(QSize(60, 0));
+        pushButton_DynamicReadPath->setFont(font1);
 
         gridLayout_9->addWidget(pushButton_DynamicReadPath, 0, 2, 1, 1);
 
@@ -440,12 +489,14 @@ public:
         pushButton_DynamicStart = new QPushButton(widget_7);
         pushButton_DynamicStart->setObjectName("pushButton_DynamicStart");
         pushButton_DynamicStart->setMinimumSize(QSize(0, 50));
+        pushButton_DynamicStart->setFont(font1);
 
         gridLayout_11->addWidget(pushButton_DynamicStart, 0, 0, 1, 1);
 
         pushButton_DynamicExport = new QPushButton(widget_7);
         pushButton_DynamicExport->setObjectName("pushButton_DynamicExport");
         pushButton_DynamicExport->setMinimumSize(QSize(0, 50));
+        pushButton_DynamicExport->setFont(font1);
 
         gridLayout_11->addWidget(pushButton_DynamicExport, 0, 2, 1, 1);
 
@@ -460,17 +511,20 @@ public:
         gridLayout_10->setContentsMargins(-1, 0, -1, 0);
         comboBox_DynamicOnlySimulate = new QComboBox(widget_6);
         comboBox_DynamicOnlySimulate->setObjectName("comboBox_DynamicOnlySimulate");
+        comboBox_DynamicOnlySimulate->setFont(font2);
 
         gridLayout_10->addWidget(comboBox_DynamicOnlySimulate, 0, 1, 1, 1);
 
         label_DynamicOnlySimulate = new QLabel(widget_6);
         label_DynamicOnlySimulate->setObjectName("label_DynamicOnlySimulate");
         label_DynamicOnlySimulate->setMaximumSize(QSize(70, 16777215));
+        label_DynamicOnlySimulate->setFont(font1);
 
         gridLayout_10->addWidget(label_DynamicOnlySimulate, 0, 0, 1, 1);
 
         checkBox_DynamicSend = new QCheckBox(widget_6);
         checkBox_DynamicSend->setObjectName("checkBox_DynamicSend");
+        checkBox_DynamicSend->setFont(font1);
 
         gridLayout_10->addWidget(checkBox_DynamicSend, 0, 2, 1, 1);
 
@@ -480,6 +534,7 @@ public:
         pushButton_DynamicUpdateSimulatePos = new QPushButton(scrollAreaWidgetContents_2);
         pushButton_DynamicUpdateSimulatePos->setObjectName("pushButton_DynamicUpdateSimulatePos");
         pushButton_DynamicUpdateSimulatePos->setMinimumSize(QSize(0, 50));
+        pushButton_DynamicUpdateSimulatePos->setFont(font1);
 
         gridLayout_14->addWidget(pushButton_DynamicUpdateSimulatePos, 6, 0, 1, 1);
 

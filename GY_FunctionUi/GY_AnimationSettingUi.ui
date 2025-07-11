@@ -28,6 +28,32 @@
    </property>
    <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: rgb(7, 193, 96);
+	border-radius:10px;  /*圆角*/
+}
+
+QPushButton:hover{
+	color: rgb(200, 200, 174);
+	background-color: rgb(27, 213, 116);
+	border-radius:10px;  /*圆角*/
+} 
+
+QPushButton:pressed{
+	color: rgb(0, 0, 0);
+	background-color: rgb(7, 193, 96);
+	border-radius:10px;  /*圆角*/
+} </string>
+     </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <property name="leftMargin">
        <number>0</number>
@@ -43,6 +69,11 @@
       </property>
       <item row="0" column="0">
        <widget class="QGroupBox" name="groupBox">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
         <property name="title">
          <string>静态动画</string>
         </property>
@@ -52,6 +83,11 @@
         <layout class="QGridLayout" name="gridLayout_5">
          <item row="0" column="0">
           <widget class="QScrollArea" name="scrollArea_Static">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="verticalScrollBarPolicy">
             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
            </property>
@@ -94,6 +130,13 @@
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>动画地址：</string>
                   </property>
@@ -108,6 +151,19 @@
                 </item>
                 <item row="0" column="2">
                  <widget class="QPushButton" name="pushButton_StaticReadPath">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>读取</string>
                   </property>
@@ -139,16 +195,38 @@
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>逐帧模拟：</string>
                   </property>
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QComboBox" name="comboBox_StaticOnlySimulate"/>
+                 <widget class="QComboBox" name="comboBox_StaticOnlySimulate">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="2">
                  <widget class="QCheckBox" name="checkBox_StaticSend">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>模拟下发键盘</string>
                   </property>
@@ -183,6 +261,13 @@
                     <height>50</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>开始模拟</string>
                   </property>
@@ -195,6 +280,13 @@
                     <width>0</width>
                     <height>50</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
                   </property>
                   <property name="text">
                    <string>导出动画文件</string>
@@ -227,6 +319,13 @@
                 </property>
                 <item row="1" column="0">
                  <widget class="QLabel" name="label_StaticSend">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>键盘下发速度：</string>
                   </property>
@@ -234,6 +333,13 @@
                 </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_StaticUi">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>界面模拟速度：</string>
                   </property>
@@ -412,6 +518,13 @@
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>图高：</string>
                   </property>
@@ -501,6 +614,13 @@
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>图宽：</string>
                   </property>
@@ -583,6 +703,13 @@
                 </item>
                 <item row="1" column="0">
                  <widget class="QLabel" name="label_DynamicSend">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>键盘下发速度：</string>
                   </property>
@@ -590,6 +717,13 @@
                 </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_DynamicUi">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>界面模拟速度：</string>
                   </property>
@@ -672,6 +806,13 @@
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>动画地址：</string>
                   </property>
@@ -686,6 +827,19 @@
                 </item>
                 <item row="0" column="2">
                  <widget class="QPushButton" name="pushButton_DynamicReadPath">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>读取</string>
                   </property>
@@ -720,6 +874,13 @@
                     <height>50</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>开始模拟</string>
                   </property>
@@ -732,6 +893,13 @@
                     <width>0</width>
                     <height>50</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
                   </property>
                   <property name="text">
                    <string>导出动画文件</string>
@@ -757,7 +925,15 @@
                  <number>0</number>
                 </property>
                 <item row="0" column="1">
-                 <widget class="QComboBox" name="comboBox_DynamicOnlySimulate"/>
+                 <widget class="QComboBox" name="comboBox_DynamicOnlySimulate">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_DynamicOnlySimulate">
@@ -767,6 +943,13 @@
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>逐帧模拟：</string>
                   </property>
@@ -774,6 +957,13 @@
                 </item>
                 <item row="0" column="2">
                  <widget class="QCheckBox" name="checkBox_DynamicSend">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>模拟下发键盘</string>
                   </property>
@@ -789,6 +979,13 @@
                  <width>0</width>
                  <height>50</height>
                 </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>微软雅黑</family>
+                 <pointsize>10</pointsize>
+                 <bold>true</bold>
+                </font>
                </property>
                <property name="text">
                 <string>更新模拟位置</string>

@@ -1,6 +1,7 @@
 debug/GY_AnimationCustomize.o
 debug/GY_AnimationSettingUi.o
 debug/GY_ConvertBinFile.o
+debug/GY_ReadFile.o
 debug/GY_GenerateBinFile.o
 debug/GY_KeyboardSettingUi.o
 debug/GY_KeyboardDrawLayout.o
@@ -11,6 +12,7 @@ debug/mainwindow.o
 debug/moc_GY_AnimationCustomize.o
 debug/moc_GY_AnimationSettingUi.o
 debug/moc_GY_ConvertBinFile.o
+debug/moc_GY_ReadFile.o
 debug/moc_GY_GenerateBinFile.o
 debug/moc_GY_KeyboardSettingUi.o
 debug/moc_GY_KeyboardDrawLayout.o

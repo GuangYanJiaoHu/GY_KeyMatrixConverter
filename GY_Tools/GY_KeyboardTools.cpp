@@ -6,8 +6,6 @@ GY_KeyboardTools::GY_KeyboardTools(QObject *parent)
 
 }
 
-
-
 QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayout_60_CN()
 {
     QMap<int, GY_KeyboardTools::KeyboardButtonInfo> MapKeyboard;
@@ -21,7 +19,7 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
     keyboardLayout._MaxHeight = 91; //根据键盘最大 Y + 边框得来
     QColor color = Qt::black;
 
-    MapKeyboard.insert( 0, KeyboardButtonInfo{QPoint(  7.00, 7), QRect(  0.00, 0, 14, 14),                "~", 192, 0, 0, color, "0029", keyboardLayout});
+    MapKeyboard.insert( 0, KeyboardButtonInfo{QPoint(  7.00, 7), QRect(  0.00, 0, 14, 14),              "ESC",  27, 0, 0, color, "0029", keyboardLayout});
     MapKeyboard.insert( 1, KeyboardButtonInfo{QPoint( 26.05, 7), QRect( 19.05, 0, 14, 14),                "1",  49, 0, 0, color, "001E", keyboardLayout});
     MapKeyboard.insert( 2, KeyboardButtonInfo{QPoint( 45.10, 7), QRect( 38.10, 0, 14, 14),                "2",  50, 0, 0, color, "001F", keyboardLayout});
     MapKeyboard.insert( 3, KeyboardButtonInfo{QPoint( 64.15, 7), QRect( 57.15, 0, 14, 14),                "3",  51, 0, 0, color, "0020", keyboardLayout});
@@ -88,6 +86,81 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
     MapKeyboard.insert(67, KeyboardButtonInfo{QPoint(271.32, 83.20), QRect(264.32, 76.20, 14, 14),   "Ctrl R", 163, 0, 0, color, "00E4", keyboardLayout });
     return MapKeyboard;
 }
+//读取动态动画内容
+QByteArray GY_KeyboardTools::getAnimationDynamic(QString path)
+{
+    QByteArray dynamicBinFile;
+
+    QFile fileRead(path);    //读取动画文件
+    if(fileRead.open(QFileDevice::ReadOnly | QFileDevice::Text)){
+        QByteArray readLineData; //一行一行读取
+        while ( !(readLineData = fileRead.readLine()).isNull() ){
+            dynamicBinFile += GY_KeyboardTools::getDynamicFillZero(readLineData.left(readLineData.size() - 2), 1); //去掉末尾的\n字节 占1个扇区
+        }
+    }else{
+        qDebug() << "读取失败 " << path;
+    }
+    fileRead.close();
+    return dynamicBinFile;
+}
+//读取静态动画内容
+QByteArray GY_KeyboardTools::getAnimationStatic(QString path)
+{
+    QByteArray animationStaticData;
+    QFile fileRead(path);
+    if(fileRead.open(QFileDevice::ReadOnly)){
+        animationStaticData += GY_KeyboardTools::getStaticFillZero(fileRead.readAll(), 4);
+    }else{
+        qDebug() << "读取失败 " << path;
+    }
+    fileRead.close();
+    return animationStaticData;
+}
+//动态动画补零
+QByteArray GY_KeyboardTools::getDynamicFillZero(QByteArray data, int sector)
+{
+    int sectorBite = 4096 * sector * 2; //扇区总字节数 - 考虑传入的字节数为16进制每次占两个字节，所以要*2
+    QByteArray writeDate = data;
+    for(int i = data.size(); i < sectorBite; i++){
+        writeDate.append("0");
+    }
+    return QByteArray::fromHex(writeDate);
+}
+//静态动画补零
+QByteArray GY_KeyboardTools::getStaticFillZero(QByteArray data, int sector)
+{
+    int sectorBite = 4096 * sector * 2; //扇区总字节数 - 考虑传入的字节数为16进制每次占两个字节，所以要*2
+    QByteArray writeDate = data;
+    //qDebug() << "读取后数据长度：" << data.size();
+    for(int i = data.size(); i < sectorBite - 2 ;i++){
+        writeDate.append("0");
+    }
+    writeDate.append("3C");
+    return QByteArray::fromHex(writeDate);
+}
+
+//Float-4字节转QByteArray
+QByteArray GY_KeyboardTools::getFlotaToByteArray(float data)
+{
+    unsigned char byteFloat[4];
+    std::memcpy(byteFloat, &data, sizeof(float));
+    QByteArray qByteArray((char*)byteFloat, sizeof(float));
+    return qByteArray;
+}
+
+//QByteArray转Float-4字
+float GY_KeyboardTools::getByteArrayToFloat(QByteArray data)
+{
+    float dataBate_4;
+    memcpy(&dataBate_4, (char *)data.left(4).data(), sizeof(float));
+    return dataBate_4;
+}
+
+
+
+
+
+
 
 
 /*

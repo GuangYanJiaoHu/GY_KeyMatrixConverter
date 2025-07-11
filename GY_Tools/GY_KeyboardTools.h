@@ -6,6 +6,16 @@
 #include <QRect>
 #include <QMap>
 #include <QColor>
+#include <QFileDialog>
+#include <QFile>
+#include <QFileDevice>
+#include <QFileInfo>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonValue>
+#include <QJsonArray>
+
+
 /*
 
     switch(keboardTypeNumber){
@@ -36,7 +46,7 @@ public:
     };
 
     //60配列 - 磁轴 70按键 - 键盘 写入地址信息
-    enum KeyboardMech_60_BinAddress {
+    enum Keyboard60_Bin_Addr {
         _FLASH_SAVE_ADDR            =  0 * 4096,            // 0x000000 最大值
         _FLASH_SAVE_ADDR_END        =  0 * 4096 + 280,      // * 70 * 4 = 280 HEX(118)
         _MIN_VALUES_ADDR            =  1 * 4096,            // 0X001000 最小值
@@ -84,7 +94,13 @@ public:
 
         _FUNCT_INDICASTOR_LIGHR     = 43 * 4096,            //0X02b000 宏-功能指示灯
         _FUNCT_INDICASTOR_LIGHR_END = 43 * 4096 + 4020,     //宏 - 功能指示灯 20*(1+50*4) = 4020
+        //动画存放地址
+        _StaticAnimation_ADDR       = 256 * 4096,           //静态动画 - 100000的位置
+        _TurnOnAnimation_ADDR       = 457 * 4096,           //开机动画 - 6DC000的位置
+        _DynamicAnimation_ADDR      = 496 * 4096,           //动态动画 - 1F0000的位置
+        _DeepAnimation_ADDR         = 2048 * 4096,          //深度动画 - 800000的位置
     };
+
 
     //键盘结构类型
     struct KeyboardLayout{
@@ -109,7 +125,29 @@ public:
     };
 
 
+    struct JsonPrivateOnlyKeyInfo{
+        int _AKType;                  //RT类型
+        QByteArray _RT_DOWN;                 //RT触发
+        QByteArray _Rt_UP;                   //RT抬起
+        QByteArray _RT_STATE;                //RT状态
+        QByteArray _FIXED_HEIGHT;            //定高
+        QByteArray _LightColor;              //灯颜色
+        QByteArray _KeyValue;                //键值
+        QByteArray _FnKeyValue;              //FN键值
+        QByteArray _AdvancedKey;             //高级键
+        QByteArray _SECONDARY_TIGGER;        //多段触发  与 定高 公用一个值
+    };
 
+    //json解析中的所有私有信息
+    struct JsonPrivateInfo{
+        int _KeyBoardCount;                  //按键个数
+        QByteArray _MULTIPLE_SET;            //多组预设  读取后显示界面
+        QByteArray _RETURN_SPEED;            //回报率   读取后显示界面
+        QByteArray _SCAN_SPEED;              //扫描率   读取后显示界面
+        QByteArray _ANIMATION_INFO;          //动画信息
+
+        QList<GY_KeyboardTools::JsonPrivateOnlyKeyInfo> _JsonPrivateOnlyKeyInfo;    //每个按键都记录一遍
+    };
 
 
 
@@ -117,8 +155,12 @@ public:
     explicit GY_KeyboardTools(QObject *parent = nullptr);
     static QMap<int, struct GY_KeyboardTools::KeyboardButtonInfo> getKeyboarLayout_60_CN();    //设置60配列键盘 70个按键
 
-
-public:
+    static QByteArray getFlotaToByteArray(float data);                         //浮点转字节型
+    static float getByteArrayToFloat(QByteArray data);                         //字节转浮点型
+    static QByteArray getAnimationDynamic(QString path);                          //读取动态动画内容
+    static QByteArray getAnimationStatic(QString path);                           //读取静态动画内容
+    static QByteArray getDynamicFillZero(QByteArray data, int sector = 4);             //动态动画补零 sector 扇区数量
+    static QByteArray getStaticFillZero(QByteArray data, int sector = 4);              //静态动画补零
 
 
 private:

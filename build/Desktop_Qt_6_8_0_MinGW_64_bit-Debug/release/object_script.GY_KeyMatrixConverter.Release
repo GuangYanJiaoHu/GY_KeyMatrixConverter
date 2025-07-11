@@ -1,6 +1,7 @@
 release/GY_AnimationCustomize.o
 release/GY_AnimationSettingUi.o
 release/GY_ConvertBinFile.o
+release/GY_ReadFile.o
 release/GY_GenerateBinFile.o
 release/GY_KeyboardSettingUi.o
 release/GY_KeyboardDrawLayout.o
@@ -11,6 +12,7 @@ release/mainwindow.o
 release/moc_GY_AnimationCustomize.o
 release/moc_GY_AnimationSettingUi.o
 release/moc_GY_ConvertBinFile.o
+release/moc_GY_ReadFile.o
 release/moc_GY_GenerateBinFile.o
 release/moc_GY_KeyboardSettingUi.o
 release/moc_GY_KeyboardDrawLayout.o

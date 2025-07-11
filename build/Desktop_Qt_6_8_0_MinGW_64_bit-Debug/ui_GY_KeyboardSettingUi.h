@@ -79,6 +79,25 @@ public:
         if (GY_KeyboardSettingUi->objectName().isEmpty())
             GY_KeyboardSettingUi->setObjectName("GY_KeyboardSettingUi");
         GY_KeyboardSettingUi->resize(986, 434);
+        GY_KeyboardSettingUi->setStyleSheet(QString::fromUtf8("\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(7, 193, 96);\n"
+"	border-radius:10px;  /*\345\234\206\350\247\222*/\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(200, 200, 174);\n"
+"	background-color: rgb(27, 213, 116);\n"
+"	border-radius:10px;  /*\345\234\206\350\247\222*/\n"
+"} \n"
+"\n"
+"QPushButton:pressed{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(7, 193, 96);\n"
+"	border-radius:10px;  /*\345\234\206\350\247\222*/\n"
+"} "));
         gridLayout = new QGridLayout(GY_KeyboardSettingUi);
         gridLayout->setObjectName("gridLayout");
         groupBox_3 = new QGroupBox(GY_KeyboardSettingUi);
@@ -114,6 +133,11 @@ public:
 
         pushButton_2 = new QPushButton(groupBox);
         pushButton_2->setObjectName("pushButton_2");
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font1.setPointSize(11);
+        font1.setBold(true);
+        pushButton_2->setFont(font1);
 
         gridLayout_7->addWidget(pushButton_2, 0, 0, 1, 1);
 
@@ -136,6 +160,8 @@ public:
 
         pushButton = new QPushButton(widget_4);
         pushButton->setObjectName("pushButton");
+        pushButton->setMinimumSize(QSize(60, 0));
+        pushButton->setFont(font1);
 
         gridLayout_6->addWidget(pushButton, 0, 2, 1, 1);
 
@@ -196,6 +222,7 @@ public:
         pushButton_ClearKeyboard = new QPushButton(scrollAreaWidgetContents);
         pushButton_ClearKeyboard->setObjectName("pushButton_ClearKeyboard");
         pushButton_ClearKeyboard->setMinimumSize(QSize(0, 50));
+        pushButton_ClearKeyboard->setFont(font1);
 
         gridLayout_2->addWidget(pushButton_ClearKeyboard, 3, 0, 1, 1);
 

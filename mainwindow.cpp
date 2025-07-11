@@ -23,6 +23,8 @@ MainWindow::MainWindow(QWidget *parent)
     layout2->addWidget(keyboardSettingUi);
     layout2->setContentsMargins(0, 0, 0, 0);
 
+
+
     //创建键盘动画模拟界面
     animationSettingUi = new GY_AnimationSettingUi(ui->widget_Animation);
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticSimulate,          keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticSimulate);               //静态动画模拟
@@ -42,11 +44,15 @@ MainWindow::MainWindow(QWidget *parent)
     layout3->addWidget(animationSettingUi);
     layout3->setContentsMargins(0, 0, 0, 0);
 
+
+
     //bin文件生成
     generateBinFile = new GY_GenerateBinFile();
     QVBoxLayout *layout4 = new QVBoxLayout(ui->widget_GenerateBinFile);
     layout4->addWidget(generateBinFile);
     layout4->setContentsMargins(0, 0, 0, 0);
+
+
 
     //bin文件转换
     convertBinFile = new GY_ConvertBinFile();
@@ -54,11 +60,12 @@ MainWindow::MainWindow(QWidget *parent)
     layout5->addWidget(convertBinFile);
     layout5->setContentsMargins(0, 0, 0, 0);
 
+
+
     //自定义动画
     animationCustomize = new GY_AnimationCustomize();
     connect(animationCustomize, &GY_AnimationCustomize::signalCustomizeAnimationIsDraw, keyboardDrawLayout, GY_KeyboardDrawLayout::slotCustomizeAnimationIsDraw);   //自定义图案绘制
     connect(animationCustomize, &GY_AnimationCustomize::signalCustomizeClearKey,        keyboardDrawLayout, GY_KeyboardDrawLayout::slotKeyboardSettingClearKey);    //清空绘制
-
     QVBoxLayout *layout6 = new QVBoxLayout(ui->widget_Customize);
     layout6->addWidget(animationCustomize);
     layout6->setContentsMargins(0, 0, 0, 0);

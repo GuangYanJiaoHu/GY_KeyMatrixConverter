@@ -12,6 +12,7 @@ SOURCES += \
     GY_FunctionUi/GY_AnimationCustomize.cpp \
     GY_FunctionUi/GY_AnimationSettingUi.cpp \
     GY_FunctionUi/GY_ConvertBinFile.cpp \
+    GY_FunctionUi/GY_Generate/GY_ReadFile.cpp \
     GY_FunctionUi/GY_GenerateBinFile.cpp \
     GY_FunctionUi/GY_KeyboardSettingUi.cpp \
     GY_KeyboardDrawLayout/GY_KeyboardDrawLayout.cpp \
@@ -24,6 +25,7 @@ HEADERS += \
     GY_FunctionUi/GY_AnimationCustomize.h \
     GY_FunctionUi/GY_AnimationSettingUi.h \
     GY_FunctionUi/GY_ConvertBinFile.h \
+    GY_FunctionUi/GY_Generate/GY_ReadFile.h \
     GY_FunctionUi/GY_GenerateBinFile.h \
     GY_FunctionUi/GY_KeyboardSettingUi.h \
     GY_KeyboardDrawLayout/GY_KeyboardDrawLayout.h \
