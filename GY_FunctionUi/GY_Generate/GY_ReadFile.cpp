@@ -161,7 +161,7 @@ QByteArray GY_ReadFile::getExprotBinFile(JsonPublicInfo jsonPublicInfo, QList<GY
         binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_AXISTYPE_SAVE_ADDR  , jsonPublicInfo._Shaft.size(), jsonPublicInfo._Shaft);                             //键轴表
         qDebug() << "写入键轴表大小:" << jsonPublicInfo._Shaft.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_AXISTYPE_SAVE_ADDR;
         binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_RANGEVALUE_SAVE_ADDR, jsonPublicInfo._ShaftInfo.size(), jsonPublicInfo._ShaftInfo);                     //键轴信息
-        qDebug() << "写入键轴信息大小:" << jsonPublicInfo._ShaftInfo.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_RANGEVALUE_SAVE_ADDR;
+        qDebug() << "写入键轴信息大小:" << jsonPublicInfo._ShaftInfo.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_RANGEVALUE_SAVE_ADDR << " 键轴信息：" << jsonPublicInfo._ShaftInfo.toHex();
         binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_CONFIGUR_GROUP_ADDR , jsonPublicInfo._MULTIPLE_SET.size(), jsonPublicInfo._MULTIPLE_SET);               //预多组预设
         qDebug() << "写入多组预设大小:" << jsonPublicInfo._MULTIPLE_SET.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_CONFIGUR_GROUP_ADDR;
         binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_RATE_OF_RETURN_ADDR , jsonPublicInfo._RETURN_SPEED.size(), jsonPublicInfo._RETURN_SPEED);               //回报率
@@ -175,6 +175,8 @@ QByteArray GY_ReadFile::getExprotBinFile(JsonPublicInfo jsonPublicInfo, QList<GY
 
             binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_ANIMATION_DATA_ADDR + (4096 * 32 * i), jsonPrivateInfo.at(i)._ANIMATION_INFO.size(), jsonPrivateInfo.at(i)._ANIMATION_INFO);    //动画信息
             qDebug() << "写入动画信息大小:" << jsonPrivateInfo.at(i)._ANIMATION_INFO.size()<< " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_ANIMATION_DATA_ADDR + (4096 * 32 * i);
+
+
             //---------------------------------------------------------写入每个按键的信息(私有信息需要对N个按键数据内容整合)--------------------------------------------------------------------------------
             QByteArray _RT_DOWN;                 //RT触发
             QByteArray _Rt_UP;                   //RT抬起
@@ -225,11 +227,15 @@ QByteArray GY_ReadFile::getExprotBinFile(JsonPublicInfo jsonPublicInfo, QList<GY
             qDebug() << "写入多段触发大小:" << _SECONDARY_TIGGER.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_SECOND_STAGE_TIGGER + (4096 * 32 * i);
             qDebug() << "--------------------------------------------循环写入次数:" << i << "-----------------------------------------------------------\n";
 
+        }else{
+            qDebug() << "当前写入键盘按键个数与要写入类型键盘个数不吻合，检查写入数据 json数据：" << jsonPrivateInfo.first()._JsonPrivateOnlyKeyInfo.count() << " 键盘中数据：" << jsonPublicInfo._KeyBoardCount;
+            return binFile;
         }
 
-        qDebug() << "当前写入键盘按键个数与要写入类型键盘个数不吻合，检查写入数据";
+
 
     }
+
     return binFile;
 }
 

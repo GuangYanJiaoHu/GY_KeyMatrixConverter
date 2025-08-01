@@ -19,71 +19,72 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
     keyboardLayout._MaxHeight = 91; //根据键盘最大 Y + 边框得来
     QColor color = Qt::black;
 
-    MapKeyboard.insert( 0, KeyboardButtonInfo{QPoint(  7.00, 7), QRect(  0.00, 0, 14, 14),              "ESC",  27, 0, 0, color, "0029", keyboardLayout});
-    MapKeyboard.insert( 1, KeyboardButtonInfo{QPoint( 26.05, 7), QRect( 19.05, 0, 14, 14),                "1",  49, 0, 0, color, "001E", keyboardLayout});
-    MapKeyboard.insert( 2, KeyboardButtonInfo{QPoint( 45.10, 7), QRect( 38.10, 0, 14, 14),                "2",  50, 0, 0, color, "001F", keyboardLayout});
-    MapKeyboard.insert( 3, KeyboardButtonInfo{QPoint( 64.15, 7), QRect( 57.15, 0, 14, 14),                "3",  51, 0, 0, color, "0020", keyboardLayout});
-    MapKeyboard.insert( 4, KeyboardButtonInfo{QPoint( 83.20, 7), QRect( 76.20, 0, 14, 14),                "4",  52, 0, 0, color, "0021", keyboardLayout});
-    MapKeyboard.insert( 5, KeyboardButtonInfo{QPoint(102.25, 7), QRect( 95.25, 0, 14, 14),                "5",  53, 0, 0, color, "0022", keyboardLayout});
-    MapKeyboard.insert( 6, KeyboardButtonInfo{QPoint(121.30, 7), QRect(114.30, 0, 14, 14),                "6",  54, 0, 0, color, "0023", keyboardLayout});
-    MapKeyboard.insert( 7, KeyboardButtonInfo{QPoint(140.35, 7), QRect(133.35, 0, 14, 14),                "7",  55, 0, 0, color, "0024", keyboardLayout});
-    MapKeyboard.insert( 8, KeyboardButtonInfo{QPoint(159.40, 7), QRect(152.40, 0, 14, 14),                "8",  56, 0, 0, color, "0025", keyboardLayout});
-    MapKeyboard.insert( 9, KeyboardButtonInfo{QPoint(178.45, 7), QRect(171.45, 0, 14, 14),                "9",  57, 0, 0, color, "0026", keyboardLayout});
-    MapKeyboard.insert(10, KeyboardButtonInfo{QPoint(197.50, 7), QRect(190.50, 0, 14, 14),                "0",  48, 0, 0, color, "0027", keyboardLayout});
-    MapKeyboard.insert(11, KeyboardButtonInfo{QPoint(216.55, 7), QRect(209.55, 0, 14, 14),                "-", 189, 0, 0, color, "002D", keyboardLayout});
-    MapKeyboard.insert(12, KeyboardButtonInfo{QPoint(235.60, 7), QRect(228.60, 0, 14, 14),                "+", 187, 0, 0, color, "002E", keyboardLayout});
-    MapKeyboard.insert(13, KeyboardButtonInfo{QPoint(264.17, 7), QRect(257.17, 0, 14, 14),        "Backspace",   8, 0, 0, color, "002A", keyboardLayout});
+    MapKeyboard.insert( 0, KeyboardButtonInfo{QPoint(  9, 9), QRect(  0, 0, 18, 18),              "ESC",  27, 0, 0, color, "0029", keyboardLayout});
+    MapKeyboard.insert( 1, KeyboardButtonInfo{QPoint( 28, 9), QRect( 19, 0, 18, 18),                "1",  49, 0, 0, color, "001E", keyboardLayout});
+    MapKeyboard.insert( 2, KeyboardButtonInfo{QPoint( 47, 9), QRect( 38, 0, 18, 18),                "2",  50, 0, 0, color, "001F", keyboardLayout});
+    MapKeyboard.insert( 3, KeyboardButtonInfo{QPoint( 66, 9), QRect( 57, 0, 18, 18),                "3",  51, 0, 0, color, "0020", keyboardLayout});
+    MapKeyboard.insert( 4, KeyboardButtonInfo{QPoint( 85, 9), QRect( 76, 0, 18, 18),                "4",  52, 0, 0, color, "0021", keyboardLayout});
+    MapKeyboard.insert( 5, KeyboardButtonInfo{QPoint(104, 9), QRect( 95, 0, 18, 18),                "5",  53, 0, 0, color, "0022", keyboardLayout});
+    MapKeyboard.insert( 6, KeyboardButtonInfo{QPoint(123, 9), QRect(114, 0, 18, 18),                "6",  54, 0, 0, color, "0023", keyboardLayout});
+    MapKeyboard.insert( 7, KeyboardButtonInfo{QPoint(142, 9), QRect(133, 0, 18, 18),                "7",  55, 0, 0, color, "0024", keyboardLayout});
+    MapKeyboard.insert( 8, KeyboardButtonInfo{QPoint(161, 9), QRect(152, 0, 18, 18),                "8",  56, 0, 0, color, "0025", keyboardLayout});
+    MapKeyboard.insert( 9, KeyboardButtonInfo{QPoint(180, 9), QRect(171, 0, 18, 18),                "9",  57, 0, 0, color, "0026", keyboardLayout});
+    MapKeyboard.insert(10, KeyboardButtonInfo{QPoint(199, 9), QRect(190, 0, 18, 18),                "0",  48, 0, 0, color, "0027", keyboardLayout});
+    MapKeyboard.insert(11, KeyboardButtonInfo{QPoint(218, 9), QRect(209, 0, 18, 18),                "-", 189, 0, 0, color, "002D", keyboardLayout});
+    MapKeyboard.insert(12, KeyboardButtonInfo{QPoint(237, 9), QRect(228, 0, 18, 18),                "+", 187, 0, 0, color, "002E", keyboardLayout});
+    MapKeyboard.insert(13, KeyboardButtonInfo{QPoint(262, 9), QRect(247, 0, 31, 18),        "Backspace",   8, 0, 0, color, "002A", keyboardLayout});
 
-    MapKeyboard.insert(14, KeyboardButtonInfo{QPoint( 11.76, 26.05), QRect(  4.76, 19.05, 14, 14),      "Tab",   9, 0, 0, color, "002B", keyboardLayout });
-    MapKeyboard.insert(15, KeyboardButtonInfo{QPoint( 35.57, 26.05), QRect( 28.57, 19.05, 14, 14),        "Q",  81, 0, 0, color, "0014", keyboardLayout });
-    MapKeyboard.insert(16, KeyboardButtonInfo{QPoint( 54.62, 26.05), QRect( 47.62, 19.05, 14, 14),        "W",  87, 0, 0, color, "001A", keyboardLayout });
-    MapKeyboard.insert(17, KeyboardButtonInfo{QPoint( 73.67, 26.05), QRect( 66.67, 19.05, 14, 14),        "E",  69, 0, 0, color, "0008", keyboardLayout });
-    MapKeyboard.insert(18, KeyboardButtonInfo{QPoint( 92.72, 26.05), QRect( 85.72, 19.05, 14, 14),        "R",  82, 0, 0, color, "0015", keyboardLayout });
-    MapKeyboard.insert(19, KeyboardButtonInfo{QPoint(111.77, 26.05), QRect(104.77, 19.05, 14, 14),        "T",  84, 0, 0, color, "0017", keyboardLayout });
-    MapKeyboard.insert(20, KeyboardButtonInfo{QPoint(130.82, 26.05), QRect(123.82, 19.05, 14, 14),        "Y",  89, 0, 0, color, "001C", keyboardLayout });
-    MapKeyboard.insert(21, KeyboardButtonInfo{QPoint(149.87, 26.05), QRect(142.87, 19.05, 14, 14),        "U",  85, 0, 0, color, "0018", keyboardLayout });
-    MapKeyboard.insert(22, KeyboardButtonInfo{QPoint(168.92, 26.05), QRect(161.92, 19.05, 14, 14),        "I",  73, 0, 0, color, "000C", keyboardLayout });
-    MapKeyboard.insert(23, KeyboardButtonInfo{QPoint(187.97, 26.05), QRect(180.97, 19.05, 14, 14),        "O",  79, 0, 0, color, "0012", keyboardLayout });
-    MapKeyboard.insert(24, KeyboardButtonInfo{QPoint(207.02, 26.05), QRect(200.02, 19.05, 14, 14),        "P",  80, 0, 0, color, "0013", keyboardLayout });
-    MapKeyboard.insert(25, KeyboardButtonInfo{QPoint(226.07, 26.05), QRect(219.07, 19.05, 14, 14),        "{", 219, 0, 0, color, "002F", keyboardLayout });
-    MapKeyboard.insert(26, KeyboardButtonInfo{QPoint(245.12, 26.05), QRect(238.12, 19.05, 14, 14),        "}", 221, 0, 0, color, "0030", keyboardLayout });
-    MapKeyboard.insert(27, KeyboardButtonInfo{QPoint(268.94, 26.05), QRect(261.94, 19.05, 14, 14),        "|", 220, 0, 0, color, "0031", keyboardLayout });
+    MapKeyboard.insert(14, KeyboardButtonInfo{QPoint( 13, 28), QRect(  0, 19, 27, 18),      "Tab",   9, 0, 0, color, "002B", keyboardLayout });
+    MapKeyboard.insert(15, KeyboardButtonInfo{QPoint( 37, 28), QRect( 28, 19, 18, 18),        "Q",  81, 0, 0, color, "0014", keyboardLayout });
+    MapKeyboard.insert(16, KeyboardButtonInfo{QPoint( 56, 28), QRect( 47, 19, 18, 18),        "W",  87, 0, 0, color, "001A", keyboardLayout });
+    MapKeyboard.insert(17, KeyboardButtonInfo{QPoint( 75, 28), QRect( 66, 19, 18, 18),        "E",  69, 0, 0, color, "0008", keyboardLayout });
+    MapKeyboard.insert(18, KeyboardButtonInfo{QPoint( 94, 28), QRect( 85, 19, 18, 18),        "R",  82, 0, 0, color, "0015", keyboardLayout });
+    MapKeyboard.insert(19, KeyboardButtonInfo{QPoint(113, 28), QRect(104, 19, 18, 18),        "T",  84, 0, 0, color, "0017", keyboardLayout });
+    MapKeyboard.insert(20, KeyboardButtonInfo{QPoint(132, 28), QRect(123, 19, 18, 18),        "Y",  89, 0, 0, color, "001C", keyboardLayout });
+    MapKeyboard.insert(21, KeyboardButtonInfo{QPoint(151, 28), QRect(142, 19, 18, 18),        "U",  85, 0, 0, color, "0018", keyboardLayout });
+    MapKeyboard.insert(22, KeyboardButtonInfo{QPoint(170, 28), QRect(161, 19, 18, 18),        "I",  73, 0, 0, color, "000C", keyboardLayout });
+    MapKeyboard.insert(23, KeyboardButtonInfo{QPoint(189, 28), QRect(180, 19, 18, 18),        "O",  79, 0, 0, color, "0012", keyboardLayout });
+    MapKeyboard.insert(24, KeyboardButtonInfo{QPoint(208, 28), QRect(199, 19, 18, 18),        "P",  80, 0, 0, color, "0013", keyboardLayout });
+    MapKeyboard.insert(25, KeyboardButtonInfo{QPoint(227, 28), QRect(218, 19, 18, 18),        "{", 219, 0, 0, color, "002F", keyboardLayout });
+    MapKeyboard.insert(26, KeyboardButtonInfo{QPoint(246, 28), QRect(237, 19, 18, 18),        "}", 221, 0, 0, color, "0030", keyboardLayout });
+    MapKeyboard.insert(27, KeyboardButtonInfo{QPoint(267, 28), QRect(256, 19, 22, 18),        "|", 220, 0, 0, color, "0031", keyboardLayout });
 
-    MapKeyboard.insert(28, KeyboardButtonInfo{QPoint( 14.14, 45.10), QRect(  7.14, 38.10, 14, 14), "CapsLock",  20, 0, 0, color, "0039", keyboardLayout });
-    MapKeyboard.insert(29, KeyboardButtonInfo{QPoint( 40.34, 45.10), QRect( 33.34, 38.10, 14, 14),        "A",  65, 0, 0, color, "0004", keyboardLayout });
-    MapKeyboard.insert(30, KeyboardButtonInfo{QPoint( 59.39, 45.10), QRect( 52.39, 38.10, 14, 14),        "S",  83, 0, 0, color, "0016", keyboardLayout });
-    MapKeyboard.insert(31, KeyboardButtonInfo{QPoint( 78.44, 45.10), QRect( 71.44, 38.10, 14, 14),        "D",  68, 0, 0, color, "0007", keyboardLayout });
-    MapKeyboard.insert(32, KeyboardButtonInfo{QPoint( 97.49, 45.10), QRect( 90.49, 38.10, 14, 14),        "F",  70, 0, 0, color, "0009", keyboardLayout });
-    MapKeyboard.insert(33, KeyboardButtonInfo{QPoint(116.54, 45.10), QRect(109.54, 38.10, 14, 14),        "G",  71, 0, 0, color, "000A", keyboardLayout });
-    MapKeyboard.insert(34, KeyboardButtonInfo{QPoint(135.59, 45.10), QRect(128.59, 38.10, 14, 14),        "H",  72, 0, 0, color, "000B", keyboardLayout });
-    MapKeyboard.insert(35, KeyboardButtonInfo{QPoint(154.64, 45.10), QRect(147.64, 38.10, 14, 14),        "J",  74, 0, 0, color, "000D", keyboardLayout });
-    MapKeyboard.insert(36, KeyboardButtonInfo{QPoint(173.69, 45.10), QRect(166.69, 38.10, 14, 14),        "K",  75, 0, 0, color, "000E", keyboardLayout });
-    MapKeyboard.insert(37, KeyboardButtonInfo{QPoint(192.74, 45.10), QRect(185.74, 38.10, 14, 14),        "L",  76, 0, 0, color, "000F", keyboardLayout });
-    MapKeyboard.insert(38, KeyboardButtonInfo{QPoint(211.79, 45.10), QRect(204.79, 38.10, 14, 14),        ";", 186, 0, 0, color, "0033", keyboardLayout });
-    MapKeyboard.insert(39, KeyboardButtonInfo{QPoint(230.84, 45.10), QRect(223.84, 38.10, 14, 14),        "'", 222, 0, 0, color, "0034", keyboardLayout });
-    MapKeyboard.insert(40, KeyboardButtonInfo{QPoint(261.79, 45.10), QRect(254.79, 38.10, 14, 14),    "Enter",  13, 0, 0, color, "0028", keyboardLayout });
+    MapKeyboard.insert(28, KeyboardButtonInfo{QPoint( 16, 47), QRect(  0, 38, 32, 18), "CapsLock",  20, 0, 0, color, "0039", keyboardLayout });
+    MapKeyboard.insert(29, KeyboardButtonInfo{QPoint( 42, 47), QRect( 33, 38, 18, 18),        "A",  65, 0, 0, color, "0004", keyboardLayout });
+    MapKeyboard.insert(30, KeyboardButtonInfo{QPoint( 61, 47), QRect( 52, 38, 18, 18),        "S",  83, 0, 0, color, "0016", keyboardLayout });
+    MapKeyboard.insert(31, KeyboardButtonInfo{QPoint( 80, 47), QRect( 71, 38, 18, 18),        "D",  68, 0, 0, color, "0007", keyboardLayout });
+    MapKeyboard.insert(32, KeyboardButtonInfo{QPoint( 99, 47), QRect( 90, 38, 18, 18),        "F",  70, 0, 0, color, "0009", keyboardLayout });
+    MapKeyboard.insert(33, KeyboardButtonInfo{QPoint(118, 47), QRect(109, 38, 18, 18),        "G",  71, 0, 0, color, "000A", keyboardLayout });
+    MapKeyboard.insert(34, KeyboardButtonInfo{QPoint(137, 47), QRect(128, 38, 18, 18),        "H",  72, 0, 0, color, "000B", keyboardLayout });
+    MapKeyboard.insert(35, KeyboardButtonInfo{QPoint(156, 47), QRect(147, 38, 18, 18),        "J",  74, 0, 0, color, "000D", keyboardLayout });
+    MapKeyboard.insert(36, KeyboardButtonInfo{QPoint(175, 47), QRect(166, 38, 18, 18),        "K",  75, 0, 0, color, "000E", keyboardLayout });
+    MapKeyboard.insert(37, KeyboardButtonInfo{QPoint(194, 47), QRect(185, 38, 18, 18),        "L",  76, 0, 0, color, "000F", keyboardLayout });
+    MapKeyboard.insert(38, KeyboardButtonInfo{QPoint(213, 47), QRect(204, 38, 18, 18),        ";", 186, 0, 0, color, "0033", keyboardLayout });
+    MapKeyboard.insert(39, KeyboardButtonInfo{QPoint(232, 47), QRect(223, 38, 18, 18),        "'", 222, 0, 0, color, "0034", keyboardLayout });
+    MapKeyboard.insert(40, KeyboardButtonInfo{QPoint(260, 47), QRect(242, 38, 36, 18),    "Enter",  14, 0, 0, color, "0028", keyboardLayout });
 
-    MapKeyboard.insert(42, KeyboardButtonInfo{QPoint( 18.91, 64.15), QRect( 11.91, 57.15, 14, 14),  "Shift L", 160, 0, 0, color, "00E1", keyboardLayout });
-    MapKeyboard.insert(43, KeyboardButtonInfo{QPoint( 49.86, 64.15), QRect( 42.86, 57.15, 14, 14),        "Z",  90, 0, 0, color, "001D", keyboardLayout });
-    MapKeyboard.insert(44, KeyboardButtonInfo{QPoint( 68.91, 64.15), QRect( 61.91, 57.15, 14, 14),        "X",  88, 0, 0, color, "001B", keyboardLayout });
-    MapKeyboard.insert(45, KeyboardButtonInfo{QPoint( 87.96, 64.15), QRect( 80.96, 57.15, 14, 14),        "C",  67, 0, 0, color, "0006", keyboardLayout });
-    MapKeyboard.insert(46, KeyboardButtonInfo{QPoint(107.01, 64.15), QRect(100.01, 57.15, 14, 14),        "V",  86, 0, 0, color, "0019", keyboardLayout });
-    MapKeyboard.insert(47, KeyboardButtonInfo{QPoint(126.06, 64.15), QRect(119.06, 57.15, 14, 14),        "B",  66, 0, 0, color, "0005", keyboardLayout });
-    MapKeyboard.insert(48, KeyboardButtonInfo{QPoint(145.11, 64.15), QRect(138.11, 57.15, 14, 14),        "N",  78, 0, 0, color, "0011", keyboardLayout });
-    MapKeyboard.insert(49, KeyboardButtonInfo{QPoint(164.16, 64.15), QRect(157.16, 57.15, 14, 14),        "M",  77, 0, 0, color, "0010", keyboardLayout });
-    MapKeyboard.insert(50, KeyboardButtonInfo{QPoint(183.21, 64.15), QRect(176.21, 57.15, 14, 14),        "<", 188, 0, 0, color, "0036", keyboardLayout });
-    MapKeyboard.insert(51, KeyboardButtonInfo{QPoint(202.26, 64.15), QRect(195.26, 57.15, 14, 14),        ">", 190, 0, 0, color, "0037", keyboardLayout });
-    MapKeyboard.insert(52, KeyboardButtonInfo{QPoint(221.31, 64.15), QRect(214.31, 57.15, 14, 14),        "?", 191, 0, 0, color, "0038", keyboardLayout });
-    MapKeyboard.insert(53, KeyboardButtonInfo{QPoint(257.03, 64.15), QRect(250.03, 57.15, 14, 14),  "Shift R", 161, 0, 0, color, "00E5", keyboardLayout });
+    MapKeyboard.insert(42, KeyboardButtonInfo{QPoint( 20, 66), QRect(  0, 57, 40, 18),  "Shift L", 160, 0, 0, color, "00E1", keyboardLayout });
+    MapKeyboard.insert(43, KeyboardButtonInfo{QPoint( 50, 66), QRect( 41, 57, 18, 18),        "Z",  90, 0, 0, color, "001D", keyboardLayout });
+    MapKeyboard.insert(44, KeyboardButtonInfo{QPoint( 69, 66), QRect( 60, 57, 18, 18),        "X",  88, 0, 0, color, "001B", keyboardLayout });
+    MapKeyboard.insert(45, KeyboardButtonInfo{QPoint( 88, 66), QRect( 79, 57, 18, 18),        "C",  67, 0, 0, color, "0006", keyboardLayout });
+    MapKeyboard.insert(46, KeyboardButtonInfo{QPoint(107, 66), QRect( 98, 57, 18, 18),        "V",  86, 0, 0, color, "0019", keyboardLayout });
+    MapKeyboard.insert(47, KeyboardButtonInfo{QPoint(126, 66), QRect(117, 57, 18, 18),        "B",  66, 0, 0, color, "0005", keyboardLayout });
+    MapKeyboard.insert(48, KeyboardButtonInfo{QPoint(145, 66), QRect(136, 57, 18, 18),        "N",  78, 0, 0, color, "0011", keyboardLayout });
+    MapKeyboard.insert(49, KeyboardButtonInfo{QPoint(164, 66), QRect(155, 57, 18, 18),        "M",  77, 0, 0, color, "0010", keyboardLayout });
+    MapKeyboard.insert(50, KeyboardButtonInfo{QPoint(183, 66), QRect(174, 57, 18, 18),        "<", 188, 0, 0, color, "0036", keyboardLayout });
+    MapKeyboard.insert(51, KeyboardButtonInfo{QPoint(202, 66), QRect(193, 57, 18, 18),        ">", 190, 0, 0, color, "0037", keyboardLayout });
+    MapKeyboard.insert(52, KeyboardButtonInfo{QPoint(221, 66), QRect(212, 57, 18, 18),        "?", 191, 0, 0, color, "0038", keyboardLayout });
+    MapKeyboard.insert(53, KeyboardButtonInfo{QPoint(254, 66), QRect(231, 57, 47, 18),  "Shift R", 161, 0, 0, color, "00E5", keyboardLayout });
 
-    MapKeyboard.insert(56, KeyboardButtonInfo{QPoint(  9.39, 83.20), QRect(  2.39, 76.20, 14, 14),   "Ctrl L", 162, 0, 0, color, "00E0", keyboardLayout });
-    MapKeyboard.insert(57, KeyboardButtonInfo{QPoint( 33.20, 83.20), QRect( 26.20, 76.20, 14, 14),    "Win L",  91, 0, 0, color, "00E3", keyboardLayout });
-    MapKeyboard.insert(58, KeyboardButtonInfo{QPoint( 57.01, 83.20), QRect( 50.01, 76.20, 14, 14),    "Alt L", 164, 0, 0, color, "00E2", keyboardLayout });
-    MapKeyboard.insert(61, KeyboardButtonInfo{QPoint(128.44, 83.20), QRect(121.44, 76.20, 14, 14),    "Space",  32, 0, 0, color, "002C", keyboardLayout });
-    MapKeyboard.insert(64, KeyboardButtonInfo{QPoint(199.89, 83.20), QRect(192.89, 76.20, 14, 14),    "Alt R", 165, 0, 0, color, "00E6", keyboardLayout });
-    MapKeyboard.insert(65, KeyboardButtonInfo{QPoint(223.70, 83.20), QRect(216.70, 76.20, 14, 14),       "Fn", 999, 0, 0, color, "00FE", keyboardLayout });
-    MapKeyboard.insert(66, KeyboardButtonInfo{QPoint(247.51, 83.20), QRect(240.51, 76.20, 14, 14),     "Menu", 000, 0, 0, color, "0076", keyboardLayout });
-    MapKeyboard.insert(67, KeyboardButtonInfo{QPoint(271.32, 83.20), QRect(264.32, 76.20, 14, 14),   "Ctrl R", 163, 0, 0, color, "00E4", keyboardLayout });
+    MapKeyboard.insert(56, KeyboardButtonInfo{QPoint( 11, 85), QRect(  0, 76, 22, 18),   "Ctrl L", 162, 0, 0, color, "00E0", keyboardLayout });
+    MapKeyboard.insert(57, KeyboardButtonInfo{QPoint( 34, 85), QRect( 23, 76, 22, 18),    "Win L",  91, 0, 0, color, "00E3", keyboardLayout });
+    MapKeyboard.insert(58, KeyboardButtonInfo{QPoint( 57, 85), QRect( 46, 76, 22, 18),    "Alt L", 164, 0, 0, color, "00E2", keyboardLayout });
+    MapKeyboard.insert(61, KeyboardButtonInfo{QPoint(128, 85), QRect( 69, 76,117, 18),    "Space",  32, 0, 0, color, "002C", keyboardLayout });
+    MapKeyboard.insert(64, KeyboardButtonInfo{QPoint(198, 85), QRect(187, 76, 22, 18),    "Alt R", 165, 0, 0, color, "00E6", keyboardLayout });
+    MapKeyboard.insert(65, KeyboardButtonInfo{QPoint(221, 85), QRect(210, 76, 22, 18),   "Ctrl R", 163, 0, 0, color, "00E4", keyboardLayout });
+    MapKeyboard.insert(66, KeyboardButtonInfo{QPoint(244, 85), QRect(233, 76, 22, 18),     "Menu", 000, 0, 0, color, "0076", keyboardLayout });
+    MapKeyboard.insert(67, KeyboardButtonInfo{QPoint(267, 85), QRect(256, 76, 22, 18),       "Fn", 999, 0, 0, color, "00FE", keyboardLayout });
+
     return MapKeyboard;
 }
 //读取动态动画内容
@@ -158,7 +159,75 @@ float GY_KeyboardTools::getByteArrayToFloat(QByteArray data)
 
 
 
+/*
+    MapKeyboard.insert( 0, KeyboardButtonInfo{QPoint(  7.00, 7), QRect(  0.00, 0, 14, 14),              "ESC",  27, 0, 0, color, "0029", keyboardLayout});
+    MapKeyboard.insert( 1, KeyboardButtonInfo{QPoint( 26.05, 7), QRect( 19.05, 0, 14, 14),                "1",  49, 0, 0, color, "001E", keyboardLayout});
+    MapKeyboard.insert( 2, KeyboardButtonInfo{QPoint( 45.10, 7), QRect( 38.10, 0, 14, 14),                "2",  50, 0, 0, color, "001F", keyboardLayout});
+    MapKeyboard.insert( 3, KeyboardButtonInfo{QPoint( 64.15, 7), QRect( 57.15, 0, 14, 14),                "3",  51, 0, 0, color, "0020", keyboardLayout});
+    MapKeyboard.insert( 4, KeyboardButtonInfo{QPoint( 83.20, 7), QRect( 76.20, 0, 14, 14),                "4",  52, 0, 0, color, "0021", keyboardLayout});
+    MapKeyboard.insert( 5, KeyboardButtonInfo{QPoint(102.25, 7), QRect( 95.25, 0, 14, 14),                "5",  53, 0, 0, color, "0022", keyboardLayout});
+    MapKeyboard.insert( 6, KeyboardButtonInfo{QPoint(121.30, 7), QRect(114.30, 0, 14, 14),                "6",  54, 0, 0, color, "0023", keyboardLayout});
+    MapKeyboard.insert( 7, KeyboardButtonInfo{QPoint(140.35, 7), QRect(133.35, 0, 14, 14),                "7",  55, 0, 0, color, "0024", keyboardLayout});
+    MapKeyboard.insert( 8, KeyboardButtonInfo{QPoint(159.40, 7), QRect(152.40, 0, 14, 14),                "8",  56, 0, 0, color, "0025", keyboardLayout});
+    MapKeyboard.insert( 9, KeyboardButtonInfo{QPoint(178.45, 7), QRect(171.45, 0, 14, 14),                "9",  57, 0, 0, color, "0026", keyboardLayout});
+    MapKeyboard.insert(10, KeyboardButtonInfo{QPoint(197.50, 7), QRect(190.50, 0, 14, 14),                "0",  48, 0, 0, color, "0027", keyboardLayout});
+    MapKeyboard.insert(11, KeyboardButtonInfo{QPoint(216.55, 7), QRect(209.55, 0, 14, 14),                "-", 189, 0, 0, color, "002D", keyboardLayout});
+    MapKeyboard.insert(12, KeyboardButtonInfo{QPoint(235.60, 7), QRect(228.60, 0, 14, 14),                "+", 187, 0, 0, color, "002E", keyboardLayout});
+    MapKeyboard.insert(13, KeyboardButtonInfo{QPoint(264.17, 7), QRect(257.17, 0, 14, 14),        "Backspace",   8, 0, 0, color, "002A", keyboardLayout});
 
+    MapKeyboard.insert(14, KeyboardButtonInfo{QPoint( 11.76, 26.05), QRect(  4.76, 19.05, 14, 14),      "Tab",   9, 0, 0, color, "002B", keyboardLayout });
+    MapKeyboard.insert(15, KeyboardButtonInfo{QPoint( 35.57, 26.05), QRect( 28.57, 19.05, 14, 14),        "Q",  81, 0, 0, color, "0014", keyboardLayout });
+    MapKeyboard.insert(16, KeyboardButtonInfo{QPoint( 54.62, 26.05), QRect( 47.62, 19.05, 14, 14),        "W",  87, 0, 0, color, "001A", keyboardLayout });
+    MapKeyboard.insert(17, KeyboardButtonInfo{QPoint( 73.67, 26.05), QRect( 66.67, 19.05, 14, 14),        "E",  69, 0, 0, color, "0008", keyboardLayout });
+    MapKeyboard.insert(18, KeyboardButtonInfo{QPoint( 92.72, 26.05), QRect( 85.72, 19.05, 14, 14),        "R",  82, 0, 0, color, "0015", keyboardLayout });
+    MapKeyboard.insert(19, KeyboardButtonInfo{QPoint(111.77, 26.05), QRect(104.77, 19.05, 14, 14),        "T",  84, 0, 0, color, "0017", keyboardLayout });
+    MapKeyboard.insert(20, KeyboardButtonInfo{QPoint(130.82, 26.05), QRect(123.82, 19.05, 14, 14),        "Y",  89, 0, 0, color, "001C", keyboardLayout });
+    MapKeyboard.insert(21, KeyboardButtonInfo{QPoint(149.87, 26.05), QRect(142.87, 19.05, 14, 14),        "U",  85, 0, 0, color, "0018", keyboardLayout });
+    MapKeyboard.insert(22, KeyboardButtonInfo{QPoint(168.92, 26.05), QRect(161.92, 19.05, 14, 14),        "I",  73, 0, 0, color, "000C", keyboardLayout });
+    MapKeyboard.insert(23, KeyboardButtonInfo{QPoint(187.97, 26.05), QRect(180.97, 19.05, 14, 14),        "O",  79, 0, 0, color, "0012", keyboardLayout });
+    MapKeyboard.insert(24, KeyboardButtonInfo{QPoint(207.02, 26.05), QRect(200.02, 19.05, 14, 14),        "P",  80, 0, 0, color, "0013", keyboardLayout });
+    MapKeyboard.insert(25, KeyboardButtonInfo{QPoint(226.07, 26.05), QRect(219.07, 19.05, 14, 14),        "{", 219, 0, 0, color, "002F", keyboardLayout });
+    MapKeyboard.insert(26, KeyboardButtonInfo{QPoint(245.12, 26.05), QRect(238.12, 19.05, 14, 14),        "}", 221, 0, 0, color, "0030", keyboardLayout });
+    MapKeyboard.insert(27, KeyboardButtonInfo{QPoint(268.94, 26.05), QRect(261.94, 19.05, 14, 14),        "|", 220, 0, 0, color, "0031", keyboardLayout });
+
+    MapKeyboard.insert(28, KeyboardButtonInfo{QPoint( 14.14, 45.10), QRect(  7.14, 38.10, 14, 14), "CapsLock",  20, 0, 0, color, "0039", keyboardLayout });
+    MapKeyboard.insert(29, KeyboardButtonInfo{QPoint( 40.34, 45.10), QRect( 33.34, 38.10, 14, 14),        "A",  65, 0, 0, color, "0004", keyboardLayout });
+    MapKeyboard.insert(30, KeyboardButtonInfo{QPoint( 59.39, 45.10), QRect( 52.39, 38.10, 14, 14),        "S",  83, 0, 0, color, "0016", keyboardLayout });
+    MapKeyboard.insert(31, KeyboardButtonInfo{QPoint( 78.44, 45.10), QRect( 71.44, 38.10, 14, 14),        "D",  68, 0, 0, color, "0007", keyboardLayout });
+    MapKeyboard.insert(32, KeyboardButtonInfo{QPoint( 97.49, 45.10), QRect( 90.49, 38.10, 14, 14),        "F",  70, 0, 0, color, "0009", keyboardLayout });
+    MapKeyboard.insert(33, KeyboardButtonInfo{QPoint(116.54, 45.10), QRect(109.54, 38.10, 14, 14),        "G",  71, 0, 0, color, "000A", keyboardLayout });
+    MapKeyboard.insert(34, KeyboardButtonInfo{QPoint(135.59, 45.10), QRect(128.59, 38.10, 14, 14),        "H",  72, 0, 0, color, "000B", keyboardLayout });
+    MapKeyboard.insert(35, KeyboardButtonInfo{QPoint(154.64, 45.10), QRect(147.64, 38.10, 14, 14),        "J",  74, 0, 0, color, "000D", keyboardLayout });
+    MapKeyboard.insert(36, KeyboardButtonInfo{QPoint(173.69, 45.10), QRect(166.69, 38.10, 14, 14),        "K",  75, 0, 0, color, "000E", keyboardLayout });
+    MapKeyboard.insert(37, KeyboardButtonInfo{QPoint(192.74, 45.10), QRect(185.74, 38.10, 14, 14),        "L",  76, 0, 0, color, "000F", keyboardLayout });
+    MapKeyboard.insert(38, KeyboardButtonInfo{QPoint(211.79, 45.10), QRect(204.79, 38.10, 14, 14),        ";", 186, 0, 0, color, "0033", keyboardLayout });
+    MapKeyboard.insert(39, KeyboardButtonInfo{QPoint(230.84, 45.10), QRect(223.84, 38.10, 14, 14),        "'", 222, 0, 0, color, "0034", keyboardLayout });
+    MapKeyboard.insert(40, KeyboardButtonInfo{QPoint(261.79, 45.10), QRect(254.79, 38.10, 14, 14),    "Enter",  13, 0, 0, color, "0028", keyboardLayout });
+
+    MapKeyboard.insert(42, KeyboardButtonInfo{QPoint( 18.91, 64.15), QRect( 11.91, 57.15, 14, 14),  "Shift L", 160, 0, 0, color, "00E1", keyboardLayout });
+    MapKeyboard.insert(43, KeyboardButtonInfo{QPoint( 49.86, 64.15), QRect( 42.86, 57.15, 14, 14),        "Z",  90, 0, 0, color, "001D", keyboardLayout });
+    MapKeyboard.insert(44, KeyboardButtonInfo{QPoint( 68.91, 64.15), QRect( 61.91, 57.15, 14, 14),        "X",  88, 0, 0, color, "001B", keyboardLayout });
+    MapKeyboard.insert(45, KeyboardButtonInfo{QPoint( 87.96, 64.15), QRect( 80.96, 57.15, 14, 14),        "C",  67, 0, 0, color, "0006", keyboardLayout });
+    MapKeyboard.insert(46, KeyboardButtonInfo{QPoint(107.01, 64.15), QRect(100.01, 57.15, 14, 14),        "V",  86, 0, 0, color, "0019", keyboardLayout });
+    MapKeyboard.insert(47, KeyboardButtonInfo{QPoint(126.06, 64.15), QRect(119.06, 57.15, 14, 14),        "B",  66, 0, 0, color, "0005", keyboardLayout });
+    MapKeyboard.insert(48, KeyboardButtonInfo{QPoint(145.11, 64.15), QRect(138.11, 57.15, 14, 14),        "N",  78, 0, 0, color, "0011", keyboardLayout });
+    MapKeyboard.insert(49, KeyboardButtonInfo{QPoint(164.16, 64.15), QRect(157.16, 57.15, 14, 14),        "M",  77, 0, 0, color, "0010", keyboardLayout });
+    MapKeyboard.insert(50, KeyboardButtonInfo{QPoint(183.21, 64.15), QRect(176.21, 57.15, 14, 14),        "<", 188, 0, 0, color, "0036", keyboardLayout });
+    MapKeyboard.insert(51, KeyboardButtonInfo{QPoint(202.26, 64.15), QRect(195.26, 57.15, 14, 14),        ">", 190, 0, 0, color, "0037", keyboardLayout });
+    MapKeyboard.insert(52, KeyboardButtonInfo{QPoint(221.31, 64.15), QRect(214.31, 57.15, 14, 14),        "?", 191, 0, 0, color, "0038", keyboardLayout });
+    MapKeyboard.insert(53, KeyboardButtonInfo{QPoint(257.03, 64.15), QRect(250.03, 57.15, 14, 14),  "Shift R", 161, 0, 0, color, "00E5", keyboardLayout });
+
+    MapKeyboard.insert(56, KeyboardButtonInfo{QPoint(  9.39, 83.20), QRect(  2.39, 76.20, 14, 14),   "Ctrl L", 162, 0, 0, color, "00E0", keyboardLayout });
+    MapKeyboard.insert(57, KeyboardButtonInfo{QPoint( 33.20, 83.20), QRect( 26.20, 76.20, 14, 14),    "Win L",  91, 0, 0, color, "00E3", keyboardLayout });
+    MapKeyboard.insert(58, KeyboardButtonInfo{QPoint( 57.01, 83.20), QRect( 50.01, 76.20, 14, 14),    "Alt L", 164, 0, 0, color, "00E2", keyboardLayout });
+    MapKeyboard.insert(61, KeyboardButtonInfo{QPoint(128.44, 83.20), QRect(121.44, 76.20, 14, 14),    "Space",  32, 0, 0, color, "002C", keyboardLayout });
+    MapKeyboard.insert(64, KeyboardButtonInfo{QPoint(199.89, 83.20), QRect(192.89, 76.20, 14, 14),    "Alt R", 165, 0, 0, color, "00E6", keyboardLayout });
+    MapKeyboard.insert(65, KeyboardButtonInfo{QPoint(223.70, 83.20), QRect(216.70, 76.20, 14, 14),       "Fn", 999, 0, 0, color, "00FE", keyboardLayout });
+    MapKeyboard.insert(66, KeyboardButtonInfo{QPoint(247.51, 83.20), QRect(240.51, 76.20, 14, 14),     "Menu", 000, 0, 0, color, "0076", keyboardLayout });
+    MapKeyboard.insert(67, KeyboardButtonInfo{QPoint(271.32, 83.20), QRect(264.32, 76.20, 14, 14),   "Ctrl R", 163, 0, 0, color, "00E4", keyboardLayout });
+
+
+*/
 
 
 
@@ -170,7 +239,7 @@ float GY_KeyboardTools::getByteArrayToFloat(QByteArray data)
         { value: '0083', key: 'System Wake', key2: '' },
         { value: '0000', key: ' ', key2: 'NO Event' },
         { value: '0001', key: 'Overrun Error', key2: '' },
-        { value: '0002', key: 'FOST Fail', key2: '' },
+        { value: '0002', key: 'FOST Fail', key2: '' },GGG
         { value: '0003', key: 'ErrorUndefined', key2: '' },
         { value: '0004', key: 'A', key2: 'a' },
         { value: '0005', key: 'B', key2: 'b' },

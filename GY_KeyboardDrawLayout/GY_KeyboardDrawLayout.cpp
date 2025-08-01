@@ -22,9 +22,10 @@ GY_KeyboardDrawLayout::GY_KeyboardDrawLayout(QWidget *parent)
     Hook->setGlobalHotKey(false);                               //默认开启钩子
 
     //默认内容
-    this->keboardLayoutSize = 3;                                //默认缩放比例为1
+    this->keboardLayoutSize = 3.2;                                //默认缩放比例为1
     this->keyboardCheck = false;                                //默认不开启键盘检测功能
     this->isCustomizeDraw = false;                              //默认不开启自定义绘制动画
+    this->isKeySimulate = false;                                //默认不开启键帽灯光绘制
     this->dynamicPixmapSize = QPoint(100, 100);                 //默认动态动画大小为100x100
     this->setKeyboardType(GY_KeyboardTools::_Keyboard_60_CN_);  //默认初始化键盘配列为60配列
 
@@ -37,22 +38,6 @@ GY_KeyboardDrawLayout::GY_KeyboardDrawLayout(QWidget *parent)
 GY_KeyboardDrawLayout::~GY_KeyboardDrawLayout()
 {
     delete ui;
-}
-
-
-void GY_KeyboardDrawLayout::test(QString key)
-{
-    QPixmap pixmap(ui->label->size());
-    QPainter painter(&pixmap);
-    pixmap.fill(QColor(0, 0, 0));  // 背景色修改
-    foreach (auto item, mapKeyboardInfo) {
-        if(item._KeyName == key){
-            setDrawKeyBoard(painter, item._Keyborders, Qt::green, item._KeyCenterPoint, Qt::red, item._KeyName, Qt::yellow);
-        }else{
-            setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, Qt::white, item._KeyName, Qt::yellow);
-        }
-    }
-    ui->label->setPixmap(pixmap);   // 更新到窗口部件上
 }
 
 //设置键盘类型
@@ -86,6 +71,7 @@ void GY_KeyboardDrawLayout::setDrawKeyborderLayout()
     QPainter painter(&pixmap);
     pixmap.fill(QColor(0, 0, 0));  // 背景色修改
     foreach (auto item, mapKeyboardInfo) {
+        qDebug() << "绘制键盘 - " << item._KeyName;
         this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, Qt::white, item._KeyName, Qt::yellow);
     }
     ui->label->setPixmap(pixmap);   // 更新到窗口部件上
@@ -195,7 +181,12 @@ void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation)
         QImage newImage = image.scaled(mapKeyboardInfo.first()._KeyboardLayout._MaxWidth, mapKeyboardInfo.first()._KeyboardLayout._MaxHeight ,Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列
         foreach (auto item, mapKeyboardInfo) {
             QColor lightColor = newImage.pixelColor(item._KeyCenterPoint);
-            this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow);
+            if(this->isKeySimulate){
+                this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow,true, true, lightColor);
+            }else{
+                this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow);
+            }
+
         }
     }else{                          //动态动画
         QImage newImage = image.scaled(this->dynamicPixmapSize.x(), this->dynamicPixmapSize.y(), Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列-100x100大小后续改成用户可调节的大小方式-对图片整体方法符合键盘尺寸
@@ -215,7 +206,12 @@ void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation)
             }else{
                 lightColor = newImage.pixelColor(item._KeyCenterPoint.x() + imageOrKeyRatio.x(), item._KeyCenterPoint.y() + imageOrKeyRatio.y());
             }
-            this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow, false);
+            if(this->isKeySimulate){
+                this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow, true, true, lightColor);
+            }else{
+                this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow);
+            }
+
         }
     }
     ui->label->setPixmap(pixmap);   // 更新到窗口部件上
@@ -331,6 +327,11 @@ void GY_KeyboardDrawLayout::slotAnimationDynamicPixmapSize(QPoint size)
 {
     this->dynamicPixmapSize = size;
 }
+//键盘灯光/键帽模拟
+void GY_KeyboardDrawLayout::slotKeyboardSettingKeySimulate(bool isSimulate)
+{
+    this->isKeySimulate = isSimulate;
+}
 //鼠标点击事件
 void GY_KeyboardDrawLayout::mousePressEvent(QMouseEvent *event)
 {
@@ -427,7 +428,8 @@ void GY_KeyboardDrawLayout::setDrawKeyBoard(QPainter &painter, QRect rectboard, 
     pen.setWidth(1);
     painter.setPen(pen);
     painter.setFont(QFont("微软雅黑", 9, QFont::Bold ));
-    painter.drawText(pointCenter.x() - rectboard.width(), pointCenter.y(), text);
+    painter.drawText(pointCenter.x() - (text.count() * keboardLayoutSize), pointCenter.y(), text);  //计算文字位置 当前x点-文本长度 * 放大倍数
+
 }
 
 //键盘按下事件

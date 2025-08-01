@@ -26,7 +26,6 @@ public:
     ~MainWindow();
 
 
-
 private:
     Ui::MainWindow *ui;
     GY_KeyboardDrawLayout *keyboardDrawLayout; //键盘绘制

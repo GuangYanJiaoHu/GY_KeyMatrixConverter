@@ -67,3 +67,9 @@ void GY_KeyboardSettingUi::on_spinBox_Light_valueChanged(int arg1)
     ui->horizontalSlider_Light->setValue(arg1);
 }
 
+//键盘按键模拟 - 键盘灯光/按键模拟
+void GY_KeyboardSettingUi::on_checkBox_KeySimulate_stateChanged(int arg1)
+{
+    emit signalKeyboardSettingKeySimulate(arg1);
+}
+

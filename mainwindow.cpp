@@ -15,15 +15,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     //创建键盘设置界面
     keyboardSettingUi = new GY_KeyboardSettingUi(ui->widget_KeyboardSetting);
-    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingClearKey, keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingClearKey);  //清空按键检测
-    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingDrawSize, keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingDrawSize);  //键盘绘制尺寸
-    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingHook,     keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingHook);      //键盘钩子
-    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingKeyCheck, keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingKeyCheck);  //按键检测功能
+    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingClearKey,   keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingClearKey);   //清空按键检测
+    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingDrawSize,   keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingDrawSize);   //键盘绘制尺寸
+    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingHook,       keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingHook);       //键盘钩子
+    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingKeyCheck,   keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingKeyCheck);   //按键检测功能
+    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingKeySimulate,keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingKeySimulate);//键盘灯光/键帽模拟
     QVBoxLayout *layout2 = new QVBoxLayout(ui->widget_KeyboardSetting);
     layout2->addWidget(keyboardSettingUi);
     layout2->setContentsMargins(0, 0, 0, 0);
-
-
 
     //创建键盘动画模拟界面
     animationSettingUi = new GY_AnimationSettingUi(ui->widget_Animation);
@@ -44,23 +43,17 @@ MainWindow::MainWindow(QWidget *parent)
     layout3->addWidget(animationSettingUi);
     layout3->setContentsMargins(0, 0, 0, 0);
 
-
-
     //bin文件生成
     generateBinFile = new GY_GenerateBinFile();
     QVBoxLayout *layout4 = new QVBoxLayout(ui->widget_GenerateBinFile);
     layout4->addWidget(generateBinFile);
     layout4->setContentsMargins(0, 0, 0, 0);
 
-
-
     //bin文件转换
     convertBinFile = new GY_ConvertBinFile();
     QVBoxLayout *layout5 = new QVBoxLayout(ui->widget_ConvertBinFile);
     layout5->addWidget(convertBinFile);
     layout5->setContentsMargins(0, 0, 0, 0);
-
-
 
     //自定义动画
     animationCustomize = new GY_AnimationCustomize();

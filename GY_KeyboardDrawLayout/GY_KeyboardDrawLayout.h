@@ -27,12 +27,9 @@ public:
     explicit GY_KeyboardDrawLayout(QWidget *parent = nullptr);
     ~GY_KeyboardDrawLayout();
 
-    void test(QString key);//测试专用
-
     void setKeyboardType(GY_KeyboardTools::KeyboardType keyboardType);   //设置键盘类型
     void setKeyboardLayoutSize(double size);    //等比放大与缩小
     void setDrawKeyborderLayout();              //绘制键盘 - 边框布局
-
 
 signals:
     void signalKeyboardDrawLayoutUpdateSimulatePos();    //修改模拟位置完成
@@ -55,7 +52,7 @@ public slots:
     void slotAnimationDynamicExport(QStringList path);          //动态动画导出
     void slotCustomizeAnimationIsDraw(bool isDraw);             //自定义图案绘制
     void slotAnimationDynamicPixmapSize(QPoint size);           //动态动画大小修改
-
+    void slotKeyboardSettingKeySimulate(bool isSimulate);       //键盘灯光/键帽模拟
 private slots:
     void slotKeyPress(GY_KeyboardHook::KeyInfo key);    //键盘按下
     void slotKeyRelease(GY_KeyboardHook::KeyInfo key);  //键盘抬起
@@ -84,7 +81,7 @@ private:
     QPoint dynamicPixmapSize; //动态动画尺寸默认100 * 100
     int keyboardMove = 30, staticAnimationSimulateSpeed = 50, dynamicAnimationSimulateSpeed = 50;      //界面绘制键盘偏移, 静态动画模拟速度，动态动画模拟速度
     double keboardLayoutSize;   //键盘大小
-    bool keyboardCheck, isDynamicSimulationPos, isCustomizeDraw;         //键盘检测功能,，动态动画模拟修改位置, 键盘自定义绘制
+    bool keyboardCheck, isDynamicSimulationPos, isCustomizeDraw, isKeySimulate;         //键盘检测功能,，动态动画模拟修改位置, 键盘自定义绘制
     QTimer *AnimationStaticSimulate, *AnimationDynamicSimulate;
     QMap<int, GY_KeyboardTools::KeyboardButtonInfo> mapKeyboardInfo;
     QStringList listStaticPictureName, listDynamicPictureName;//存放地址每个图片的地址

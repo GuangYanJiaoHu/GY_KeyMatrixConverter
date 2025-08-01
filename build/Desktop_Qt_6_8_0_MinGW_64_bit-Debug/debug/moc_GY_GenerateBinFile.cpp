@@ -43,7 +43,13 @@ constexpr auto qt_meta_stringdata_CLASSGY_GenerateBinFileENDCLASS = QtMocHelpers
     "on_pushButton_Dynamic_clicked",
     "on_pushButton_Deep_clicked",
     "on_pushButton_Export_clicked",
-    "on_pushButton_ReadJson_clicked"
+    "on_pushButton_ReadJson_clicked",
+    "on_comboBox_ShaftType_activated",
+    "index",
+    "on_listWidget_ReadJson_currentTextChanged",
+    "currentText",
+    "on_pushButton_ReadIni_clicked",
+    "on_pushButton_ExportIni_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -56,7 +62,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_GenerateBinFileENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,13 +70,17 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_GenerateBinFileENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   56,    2, 0x08,    1 /* Private */,
-       3,    0,   57,    2, 0x08,    2 /* Private */,
-       4,    0,   58,    2, 0x08,    3 /* Private */,
-       5,    0,   59,    2, 0x08,    4 /* Private */,
-       6,    0,   60,    2, 0x08,    5 /* Private */,
-       7,    0,   61,    2, 0x08,    6 /* Private */,
-       8,    0,   62,    2, 0x08,    7 /* Private */,
+       1,    0,   80,    2, 0x08,    1 /* Private */,
+       3,    0,   81,    2, 0x08,    2 /* Private */,
+       4,    0,   82,    2, 0x08,    3 /* Private */,
+       5,    0,   83,    2, 0x08,    4 /* Private */,
+       6,    0,   84,    2, 0x08,    5 /* Private */,
+       7,    0,   85,    2, 0x08,    6 /* Private */,
+       8,    0,   86,    2, 0x08,    7 /* Private */,
+       9,    1,   87,    2, 0x08,    8 /* Private */,
+      11,    1,   90,    2, 0x08,   10 /* Private */,
+      13,    0,   93,    2, 0x08,   12 /* Private */,
+      14,    0,   94,    2, 0x08,   13 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -78,6 +88,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_GenerateBinFileENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   10,
+    QMetaType::Void, QMetaType::QString,   12,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -106,6 +120,16 @@ Q_CONSTINIT const QMetaObject GY_GenerateBinFile::staticMetaObject = { {
         // method 'on_pushButton_Export_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_ReadJson_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_comboBox_ShaftType_activated'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_listWidget_ReadJson_currentTextChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'on_pushButton_ReadIni_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_ExportIni_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -124,10 +148,13 @@ void GY_GenerateBinFile::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 4: _t->on_pushButton_Deep_clicked(); break;
         case 5: _t->on_pushButton_Export_clicked(); break;
         case 6: _t->on_pushButton_ReadJson_clicked(); break;
+        case 7: _t->on_comboBox_ShaftType_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->on_listWidget_ReadJson_currentTextChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 9: _t->on_pushButton_ReadIni_clicked(); break;
+        case 10: _t->on_pushButton_ExportIni_clicked(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *GY_GenerateBinFile::metaObject() const
@@ -149,13 +176,13 @@ int GY_GenerateBinFile::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 11)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 11;
     }
     return _id;
 }

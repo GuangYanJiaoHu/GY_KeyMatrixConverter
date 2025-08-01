@@ -144,11 +144,11 @@ public:
         scrollArea_Static = new QScrollArea(groupBox);
         scrollArea_Static->setObjectName("scrollArea_Static");
         scrollArea_Static->setFont(font);
-        scrollArea_Static->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOn);
+        scrollArea_Static->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAsNeeded);
         scrollArea_Static->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 406, 490));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 423, 490));
         gridLayout_12 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_12->setObjectName("gridLayout_12");
         gridLayout_12->setVerticalSpacing(7);
@@ -314,11 +314,11 @@ public:
         gridLayout_6->setObjectName("gridLayout_6");
         scrollArea_2 = new QScrollArea(groupBox_2);
         scrollArea_2->setObjectName("scrollArea_2");
-        scrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOn);
+        scrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAsNeeded);
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName("scrollAreaWidgetContents_2");
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 405, 490));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 422, 490));
         gridLayout_14 = new QGridLayout(scrollAreaWidgetContents_2);
         gridLayout_14->setSpacing(7);
         gridLayout_14->setObjectName("gridLayout_14");
@@ -561,7 +561,7 @@ public:
     void retranslateUi(QWidget *GY_AnimationSettingUi)
     {
         GY_AnimationSettingUi->setWindowTitle(QCoreApplication::translate("GY_AnimationSettingUi", "Form", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\351\235\231\346\200\201\345\212\250\347\224\273", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\351\235\231\346\200\201/\345\274\200\346\234\272 \345\212\250\347\224\273", nullptr));
         label_StaticReadPath->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\347\224\273\345\234\260\345\235\200\357\274\232", nullptr));
         pushButton_StaticReadPath->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\350\257\273\345\217\226", nullptr));
         label_StaticOnlySimulate->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\351\200\220\345\270\247\346\250\241\346\213\237\357\274\232", nullptr));
@@ -572,7 +572,7 @@ public:
         label_StaticUi->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\347\225\214\351\235\242\346\250\241\346\213\237\351\200\237\345\272\246\357\274\232", nullptr));
         label_StaticSendMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
         label_StaticUiMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\346\200\201\345\212\250\347\224\273", nullptr));
+        groupBox_2->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\346\200\201/\346\267\261\345\272\246 \345\212\250\347\224\273", nullptr));
         label_DynamicSend_2->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\233\276\351\253\230\357\274\232", nullptr));
         label_PixmapWidth->setText(QCoreApplication::translate("GY_AnimationSettingUi", "PX", nullptr));
         label_PixmapHeight->setText(QCoreApplication::translate("GY_AnimationSettingUi", "PX", nullptr));

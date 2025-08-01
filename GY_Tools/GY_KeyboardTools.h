@@ -14,7 +14,8 @@
 #include <QJsonDocument>
 #include <QJsonValue>
 #include <QJsonArray>
-
+#include <QImage>
+#include <QPainter>
 
 /*
 
