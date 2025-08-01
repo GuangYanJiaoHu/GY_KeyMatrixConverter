@@ -7,6 +7,9 @@ GY_GenerateBinFile::GY_GenerateBinFile(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->tabWidget->setCurrentIndex(0);
+
     //设置动态动画排序 - listwiget可拖动
     ui->listWidget_Deep->setDragEnabled(true);
     ui->listWidget_Deep->setAcceptDrops(true);
@@ -346,8 +349,94 @@ void GY_GenerateBinFile::on_pushButton_ReadIni_clicked()
     ui->doubleSpinBox_rtUpDft->setValue(      settings.value("A_RT_Release").toDouble()    ); //RT抬起值
     settings.endGroup();
 
+    settings.beginGroup("Key_Shaft_B");
+    ui->doubleSpinBox_maxTop_2->setValue(       settings.value("B_MAX_Up").toDouble()        ); //最大上限值
+    ui->doubleSpinBox_maxDefault_2->setValue(   settings.value("B_MAX_Defalut").toDouble()   ); //最大默认值
+    ui->doubleSpinBox_maxBtm_2->setValue(       settings.value("B_MAX_Down").toDouble()      ); //最大下限值
+    ui->doubleSpinBox_minTop_2->setValue(       settings.value("B_MIN_Up").toDouble()        ); //最小上限值
+    ui->doubleSpinBox_minDefault_2->setValue(   settings.value("B_MAX_Default").toDouble()   ); //最小默认值
+    ui->doubleSpinBox_minBtm_2->setValue(       settings.value("B_MIN_Down" ).toDouble()     ); //最小下限值
+    ui->doubleSpinBox_deadZoneUp_2->setValue(   settings.value("B_DeadZoonUp").toDouble()    ); //上死区
+    ui->doubleSpinBox_deadZoneDown_2->setValue( settings.value("B_DeadZoonDown").toDouble()  ); //下死区
+    ui->doubleSpinBox_acoefficientA_2->setValue(settings.value("B_AcoefficientA").toDouble() ); //系数A
+    ui->doubleSpinBox_acoefficientB_2->setValue(settings.value("B_AcoefficientB").toDouble() ); //系数B
+    ui->doubleSpinBox_acoefficientC_2->setValue(settings.value("B_AcoefficientC").toDouble() ); //系数C
+    ui->doubleSpinBox_acoefficientD_2->setValue(settings.value("B_AcoefficientD").toDouble() ); //系数D
+    ui->doubleSpinBox_fhTop_2->setValue(        settings.value("B_RT_FH_Up").toDouble()      ); //RT定高上限
+    ui->doubleSpinBox_fhDnDft_2->setValue(      settings.value("B_RT_FH_Default").toDouble() ); //RT定高默认
+    ui->doubleSpinBox_fhBtm_2->setValue(        settings.value("B_RT_FH_Down").toDouble()    ); //RT定高下限
+    ui->doubleSpinBox_rtTop_2->setValue(        settings.value("B_RT_Up").toDouble()         ); //RT上限值
+    ui->doubleSpinBox_rtBtm_2->setValue(        settings.value("B_RT_Down").toDouble()       ); //RT下限值
+    ui->doubleSpinBox_rtDnDft_2->setValue(      settings.value("B_RT_Click").toDouble()      ); //RT触发值
+    ui->doubleSpinBox_rtUpDft_2->setValue(      settings.value("B_RT_Release").toDouble()    ); //RT抬起值
+    settings.endGroup();
 
+    settings.beginGroup("Key_Shaft_C");
+    ui->doubleSpinBox_maxTop_3->setValue(       settings.value("C_MAX_Up").toDouble()        ); //最大上限值
+    ui->doubleSpinBox_maxDefault_3->setValue(   settings.value("C_MAX_Defalut").toDouble()   ); //最大默认值
+    ui->doubleSpinBox_maxBtm_3->setValue(       settings.value("C_MAX_Down").toDouble()      ); //最大下限值
+    ui->doubleSpinBox_minTop_3->setValue(       settings.value("C_MIN_Up").toDouble()        ); //最小上限值
+    ui->doubleSpinBox_minDefault_3->setValue(   settings.value("C_MAX_Default").toDouble()   ); //最小默认值
+    ui->doubleSpinBox_minBtm_3->setValue(       settings.value("C_MIN_Down" ).toDouble()     ); //最小下限值
+    ui->doubleSpinBox_deadZoneUp_3->setValue(   settings.value("C_DeadZoonUp").toDouble()    ); //上死区
+    ui->doubleSpinBox_deadZoneDown_3->setValue( settings.value("C_DeadZoonDown").toDouble()  ); //下死区
+    ui->doubleSpinBox_acoefficientA_3->setValue(settings.value("C_AcoefficientA").toDouble() ); //系数A
+    ui->doubleSpinBox_acoefficientB_3->setValue(settings.value("C_AcoefficientB").toDouble() ); //系数B
+    ui->doubleSpinBox_acoefficientC_3->setValue(settings.value("C_AcoefficientC").toDouble() ); //系数C
+    ui->doubleSpinBox_acoefficientD_3->setValue(settings.value("C_AcoefficientD").toDouble() ); //系数D
+    ui->doubleSpinBox_fhTop_3->setValue(        settings.value("C_RT_FH_Up").toDouble()      ); //RT定高上限
+    ui->doubleSpinBox_fhDnDft_3->setValue(      settings.value("C_RT_FH_Default").toDouble() ); //RT定高默认
+    ui->doubleSpinBox_fhBtm_3->setValue(        settings.value("C_RT_FH_Down").toDouble()    ); //RT定高下限
+    ui->doubleSpinBox_rtTop_3->setValue(        settings.value("C_RT_Up").toDouble()         ); //RT上限值
+    ui->doubleSpinBox_rtBtm_3->setValue(        settings.value("C_RT_Down").toDouble()       ); //RT下限值
+    ui->doubleSpinBox_rtDnDft_3->setValue(      settings.value("C_RT_Click").toDouble()      ); //RT触发值
+    ui->doubleSpinBox_rtUpDft_3->setValue(      settings.value("C_RT_Release").toDouble()    ); //RT抬起值
+    settings.endGroup();
 
+    settings.beginGroup("Key_Shaft_D");
+    ui->doubleSpinBox_maxTop_4->setValue(       settings.value("D_MAX_Up").toDouble()        ); //最大上限值
+    ui->doubleSpinBox_maxDefault_4->setValue(   settings.value("D_MAX_Defalut").toDouble()   ); //最大默认值
+    ui->doubleSpinBox_maxBtm_4->setValue(       settings.value("D_MAX_Down").toDouble()      ); //最大下限值
+    ui->doubleSpinBox_minTop_4->setValue(       settings.value("D_MIN_Up").toDouble()        ); //最小上限值
+    ui->doubleSpinBox_minDefault_4->setValue(   settings.value("D_MAX_Default").toDouble()   ); //最小默认值
+    ui->doubleSpinBox_minBtm_4->setValue(       settings.value("D_MIN_Down" ).toDouble()     ); //最小下限值
+    ui->doubleSpinBox_deadZoneUp_4->setValue(   settings.value("D_DeadZoonUp").toDouble()    ); //上死区
+    ui->doubleSpinBox_deadZoneDown_4->setValue( settings.value("D_DeadZoonDown").toDouble()  ); //下死区
+    ui->doubleSpinBox_acoefficientA_4->setValue(settings.value("D_AcoefficientA").toDouble() ); //系数A
+    ui->doubleSpinBox_acoefficientB_4->setValue(settings.value("D_AcoefficientB").toDouble() ); //系数B
+    ui->doubleSpinBox_acoefficientC_4->setValue(settings.value("D_AcoefficientC").toDouble() ); //系数C
+    ui->doubleSpinBox_acoefficientD_4->setValue(settings.value("D_AcoefficientD").toDouble() ); //系数D
+    ui->doubleSpinBox_fhTop_4->setValue(        settings.value("D_RT_FH_Up").toDouble()      ); //RT定高上限
+    ui->doubleSpinBox_fhDnDft_4->setValue(      settings.value("D_RT_FH_Default").toDouble() ); //RT定高默认
+    ui->doubleSpinBox_fhBtm_4->setValue(        settings.value("D_RT_FH_Down").toDouble()    ); //RT定高下限
+    ui->doubleSpinBox_rtTop_4->setValue(        settings.value("D_RT_Up").toDouble()         ); //RT上限值
+    ui->doubleSpinBox_rtBtm_4->setValue(        settings.value("D_RT_Down").toDouble()       ); //RT下限值
+    ui->doubleSpinBox_rtDnDft_4->setValue(      settings.value("D_RT_Click").toDouble()      ); //RT触发值
+    ui->doubleSpinBox_rtUpDft_4->setValue(      settings.value("D_RT_Release").toDouble()    ); //RT抬起值
+    settings.endGroup();
+
+    settings.beginGroup("Key_Shaft_E");
+    ui->doubleSpinBox_maxTop_5->setValue(       settings.value("E_MAX_Up").toDouble()        ); //最大上限值
+    ui->doubleSpinBox_maxDefault_5->setValue(   settings.value("E_MAX_Defalut").toDouble()   ); //最大默认值
+    ui->doubleSpinBox_maxBtm_5->setValue(       settings.value("E_MAX_Down").toDouble()      ); //最大下限值
+    ui->doubleSpinBox_minTop_5->setValue(       settings.value("E_MIN_Up").toDouble()        ); //最小上限值
+    ui->doubleSpinBox_minDefault_5->setValue(   settings.value("E_MAX_Default").toDouble()   ); //最小默认值
+    ui->doubleSpinBox_minBtm_5->setValue(       settings.value("E_MIN_Down" ).toDouble()     ); //最小下限值
+    ui->doubleSpinBox_deadZoneUp_5->setValue(   settings.value("E_DeadZoonUp").toDouble()    ); //上死区
+    ui->doubleSpinBox_deadZoneDown_5->setValue( settings.value("E_DeadZoonDown").toDouble()  ); //下死区
+    ui->doubleSpinBox_acoefficientA_5->setValue(settings.value("E_AcoefficientA").toDouble() ); //系数A
+    ui->doubleSpinBox_acoefficientB_5->setValue(settings.value("E_AcoefficientB").toDouble() ); //系数B
+    ui->doubleSpinBox_acoefficientC_5->setValue(settings.value("E_AcoefficientC").toDouble() ); //系数C
+    ui->doubleSpinBox_acoefficientD_5->setValue(settings.value("E_AcoefficientD").toDouble() ); //系数D
+    ui->doubleSpinBox_fhTop_5->setValue(        settings.value("E_RT_FH_Up").toDouble()      ); //RT定高上限
+    ui->doubleSpinBox_fhDnDft_5->setValue(      settings.value("E_RT_FH_Default").toDouble() ); //RT定高默认
+    ui->doubleSpinBox_fhBtm_5->setValue(        settings.value("E_RT_FH_Down").toDouble()    ); //RT定高下限
+    ui->doubleSpinBox_rtTop_5->setValue(        settings.value("E_RT_Up").toDouble()         ); //RT上限值
+    ui->doubleSpinBox_rtBtm_5->setValue(        settings.value("E_RT_Down").toDouble()       ); //RT下限值
+    ui->doubleSpinBox_rtDnDft_5->setValue(      settings.value("E_RT_Click").toDouble()      ); //RT触发值
+    ui->doubleSpinBox_rtUpDft_5->setValue(      settings.value("E_RT_Release").toDouble()    ); //RT抬起值
+    settings.endGroup();
+    qDebug() << "配置文件导入完成";
 }
 
 //导出INI配置文件

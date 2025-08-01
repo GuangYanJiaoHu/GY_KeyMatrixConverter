@@ -71,7 +71,7 @@ void GY_KeyboardDrawLayout::setDrawKeyborderLayout()
     QPainter painter(&pixmap);
     pixmap.fill(QColor(0, 0, 0));  // 背景色修改
     foreach (auto item, mapKeyboardInfo) {
-        qDebug() << "绘制键盘 - " << item._KeyName;
+        //qDebug() << "绘制键盘 - " << item._KeyName;
         this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, Qt::white, item._KeyName, Qt::yellow);
     }
     ui->label->setPixmap(pixmap);   // 更新到窗口部件上

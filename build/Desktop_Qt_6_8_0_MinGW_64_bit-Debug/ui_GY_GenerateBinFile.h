@@ -114,11 +114,15 @@ public:
     QLabel *label_whiteBalance_B;
     QSpinBox *spinBox_whiteBalance_B;
     QFrame *line;
-    QGroupBox *groupBox_2;
+    QWidget *widget_21;
     QGridLayout *gridLayout_27;
-    QScrollArea *scrollArea_7;
-    QWidget *scrollAreaWidgetContents_7;
-    QGridLayout *gridLayout_26;
+    QWidget *widget_4;
+    QGridLayout *gridLayout_30;
+    QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *pushButton_ReadIni;
+    QPushButton *pushButton_ExportIni;
+    QSpacerItem *horizontalSpacer;
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout_16;
@@ -330,13 +334,6 @@ public:
     QLabel *label_rtTop_5;
     QDoubleSpinBox *doubleSpinBox_rtBtm_5;
     QLabel *label_rtBtm_5;
-    QWidget *widget_4;
-    QGridLayout *gridLayout_30;
-    QSpacerItem *horizontalSpacer_2;
-    QPushButton *pushButton_ReadIni;
-    QPushButton *pushButton_ExportIni;
-    QSpacerItem *horizontalSpacer;
-    QSpacerItem *horizontalSpacer_3;
     QWidget *tab_3;
     QPushButton *pushButton_Export;
     QWidget *layoutWidget;
@@ -776,11 +773,7 @@ public:
         groupBox = new QGroupBox(scrollAreaWidgetContents_2);
         groupBox->setObjectName("groupBox");
         groupBox->setMaximumSize(QSize(220, 16777215));
-        QFont font5;
-        font5.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
-        font5.setPointSize(9);
-        font5.setBold(true);
-        groupBox->setFont(font5);
+        groupBox->setFont(font1);
         groupBox->setMouseTracking(false);
         groupBox->setTabletTracking(false);
         groupBox->setAcceptDrops(false);
@@ -964,27 +957,55 @@ public:
 
         gridLayout_7->addWidget(groupBox, 0, 0, 1, 1);
 
-        groupBox_2 = new QGroupBox(scrollAreaWidgetContents_2);
-        groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        gridLayout_27 = new QGridLayout(groupBox_2);
+        widget_21 = new QWidget(scrollAreaWidgetContents_2);
+        widget_21->setObjectName("widget_21");
+        gridLayout_27 = new QGridLayout(widget_21);
         gridLayout_27->setObjectName("gridLayout_27");
         gridLayout_27->setHorizontalSpacing(0);
         gridLayout_27->setVerticalSpacing(3);
-        gridLayout_27->setContentsMargins(0, 0, 0, 0);
-        scrollArea_7 = new QScrollArea(groupBox_2);
-        scrollArea_7->setObjectName("scrollArea_7");
-        scrollArea_7->setWidgetResizable(true);
-        scrollAreaWidgetContents_7 = new QWidget();
-        scrollAreaWidgetContents_7->setObjectName("scrollAreaWidgetContents_7");
-        scrollAreaWidgetContents_7->setGeometry(QRect(0, 0, 751, 297));
-        gridLayout_26 = new QGridLayout(scrollAreaWidgetContents_7);
-        gridLayout_26->setSpacing(7);
-        gridLayout_26->setObjectName("gridLayout_26");
-        gridLayout_26->setContentsMargins(0, 0, 0, 0);
-        stackedWidget = new QStackedWidget(scrollAreaWidgetContents_7);
+        gridLayout_27->setContentsMargins(0, 0, 0, 2);
+        widget_4 = new QWidget(widget_21);
+        widget_4->setObjectName("widget_4");
+        gridLayout_30 = new QGridLayout(widget_4);
+        gridLayout_30->setSpacing(0);
+        gridLayout_30->setObjectName("gridLayout_30");
+        gridLayout_30->setContentsMargins(0, 0, 0, 3);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_30->addItem(horizontalSpacer_2, 0, 2, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_30->addItem(horizontalSpacer_3, 0, 4, 1, 1);
+
+        pushButton_ReadIni = new QPushButton(widget_4);
+        pushButton_ReadIni->setObjectName("pushButton_ReadIni");
+        pushButton_ReadIni->setMinimumSize(QSize(300, 45));
+        pushButton_ReadIni->setMaximumSize(QSize(16777215, 45));
+        pushButton_ReadIni->setFont(font4);
+
+        gridLayout_30->addWidget(pushButton_ReadIni, 0, 1, 1, 1);
+
+        pushButton_ExportIni = new QPushButton(widget_4);
+        pushButton_ExportIni->setObjectName("pushButton_ExportIni");
+        pushButton_ExportIni->setMinimumSize(QSize(300, 45));
+        pushButton_ExportIni->setMaximumSize(QSize(16777215, 45));
+        pushButton_ExportIni->setFont(font4);
+        pushButton_ExportIni->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);"));
+
+        gridLayout_30->addWidget(pushButton_ExportIni, 0, 3, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_30->addItem(horizontalSpacer, 0, 0, 1, 1);
+
+
+        gridLayout_27->addWidget(widget_4, 1, 0, 1, 1);
+
+        stackedWidget = new QStackedWidget(widget_21);
         stackedWidget->setObjectName("stackedWidget");
         stackedWidget->setMaximumSize(QSize(16777215, 16777215));
+        stackedWidget->setLineWidth(0);
         page = new QWidget();
         page->setObjectName("page");
         gridLayout_16 = new QGridLayout(page);
@@ -2550,52 +2571,10 @@ public:
 
         stackedWidget->addWidget(page_5);
 
-        gridLayout_26->addWidget(stackedWidget, 0, 0, 1, 1);
-
-        scrollArea_7->setWidget(scrollAreaWidgetContents_7);
-
-        gridLayout_27->addWidget(scrollArea_7, 0, 0, 1, 1);
-
-        widget_4 = new QWidget(groupBox_2);
-        widget_4->setObjectName("widget_4");
-        gridLayout_30 = new QGridLayout(widget_4);
-        gridLayout_30->setSpacing(0);
-        gridLayout_30->setObjectName("gridLayout_30");
-        gridLayout_30->setContentsMargins(0, 0, 0, 3);
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_30->addItem(horizontalSpacer_2, 0, 2, 1, 1);
-
-        pushButton_ReadIni = new QPushButton(widget_4);
-        pushButton_ReadIni->setObjectName("pushButton_ReadIni");
-        pushButton_ReadIni->setMinimumSize(QSize(300, 45));
-        pushButton_ReadIni->setMaximumSize(QSize(16777215, 45));
-        pushButton_ReadIni->setFont(font4);
-
-        gridLayout_30->addWidget(pushButton_ReadIni, 0, 1, 1, 1);
-
-        pushButton_ExportIni = new QPushButton(widget_4);
-        pushButton_ExportIni->setObjectName("pushButton_ExportIni");
-        pushButton_ExportIni->setMinimumSize(QSize(300, 45));
-        pushButton_ExportIni->setMaximumSize(QSize(16777215, 45));
-        pushButton_ExportIni->setFont(font4);
-        pushButton_ExportIni->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);"));
-
-        gridLayout_30->addWidget(pushButton_ExportIni, 0, 3, 1, 1);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_30->addItem(horizontalSpacer, 0, 0, 1, 1);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_30->addItem(horizontalSpacer_3, 0, 4, 1, 1);
+        gridLayout_27->addWidget(stackedWidget, 0, 0, 1, 1);
 
 
-        gridLayout_27->addWidget(widget_4, 1, 0, 1, 1);
-
-
-        gridLayout_7->addWidget(groupBox_2, 0, 1, 1, 1);
+        gridLayout_7->addWidget(widget_21, 0, 1, 1, 1);
 
         scrollArea_2->setWidget(scrollAreaWidgetContents_2);
 
@@ -2607,10 +2586,10 @@ public:
         pushButton_Export = new QPushButton(tab_3);
         pushButton_Export->setObjectName("pushButton_Export");
         pushButton_Export->setGeometry(QRect(80, 80, 231, 111));
-        QFont font6;
-        font6.setPointSize(17);
-        font6.setBold(true);
-        pushButton_Export->setFont(font6);
+        QFont font5;
+        font5.setPointSize(17);
+        font5.setBold(true);
+        pushButton_Export->setFont(font5);
         layoutWidget = new QWidget(tab_3);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(40, 20, 362, 39));
@@ -2621,11 +2600,11 @@ public:
         label_dynamic_2->setObjectName("label_dynamic_2");
         label_dynamic_2->setMinimumSize(QSize(100, 0));
         label_dynamic_2->setMaximumSize(QSize(100, 16777215));
-        QFont font7;
-        font7.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
-        font7.setPointSize(14);
-        font7.setBold(true);
-        label_dynamic_2->setFont(font7);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font6.setPointSize(14);
+        font6.setBold(true);
+        label_dynamic_2->setFont(font6);
         label_dynamic_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);"));
 
         horizontalLayout_8->addWidget(label_dynamic_2);
@@ -2635,11 +2614,11 @@ public:
         comboBox_keyboardType->addItem(QString());
         comboBox_keyboardType->setObjectName("comboBox_keyboardType");
         comboBox_keyboardType->setMinimumSize(QSize(140, 0));
-        QFont font8;
-        font8.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
-        font8.setPointSize(13);
-        font8.setBold(true);
-        comboBox_keyboardType->setFont(font8);
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font7.setPointSize(13);
+        font7.setBold(true);
+        comboBox_keyboardType->setFont(font7);
         comboBox_keyboardType->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         comboBox_keyboardType->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
 "background-color: rgb(60, 60, 60);"));
@@ -2697,7 +2676,8 @@ public:
         label_keyMax->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\214\211\351\224\256\346\234\200\345\244\247\345\200\274", nullptr));
         pushButton_keyMaxorMinValue->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\241\256\350\256\244\346\214\211\351\224\256\351\273\230\350\256\244\345\200\274", nullptr));
         label_whiteBalance_B->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\231\275\345\271\263\350\241\241B", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264\344\277\241\346\201\257", nullptr));
+        pushButton_ReadIni->setText(QCoreApplication::translate("GY_GenerateBinFile", "\345\215\225\347\213\254\345\257\274\345\205\245ini\351\205\215\347\275\256", nullptr));
+        pushButton_ExportIni->setText(QCoreApplication::translate("GY_GenerateBinFile", "\345\257\274\345\207\272ini\351\205\215\347\275\256\346\226\207\344\273\266", nullptr));
         groupBox_3->setTitle(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\344\275\223\344\277\241\346\201\257A", nullptr));
         label_acoefficientA->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
         label_deadZoneDown->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
@@ -2798,8 +2778,6 @@ public:
         label_rtUpDft_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
         label_rtTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
         label_rtBtm_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
-        pushButton_ReadIni->setText(QCoreApplication::translate("GY_GenerateBinFile", "\345\215\225\347\213\254\345\257\274\345\205\245ini\351\205\215\347\275\256", nullptr));
-        pushButton_ExportIni->setText(QCoreApplication::translate("GY_GenerateBinFile", "\345\257\274\345\207\272ini\351\205\215\347\275\256\346\226\207\344\273\266", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("GY_GenerateBinFile", "\344\277\241\346\201\257\351\205\215\347\275\256", nullptr));
         pushButton_Export->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\200\351\224\256\345\257\274\345\207\272\351\205\215\347\275\256", nullptr));
         label_dynamic_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\233\230\347\261\273\345\236\213\357\274\232", nullptr));

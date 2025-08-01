@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->tabWidget->setCurrentIndex(0);  //显示第一页
+
     //创建键盘绘制区域
     keyboardDrawLayout = new GY_KeyboardDrawLayout(ui->widget_keyboardLayout);
     QVBoxLayout *layout = new QVBoxLayout(ui->widget_keyboardLayout);

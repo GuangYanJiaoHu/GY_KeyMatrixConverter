@@ -197,7 +197,7 @@ QPushButton:pressed{
              <enum>QTabWidget::TabShape::Rounded</enum>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>3</number>
             </property>
             <property name="elideMode">
              <enum>Qt::TextElideMode::ElideNone</enum>
