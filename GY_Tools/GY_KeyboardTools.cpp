@@ -61,7 +61,7 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
     MapKeyboard.insert(37, KeyboardButtonInfo{QPoint(194, 47), QRect(185, 38, 18, 18),        "L",  76, 0, 0, color, "000F", keyboardLayout });
     MapKeyboard.insert(38, KeyboardButtonInfo{QPoint(213, 47), QRect(204, 38, 18, 18),        ";", 186, 0, 0, color, "0033", keyboardLayout });
     MapKeyboard.insert(39, KeyboardButtonInfo{QPoint(232, 47), QRect(223, 38, 18, 18),        "'", 222, 0, 0, color, "0034", keyboardLayout });
-    MapKeyboard.insert(40, KeyboardButtonInfo{QPoint(260, 47), QRect(242, 38, 36, 18),    "Enter",  14, 0, 0, color, "0028", keyboardLayout });
+    MapKeyboard.insert(40, KeyboardButtonInfo{QPoint(260, 47), QRect(242, 38, 36, 18),    "Enter",  13, 0, 0, color, "0028", keyboardLayout });
 
     MapKeyboard.insert(42, KeyboardButtonInfo{QPoint( 20, 66), QRect(  0, 57, 40, 18),  "Shift L", 160, 0, 0, color, "00E1", keyboardLayout });
     MapKeyboard.insert(43, KeyboardButtonInfo{QPoint( 50, 66), QRect( 41, 57, 18, 18),        "Z",  90, 0, 0, color, "001D", keyboardLayout });

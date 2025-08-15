@@ -418,6 +418,10 @@ Makefile: ../../GY_KeyMatrixConverter.pro D:/Qt/6.8.0/mingw_64/mkspecs/win32-g++
 		../../GY_KeyMatrixConverter.pro \
 		D:/Qt/6.8.0/mingw_64/lib/Qt6Widgets.prl \
 		D:/Qt/6.8.0/mingw_64/lib/Qt6Gui.prl \
+		D:/Qt/6.8.0/mingw_64/lib/Qt6Sql.prl \
+		D:/Qt/6.8.0/mingw_64/lib/Qt6Bluetooth.prl \
+		D:/Qt/6.8.0/mingw_64/lib/Qt6Network.prl \
+		D:/Qt/6.8.0/mingw_64/lib/Qt6Concurrent.prl \
 		D:/Qt/6.8.0/mingw_64/lib/Qt6Core.prl \
 		D:/Qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl \
 		.qmake.stash \
@@ -771,6 +775,10 @@ D:/Qt/6.8.0/mingw_64/mkspecs/features/lex.prf:
 ../../GY_KeyMatrixConverter.pro:
 D:/Qt/6.8.0/mingw_64/lib/Qt6Widgets.prl:
 D:/Qt/6.8.0/mingw_64/lib/Qt6Gui.prl:
+D:/Qt/6.8.0/mingw_64/lib/Qt6Sql.prl:
+D:/Qt/6.8.0/mingw_64/lib/Qt6Bluetooth.prl:
+D:/Qt/6.8.0/mingw_64/lib/Qt6Network.prl:
+D:/Qt/6.8.0/mingw_64/lib/Qt6Concurrent.prl:
 D:/Qt/6.8.0/mingw_64/lib/Qt6Core.prl:
 D:/Qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl:
 .qmake.stash:

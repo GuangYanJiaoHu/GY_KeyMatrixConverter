@@ -6,6 +6,9 @@ GY_AnimationSettingUi::GY_AnimationSettingUi(QWidget *parent)
     , ui(new Ui::GY_AnimationSettingUi)
 {
     ui->setupUi(this);
+    this->isDownloadKeyboardStatic = false;     //初始化默认不下发键盘模拟
+    this->isDownloadKeyboardDynamic = false;    //初始化默认不下发键盘模拟
+
     ui->pushButton_StaticStart->setCheckable(true);             //开启静态动画模拟 - 按钮T/F状态
     ui->pushButton_DynamicStart->setCheckable(true);            //开启动态动画模拟 - 按钮T/F状态
     ui->pushButton_DynamicUpdateSimulatePos->setCheckable(true);//开启动态动画模拟位置更改 - 按钮T/F状态
@@ -38,12 +41,16 @@ void GY_AnimationSettingUi::on_pushButton_StaticReadPath_clicked()
 //静态动画开始模拟
 void GY_AnimationSettingUi::on_pushButton_StaticStart_clicked()
 {
+    if(listStaticPicturePath.isEmpty()){
+        QMessageBox::critical(this, "错误提示", "先选择图片，在进行模拟");
+        return ;
+    }
     if(!ui->pushButton_StaticStart->isChecked()){      //默认状态
         ui->pushButton_StaticStart->setText("开始模拟");
-        emit signalAnimationStaticSimulate(ui->lineEdit_StaticReadPath->text() + "/", listStaticPicturePath, false); //界面停止模拟装状态
+        emit signalAnimationStaticSimulate(ui->lineEdit_StaticReadPath->text() + "/", listStaticPicturePath, false, this->isDownloadKeyboardStatic); //界面停止模拟装状态
     }else{                                              //点击后状态，显示停止模拟
         ui->pushButton_StaticStart->setText("停止模拟");
-        emit signalAnimationStaticSimulate(ui->lineEdit_StaticReadPath->text() + "/", listStaticPicturePath, true);  //界面开始模拟状态
+        emit signalAnimationStaticSimulate(ui->lineEdit_StaticReadPath->text() + "/", listStaticPicturePath, true, this->isDownloadKeyboardStatic);  //界面开始模拟状态
     }
 }
 
@@ -51,9 +58,10 @@ void GY_AnimationSettingUi::on_pushButton_StaticStart_clicked()
 void GY_AnimationSettingUi::on_comboBox_StaticOnlySimulate_currentIndexChanged(int index)
 {
     if(listStaticPicturePath.isEmpty()){
+        QMessageBox::critical(this, "错误提示", "先选择图片，在进行模拟");
         return ;
     }
-    emit signalAnimationStaticOnlySimulate(ui->lineEdit_StaticReadPath->text() + "/", listStaticPicturePath.at(index));
+    emit signalAnimationStaticOnlySimulate(ui->lineEdit_StaticReadPath->text() + "/", listStaticPicturePath.at(index), this->isDownloadKeyboardStatic);
 }
 
 
@@ -78,39 +86,34 @@ void GY_AnimationSettingUi::on_pushButton_DynamicReadPath_clicked()
 //动态动画开始模拟
 void GY_AnimationSettingUi::on_pushButton_DynamicStart_clicked()
 {
+    if(listDynamicPicturePath.isEmpty()){
+        QMessageBox::critical(this, "错误提示", "先选择图片，在进行模拟");
+        return ;
+    }
     if(!ui->pushButton_DynamicStart->isChecked()){      //默认状态
         ui->pushButton_DynamicStart->setText("开始模拟");
-        emit signalAnimationDynamicSimulate(ui->lineEdit_DynamicReadPath->text() + "/", listDynamicPicturePath, false); //界面停止模拟装状态
+        emit signalAnimationDynamicSimulate(ui->lineEdit_DynamicReadPath->text() + "/", listDynamicPicturePath, false, this->isDownloadKeyboardDynamic); //界面停止模拟装状态
     }else{                                              //点击后状态，显示停止模拟
         ui->pushButton_DynamicStart->setText("停止模拟");
-        emit signalAnimationDynamicSimulate(ui->lineEdit_DynamicReadPath->text() + "/", listDynamicPicturePath, true);  //界面开始模拟状态
+        emit signalAnimationDynamicSimulate(ui->lineEdit_DynamicReadPath->text() + "/", listDynamicPicturePath, true, this->isDownloadKeyboardDynamic);  //界面开始模拟状态
     }
 }
-
-
 
 //动态动画逐帧模拟
 void GY_AnimationSettingUi::on_comboBox_DynamicOnlySimulate_currentIndexChanged(int index)
 {
     if(listDynamicPicturePath.isEmpty()){
+        QMessageBox::critical(this, "错误提示", "先选择图片，在进行模拟");
         return ;
     }
-    emit signalAnimationDynamicOnlySimulate(ui->lineEdit_DynamicReadPath->text() + "/", listDynamicPicturePath.at(index));
+    emit signalAnimationDynamicOnlySimulate(ui->lineEdit_DynamicReadPath->text() + "/", listDynamicPicturePath.at(index), this->isDownloadKeyboardDynamic);
 }
 
 //静态动画界面速度模拟 - 抬手发送
 void GY_AnimationSettingUi::on_horizontalSlider_StaticUi_sliderReleased()
 {
     //信号对接
-
     emit signalAnimationStaticUiSimulateSpeed(ui->horizontalSlider_StaticUi->value());
-}
-
-//静态动画键盘下发速度模拟 - 抬手发送
-void GY_AnimationSettingUi::on_horizontalSlider_StaticSend_sliderReleased()
-{
-    //信号对接
-    emit signalAnimationStaticSendSimulateSpeed(ui->horizontalSlider_StaticSend->value());
 }
 
 //静态动画界面速度模拟 - 给控件显示专用
@@ -119,11 +122,6 @@ void GY_AnimationSettingUi::on_horizontalSlider_StaticUi_valueChanged(int value)
     ui->label_StaticUiMs->setText(QString("%1ms").arg(value));
 }
 
-//静态动画键盘下发速度模拟 - 给控件显示专用
-void GY_AnimationSettingUi::on_horizontalSlider_StaticSend_valueChanged(int value)
-{
-    ui->label_StaticSendMs->setText(QString("%1ms").arg(value));
-}
 
 //动态动画界面速度模拟 - 抬手发送
 void GY_AnimationSettingUi::on_horizontalSlider_DynamicUi_sliderReleased()
@@ -131,23 +129,10 @@ void GY_AnimationSettingUi::on_horizontalSlider_DynamicUi_sliderReleased()
     emit signalAnimationDynamicUiSimulateSpeed(ui->horizontalSlider_DynamicUi->value());
 }
 
-//动态动画键盘下发速度模拟 - 抬手发送
-void GY_AnimationSettingUi::on_horizontalSlider_DynamicSend_sliderReleased()
-{
-
-    emit signalAnimationDynamicSendSimulateSpeed(ui->horizontalSlider_DynamicSend->value());
-}
-
 //动态动画界面速度模拟 - 给控件显示专用
 void GY_AnimationSettingUi::on_horizontalSlider_DynamicUi_valueChanged(int value)
 {
     ui->label_DynamicUiMs->setText(QString("%1ms").arg(value));
-}
-
-//动态动画键盘下发速度模拟 - 给控件显示专用
-void GY_AnimationSettingUi::on_horizontalSlider_DynamicSend_valueChanged(int value)
-{
-    ui->label_DynamicSendMs->setText(QString("%1ms").arg(value));
 }
 
 //更改动态动画模拟按键位置
@@ -219,5 +204,29 @@ void GY_AnimationSettingUi::on_horizontalSlider_PixmapHeight_valueChanged(int va
 void GY_AnimationSettingUi::on_spinBox_PixmapHeight_valueChanged(int arg1)
 {
     ui->horizontalSlider_PixmapHeight->setValue(arg1);
+}
+
+//静态动画键盘模拟开启
+void GY_AnimationSettingUi::on_checkBox_StaticSend_stateChanged(int arg1)
+{
+    if(arg1){
+        qDebug() << "开启";
+        this->isDownloadKeyboardStatic = true;
+    }else{
+        qDebug() << "关闭";
+        this->isDownloadKeyboardStatic = false;
+    }
+}
+
+//动态动画键盘模拟开启
+void GY_AnimationSettingUi::on_checkBox_DynamicSend_stateChanged(int arg1)
+{
+    if(arg1){
+        qDebug() << "开启";
+        this->isDownloadKeyboardDynamic = true;
+    }else{
+        qDebug() << "关闭";
+        this->isDownloadKeyboardDynamic = false;
+    }
 }
 

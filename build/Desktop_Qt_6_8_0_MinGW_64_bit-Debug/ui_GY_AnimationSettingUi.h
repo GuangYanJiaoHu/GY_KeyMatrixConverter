@@ -53,12 +53,9 @@ public:
     QPushButton *pushButton_StaticExport;
     QWidget *widget_8;
     QGridLayout *gridLayout_8;
-    QLabel *label_StaticSend;
-    QLabel *label_StaticUi;
-    QLabel *label_StaticSendMs;
     QLabel *label_StaticUiMs;
+    QLabel *label_StaticUi;
     QSlider *horizontalSlider_StaticUi;
-    QSlider *horizontalSlider_StaticSend;
     QSpacerItem *verticalSpacer;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_6;
@@ -78,11 +75,8 @@ public:
     QWidget *widget_9;
     QGridLayout *gridLayout_13;
     QLabel *label_DynamicUiMs;
-    QLabel *label_DynamicSend;
     QLabel *label_DynamicUi;
-    QLabel *label_DynamicSendMs;
     QSlider *horizontalSlider_DynamicUi;
-    QSlider *horizontalSlider_DynamicSend;
     QWidget *widget_5;
     QGridLayout *gridLayout_9;
     QLabel *label_DynamicReadPath;
@@ -247,31 +241,18 @@ public:
         gridLayout_8 = new QGridLayout(widget_8);
         gridLayout_8->setObjectName("gridLayout_8");
         gridLayout_8->setContentsMargins(11, 0, 11, 0);
-        label_StaticSend = new QLabel(widget_8);
-        label_StaticSend->setObjectName("label_StaticSend");
-        label_StaticSend->setFont(font1);
-
-        gridLayout_8->addWidget(label_StaticSend, 1, 0, 1, 1);
-
-        label_StaticUi = new QLabel(widget_8);
-        label_StaticUi->setObjectName("label_StaticUi");
-        label_StaticUi->setFont(font1);
-
-        gridLayout_8->addWidget(label_StaticUi, 0, 0, 1, 1);
-
-        label_StaticSendMs = new QLabel(widget_8);
-        label_StaticSendMs->setObjectName("label_StaticSendMs");
-        label_StaticSendMs->setMinimumSize(QSize(50, 0));
-        label_StaticSendMs->setMaximumSize(QSize(50, 16777215));
-
-        gridLayout_8->addWidget(label_StaticSendMs, 1, 2, 1, 1);
-
         label_StaticUiMs = new QLabel(widget_8);
         label_StaticUiMs->setObjectName("label_StaticUiMs");
         label_StaticUiMs->setMinimumSize(QSize(50, 0));
         label_StaticUiMs->setMaximumSize(QSize(50, 16777215));
 
         gridLayout_8->addWidget(label_StaticUiMs, 0, 2, 1, 1);
+
+        label_StaticUi = new QLabel(widget_8);
+        label_StaticUi->setObjectName("label_StaticUi");
+        label_StaticUi->setFont(font1);
+
+        gridLayout_8->addWidget(label_StaticUi, 0, 0, 1, 1);
 
         horizontalSlider_StaticUi = new QSlider(widget_8);
         horizontalSlider_StaticUi->setObjectName("horizontalSlider_StaticUi");
@@ -282,16 +263,6 @@ public:
         horizontalSlider_StaticUi->setOrientation(Qt::Orientation::Horizontal);
 
         gridLayout_8->addWidget(horizontalSlider_StaticUi, 0, 1, 1, 1);
-
-        horizontalSlider_StaticSend = new QSlider(widget_8);
-        horizontalSlider_StaticSend->setObjectName("horizontalSlider_StaticSend");
-        horizontalSlider_StaticSend->setMinimum(10);
-        horizontalSlider_StaticSend->setMaximum(300);
-        horizontalSlider_StaticSend->setPageStep(1);
-        horizontalSlider_StaticSend->setValue(50);
-        horizontalSlider_StaticSend->setOrientation(Qt::Orientation::Horizontal);
-
-        gridLayout_8->addWidget(horizontalSlider_StaticSend, 1, 1, 1, 1);
 
 
         gridLayout_12->addWidget(widget_8, 3, 0, 1, 1);
@@ -347,7 +318,7 @@ public:
 
         horizontalSlider_PixmapHeight = new QSlider(widget_10);
         horizontalSlider_PixmapHeight->setObjectName("horizontalSlider_PixmapHeight");
-        horizontalSlider_PixmapHeight->setMinimum(100);
+        horizontalSlider_PixmapHeight->setMinimum(10);
         horizontalSlider_PixmapHeight->setMaximum(400);
         horizontalSlider_PixmapHeight->setValue(100);
         horizontalSlider_PixmapHeight->setOrientation(Qt::Orientation::Horizontal);
@@ -356,7 +327,7 @@ public:
 
         horizontalSlider_PixmapWidth = new QSlider(widget_10);
         horizontalSlider_PixmapWidth->setObjectName("horizontalSlider_PixmapWidth");
-        horizontalSlider_PixmapWidth->setMinimum(100);
+        horizontalSlider_PixmapWidth->setMinimum(10);
         horizontalSlider_PixmapWidth->setMaximum(400);
         horizontalSlider_PixmapWidth->setValue(100);
         horizontalSlider_PixmapWidth->setOrientation(Qt::Orientation::Horizontal);
@@ -381,16 +352,18 @@ public:
         spinBox_PixmapWidth = new QSpinBox(widget_10);
         spinBox_PixmapWidth->setObjectName("spinBox_PixmapWidth");
         spinBox_PixmapWidth->setMinimumSize(QSize(75, 30));
-        spinBox_PixmapWidth->setMinimum(100);
+        spinBox_PixmapWidth->setMinimum(10);
         spinBox_PixmapWidth->setMaximum(400);
+        spinBox_PixmapWidth->setValue(100);
 
         gridLayout_15->addWidget(spinBox_PixmapWidth, 0, 2, 1, 1);
 
         spinBox_PixmapHeight = new QSpinBox(widget_10);
         spinBox_PixmapHeight->setObjectName("spinBox_PixmapHeight");
         spinBox_PixmapHeight->setMinimumSize(QSize(75, 30));
-        spinBox_PixmapHeight->setMinimum(100);
+        spinBox_PixmapHeight->setMinimum(10);
         spinBox_PixmapHeight->setMaximum(400);
+        spinBox_PixmapHeight->setValue(100);
 
         gridLayout_15->addWidget(spinBox_PixmapHeight, 1, 2, 1, 1);
 
@@ -410,24 +383,11 @@ public:
 
         gridLayout_13->addWidget(label_DynamicUiMs, 0, 2, 1, 1);
 
-        label_DynamicSend = new QLabel(widget_9);
-        label_DynamicSend->setObjectName("label_DynamicSend");
-        label_DynamicSend->setFont(font1);
-
-        gridLayout_13->addWidget(label_DynamicSend, 1, 0, 1, 1);
-
         label_DynamicUi = new QLabel(widget_9);
         label_DynamicUi->setObjectName("label_DynamicUi");
         label_DynamicUi->setFont(font1);
 
         gridLayout_13->addWidget(label_DynamicUi, 0, 0, 1, 1);
-
-        label_DynamicSendMs = new QLabel(widget_9);
-        label_DynamicSendMs->setObjectName("label_DynamicSendMs");
-        label_DynamicSendMs->setMinimumSize(QSize(50, 0));
-        label_DynamicSendMs->setMaximumSize(QSize(50, 16777215));
-
-        gridLayout_13->addWidget(label_DynamicSendMs, 1, 2, 1, 1);
 
         horizontalSlider_DynamicUi = new QSlider(widget_9);
         horizontalSlider_DynamicUi->setObjectName("horizontalSlider_DynamicUi");
@@ -437,15 +397,6 @@ public:
         horizontalSlider_DynamicUi->setOrientation(Qt::Orientation::Horizontal);
 
         gridLayout_13->addWidget(horizontalSlider_DynamicUi, 0, 1, 1, 1);
-
-        horizontalSlider_DynamicSend = new QSlider(widget_9);
-        horizontalSlider_DynamicSend->setObjectName("horizontalSlider_DynamicSend");
-        horizontalSlider_DynamicSend->setMinimum(10);
-        horizontalSlider_DynamicSend->setMaximum(300);
-        horizontalSlider_DynamicSend->setValue(50);
-        horizontalSlider_DynamicSend->setOrientation(Qt::Orientation::Horizontal);
-
-        gridLayout_13->addWidget(horizontalSlider_DynamicSend, 1, 1, 1, 1);
 
 
         gridLayout_14->addWidget(widget_9, 3, 0, 1, 1);
@@ -568,19 +519,15 @@ public:
         checkBox_StaticSend->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\346\250\241\346\213\237\344\270\213\345\217\221\351\224\256\347\233\230", nullptr));
         pushButton_StaticStart->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\274\200\345\247\213\346\250\241\346\213\237", nullptr));
         pushButton_StaticExport->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\257\274\345\207\272\345\212\250\347\224\273\346\226\207\344\273\266", nullptr));
-        label_StaticSend->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\351\224\256\347\233\230\344\270\213\345\217\221\351\200\237\345\272\246\357\274\232", nullptr));
-        label_StaticUi->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\347\225\214\351\235\242\346\250\241\346\213\237\351\200\237\345\272\246\357\274\232", nullptr));
-        label_StaticSendMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
         label_StaticUiMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
+        label_StaticUi->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\347\225\214\351\235\242\346\250\241\346\213\237\351\200\237\345\272\246\357\274\232", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\346\200\201/\346\267\261\345\272\246 \345\212\250\347\224\273", nullptr));
         label_DynamicSend_2->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\233\276\351\253\230\357\274\232", nullptr));
         label_PixmapWidth->setText(QCoreApplication::translate("GY_AnimationSettingUi", "PX", nullptr));
         label_PixmapHeight->setText(QCoreApplication::translate("GY_AnimationSettingUi", "PX", nullptr));
         label_DynamicUi_2->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\233\276\345\256\275\357\274\232", nullptr));
         label_DynamicUiMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
-        label_DynamicSend->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\351\224\256\347\233\230\344\270\213\345\217\221\351\200\237\345\272\246\357\274\232", nullptr));
         label_DynamicUi->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\347\225\214\351\235\242\346\250\241\346\213\237\351\200\237\345\272\246\357\274\232", nullptr));
-        label_DynamicSendMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
         label_DynamicReadPath->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\347\224\273\345\234\260\345\235\200\357\274\232", nullptr));
         pushButton_DynamicReadPath->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\350\257\273\345\217\226", nullptr));
         pushButton_DynamicStart->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\274\200\345\247\213\346\250\241\346\213\237", nullptr));

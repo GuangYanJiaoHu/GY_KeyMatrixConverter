@@ -33,26 +33,27 @@ public:
 
 signals:
     void signalKeyboardDrawLayoutUpdateSimulatePos();    //修改模拟位置完成
+    void signalKeyboardDrawLayoutStaticDownloadSimulate(QList<QString> color);    //静态动画下位机键盘模拟
+    void signalKeyboardDrawLayoutDynamicDownloadSimulate(QList<QString> color);   //动态动画下位机键盘模拟
 
 public slots:
     void slotKeyboardSettingClearKey();                  //清空键盘按键操作
     void slotKeyboardSettingDrawSize(double size);       //调整绘制键盘大小
     void slotKeyboardSettingHook(bool isHook);           //键盘钩子功能-是否开启
     void slotKeyboardSettingKeyCheck(bool isCheck);      //按键检测功能-是否开启
-    void slotAnimationStaticSimulate(QString path, QStringList listStaticPictureName, bool isStart);      //静态动画模拟
-    void slotAnimationDynamicSimulate(QString path, QStringList listDynamicPictureName, bool isStart);    //动态动画模拟
-    void slotAnimationStaticOnlySimulate(QString path, QString onlyName);                   //静态动画逐帧模拟
-    void slotAnimationDynamicOnlySimulate(QString path, QString onlyName);                  //动态动画逐帧模拟
+    void slotAnimationStaticSimulate(QString path, QStringList listStaticPictureName, bool isStart, bool isDownLoadKeyboard);      //静态动画模拟
+    void slotAnimationDynamicSimulate(QString path, QStringList listDynamicPictureName, bool isStart, bool isDownLoadKeyboard);    //动态动画模拟
+    void slotAnimationStaticOnlySimulate(QString path, QString onlyName, bool isDownLoadKeyboard);                   //静态动画逐帧模拟
+    void slotAnimationDynamicOnlySimulate(QString path, QString onlyName, bool isDownLoadKeyboard);                  //动态动画逐帧模拟
     void slotAnimationStaticUiSimulateSpeed(int speed);         //静态ui模拟速度
     void slotAnimationDynamicUiSimulateSpeed(int speed);        //动态ui模拟速度
-    void slotAnimationStaticSendSimulateSpeed(int speed);       //静态键盘下发模拟速度
-    void slotAnimationDynamicSendSimulateSpeed(int speed);      //动态键盘下发模拟速度
     void slotAnimationDynamicUpdateSimulatePos();               //更改动态动画模拟按键位置
     void slotAnimationStaticExport(QStringList path);           //静态动画导出
     void slotAnimationDynamicExport(QStringList path);          //动态动画导出
     void slotCustomizeAnimationIsDraw(bool isDraw);             //自定义图案绘制
     void slotAnimationDynamicPixmapSize(QPoint size);           //动态动画大小修改
     void slotKeyboardSettingKeySimulate(bool isSimulate);       //键盘灯光/键帽模拟
+
 private slots:
     void slotKeyPress(GY_KeyboardHook::KeyInfo key);    //键盘按下
     void slotKeyRelease(GY_KeyboardHook::KeyInfo key);  //键盘抬起
@@ -60,28 +61,17 @@ private slots:
     void slotTimerAnimationDynamicSimulate();           //定时器 - 槽函数 - 动态动画开始模拟
     virtual void mousePressEvent(QMouseEvent *event) override;  //鼠标点击事件
 
-private:/**
-     * @brief setDrawKeyBoard
-     * @param painter
-     * @param rectboard
-     * @param colorRect
-     * @param centerPoint
-     * @param colorLight
-     * @param text
-     * @param colorText
-     * @param isFill
-     * @param colorFill
-     * @param isAnimationType true = 静态动画 || false = 动态动画
-     */
+private:
     void setDrawKeyBoard(QPainter &painter, QRect rectboard, QColor colorRect, QPoint centerPoint, QColor colorLight, QString text, QColor colorText, bool isAnimationType = true, bool isFill = false, QColor colorFill = Qt::red);      //单独绘制一个按键
-    void setAnimationSimulate(QString path, bool isAnimation = true);        //静态/动态动画模拟  默认静态动画
+    void setAnimationSimulate(QString path, bool isAnimation = true, bool isDownLoadKeyboard = false);        //静态/动态动画模拟  默认静态动画
+
 private:
     Ui::GY_KeyboardDrawLayout *ui;
     GY_KeyboardHook *Hook;      //按键钩子检测
     QPoint dynamicPixmapSize; //动态动画尺寸默认100 * 100
-    int keyboardMove = 30, staticAnimationSimulateSpeed = 50, dynamicAnimationSimulateSpeed = 50;      //界面绘制键盘偏移, 静态动画模拟速度，动态动画模拟速度
+    int keyboardMove = 30, staticAnimationSimulateSpeed = 50, dynamicAnimationSimulateSpeed = 50, staticDownloadSendSimulateSpeed = 50, dynamicDownloadSendSimulateSpeed = 50;      //界面绘制键盘偏移, 静态动画模拟速度，动态动画模拟速度
     double keboardLayoutSize;   //键盘大小
-    bool keyboardCheck, isDynamicSimulationPos, isCustomizeDraw, isKeySimulate;         //键盘检测功能,，动态动画模拟修改位置, 键盘自定义绘制
+    bool keyboardCheck, isDynamicSimulationPos, isCustomizeDraw, isKeySimulate, isDownloadKeyboardStatic, isDownloadKeyboardDynamic;   //动画下发键盘模拟;         //键盘检测功能,，动态动画模拟修改位置, 键盘自定义绘制
     QTimer *AnimationStaticSimulate, *AnimationDynamicSimulate;
     QMap<int, GY_KeyboardTools::KeyboardButtonInfo> mapKeyboardInfo;
     QStringList listStaticPictureName, listDynamicPictureName;//存放地址每个图片的地址

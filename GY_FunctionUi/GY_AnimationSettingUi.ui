@@ -317,53 +317,6 @@ QPushButton:pressed{
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label_StaticSend">
-                  <property name="font">
-                   <font>
-                    <family>微软雅黑</family>
-                    <pointsize>10</pointsize>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>键盘下发速度：</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label_StaticUi">
-                  <property name="font">
-                   <font>
-                    <family>微软雅黑</family>
-                    <pointsize>10</pointsize>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>界面模拟速度：</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="2">
-                 <widget class="QLabel" name="label_StaticSendMs">
-                  <property name="minimumSize">
-                   <size>
-                    <width>50</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>50</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>50ms</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="2">
                  <widget class="QLabel" name="label_StaticUiMs">
                   <property name="minimumSize">
@@ -383,27 +336,22 @@ QPushButton:pressed{
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="1">
-                 <widget class="QSlider" name="horizontalSlider_StaticUi">
-                  <property name="minimum">
-                   <number>10</number>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_StaticUi">
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
                   </property>
-                  <property name="maximum">
-                   <number>300</number>
-                  </property>
-                  <property name="pageStep">
-                   <number>1</number>
-                  </property>
-                  <property name="value">
-                   <number>50</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Orientation::Horizontal</enum>
+                  <property name="text">
+                   <string>界面模拟速度：</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QSlider" name="horizontalSlider_StaticSend">
+                <item row="0" column="1">
+                 <widget class="QSlider" name="horizontalSlider_StaticUi">
                   <property name="minimum">
                    <number>10</number>
                   </property>
@@ -552,7 +500,7 @@ QPushButton:pressed{
                 <item row="1" column="1">
                  <widget class="QSlider" name="horizontalSlider_PixmapHeight">
                   <property name="minimum">
-                   <number>100</number>
+                   <number>10</number>
                   </property>
                   <property name="maximum">
                    <number>400</number>
@@ -568,7 +516,7 @@ QPushButton:pressed{
                 <item row="0" column="1">
                  <widget class="QSlider" name="horizontalSlider_PixmapWidth">
                   <property name="minimum">
-                   <number>100</number>
+                   <number>10</number>
                   </property>
                   <property name="maximum">
                    <number>400</number>
@@ -635,10 +583,13 @@ QPushButton:pressed{
                    </size>
                   </property>
                   <property name="minimum">
-                   <number>100</number>
+                   <number>10</number>
                   </property>
                   <property name="maximum">
                    <number>400</number>
+                  </property>
+                  <property name="value">
+                   <number>100</number>
                   </property>
                  </widget>
                 </item>
@@ -651,10 +602,13 @@ QPushButton:pressed{
                    </size>
                   </property>
                   <property name="minimum">
-                   <number>100</number>
+                   <number>10</number>
                   </property>
                   <property name="maximum">
                    <number>400</number>
+                  </property>
+                  <property name="value">
+                   <number>100</number>
                   </property>
                  </widget>
                 </item>
@@ -701,20 +655,6 @@ QPushButton:pressed{
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label_DynamicSend">
-                  <property name="font">
-                   <font>
-                    <family>微软雅黑</family>
-                    <pointsize>10</pointsize>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>键盘下发速度：</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_DynamicUi">
                   <property name="font">
@@ -729,43 +669,8 @@ QPushButton:pressed{
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="2">
-                 <widget class="QLabel" name="label_DynamicSendMs">
-                  <property name="minimumSize">
-                   <size>
-                    <width>50</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>50</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>50ms</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="1">
                  <widget class="QSlider" name="horizontalSlider_DynamicUi">
-                  <property name="minimum">
-                   <number>10</number>
-                  </property>
-                  <property name="maximum">
-                   <number>300</number>
-                  </property>
-                  <property name="value">
-                   <number>50</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Orientation::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QSlider" name="horizontalSlider_DynamicSend">
                   <property name="minimum">
                    <number>10</number>
                   </property>

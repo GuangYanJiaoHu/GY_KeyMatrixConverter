@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QVBoxLayout>
-
+#include <Communicate/GY_Communicate.h>
 #include <GY_KeyboardDrawLayout/GY_KeyboardDrawLayout.h>
 #include <GY_FunctionUi/GY_KeyboardSettingUi.h>
 #include <GY_FunctionUi/GY_AnimationSettingUi.h>
@@ -28,11 +28,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    GY_Communicate *communicate;               //hid通信
     GY_KeyboardDrawLayout *keyboardDrawLayout; //键盘绘制
     GY_KeyboardSettingUi  *keyboardSettingUi;  //键盘设置
     GY_AnimationSettingUi *animationSettingUi; //动画设置
     GY_GenerateBinFile    *generateBinFile;    //bin文件生成
     GY_ConvertBinFile     *convertBinFile;     //bin文件转换
     GY_AnimationCustomize *animationCustomize; //自定义动画
+
 };
 #endif // MAINWINDOW_H

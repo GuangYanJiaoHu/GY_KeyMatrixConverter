@@ -2640,7 +2640,7 @@ public:
 
         retranslateUi(GY_GenerateBinFile);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
         stackedWidget->setCurrentIndex(1);
 
 

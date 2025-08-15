@@ -106,8 +106,10 @@ void GY_KeyboardDrawLayout::slotKeyboardSettingKeyCheck(bool isCheck)
 }
 
 //静态动画模拟
-void GY_KeyboardDrawLayout::slotAnimationStaticSimulate(QString path, QStringList listStaticPicturePath, bool isStart)
+void GY_KeyboardDrawLayout::slotAnimationStaticSimulate(QString path, QStringList listStaticPicturePath, bool isStart, bool isDownLoadKeyboard)
 {
+    this->isDownloadKeyboardStatic = isDownLoadKeyboard;
+    qDebug() << "静态动画模拟" << " -是否下发键盘：" << isDownLoadKeyboard;
     if(listStaticPicturePath.count() == 0){
         return;
     }
@@ -128,19 +130,22 @@ void GY_KeyboardDrawLayout::slotTimerAnimationStaticSimulate()
     if(staticAnimationIndex >= this->listStaticPictureName.count()){
         staticAnimationIndex = 0;
     }
-    this->setAnimationSimulate(this->listStaticPictureName.at(staticAnimationIndex), true);
+    this->setAnimationSimulate(this->listStaticPictureName.at(staticAnimationIndex), true, this->isDownloadKeyboardStatic);
     staticAnimationIndex++;
 }
 //静态动画逐帧模拟
-void GY_KeyboardDrawLayout::slotAnimationStaticOnlySimulate(QString path, QString onlyPath)
+void GY_KeyboardDrawLayout::slotAnimationStaticOnlySimulate(QString path, QString onlyPath, bool isDownLoadKeyboard)
 {
-    this->setAnimationSimulate(path + onlyPath, true);
+    this->isDownloadKeyboardStatic = isDownLoadKeyboard;
+    qDebug() << "静态动画逐帧模拟" << " -是否下发键盘：" << isDownLoadKeyboard;
+    this->setAnimationSimulate(path + onlyPath, true, this->isDownloadKeyboardStatic);
 }
 
 //动态动画模拟
-void GY_KeyboardDrawLayout::slotAnimationDynamicSimulate(QString path, QStringList listDynamicPicturePath, bool isStart)
+void GY_KeyboardDrawLayout::slotAnimationDynamicSimulate(QString path, QStringList listDynamicPicturePath, bool isStart, bool isDownLoadKeyboard)
 {
-    qDebug() << "动态动画模拟";
+    this->isDownloadKeyboardDynamic = isDownLoadKeyboard;
+    qDebug() << "动态动画模拟" << " -是否下发键盘：" << isDownLoadKeyboard;
     if(listDynamicPicturePath.count() == 0){
         return;
     }
@@ -161,18 +166,21 @@ void GY_KeyboardDrawLayout::slotTimerAnimationDynamicSimulate()
     if(dynamicAnimationIndex >= this->listDynamicPictureName.count()){
         dynamicAnimationIndex = 0;
     }
-    this->setAnimationSimulate(this->listDynamicPictureName.at(dynamicAnimationIndex), false);
+    this->setAnimationSimulate(this->listDynamicPictureName.at(dynamicAnimationIndex), false, this->isDownloadKeyboardDynamic);
     dynamicAnimationIndex++;
 }
 //动态动画逐帧模拟
-void GY_KeyboardDrawLayout::slotAnimationDynamicOnlySimulate(QString path, QString onlyPath)
+void GY_KeyboardDrawLayout::slotAnimationDynamicOnlySimulate(QString path, QString onlyPath, bool isDownLoadKeyboard)
 {
-    this->setAnimationSimulate(path + onlyPath, false);
+    this->isDownloadKeyboardDynamic = isDownLoadKeyboard;
+    qDebug() << "动态动画逐帧模拟" << " -是否下发键盘：" << isDownLoadKeyboard;
+    this->setAnimationSimulate(path + onlyPath, false, isDownLoadKeyboard);
 }
 
 //静态/动态动画模拟  默认静态动画
-void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation)
+void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation, bool isDownLoadKeyboard)
 {
+
     QImage image(path);
     QPixmap pixmap(ui->label->size());
     QPainter painter(&pixmap);
@@ -186,8 +194,30 @@ void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation)
             }else{
                 this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow);
             }
-
         }
+
+        //静态动画下发至键盘
+        QList<QString> listColor;
+        for(int i = 0; i < mapKeyboardInfo.first()._KeyboardLayout._ButtonCount; i++){
+            QColor colorRGB = Qt::black;
+            //计算取色按键的比例关系 并判断这个按键是否存在
+            if(mapKeyboardInfo.contains(i)){
+                auto keyboardInfo = mapKeyboardInfo.find(i);
+                colorRGB = newImage.pixelColor(keyboardInfo.value()._KeyCenterPoint);
+                listColor.append(QString("%1").arg(colorRGB.red(),  2, 16, QChar('0')));
+                listColor.append(QString("%1").arg(colorRGB.green(),2, 16, QChar('0')));
+                listColor.append(QString("%1").arg(colorRGB.blue(), 2, 16, QChar('0')));
+            }else{
+                listColor.append("00");
+                listColor.append("00");
+                listColor.append("00");
+            }
+        }
+        if(isDownLoadKeyboard == true){ //下发给键盘
+            //qDebug() << "179_KeyboardDrawLayout动画模拟:" << "静态动画？" << isAnimation << " 下发键盘？" << isDownLoadKeyboard;
+            emit signalKeyboardDrawLayoutStaticDownloadSimulate(listColor);
+        }
+
     }else{                          //动态动画
         QImage newImage = image.scaled(this->dynamicPixmapSize.x(), this->dynamicPixmapSize.y(), Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列-100x100大小后续改成用户可调节的大小方式-对图片整体方法符合键盘尺寸
         QImage drawImage= image.scaled(this->dynamicPixmapSize.x() * keboardLayoutSize, this->dynamicPixmapSize.y() * keboardLayoutSize, Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列-100x100大小后续改成用户可调节的大小方式-对图片整体方法符合键盘尺寸
@@ -211,7 +241,34 @@ void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation)
             }else{
                 this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow);
             }
+        }
 
+
+        QList<QString> listColor;
+        for(int i = 0; i < mapKeyboardInfo.first()._KeyboardLayout._ButtonCount; i++){
+            QColor colorRGB = Qt::black;
+            if(mapKeyboardInfo.contains(i)){
+                auto item = mapKeyboardInfo.find(i);
+
+                QRgb pixelColor;
+                if(!newImage.rect().contains(QPoint(item.value()._KeyCenterPoint.x() + imageOrKeyRatio.x(), item.value()._KeyCenterPoint.y() + imageOrKeyRatio.y()))){
+                    pixelColor = Qt::black;
+                }else{
+                    pixelColor = newImage.pixel(item.value()._KeyCenterPoint.x() + imageOrKeyRatio.x(), item.value()._KeyCenterPoint.y() + imageOrKeyRatio.y());
+                }
+                int brightness = qGray(pixelColor);
+                QColor lightColor(brightness, brightness, brightness);
+                listColor.append(QString("%1").arg(lightColor.red(),  2, 16, QChar('0')));
+                listColor.append(QString("%1").arg(lightColor.green(),2, 16, QChar('0')));
+                listColor.append(QString("%1").arg(lightColor.blue(), 2, 16, QChar('0')));
+            }else{
+                listColor.append("00");
+                listColor.append("00");
+                listColor.append("00");
+            }
+        }
+        if(isDownLoadKeyboard == true){ //下发给键盘
+            emit signalKeyboardDrawLayoutDynamicDownloadSimulate(listColor);
         }
     }
     ui->label->setPixmap(pixmap);   // 更新到窗口部件上
@@ -234,16 +291,6 @@ void GY_KeyboardDrawLayout::slotAnimationDynamicUiSimulateSpeed(int speed)
     if(this->AnimationDynamicSimulate->isActive()){
         this->AnimationDynamicSimulate->start(speed);
     }
-}
-//静态键盘下发模拟速度
-void GY_KeyboardDrawLayout::slotAnimationStaticSendSimulateSpeed(int speed)
-{
-
-}
-//动态键盘下发模拟速度
-void GY_KeyboardDrawLayout::slotAnimationDynamicSendSimulateSpeed(int speed)
-{
-
 }
 //更改动态动画模拟按键位置
 void GY_KeyboardDrawLayout::slotAnimationDynamicUpdateSimulatePos()

@@ -8,6 +8,7 @@
 
 #include "../../../GY_KeyboardDrawLayout/GY_KeyboardDrawLayout.h"
 #include <QtCore/qmetatype.h>
+#include <QtCore/QList>
 
 #include <QtCore/qtmochelpers.h>
 
@@ -38,6 +39,9 @@ constexpr auto qt_meta_stringdata_CLASSGY_KeyboardDrawLayoutENDCLASS = QtMocHelp
     "GY_KeyboardDrawLayout",
     "signalKeyboardDrawLayoutUpdateSimulatePos",
     "",
+    "signalKeyboardDrawLayoutStaticDownloadSimulate",
+    "color",
+    "signalKeyboardDrawLayoutDynamicDownloadSimulate",
     "slotKeyboardSettingClearKey",
     "slotKeyboardSettingDrawSize",
     "size",
@@ -49,6 +53,7 @@ constexpr auto qt_meta_stringdata_CLASSGY_KeyboardDrawLayoutENDCLASS = QtMocHelp
     "path",
     "listStaticPictureName",
     "isStart",
+    "isDownLoadKeyboard",
     "slotAnimationDynamicSimulate",
     "listDynamicPictureName",
     "slotAnimationStaticOnlySimulate",
@@ -57,8 +62,6 @@ constexpr auto qt_meta_stringdata_CLASSGY_KeyboardDrawLayoutENDCLASS = QtMocHelp
     "slotAnimationStaticUiSimulateSpeed",
     "speed",
     "slotAnimationDynamicUiSimulateSpeed",
-    "slotAnimationStaticSendSimulateSpeed",
-    "slotAnimationDynamicSendSimulateSpeed",
     "slotAnimationDynamicUpdateSimulatePos",
     "slotAnimationStaticExport",
     "slotAnimationDynamicExport",
@@ -93,63 +96,63 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_KeyboardDrawLayoutENDCLASS[] 
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,  158,    2, 0x06,    1 /* Public */,
+       3,    1,  159,    2, 0x06,    2 /* Public */,
+       5,    1,  162,    2, 0x06,    4 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,  159,    2, 0x0a,    2 /* Public */,
-       4,    1,  160,    2, 0x0a,    3 /* Public */,
-       6,    1,  163,    2, 0x0a,    5 /* Public */,
-       8,    1,  166,    2, 0x0a,    7 /* Public */,
-      10,    3,  169,    2, 0x0a,    9 /* Public */,
-      14,    3,  176,    2, 0x0a,   13 /* Public */,
-      16,    2,  183,    2, 0x0a,   17 /* Public */,
-      18,    2,  188,    2, 0x0a,   20 /* Public */,
-      19,    1,  193,    2, 0x0a,   23 /* Public */,
-      21,    1,  196,    2, 0x0a,   25 /* Public */,
-      22,    1,  199,    2, 0x0a,   27 /* Public */,
-      23,    1,  202,    2, 0x0a,   29 /* Public */,
-      24,    0,  205,    2, 0x0a,   31 /* Public */,
-      25,    1,  206,    2, 0x0a,   32 /* Public */,
-      26,    1,  209,    2, 0x0a,   34 /* Public */,
-      27,    1,  212,    2, 0x0a,   36 /* Public */,
-      29,    1,  215,    2, 0x0a,   38 /* Public */,
-      30,    1,  218,    2, 0x0a,   40 /* Public */,
-      32,    1,  221,    2, 0x08,   42 /* Private */,
-      35,    1,  224,    2, 0x08,   44 /* Private */,
-      36,    0,  227,    2, 0x08,   46 /* Private */,
-      37,    0,  228,    2, 0x08,   47 /* Private */,
-      38,    1,  229,    2, 0x08,   48 /* Private */,
+       6,    0,  165,    2, 0x0a,    6 /* Public */,
+       7,    1,  166,    2, 0x0a,    7 /* Public */,
+       9,    1,  169,    2, 0x0a,    9 /* Public */,
+      11,    1,  172,    2, 0x0a,   11 /* Public */,
+      13,    4,  175,    2, 0x0a,   13 /* Public */,
+      18,    4,  184,    2, 0x0a,   18 /* Public */,
+      20,    3,  193,    2, 0x0a,   23 /* Public */,
+      22,    3,  200,    2, 0x0a,   27 /* Public */,
+      23,    1,  207,    2, 0x0a,   31 /* Public */,
+      25,    1,  210,    2, 0x0a,   33 /* Public */,
+      26,    0,  213,    2, 0x0a,   35 /* Public */,
+      27,    1,  214,    2, 0x0a,   36 /* Public */,
+      28,    1,  217,    2, 0x0a,   38 /* Public */,
+      29,    1,  220,    2, 0x0a,   40 /* Public */,
+      31,    1,  223,    2, 0x0a,   42 /* Public */,
+      32,    1,  226,    2, 0x0a,   44 /* Public */,
+      34,    1,  229,    2, 0x08,   46 /* Private */,
+      37,    1,  232,    2, 0x08,   48 /* Private */,
+      38,    0,  235,    2, 0x08,   50 /* Private */,
+      39,    0,  236,    2, 0x08,   51 /* Private */,
+      40,    1,  237,    2, 0x08,   52 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QStringList,    4,
+    QMetaType::Void, QMetaType::QStringList,    4,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Double,    5,
-    QMetaType::Void, QMetaType::Bool,    7,
-    QMetaType::Void, QMetaType::Bool,    9,
-    QMetaType::Void, QMetaType::QString, QMetaType::QStringList, QMetaType::Bool,   11,   12,   13,
-    QMetaType::Void, QMetaType::QString, QMetaType::QStringList, QMetaType::Bool,   11,   15,   13,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,   11,   17,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,   11,   17,
-    QMetaType::Void, QMetaType::Int,   20,
-    QMetaType::Void, QMetaType::Int,   20,
-    QMetaType::Void, QMetaType::Int,   20,
-    QMetaType::Void, QMetaType::Int,   20,
+    QMetaType::Void, QMetaType::Double,    8,
+    QMetaType::Void, QMetaType::Bool,   10,
+    QMetaType::Void, QMetaType::Bool,   12,
+    QMetaType::Void, QMetaType::QString, QMetaType::QStringList, QMetaType::Bool, QMetaType::Bool,   14,   15,   16,   17,
+    QMetaType::Void, QMetaType::QString, QMetaType::QStringList, QMetaType::Bool, QMetaType::Bool,   14,   19,   16,   17,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Bool,   14,   21,   17,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Bool,   14,   21,   17,
+    QMetaType::Void, QMetaType::Int,   24,
+    QMetaType::Void, QMetaType::Int,   24,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QStringList,   11,
-    QMetaType::Void, QMetaType::QStringList,   11,
-    QMetaType::Void, QMetaType::Bool,   28,
-    QMetaType::Void, QMetaType::QPoint,    5,
-    QMetaType::Void, QMetaType::Bool,   31,
-    QMetaType::Void, 0x80000000 | 33,   34,
-    QMetaType::Void, 0x80000000 | 33,   34,
+    QMetaType::Void, QMetaType::QStringList,   14,
+    QMetaType::Void, QMetaType::QStringList,   14,
+    QMetaType::Void, QMetaType::Bool,   30,
+    QMetaType::Void, QMetaType::QPoint,    8,
+    QMetaType::Void, QMetaType::Bool,   33,
+    QMetaType::Void, 0x80000000 | 35,   36,
+    QMetaType::Void, 0x80000000 | 35,   36,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 39,   40,
+    QMetaType::Void, 0x80000000 | 41,   42,
 
        0        // eod
 };
@@ -165,6 +168,12 @@ Q_CONSTINIT const QMetaObject GY_KeyboardDrawLayout::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<GY_KeyboardDrawLayout, std::true_type>,
         // method 'signalKeyboardDrawLayoutUpdateSimulatePos'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'signalKeyboardDrawLayoutStaticDownloadSimulate'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QList<QString>, std::false_type>,
+        // method 'signalKeyboardDrawLayoutDynamicDownloadSimulate'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QList<QString>, std::false_type>,
         // method 'slotKeyboardSettingClearKey'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'slotKeyboardSettingDrawSize'
@@ -181,29 +190,27 @@ Q_CONSTINIT const QMetaObject GY_KeyboardDrawLayout::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QStringList, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'slotAnimationDynamicSimulate'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QStringList, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'slotAnimationStaticOnlySimulate'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'slotAnimationDynamicOnlySimulate'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'slotAnimationStaticUiSimulateSpeed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'slotAnimationDynamicUiSimulateSpeed'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'slotAnimationStaticSendSimulateSpeed'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'slotAnimationDynamicSendSimulateSpeed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'slotAnimationDynamicUpdateSimulatePos'
@@ -247,18 +254,18 @@ void GY_KeyboardDrawLayout::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         (void)_t;
         switch (_id) {
         case 0: _t->signalKeyboardDrawLayoutUpdateSimulatePos(); break;
-        case 1: _t->slotKeyboardSettingClearKey(); break;
-        case 2: _t->slotKeyboardSettingDrawSize((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 3: _t->slotKeyboardSettingHook((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 4: _t->slotKeyboardSettingKeyCheck((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 5: _t->slotAnimationStaticSimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[3]))); break;
-        case 6: _t->slotAnimationDynamicSimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[3]))); break;
-        case 7: _t->slotAnimationStaticOnlySimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 8: _t->slotAnimationDynamicOnlySimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 9: _t->slotAnimationStaticUiSimulateSpeed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 10: _t->slotAnimationDynamicUiSimulateSpeed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 11: _t->slotAnimationStaticSendSimulateSpeed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 12: _t->slotAnimationDynamicSendSimulateSpeed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 1: _t->signalKeyboardDrawLayoutStaticDownloadSimulate((*reinterpret_cast< std::add_pointer_t<QList<QString>>>(_a[1]))); break;
+        case 2: _t->signalKeyboardDrawLayoutDynamicDownloadSimulate((*reinterpret_cast< std::add_pointer_t<QList<QString>>>(_a[1]))); break;
+        case 3: _t->slotKeyboardSettingClearKey(); break;
+        case 4: _t->slotKeyboardSettingDrawSize((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 5: _t->slotKeyboardSettingHook((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 6: _t->slotKeyboardSettingKeyCheck((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 7: _t->slotAnimationStaticSimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[4]))); break;
+        case 8: _t->slotAnimationDynamicSimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[4]))); break;
+        case 9: _t->slotAnimationStaticOnlySimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[3]))); break;
+        case 10: _t->slotAnimationDynamicOnlySimulate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[3]))); break;
+        case 11: _t->slotAnimationStaticUiSimulateSpeed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 12: _t->slotAnimationDynamicUiSimulateSpeed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 13: _t->slotAnimationDynamicUpdateSimulatePos(); break;
         case 14: _t->slotAnimationStaticExport((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
         case 15: _t->slotAnimationDynamicExport((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
@@ -278,6 +285,20 @@ void GY_KeyboardDrawLayout::qt_static_metacall(QObject *_o, QMetaObject::Call _c
             using _t = void (GY_KeyboardDrawLayout::*)();
             if (_t _q_method = &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutUpdateSimulatePos; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (GY_KeyboardDrawLayout::*)(QList<QString> );
+            if (_t _q_method = &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutStaticDownloadSimulate; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 1;
+                return;
+            }
+        }
+        {
+            using _t = void (GY_KeyboardDrawLayout::*)(QList<QString> );
+            if (_t _q_method = &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutDynamicDownloadSimulate; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 2;
                 return;
             }
         }
@@ -318,5 +339,19 @@ int GY_KeyboardDrawLayout::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void GY_KeyboardDrawLayout::signalKeyboardDrawLayoutUpdateSimulatePos()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void GY_KeyboardDrawLayout::signalKeyboardDrawLayoutStaticDownloadSimulate(QList<QString> _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void GY_KeyboardDrawLayout::signalKeyboardDrawLayoutDynamicDownloadSimulate(QList<QString> _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 QT_WARNING_POP

@@ -9,9 +9,22 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->tabWidget->setCurrentIndex(0);  //显示第一页
 
+    //键盘通信hid 蓝牙 2.4
+    communicate = new GY_Communicate(); //通信
+    connect(communicate, &GY_Communicate::signalsDeviceConnect,   this, [=](const Device &deviceInfo){
+        qDebug() << "键盘连接：" ;
+        communicate->WriteAllKeyboard("FE 05 FF");
+        // communicate->WriteAllKeyboard("FE 03 00");
+        // QThread::msleep(5);
+        // communicate->WriteAllKeyboard("FE 83 00");
+    });
+    connect(communicate, &GY_Communicate::signalsDeviceDisconnect,this, [=](const Device &deviceInfo){qDebug() << "键盘断开连接：" ;});
+
     //创建键盘绘制区域
     keyboardDrawLayout = new GY_KeyboardDrawLayout(ui->widget_keyboardLayout);
     QVBoxLayout *layout = new QVBoxLayout(ui->widget_keyboardLayout);
+    connect(keyboardDrawLayout, &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutStaticDownloadSimulate, communicate, &GY_Communicate::slotAnimationStaticSimulate); //静态动画下发键盘模拟
+    connect(keyboardDrawLayout, &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutDynamicDownloadSimulate, communicate, &GY_Communicate::slotAnimationDynamicSimulate); //静态动画下发键盘模拟
     layout->addWidget(keyboardDrawLayout);
     layout->setContentsMargins(0, 0, 0, 0);
 
@@ -22,6 +35,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingHook,       keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingHook);       //键盘钩子
     connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingKeyCheck,   keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingKeyCheck);   //按键检测功能
     connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingKeySimulate,keyboardDrawLayout, &GY_KeyboardDrawLayout::slotKeyboardSettingKeySimulate);//键盘灯光/键帽模拟
+    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingBrightness, communicate, &GY_Communicate::soltKeyboardSettingBrightness);               //键盘亮度调节
+    connect(keyboardSettingUi, &GY_KeyboardSettingUi::signalKeyboardSettingSendData,   communicate, &GY_Communicate::soltKeyboardSettingSendData);                 //键盘指令数据发送
+
     QVBoxLayout *layout2 = new QVBoxLayout(ui->widget_KeyboardSetting);
     layout2->addWidget(keyboardSettingUi);
     layout2->setContentsMargins(0, 0, 0, 0);
@@ -34,16 +50,16 @@ MainWindow::MainWindow(QWidget *parent)
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicOnlySimulate,     keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicOnlySimulate);          //动态动画逐帧模拟
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticUiSimulateSpeed,   keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticUiSimulateSpeed);        //静态ui模拟速度
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicUiSimulateSpeed,  keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicUiSimulateSpeed);       //动态ui模拟速度
-    connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticSendSimulateSpeed, keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticSendSimulateSpeed);      //静态键盘下发模拟速度
-    connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicSendSimulateSpeed,keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicSendSimulateSpeed);     //动态键盘下发模拟速度
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicUpdateSimulatePos,keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicUpdateSimulatePos);     //更改动态动画模拟按键位置
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticExport,            keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticExport);                 //静态动画导出
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicExport,           keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicExport);                //动态动画导出
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicPixmapSize,       keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicPixmapSize);            //动态动画导出
     connect(keyboardDrawLayout, &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutUpdateSimulatePos,animationSettingUi, &GY_AnimationSettingUi::slotKeyboardDrawLayoutUpdateSimulatePos); //更改模拟位置完成
+
     QVBoxLayout *layout3 = new QVBoxLayout(ui->widget_Animation);
     layout3->addWidget(animationSettingUi);
     layout3->setContentsMargins(0, 0, 0, 0);
+
 
     //bin文件生成
     generateBinFile = new GY_GenerateBinFile();

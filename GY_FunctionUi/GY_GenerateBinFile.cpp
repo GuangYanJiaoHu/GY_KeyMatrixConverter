@@ -37,7 +37,6 @@ GY_GenerateBinFile::~GY_GenerateBinFile()
     delete ui;
 }
 
-
 //确认按键默认值
 void GY_GenerateBinFile::on_pushButton_keyMaxorMinValue_clicked()
 {
@@ -97,6 +96,7 @@ void GY_GenerateBinFile::on_pushButton_Export_clicked()
     switch(ui->comboBox_keyboardType->currentIndex()){
     case 0:
         QMessageBox::critical(this,"错误提示","请选择键盘类型");
+        return;
         break;
     case 1:
         jsonPublicInfo._KeyBoardCount = 70;

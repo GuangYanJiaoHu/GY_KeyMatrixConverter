@@ -46,6 +46,10 @@ constexpr auto qt_meta_stringdata_CLASSGY_KeyboardSettingUiENDCLASS = QtMocHelpe
     "isCheck",
     "signalKeyboardSettingKeySimulate",
     "isSimulate",
+    "signalKeyboardSettingBrightness",
+    "lightHex",
+    "signalKeyboardSettingSendData",
+    "data",
     "on_comboBox_KeyboardType_currentIndexChanged",
     "index",
     "on_pushButton_ClearKeyboard_clicked",
@@ -57,7 +61,10 @@ constexpr auto qt_meta_stringdata_CLASSGY_KeyboardSettingUiENDCLASS = QtMocHelpe
     "on_checkBox_KeyCheck_stateChanged",
     "on_horizontalSlider_Light_sliderMoved",
     "on_spinBox_Light_valueChanged",
-    "on_checkBox_KeySimulate_stateChanged"
+    "on_checkBox_KeySimulate_stateChanged",
+    "on_horizontalSlider_Light_valueChanged",
+    "value",
+    "on_pushButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -70,30 +77,34 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_KeyboardSettingUiENDCLASS[] =
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       5,       // signalCount
+       7,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   98,    2, 0x06,    1 /* Public */,
-       3,    1,   99,    2, 0x06,    2 /* Public */,
-       5,    1,  102,    2, 0x06,    4 /* Public */,
-       7,    1,  105,    2, 0x06,    6 /* Public */,
-       9,    1,  108,    2, 0x06,    8 /* Public */,
+       1,    0,  122,    2, 0x06,    1 /* Public */,
+       3,    1,  123,    2, 0x06,    2 /* Public */,
+       5,    1,  126,    2, 0x06,    4 /* Public */,
+       7,    1,  129,    2, 0x06,    6 /* Public */,
+       9,    1,  132,    2, 0x06,    8 /* Public */,
+      11,    1,  135,    2, 0x06,   10 /* Public */,
+      13,    1,  138,    2, 0x06,   12 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      11,    1,  111,    2, 0x08,   10 /* Private */,
-      13,    0,  114,    2, 0x08,   12 /* Private */,
-      14,    1,  115,    2, 0x08,   13 /* Private */,
-      16,    1,  118,    2, 0x08,   15 /* Private */,
-      18,    1,  121,    2, 0x08,   17 /* Private */,
-      19,    1,  124,    2, 0x08,   19 /* Private */,
-      20,    1,  127,    2, 0x08,   21 /* Private */,
-      21,    1,  130,    2, 0x08,   23 /* Private */,
-      22,    1,  133,    2, 0x08,   25 /* Private */,
+      15,    1,  141,    2, 0x08,   14 /* Private */,
+      17,    0,  144,    2, 0x08,   16 /* Private */,
+      18,    1,  145,    2, 0x08,   17 /* Private */,
+      20,    1,  148,    2, 0x08,   19 /* Private */,
+      22,    1,  151,    2, 0x08,   21 /* Private */,
+      23,    1,  154,    2, 0x08,   23 /* Private */,
+      24,    1,  157,    2, 0x08,   25 /* Private */,
+      25,    1,  160,    2, 0x08,   27 /* Private */,
+      26,    1,  163,    2, 0x08,   29 /* Private */,
+      27,    1,  166,    2, 0x08,   31 /* Private */,
+      29,    0,  169,    2, 0x08,   33 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -101,17 +112,21 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_KeyboardSettingUiENDCLASS[] =
     QMetaType::Void, QMetaType::Bool,    6,
     QMetaType::Void, QMetaType::Bool,    8,
     QMetaType::Void, QMetaType::Bool,   10,
+    QMetaType::Void, QMetaType::QString,   12,
+    QMetaType::Void, QMetaType::QString,   14,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int,   12,
+    QMetaType::Void, QMetaType::Int,   16,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   15,
-    QMetaType::Void, QMetaType::Double,   17,
-    QMetaType::Void, QMetaType::Int,   17,
-    QMetaType::Void, QMetaType::Int,   17,
-    QMetaType::Void, QMetaType::Int,   15,
-    QMetaType::Void, QMetaType::Int,   17,
-    QMetaType::Void, QMetaType::Int,   17,
+    QMetaType::Void, QMetaType::Int,   19,
+    QMetaType::Void, QMetaType::Double,   21,
+    QMetaType::Void, QMetaType::Int,   21,
+    QMetaType::Void, QMetaType::Int,   21,
+    QMetaType::Void, QMetaType::Int,   19,
+    QMetaType::Void, QMetaType::Int,   21,
+    QMetaType::Void, QMetaType::Int,   21,
+    QMetaType::Void, QMetaType::Int,   28,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -139,6 +154,12 @@ Q_CONSTINIT const QMetaObject GY_KeyboardSettingUi::staticMetaObject = { {
         // method 'signalKeyboardSettingKeySimulate'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'signalKeyboardSettingBrightness'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'signalKeyboardSettingSendData'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'on_comboBox_KeyboardType_currentIndexChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
@@ -164,7 +185,12 @@ Q_CONSTINIT const QMetaObject GY_KeyboardSettingUi::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'on_checkBox_KeySimulate_stateChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_horizontalSlider_Light_valueChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_pushButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -180,15 +206,19 @@ void GY_KeyboardSettingUi::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
         case 2: _t->signalKeyboardSettingHook((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 3: _t->signalKeyboardSettingKeyCheck((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 4: _t->signalKeyboardSettingKeySimulate((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 5: _t->on_comboBox_KeyboardType_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 6: _t->on_pushButton_ClearKeyboard_clicked(); break;
-        case 7: _t->on_horizontalSlider_Size_sliderMoved((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 8: _t->on_doubleSpinBox_Size_valueChanged((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 9: _t->on_checkBox_Hook_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 10: _t->on_checkBox_KeyCheck_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 11: _t->on_horizontalSlider_Light_sliderMoved((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 12: _t->on_spinBox_Light_valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 13: _t->on_checkBox_KeySimulate_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->signalKeyboardSettingBrightness((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 6: _t->signalKeyboardSettingSendData((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 7: _t->on_comboBox_KeyboardType_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->on_pushButton_ClearKeyboard_clicked(); break;
+        case 9: _t->on_horizontalSlider_Size_sliderMoved((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 10: _t->on_doubleSpinBox_Size_valueChanged((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 11: _t->on_checkBox_Hook_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 12: _t->on_checkBox_KeyCheck_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 13: _t->on_horizontalSlider_Light_sliderMoved((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 14: _t->on_spinBox_Light_valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 15: _t->on_checkBox_KeySimulate_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 16: _t->on_horizontalSlider_Light_valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 17: _t->on_pushButton_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -228,6 +258,20 @@ void GY_KeyboardSettingUi::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
                 return;
             }
         }
+        {
+            using _t = void (GY_KeyboardSettingUi::*)(QString );
+            if (_t _q_method = &GY_KeyboardSettingUi::signalKeyboardSettingBrightness; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 5;
+                return;
+            }
+        }
+        {
+            using _t = void (GY_KeyboardSettingUi::*)(QString );
+            if (_t _q_method = &GY_KeyboardSettingUi::signalKeyboardSettingSendData; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 6;
+                return;
+            }
+        }
     }
 }
 
@@ -250,13 +294,13 @@ int GY_KeyboardSettingUi::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 18;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 18)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 14;
+        _id -= 18;
     }
     return _id;
 }
@@ -293,5 +337,19 @@ void GY_KeyboardSettingUi::signalKeyboardSettingKeySimulate(bool _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 4, _a);
+}
+
+// SIGNAL 5
+void GY_KeyboardSettingUi::signalKeyboardSettingBrightness(QString _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 5, _a);
+}
+
+// SIGNAL 6
+void GY_KeyboardSettingUi::signalKeyboardSettingSendData(QString _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 6, _a);
 }
 QT_WARNING_POP

@@ -20,6 +20,9 @@ signals:
     void signalKeyboardSettingHook(bool isHook);            //键盘钩子功能-是否开启
     void signalKeyboardSettingKeyCheck(bool isCheck);       //按键检测功能-是否开启
     void signalKeyboardSettingKeySimulate(bool isSimulate); //键帽/灯光模拟切换
+    void signalKeyboardSettingBrightness(QString lightHex); //灯光亮度调节
+    void signalKeyboardSettingSendData(QString data);       //向键盘发送数据指令
+
 private slots:
     void on_comboBox_KeyboardType_currentIndexChanged(int index);   //键盘类型调整
     void on_pushButton_ClearKeyboard_clicked();                     //清空键盘按键操作
@@ -29,7 +32,9 @@ private slots:
     void on_checkBox_KeyCheck_stateChanged(int arg1);               //按键检测功能-是否开启
     void on_horizontalSlider_Light_sliderMoved(int position);       //键盘灯光调整
     void on_spinBox_Light_valueChanged(int arg1);                   //键盘灯光调整
-    void on_checkBox_KeySimulate_stateChanged(int arg1);
+    void on_checkBox_KeySimulate_stateChanged(int arg1);            //键盘按键模拟 - 键盘灯光/按键模拟
+    void on_horizontalSlider_Light_valueChanged(int value);         //键盘亮度变化调节
+    void on_pushButton_clicked();                                   //指令发送
 
 private:
     Ui::GY_KeyboardSettingUi *ui;

@@ -43,7 +43,7 @@ void GY_KeyboardSettingUi::on_doubleSpinBox_Size_valueChanged(double arg1)
     emit signalKeyboardSettingDrawSize(arg1);
 }
 
-//键盘钩子功能 - 是否开启
+//键盘钩子功能 - 是否开启QQ
 void GY_KeyboardSettingUi::on_checkBox_Hook_stateChanged(int arg1)
 {
     emit signalKeyboardSettingHook(arg1);
@@ -71,5 +71,18 @@ void GY_KeyboardSettingUi::on_spinBox_Light_valueChanged(int arg1)
 void GY_KeyboardSettingUi::on_checkBox_KeySimulate_stateChanged(int arg1)
 {
     emit signalKeyboardSettingKeySimulate(arg1);
+}
+
+//键盘亮度调节 //FE 05 xx
+void GY_KeyboardSettingUi::on_horizontalSlider_Light_valueChanged(int value)
+{
+    QString HexValue = QString("%1").arg(value, 0, 16).toUpper();
+    emit signalKeyboardSettingBrightness(HexValue);
+}
+
+//指令发送
+void GY_KeyboardSettingUi::on_pushButton_clicked()
+{
+    emit signalKeyboardSettingSendData(ui->lineEdit->text());
 }
 
