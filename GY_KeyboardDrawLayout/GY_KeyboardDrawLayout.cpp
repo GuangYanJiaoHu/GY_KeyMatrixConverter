@@ -22,7 +22,7 @@ GY_KeyboardDrawLayout::GY_KeyboardDrawLayout(QWidget *parent)
     Hook->setGlobalHotKey(false);                               //默认开启钩子
 
     //默认内容
-    this->keboardLayoutSize = 3.2;                                //默认缩放比例为1
+    this->keboardLayoutSize = 3.2;                              //默认缩放比例为1
     this->keyboardCheck = false;                                //默认不开启键盘检测功能
     this->isCustomizeDraw = false;                              //默认不开启自定义绘制动画
     this->isKeySimulate = false;                                //默认不开启键帽灯光绘制
@@ -180,7 +180,6 @@ void GY_KeyboardDrawLayout::slotAnimationDynamicOnlySimulate(QString path, QStri
 //静态/动态动画模拟  默认静态动画
 void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation, bool isDownLoadKeyboard)
 {
-
     QImage image(path);
     QPixmap pixmap(ui->label->size());
     QPainter painter(&pixmap);

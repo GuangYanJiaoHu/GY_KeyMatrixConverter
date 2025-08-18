@@ -1,4 +1,4 @@
-QT       += core gui  sql bluetooth  network concurrent
+QT       += core gui  sql bluetooth network concurrent
 
 
 QMAKE_CXXFLAGS += -Wno-unknown-pragmas
