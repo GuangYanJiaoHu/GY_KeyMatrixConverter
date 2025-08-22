@@ -9,10 +9,10 @@ GY_Communicate::GY_Communicate(QObject *parent)
     connect(keyboard, &GY_HIDKeyboard::signalKeyboardConnection,    this, &GY_Communicate::slotsKeyboardConnect);
     connect(keyboard, &GY_HIDKeyboard::signalKeyboardDisconnection, this, &GY_Communicate::slotsKeyboardDisconnect);
 
-    // keyboard = new GY_HIDKeyboard(0x0483,0x5750);   //pid vid
-    // connect(keyboard, &GY_HIDKeyboard::signalKeyboardConnection,    this, &GY_Communicate::slotsKeyboardConnect);
-    // connect(keyboard, &GY_HIDKeyboard::signalKeyboardDisconnection, this, &GY_Communicate::slotsKeyboardDisconnect);
-    // connect(keyboard, &GY_HIDKeyboard::signalBatteryChange,         this, &GY_Communicate::signalsDeviceBattery);
+    keyboard = new GY_HIDKeyboard(0x0483,0x5750);   //pid vid
+    connect(keyboard, &GY_HIDKeyboard::signalKeyboardConnection,    this, &GY_Communicate::slotsKeyboardConnect);
+    connect(keyboard, &GY_HIDKeyboard::signalKeyboardDisconnection, this, &GY_Communicate::slotsKeyboardDisconnect);
+    connect(keyboard, &GY_HIDKeyboard::signalBatteryChange,         this, &GY_Communicate::signalsDeviceBattery);
 
     Mouse = new GY_HIDMouse(0x0483,0x5850);         //pid vid
     connect(Mouse, &GY_HIDMouse::signalMouseConnection,     this, &GY_Communicate::slotsMouseConnect);

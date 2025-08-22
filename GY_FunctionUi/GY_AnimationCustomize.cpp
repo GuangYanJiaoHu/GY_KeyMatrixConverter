@@ -14,8 +14,6 @@ GY_AnimationCustomize::~GY_AnimationCustomize()
     delete ui;
 }
 
-
-
 //开始绘图案
 void GY_AnimationCustomize::on_pushButton_Draw_clicked()
 {
@@ -27,7 +25,6 @@ void GY_AnimationCustomize::on_pushButton_Draw_clicked()
         emit signalCustomizeAnimationIsDraw(true);
     }
 }
-
 
 void GY_AnimationCustomize::on_pushButton_Clear_clicked()
 {

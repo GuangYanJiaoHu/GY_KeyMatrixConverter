@@ -337,7 +337,7 @@ void GY_KeyboardDrawLayout::slotAnimationDynamicExport(QStringList path)
 
     for(int keySumCount = 0; keySumCount < mapKeyboardInfo.first()._KeyboardLayout._ButtonCount; keySumCount++){
         QList<QString> listDynamicHexColor;  //16进制数值
-        for(int pixNumber = 1; pixNumber < path.count(); pixNumber++){
+        for(int pixNumber = 0; pixNumber < path.count(); pixNumber++){
             QRgb pixelColor = lightColor.rgb();
             for(int keyNumber = 0; keyNumber < mapKeyboardInfo.first()._KeyboardLayout._ButtonCount; keyNumber++){
                 if(mapKeyboardInfo.contains(keyNumber)){

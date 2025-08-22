@@ -80,7 +80,6 @@ MainWindow::MainWindow(QWidget *parent)
     QVBoxLayout *layout6 = new QVBoxLayout(ui->widget_Customize);
     layout6->addWidget(animationCustomize);
     layout6->setContentsMargins(0, 0, 0, 0);
-
 }
 
 MainWindow::~MainWindow()

@@ -19,7 +19,6 @@ GY_AnimationSettingUi::~GY_AnimationSettingUi()
     delete ui;
 }
 
-
 //---------------------------------------------静态动画-------------------------------------------------------------------
 //静态动画读取地址
 void GY_AnimationSettingUi::on_pushButton_StaticReadPath_clicked()
@@ -63,7 +62,6 @@ void GY_AnimationSettingUi::on_comboBox_StaticOnlySimulate_currentIndexChanged(i
     }
     emit signalAnimationStaticOnlySimulate(ui->lineEdit_StaticReadPath->text() + "/", listStaticPicturePath.at(index), this->isDownloadKeyboardStatic);
 }
-
 
 //---------------------------------------------动态动画-------------------------------------------------------------------
 //动态动画读取地址

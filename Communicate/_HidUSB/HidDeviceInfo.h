@@ -60,8 +60,6 @@ public:
     hid_device *getDeviceHandle() const;
     void setDeviceHandle(hid_device *newDeviceHandle);
 #endif
-
-
     const QString &getDevicePortPath() const;
     void setDevicePortPath(const QString &newDevicePortPath);
 
@@ -105,6 +103,7 @@ public:
     void setIsConnectStatus(const bool &newIsConnectStatus);
 
 private:
+
 #ifdef Q_OS_MAC
     int DeviceHandle;           //Mac端口句柄
 #elif defined(Q_OS_WIN)
