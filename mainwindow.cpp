@@ -60,7 +60,6 @@ MainWindow::MainWindow(QWidget *parent)
     layout3->addWidget(animationSettingUi);
     layout3->setContentsMargins(0, 0, 0, 0);
 
-
     //bin文件生成
     generateBinFile = new GY_GenerateBinFile();
     QVBoxLayout *layout4 = new QVBoxLayout(ui->widget_GenerateBinFile);

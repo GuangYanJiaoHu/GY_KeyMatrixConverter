@@ -42,6 +42,7 @@ void GY_GenerateBinFile::on_pushButton_keyMaxorMinValue_clicked()
 {
 
 }
+
 //开机动画读取
 void GY_GenerateBinFile::on_pushButton_clicked()
 {
