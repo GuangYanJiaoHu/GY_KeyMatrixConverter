@@ -50,6 +50,7 @@ public slots:
     void slotAnimationDynamicUpdateSimulatePos();               //更改动态动画模拟按键位置
     void slotAnimationStaticExport(QStringList path);           //静态动画导出
     void slotAnimationDynamicExport(QStringList path);          //动态动画导出
+    void slotAnimationStaticWebExport(QStringList path);        //静态动画网页版导出
     void slotCustomizeAnimationIsDraw(bool isDraw);             //自定义图案绘制
     void slotAnimationDynamicPixmapSize(QPoint size);           //动态动画大小修改
     void slotKeyboardSettingKeySimulate(bool isSimulate);       //键盘灯光/键帽模拟

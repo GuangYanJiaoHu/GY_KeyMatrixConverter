@@ -326,6 +326,95 @@ void GY_KeyboardDrawLayout::slotAnimationStaticExport(QStringList path)
     }
     QMessageBox::information(this,"静态动画导出","静态动画导出完成");
 }
+
+//静态动画网页版导出 - 不与动画模拟写在一起主要目的是(解耦)，否则要先模拟在导出
+void GY_KeyboardDrawLayout::slotAnimationStaticWebExport(QStringList path)
+{
+    qDebug() << "静态动画网页版导出" << path;
+    QList<QString> listStaticHexColor;
+    QColor lightColor;
+    foreach(auto itor, path){
+        QImage image(itor);
+        QImage newImage = image.scaled(mapKeyboardInfo.first()._KeyboardLayout._MaxWidth, mapKeyboardInfo.first()._KeyboardLayout._MaxHeight ,Qt::IgnoreAspectRatio,Qt::SmoothTransformation);   //70配列
+        for(int i = 0; i < dynamicSimulatePos._KeyboardLayout._ButtonCount; i++){
+            if(mapKeyboardInfo.contains(i)){
+                auto item = mapKeyboardInfo.find(i);
+                lightColor = newImage.pixelColor(item.value()._KeyCenterPoint);
+                listStaticHexColor.append("#" + QString("%1%2%3").arg(lightColor.red(),  2, 16, QChar('0')).arg(lightColor.green(),2, 16, QChar('0')).arg(lightColor.blue(), 2, 16, QChar('0')));
+            }else{  //没有这个按键，空白3个
+                listStaticHexColor.append("#000000");
+            }
+        }
+    }
+    QMap<int, QList<QString>> mapColor;
+    for(int i = 0; i < dynamicSimulatePos._KeyboardLayout._ButtonCount; i++){
+        QList<QString> listColor;
+        for(int j = i; j < listStaticHexColor.count(); j += dynamicSimulatePos._KeyboardLayout._ButtonCount){
+            listColor.append(listStaticHexColor.at(j));
+        }
+        mapColor.insert(i, listColor);
+    }
+
+
+    QFile file(QFileDialog::getSaveFileName(this,"", "静态动画网页版", "静态动画网页版(*.web);;所有文件 (*);"));
+    int group = 0;
+    if(file.open(QFileDevice::WriteOnly | QIODevice::Text)){
+        file.write("{");
+        for(auto item = mapColor.begin(); item != mapColor.end(); item++){
+            file.write(QString("\"%1\":[").arg(group).toUtf8());
+            for(int i = 0; i < item.value().count(); i++){
+                file.write( QString("\'%1\'").arg(item.value().at(i)).toUtf8() );
+                if(i < item.value().count() - 1){
+                    file.write(",");
+                }
+            }
+            group++;
+            file.write("],\n");
+        }
+        file.write("}");
+        file.close();
+    }else{
+        qDebug() << "写入失败";
+    }
+    QMessageBox::information(this,"静态动画网页版导出","静态动画网页版导出");
+
+
+
+
+
+    // int group = 1;
+    // QFile file(QFileDialog::getSaveFileName(this,"", "静态动画网页版", "静态动画网页版(*.web);;所有文件 (*);")); //static Animation
+    // if(file.open(QFileDevice::WriteOnly | QIODevice::Text)){
+    //     file.write("{");
+    //     for(int i = 0; i < listStaticHexColor.count(); i++){
+    //         if(i == 0 ) {
+    //             file.write("\"0\":[");
+    //         }
+
+    //         if(i % path.count()  == 0 && i != 0) {
+    //             QString title = QString("],\n\"%1\":[").arg(group);
+    //             file.write(title.toUtf8());
+    //             group++;
+    //         }
+    //         file.write(QString("\'%1\'").arg(listStaticHexColor.at(i)).toUtf8());
+
+    //         qDebug() << QString("当前内容[i = %1] & [行数 = %2] [%3 % %4] = [%5] [色号 = %6]").arg(i).arg(group).arg(i).arg(path.count() ).arg((i + 1) % path.count()).arg(listStaticHexColor.at(i));
+    //         if((i + 1) % path.count() != 0 || i == 0) {
+    //             file.write(",");
+    //         }else{
+    //             qDebug() << "当前无需增加逗号";
+    //         }
+
+    //     }
+    //     file.write("]}");
+    //     file.close();
+    // }else{
+    //     qDebug() << "写入失败";
+    // }
+    // QMessageBox::information(this,"静态动画网页版导出","静态动画网页版导出");
+}
+
+
 //动态动画导出
 void GY_KeyboardDrawLayout::slotAnimationDynamicExport(QStringList path)
 {
@@ -337,11 +426,12 @@ void GY_KeyboardDrawLayout::slotAnimationDynamicExport(QStringList path)
 
     for(int keySumCount = 0; keySumCount < mapKeyboardInfo.first()._KeyboardLayout._ButtonCount; keySumCount++){
         QList<QString> listDynamicHexColor;  //16进制数值
-        for(int pixNumber = 0; pixNumber < path.count(); pixNumber++){
+        for(int pixNumber = 1; pixNumber < path.count(); pixNumber++){
             QRgb pixelColor = lightColor.rgb();
             for(int keyNumber = 0; keyNumber < mapKeyboardInfo.first()._KeyboardLayout._ButtonCount; keyNumber++){
                 if(mapKeyboardInfo.contains(keyNumber)){
                     auto keyboardInfo = mapKeyboardInfo.find(keyNumber);
+
                     double imageOrKeyRatio_X = (pixmapBackground.at(pixNumber).width()  / 2.0) - mapKeyboardInfo.find(keySumCount).value()._KeyCenterPoint.x();
                     double imageOrKeyRatio_Y = (pixmapBackground.at(pixNumber).height() / 2.0) - mapKeyboardInfo.find(keySumCount).value()._KeyCenterPoint.y();
                     if(keyboardInfo.value()._KeyCenterPoint.x() + imageOrKeyRatio_X >= pixmapBackground.at(pixNumber).width() || keyboardInfo.value()._KeyCenterPoint.y() + imageOrKeyRatio_Y >= pixmapBackground.at(pixNumber).height() || keyboardInfo.value()._KeyCenterPoint.x() + imageOrKeyRatio_X < 0 || keyboardInfo.value()._KeyCenterPoint.y() + imageOrKeyRatio_Y < 0){

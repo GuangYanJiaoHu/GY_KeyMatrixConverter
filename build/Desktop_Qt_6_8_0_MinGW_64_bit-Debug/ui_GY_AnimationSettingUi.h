@@ -37,6 +37,10 @@ public:
     QScrollArea *scrollArea_Static;
     QWidget *scrollAreaWidgetContents;
     QGridLayout *gridLayout_12;
+    QWidget *widget_4;
+    QGridLayout *gridLayout_7;
+    QPushButton *pushButton_StaticStart;
+    QPushButton *pushButton_StaticExport;
     QWidget *widget_2;
     QGridLayout *gridLayout_3;
     QLabel *label_StaticReadPath;
@@ -47,16 +51,13 @@ public:
     QLabel *label_StaticOnlySimulate;
     QComboBox *comboBox_StaticOnlySimulate;
     QCheckBox *checkBox_StaticSend;
-    QWidget *widget_4;
-    QGridLayout *gridLayout_7;
-    QPushButton *pushButton_StaticStart;
-    QPushButton *pushButton_StaticExport;
     QWidget *widget_8;
     QGridLayout *gridLayout_8;
     QLabel *label_StaticUiMs;
     QLabel *label_StaticUi;
     QSlider *horizontalSlider_StaticUi;
     QSpacerItem *verticalSpacer;
+    QPushButton *pushButton_StaticExportWeb;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_6;
     QScrollArea *scrollArea_2;
@@ -146,6 +147,34 @@ public:
         gridLayout_12 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_12->setObjectName("gridLayout_12");
         gridLayout_12->setVerticalSpacing(7);
+        widget_4 = new QWidget(scrollAreaWidgetContents);
+        widget_4->setObjectName("widget_4");
+        widget_4->setMaximumSize(QSize(16777215, 80));
+        gridLayout_7 = new QGridLayout(widget_4);
+        gridLayout_7->setObjectName("gridLayout_7");
+        gridLayout_7->setHorizontalSpacing(7);
+        gridLayout_7->setContentsMargins(-1, 0, -1, 0);
+        pushButton_StaticStart = new QPushButton(widget_4);
+        pushButton_StaticStart->setObjectName("pushButton_StaticStart");
+        pushButton_StaticStart->setMinimumSize(QSize(0, 50));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font1.setPointSize(10);
+        font1.setBold(true);
+        pushButton_StaticStart->setFont(font1);
+
+        gridLayout_7->addWidget(pushButton_StaticStart, 0, 0, 1, 1);
+
+        pushButton_StaticExport = new QPushButton(widget_4);
+        pushButton_StaticExport->setObjectName("pushButton_StaticExport");
+        pushButton_StaticExport->setMinimumSize(QSize(0, 50));
+        pushButton_StaticExport->setFont(font1);
+
+        gridLayout_7->addWidget(pushButton_StaticExport, 0, 2, 1, 1);
+
+
+        gridLayout_12->addWidget(widget_4, 2, 0, 1, 1);
+
         widget_2 = new QWidget(scrollAreaWidgetContents);
         widget_2->setObjectName("widget_2");
         widget_2->setMaximumSize(QSize(16777215, 50));
@@ -155,10 +184,6 @@ public:
         label_StaticReadPath = new QLabel(widget_2);
         label_StaticReadPath->setObjectName("label_StaticReadPath");
         label_StaticReadPath->setMaximumSize(QSize(70, 16777215));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
-        font1.setPointSize(10);
-        font1.setBold(true);
         label_StaticReadPath->setFont(font1);
 
         gridLayout_3->addWidget(label_StaticReadPath, 0, 0, 1, 1);
@@ -211,30 +236,6 @@ public:
 
         gridLayout_12->addWidget(widget_3, 1, 0, 1, 1);
 
-        widget_4 = new QWidget(scrollAreaWidgetContents);
-        widget_4->setObjectName("widget_4");
-        widget_4->setMaximumSize(QSize(16777215, 80));
-        gridLayout_7 = new QGridLayout(widget_4);
-        gridLayout_7->setObjectName("gridLayout_7");
-        gridLayout_7->setHorizontalSpacing(7);
-        gridLayout_7->setContentsMargins(-1, 0, -1, 0);
-        pushButton_StaticStart = new QPushButton(widget_4);
-        pushButton_StaticStart->setObjectName("pushButton_StaticStart");
-        pushButton_StaticStart->setMinimumSize(QSize(0, 50));
-        pushButton_StaticStart->setFont(font1);
-
-        gridLayout_7->addWidget(pushButton_StaticStart, 0, 0, 1, 1);
-
-        pushButton_StaticExport = new QPushButton(widget_4);
-        pushButton_StaticExport->setObjectName("pushButton_StaticExport");
-        pushButton_StaticExport->setMinimumSize(QSize(0, 50));
-        pushButton_StaticExport->setFont(font1);
-
-        gridLayout_7->addWidget(pushButton_StaticExport, 0, 2, 1, 1);
-
-
-        gridLayout_12->addWidget(widget_4, 2, 0, 1, 1);
-
         widget_8 = new QWidget(scrollAreaWidgetContents);
         widget_8->setObjectName("widget_8");
         widget_8->setMaximumSize(QSize(16777215, 80));
@@ -265,11 +266,18 @@ public:
         gridLayout_8->addWidget(horizontalSlider_StaticUi, 0, 1, 1, 1);
 
 
-        gridLayout_12->addWidget(widget_8, 3, 0, 1, 1);
+        gridLayout_12->addWidget(widget_8, 4, 0, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout_12->addItem(verticalSpacer, 4, 0, 1, 1);
+        gridLayout_12->addItem(verticalSpacer, 6, 0, 1, 1);
+
+        pushButton_StaticExportWeb = new QPushButton(scrollAreaWidgetContents);
+        pushButton_StaticExportWeb->setObjectName("pushButton_StaticExportWeb");
+        pushButton_StaticExportWeb->setMinimumSize(QSize(0, 50));
+        pushButton_StaticExportWeb->setFont(font1);
+
+        gridLayout_12->addWidget(pushButton_StaticExportWeb, 5, 0, 1, 1);
 
         scrollArea_Static->setWidget(scrollAreaWidgetContents);
 
@@ -513,14 +521,15 @@ public:
     {
         GY_AnimationSettingUi->setWindowTitle(QCoreApplication::translate("GY_AnimationSettingUi", "Form", nullptr));
         groupBox->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\351\235\231\346\200\201/\345\274\200\346\234\272 \345\212\250\347\224\273", nullptr));
+        pushButton_StaticStart->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\274\200\345\247\213\346\250\241\346\213\237", nullptr));
+        pushButton_StaticExport->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\257\274\345\207\272\345\212\250\347\224\273\346\226\207\344\273\266", nullptr));
         label_StaticReadPath->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\347\224\273\345\234\260\345\235\200\357\274\232", nullptr));
         pushButton_StaticReadPath->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\350\257\273\345\217\226", nullptr));
         label_StaticOnlySimulate->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\351\200\220\345\270\247\346\250\241\346\213\237\357\274\232", nullptr));
         checkBox_StaticSend->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\346\250\241\346\213\237\344\270\213\345\217\221\351\224\256\347\233\230", nullptr));
-        pushButton_StaticStart->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\274\200\345\247\213\346\250\241\346\213\237", nullptr));
-        pushButton_StaticExport->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\257\274\345\207\272\345\212\250\347\224\273\346\226\207\344\273\266", nullptr));
         label_StaticUiMs->setText(QCoreApplication::translate("GY_AnimationSettingUi", "50ms", nullptr));
         label_StaticUi->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\347\225\214\351\235\242\346\250\241\346\213\237\351\200\237\345\272\246\357\274\232", nullptr));
+        pushButton_StaticExportWeb->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\257\274\345\207\272\347\275\221\351\241\265\347\211\210-\351\235\231\346\200\201\345\212\250\347\224\273\346\226\207\344\273\266", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("GY_AnimationSettingUi", "\345\212\250\346\200\201/\346\267\261\345\272\246 \345\212\250\347\224\273", nullptr));
         label_DynamicSend_2->setText(QCoreApplication::translate("GY_AnimationSettingUi", "\345\233\276\351\253\230\357\274\232", nullptr));
         label_PixmapWidth->setText(QCoreApplication::translate("GY_AnimationSettingUi", "PX", nullptr));

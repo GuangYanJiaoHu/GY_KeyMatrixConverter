@@ -71,11 +71,13 @@ void GY_AnimationSettingUi::on_pushButton_DynamicReadPath_clicked()
     if(filePath.isEmpty()){
         return ;
     }
+    //ui->comboBox_DynamicOnlySimulate->clear();
     listDynamicPicturePath.clear();
     ui->lineEdit_DynamicReadPath->setText(filePath);
     QDir Dir(filePath);                              			//查看工作路径是否存在
     Dir.setFilter(QDir::Files);                     			//设置过滤器只查看文件
     listDynamicPicturePath = Dir.entryList(QDir::Files);  		//获取所有文件
+
     foreach (auto file, listDynamicPicturePath){                //遍历只加载.txt到文件列表
         ui->comboBox_DynamicOnlySimulate->addItem(file);
     }
@@ -164,6 +166,19 @@ void GY_AnimationSettingUi::on_pushButton_StaticExport_clicked()
     }
     emit signalAnimationStaticExport(path);
 }
+//静态动画网页版导出
+void GY_AnimationSettingUi::on_pushButton_StaticExportWeb_clicked()
+{
+    if(ui->lineEdit_StaticReadPath->text().isEmpty()){
+        //无导出内容
+        return;
+    }
+    QStringList path;
+    foreach(auto item, listStaticPicturePath){
+        path.append(ui->lineEdit_StaticReadPath->text() + "/" + item);
+    }
+    emit signalAnimationStaticWebExport(path);
+}
 
 //动态动画导出
 void GY_AnimationSettingUi::on_pushButton_DynamicExport_clicked()
@@ -227,4 +242,6 @@ void GY_AnimationSettingUi::on_checkBox_DynamicSend_stateChanged(int arg1)
         this->isDownloadKeyboardDynamic = false;
     }
 }
+
+
 

@@ -65,6 +65,7 @@ constexpr auto qt_meta_stringdata_CLASSGY_KeyboardDrawLayoutENDCLASS = QtMocHelp
     "slotAnimationDynamicUpdateSimulatePos",
     "slotAnimationStaticExport",
     "slotAnimationDynamicExport",
+    "slotAnimationStaticWebExport",
     "slotCustomizeAnimationIsDraw",
     "isDraw",
     "slotAnimationDynamicPixmapSize",
@@ -91,7 +92,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_KeyboardDrawLayoutENDCLASS[] 
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      24,   14, // methods
+      25,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -99,32 +100,33 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_KeyboardDrawLayoutENDCLASS[] 
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  158,    2, 0x06,    1 /* Public */,
-       3,    1,  159,    2, 0x06,    2 /* Public */,
-       5,    1,  162,    2, 0x06,    4 /* Public */,
+       1,    0,  164,    2, 0x06,    1 /* Public */,
+       3,    1,  165,    2, 0x06,    2 /* Public */,
+       5,    1,  168,    2, 0x06,    4 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,  165,    2, 0x0a,    6 /* Public */,
-       7,    1,  166,    2, 0x0a,    7 /* Public */,
-       9,    1,  169,    2, 0x0a,    9 /* Public */,
-      11,    1,  172,    2, 0x0a,   11 /* Public */,
-      13,    4,  175,    2, 0x0a,   13 /* Public */,
-      18,    4,  184,    2, 0x0a,   18 /* Public */,
-      20,    3,  193,    2, 0x0a,   23 /* Public */,
-      22,    3,  200,    2, 0x0a,   27 /* Public */,
-      23,    1,  207,    2, 0x0a,   31 /* Public */,
-      25,    1,  210,    2, 0x0a,   33 /* Public */,
-      26,    0,  213,    2, 0x0a,   35 /* Public */,
-      27,    1,  214,    2, 0x0a,   36 /* Public */,
-      28,    1,  217,    2, 0x0a,   38 /* Public */,
-      29,    1,  220,    2, 0x0a,   40 /* Public */,
-      31,    1,  223,    2, 0x0a,   42 /* Public */,
-      32,    1,  226,    2, 0x0a,   44 /* Public */,
-      34,    1,  229,    2, 0x08,   46 /* Private */,
-      37,    1,  232,    2, 0x08,   48 /* Private */,
-      38,    0,  235,    2, 0x08,   50 /* Private */,
-      39,    0,  236,    2, 0x08,   51 /* Private */,
-      40,    1,  237,    2, 0x08,   52 /* Private */,
+       6,    0,  171,    2, 0x0a,    6 /* Public */,
+       7,    1,  172,    2, 0x0a,    7 /* Public */,
+       9,    1,  175,    2, 0x0a,    9 /* Public */,
+      11,    1,  178,    2, 0x0a,   11 /* Public */,
+      13,    4,  181,    2, 0x0a,   13 /* Public */,
+      18,    4,  190,    2, 0x0a,   18 /* Public */,
+      20,    3,  199,    2, 0x0a,   23 /* Public */,
+      22,    3,  206,    2, 0x0a,   27 /* Public */,
+      23,    1,  213,    2, 0x0a,   31 /* Public */,
+      25,    1,  216,    2, 0x0a,   33 /* Public */,
+      26,    0,  219,    2, 0x0a,   35 /* Public */,
+      27,    1,  220,    2, 0x0a,   36 /* Public */,
+      28,    1,  223,    2, 0x0a,   38 /* Public */,
+      29,    1,  226,    2, 0x0a,   40 /* Public */,
+      30,    1,  229,    2, 0x0a,   42 /* Public */,
+      32,    1,  232,    2, 0x0a,   44 /* Public */,
+      33,    1,  235,    2, 0x0a,   46 /* Public */,
+      35,    1,  238,    2, 0x08,   48 /* Private */,
+      38,    1,  241,    2, 0x08,   50 /* Private */,
+      39,    0,  244,    2, 0x08,   52 /* Private */,
+      40,    0,  245,    2, 0x08,   53 /* Private */,
+      41,    1,  246,    2, 0x08,   54 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -145,14 +147,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGY_KeyboardDrawLayoutENDCLASS[] 
     QMetaType::Void,
     QMetaType::Void, QMetaType::QStringList,   14,
     QMetaType::Void, QMetaType::QStringList,   14,
-    QMetaType::Void, QMetaType::Bool,   30,
+    QMetaType::Void, QMetaType::QStringList,   14,
+    QMetaType::Void, QMetaType::Bool,   31,
     QMetaType::Void, QMetaType::QPoint,    8,
-    QMetaType::Void, QMetaType::Bool,   33,
-    QMetaType::Void, 0x80000000 | 35,   36,
-    QMetaType::Void, 0x80000000 | 35,   36,
+    QMetaType::Void, QMetaType::Bool,   34,
+    QMetaType::Void, 0x80000000 | 36,   37,
+    QMetaType::Void, 0x80000000 | 36,   37,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 41,   42,
+    QMetaType::Void, 0x80000000 | 42,   43,
 
        0        // eod
 };
@@ -221,6 +224,9 @@ Q_CONSTINIT const QMetaObject GY_KeyboardDrawLayout::staticMetaObject = { {
         // method 'slotAnimationDynamicExport'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QStringList, std::false_type>,
+        // method 'slotAnimationStaticWebExport'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QStringList, std::false_type>,
         // method 'slotCustomizeAnimationIsDraw'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
@@ -269,14 +275,15 @@ void GY_KeyboardDrawLayout::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         case 13: _t->slotAnimationDynamicUpdateSimulatePos(); break;
         case 14: _t->slotAnimationStaticExport((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
         case 15: _t->slotAnimationDynamicExport((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
-        case 16: _t->slotCustomizeAnimationIsDraw((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 17: _t->slotAnimationDynamicPixmapSize((*reinterpret_cast< std::add_pointer_t<QPoint>>(_a[1]))); break;
-        case 18: _t->slotKeyboardSettingKeySimulate((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 19: _t->slotKeyPress((*reinterpret_cast< std::add_pointer_t<GY_KeyboardHook::KeyInfo>>(_a[1]))); break;
-        case 20: _t->slotKeyRelease((*reinterpret_cast< std::add_pointer_t<GY_KeyboardHook::KeyInfo>>(_a[1]))); break;
-        case 21: _t->slotTimerAnimationStaticSimulate(); break;
-        case 22: _t->slotTimerAnimationDynamicSimulate(); break;
-        case 23: _t->mousePressEvent((*reinterpret_cast< std::add_pointer_t<QMouseEvent*>>(_a[1]))); break;
+        case 16: _t->slotAnimationStaticWebExport((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 17: _t->slotCustomizeAnimationIsDraw((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 18: _t->slotAnimationDynamicPixmapSize((*reinterpret_cast< std::add_pointer_t<QPoint>>(_a[1]))); break;
+        case 19: _t->slotKeyboardSettingKeySimulate((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 20: _t->slotKeyPress((*reinterpret_cast< std::add_pointer_t<GY_KeyboardHook::KeyInfo>>(_a[1]))); break;
+        case 21: _t->slotKeyRelease((*reinterpret_cast< std::add_pointer_t<GY_KeyboardHook::KeyInfo>>(_a[1]))); break;
+        case 22: _t->slotTimerAnimationStaticSimulate(); break;
+        case 23: _t->slotTimerAnimationDynamicSimulate(); break;
+        case 24: _t->mousePressEvent((*reinterpret_cast< std::add_pointer_t<QMouseEvent*>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -324,13 +331,13 @@ int GY_KeyboardDrawLayout::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 24)
+        if (_id < 25)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 25;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 24)
+        if (_id < 25)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 24;
+        _id -= 25;
     }
     return _id;
 }

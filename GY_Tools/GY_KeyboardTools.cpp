@@ -79,7 +79,13 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
     MapKeyboard.insert(56, KeyboardButtonInfo{QPoint( 11, 85), QRect(  0, 76, 22, 18),   "Ctrl L", 162, 0, 0, color, "00E0", keyboardLayout });
     MapKeyboard.insert(57, KeyboardButtonInfo{QPoint( 34, 85), QRect( 23, 76, 22, 18),    "Win L",  91, 0, 0, color, "00E3", keyboardLayout });
     MapKeyboard.insert(58, KeyboardButtonInfo{QPoint( 57, 85), QRect( 46, 76, 22, 18),    "Alt L", 164, 0, 0, color, "00E2", keyboardLayout });
-    MapKeyboard.insert(61, KeyboardButtonInfo{QPoint(128, 85), QRect( 69, 76,117, 18),    "Space",  32, 0, 0, color, "002C", keyboardLayout });
+
+    MapKeyboard.insert(59, KeyboardButtonInfo{QPoint( 88, 85), QRect( 78, 76, 20, 18),   "Space0", 998, 0, 0, color, "0000", keyboardLayout });
+    MapKeyboard.insert(60, KeyboardButtonInfo{QPoint(108, 85), QRect( 98, 76, 20, 18),   "Space1", 998, 0, 0, color, "0000", keyboardLayout });
+    MapKeyboard.insert(61, KeyboardButtonInfo{QPoint(128, 85), QRect(118, 76, 20, 18),    "Space",  32, 0, 0, color, "002C", keyboardLayout });
+    MapKeyboard.insert(62, KeyboardButtonInfo{QPoint(148, 85), QRect(138, 76, 20, 18),   "Space2", 998, 0, 0, color, "0000", keyboardLayout });
+    MapKeyboard.insert(63, KeyboardButtonInfo{QPoint(168, 85), QRect(158, 76, 20, 18),   "Space3", 998, 0, 0, color, "0000", keyboardLayout });
+
     MapKeyboard.insert(64, KeyboardButtonInfo{QPoint(198, 85), QRect(187, 76, 22, 18),    "Alt R", 165, 0, 0, color, "00E6", keyboardLayout });
     MapKeyboard.insert(65, KeyboardButtonInfo{QPoint(221, 85), QRect(210, 76, 22, 18),   "Ctrl R", 163, 0, 0, color, "00E4", keyboardLayout });
     MapKeyboard.insert(66, KeyboardButtonInfo{QPoint(244, 85), QRect(233, 76, 22, 18),     "Menu", 000, 0, 0, color, "0076", keyboardLayout });
@@ -87,6 +93,7 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
 
     return MapKeyboard;
 }
+
 //读取动态动画内容
 QByteArray GY_KeyboardTools::getAnimationDynamic(QString path)
 {
@@ -104,6 +111,7 @@ QByteArray GY_KeyboardTools::getAnimationDynamic(QString path)
     fileRead.close();
     return dynamicBinFile;
 }
+
 //读取静态动画内容
 QByteArray GY_KeyboardTools::getAnimationStatic(QString path)
 {
@@ -117,6 +125,7 @@ QByteArray GY_KeyboardTools::getAnimationStatic(QString path)
     fileRead.close();
     return animationStaticData;
 }
+
 //动态动画补零
 QByteArray GY_KeyboardTools::getDynamicFillZero(QByteArray data, int sector)
 {
@@ -127,6 +136,7 @@ QByteArray GY_KeyboardTools::getDynamicFillZero(QByteArray data, int sector)
     }
     return QByteArray::fromHex(writeDate);
 }
+
 //静态动画补零
 QByteArray GY_KeyboardTools::getStaticFillZero(QByteArray data, int sector)
 {
@@ -156,6 +166,8 @@ float GY_KeyboardTools::getByteArrayToFloat(QByteArray data)
     memcpy(&dataBate_4, (char *)data.left(4).data(), sizeof(float));
     return dataBate_4;
 }
+
+
 
 
 
@@ -225,8 +237,6 @@ float GY_KeyboardTools::getByteArrayToFloat(QByteArray data)
     MapKeyboard.insert(65, KeyboardButtonInfo{QPoint(223.70, 83.20), QRect(216.70, 76.20, 14, 14),       "Fn", 999, 0, 0, color, "00FE", keyboardLayout });
     MapKeyboard.insert(66, KeyboardButtonInfo{QPoint(247.51, 83.20), QRect(240.51, 76.20, 14, 14),     "Menu", 000, 0, 0, color, "0076", keyboardLayout });
     MapKeyboard.insert(67, KeyboardButtonInfo{QPoint(271.32, 83.20), QRect(264.32, 76.20, 14, 14),   "Ctrl R", 163, 0, 0, color, "00E4", keyboardLayout });
-
-
 */
 
 
