@@ -458,18 +458,19 @@ void GY_KeyboardDrawLayout::mousePressEvent(QMouseEvent *event)
             pixmap.fill(QColor(0, 0, 0));  // 背景色修改
             for(QMap<int, GY_KeyboardTools::KeyboardButtonInfo>::iterator item = mapKeyboardInfo.begin(); item != mapKeyboardInfo.end(); ++item){
                 if(item.value()._Keyborders.contains(pos)){
+                    qDebug() << "包含当前颜色:" << item.value()._KeyName << item.value()._KeyCustomizeColor;
                     item.value()._KeyCustomizeColor = Qt::black;    //初始化黑色
                 }
                 if(item.value()._KeyCustomizeColor == Qt::black){
+                    qDebug() << "包含当前颜色 黑色:" << item.value()._KeyName << item.value()._KeyCustomizeColor;
                     this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, Qt::white, item.value()._KeyName, Qt::yellow);
                 }else{
+                    qDebug() << "包含当前颜色 = 红色:" << item.value()._KeyName << item.value()._KeyCustomizeColor;
                     this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, Qt::white, item.value()._KeyName, Qt::yellow, true, true, item.value()._KeyCustomizeColor);
                 }
             }
             ui->label->setPixmap(pixmap);   // 更新到窗口部件上
         }
-
-
     }
 
     if(this->isDynamicSimulationPos){
@@ -491,7 +492,6 @@ void GY_KeyboardDrawLayout::setDrawKeyBoard(QPainter &painter, QRect rectboard, 
 {
     float  sidePosX = 0, sidePosY = 0, sideWidth = 0, sideHeight = 0, lightCenterX = 0, lightCenterY = 0, lightRadiusX = 0, lightRadiusY = 0;
     float radius = (mapKeyboardInfo.first()._KeyCenterPoint.x() - mapKeyboardInfo.first()._Keyborders.x() + 0) * keboardLayoutSize;
-
     //---------------------------------------------------绘制按键四周边框--------------------------------------------------------------
     QPen pen(3);
     pen.setColor(colorRect);
@@ -523,9 +523,10 @@ void GY_KeyboardDrawLayout::setDrawKeyBoard(QPainter &painter, QRect rectboard, 
     lightCenterY = pointCenter.y() - radius;
     lightRadiusX = lightRadiusY = radius  * 2 ;
     if(isFill == false){
+
         painter.drawEllipse(lightCenterX, lightCenterY, lightRadiusX, lightRadiusY);
     }else{
-        painter.setBrush(QBrush(colorFill)); // :cite[1]:cite[3]
+        painter.setBrush(QBrush(colorFill));    //对圆角矩形进行填充
         painter.drawRoundedRect(sidePosX, sidePosY, sideWidth, sideHeight, RadiusRect, RadiusRect); //绘制圆角边框
         //painter.fillRect(sidePosX, sidePosY, sideWidth, sideHeight, colorFill);
 
@@ -538,6 +539,8 @@ void GY_KeyboardDrawLayout::setDrawKeyBoard(QPainter &painter, QRect rectboard, 
     painter.setFont(QFont("微软雅黑", 9, QFont::Bold ));
     painter.drawText(pointCenter.x() - (text.count() * keboardLayoutSize), pointCenter.y(), text);  //计算文字位置 当前x点-文本长度 * 放大倍数
 
+    // 设置无填充
+    painter.setBrush(Qt::NoBrush);  //将之前画刷全部清空，不然二次绘制的时候会有残留
 }
 
 //键盘按下事件

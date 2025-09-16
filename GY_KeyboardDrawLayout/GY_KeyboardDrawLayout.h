@@ -67,6 +67,19 @@ private slots:
     virtual void mousePressEvent(QMouseEvent *event) override;  //鼠标点击事件
 
 private:
+    /**
+     * @brief setDrawKeyBoard   绘制单个按键
+     * @param painter           绘制painter
+     * @param rectboard         绘制按键边框
+     * @param colorRect         绘制边框颜色
+     * @param centerPoint       绘制灯光中心点 - 按键中心点
+     * @param colorLight        绘制灯光颜色
+     * @param text              绘制按键字符
+     * @param colorText         绘制按键字符颜色
+     * @param isAnimationType   动画类型 - true静态动画 | false动态动画
+     * @param isFill            是否对按键进行颜色填充
+     * @param colorFill         填充按键颜色
+     */
     void setDrawKeyBoard(QPainter &painter, QRect rectboard, QColor colorRect, QPoint centerPoint, QColor colorLight, QString text, QColor colorText, bool isAnimationType = true, bool isFill = false, QColor colorFill = Qt::red);      //单独绘制一个按键
     void setAnimationSimulate(QString path, bool isAnimation = true, bool isDownLoadKeyboard = false);        //静态/动态动画模拟  默认静态动画
 
