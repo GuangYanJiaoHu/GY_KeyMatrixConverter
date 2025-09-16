@@ -231,7 +231,9 @@ void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation,
         foreach (auto item, mapKeyboardInfo) {
             QColor lightColor;
             if(!newImage.rect().contains(QPoint(item._KeyCenterPoint.x() + imageOrKeyRatio.x(), item._KeyCenterPoint.y() + imageOrKeyRatio.y()))){
-                lightColor = newImage.pixelColor(0, 0);
+                //lightColor = newImage.pixelColor(0, 0); //这里是一个遗留的bug 后续要改为：取第一帧的数据为键盘颜色
+                lightColor = Qt::black;
+
             }else{
                 lightColor = newImage.pixelColor(item._KeyCenterPoint.x() + imageOrKeyRatio.x(), item._KeyCenterPoint.y() + imageOrKeyRatio.y());
             }
@@ -377,41 +379,6 @@ void GY_KeyboardDrawLayout::slotAnimationStaticWebExport(QStringList path)
         qDebug() << "写入失败";
     }
     QMessageBox::information(this,"静态动画网页版导出","静态动画网页版导出");
-
-
-
-
-
-    // int group = 1;
-    // QFile file(QFileDialog::getSaveFileName(this,"", "静态动画网页版", "静态动画网页版(*.web);;所有文件 (*);")); //static Animation
-    // if(file.open(QFileDevice::WriteOnly | QIODevice::Text)){
-    //     file.write("{");
-    //     for(int i = 0; i < listStaticHexColor.count(); i++){
-    //         if(i == 0 ) {
-    //             file.write("\"0\":[");
-    //         }
-
-    //         if(i % path.count()  == 0 && i != 0) {
-    //             QString title = QString("],\n\"%1\":[").arg(group);
-    //             file.write(title.toUtf8());
-    //             group++;
-    //         }
-    //         file.write(QString("\'%1\'").arg(listStaticHexColor.at(i)).toUtf8());
-
-    //         qDebug() << QString("当前内容[i = %1] & [行数 = %2] [%3 % %4] = [%5] [色号 = %6]").arg(i).arg(group).arg(i).arg(path.count() ).arg((i + 1) % path.count()).arg(listStaticHexColor.at(i));
-    //         if((i + 1) % path.count() != 0 || i == 0) {
-    //             file.write(",");
-    //         }else{
-    //             qDebug() << "当前无需增加逗号";
-    //         }
-
-    //     }
-    //     file.write("]}");
-    //     file.close();
-    // }else{
-    //     qDebug() << "写入失败";
-    // }
-    // QMessageBox::information(this,"静态动画网页版导出","静态动画网页版导出");
 }
 
 
@@ -533,7 +500,9 @@ void GY_KeyboardDrawLayout::setDrawKeyBoard(QPainter &painter, QRect rectboard, 
     sidePosY   = rectboard.y() * keboardLayoutSize + keyboardMove;  //对y点整体放大
     sideWidth  = rectboard.width() * keboardLayoutSize;             //对边长整体放大
     sideHeight = rectboard.height() * keboardLayoutSize;            //对边宽整体放大
-    painter.drawRect(sidePosX, sidePosY, sideWidth, sideHeight);    //绘制边框
+    //painter.drawRect(sidePosX, sidePosY, sideWidth, sideHeight);    //绘制边框
+    painter.setRenderHint(QPainter::Antialiasing, true); // 开启抗锯齿
+    painter.drawRoundedRect(sidePosX, sidePosY, sideWidth, sideHeight, RadiusRect, RadiusRect); //绘制圆角边框
 
     //--------------------------------------------------绘制按键中心点灯光-------------------------------------------------------------
     QPoint pointCenter(centerPoint.x() * keboardLayoutSize + keyboardMove, centerPoint.y() * keboardLayoutSize + keyboardMove); //对键盘等比缩放
@@ -556,7 +525,10 @@ void GY_KeyboardDrawLayout::setDrawKeyBoard(QPainter &painter, QRect rectboard, 
     if(isFill == false){
         painter.drawEllipse(lightCenterX, lightCenterY, lightRadiusX, lightRadiusY);
     }else{
-        painter.fillRect(sidePosX, sidePosY, sideWidth, sideHeight, colorFill);
+        painter.setBrush(QBrush(colorFill)); // :cite[1]:cite[3]
+        painter.drawRoundedRect(sidePosX, sidePosY, sideWidth, sideHeight, RadiusRect, RadiusRect); //绘制圆角边框
+        //painter.fillRect(sidePosX, sidePosY, sideWidth, sideHeight, colorFill);
+
     }
 
     //-----------------------------------------------------绘制按键字符---------------------------------------------------------------

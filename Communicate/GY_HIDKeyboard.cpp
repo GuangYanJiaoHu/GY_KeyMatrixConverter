@@ -5,8 +5,8 @@ void GY_HIDKeyboard::GetDeviceReadMessage(const QString &portPath)
     for(auto item = listConnectDevice->begin(); item != listConnectDevice->end(); item++){
         if(item->getDevicePortPath() == portPath){
             qDebug()<<"开始读取hid设备信息"<<QTime::currentTime();
-            qDebug() << "写入状态:" << this->WriteHandle(item->getDeviceHandle(), QByteArray("FE F5 02"));//设备颜色
-            break;                                                              //已经拿到信息后就可以即使的关闭循环状态节省资源
+            qDebug() << "写入状态:" << this->WriteHandle(item->getDeviceHandle(), QByteArray("FE F5 02"));  //设备颜色
+            break;      //已经拿到信息后就可以即使的关闭循环状态节省资源
         }
     }
     if(!timerBattery->isActive()){
@@ -97,10 +97,10 @@ void GY_HIDKeyboard::setDeviceMessage(const QString &portPath, const QString &Da
                 qDebug() << "HID键盘返回信息-设备批号：" << QString(HexToMessage(recvData.remove("FE F5 05", Qt::CaseInsensitive))).simplified().remove(QChar('\u0000'));
             }else if(order == "FE F5 06"){
                 QString uniqueID = QString(HexToMessage(recvData.remove("FE F5 06", Qt::CaseInsensitive))).simplified().remove(QChar('\u0000'));
-                if(uniqueID.contains("GY02B-")){                  //旧键盘
-                    listConnectDevice->operator [](i).setDeviceType(HidDeviceInfo::DeviceType::_HID_KEYBOARD_JIAN0);                    //设备类型
+                if(uniqueID.contains("GY02B-")){                                                                    //旧键盘
+                    listConnectDevice->operator [](i).setDeviceType(HidDeviceInfo::DeviceType::_HID_KEYBOARD_JIAN0);//设备类型
                 }else if(uniqueID.contains("GY03B-")){
-                    listConnectDevice->operator [](i).setDeviceType(HidDeviceInfo::DeviceType::_HID_KEYBOARD);                          //设备类型
+                    listConnectDevice->operator [](i).setDeviceType(HidDeviceInfo::DeviceType::_HID_KEYBOARD);      //设备类型
                 }
                 listConnectDevice->operator [](i).setDeviceUniqueID(uniqueID);
                 qDebug() << "HID键盘返回信息-唯一编码：" << QString(HexToMessage(recvData.remove("FE F5 06", Qt::CaseInsensitive))).simplified().remove(QChar('\u0000'));
@@ -112,15 +112,16 @@ void GY_HIDKeyboard::setDeviceMessage(const QString &portPath, const QString &Da
                 if(deviceNameOrDFU.count() >= 2){
                     listConnectDevice->operator [](i).setDeviceName(deviceNameOrDFU.at(0));
                     listConnectDevice->operator [](i).setDeviceDfuVersion(deviceNameOrDFU.at(1));
-                    if(deviceNameOrDFU.at(0).contains("KEY_PAD")){//这是小键盘
-                        listConnectDevice->operator [](i).setDeviceType(HidDeviceInfo::DeviceType::_HID_KEYPAD);                          //设备类型
+                    if(deviceNameOrDFU.at(0).contains("KEY_PAD")){                                                  //这是小键盘
+                        listConnectDevice->operator [](i).setDeviceType(HidDeviceInfo::DeviceType::_HID_KEYPAD);    //设备类型
                     }
                 }
                 qDebug() << "HID键盘返回信息-DFU版本：" << listConnectDevice->at(i).getDeviceName() << " - " << listConnectDevice->at(i).getDeviceDfuVersion();
             }else if(order == "FE F6"){
-                int batter_value=recvData.mid(6,2).toInt(nullptr, 16);//读取的信息转为int值
-                if(batter_value>100)//信息错误时会出现大于100的电量
-                    batter_value=batter_value%100;//尝试是否有其他方式模拟
+                int batter_value=recvData.mid(6,2).toInt(nullptr, 16);                                              //读取的信息转为int值
+                if(batter_value>100) {                                                                              //信息错误时会出现大于100的电量
+                    batter_value=batter_value%100;                                                                  //尝试是否有其他方式模拟
+                }
                 QString batterLevel = QString("%1").arg(batter_value);
                 QString batterType = QString("%1").arg(recvData.mid(9,2).toInt(nullptr, 16));
                 bool isBatterType = true;
@@ -150,7 +151,7 @@ void GY_HIDKeyboard::setDeviceMessage(const QString &portPath, const QString &Da
 void GY_HIDKeyboard::slotReadyRead(const QString &portPath, QString &recvData)  //hid_device *Handle,
 {
     qDebug() << "--HID键盘读取数据--：" << recvData;
-    //-----------------------------------------HID鼠标读取-------------------------------------------------------------
+    //-------------------------------------------------------HID鼠标读取--------------------------------------------------------------------
     if(recvData.left(8) == "FE F5 02" || recvData.left(8) == "fe f5 02"){
         this->setDeviceMessage(portPath, recvData, "FE F5 02", HidDeviceInfo::_HID_KEYBOARD);
     }else if(recvData.left(8) == "FE F5 03" || recvData.left(8) == "fe f5 03"){

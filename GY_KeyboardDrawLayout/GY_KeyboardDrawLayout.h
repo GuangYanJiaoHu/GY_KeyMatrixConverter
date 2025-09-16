@@ -15,6 +15,10 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
+
+//绘制键盘圆角
+#define RadiusRect 5
+
 namespace Ui {
 class GY_KeyboardDrawLayout;
 }

@@ -149,24 +149,24 @@ QByteArray GY_ReadFile::getExprotBinFile(JsonPublicInfo jsonPublicInfo, QList<GY
     default:    break;
     }
 
+    //---------------------------------------------------------------写入公有内容------------------------------------------------------------------------------------------------------------
+    binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_FLASH_SAVE_ADDR, jsonPublicInfo._Max.size(), jsonPublicInfo._Max);                                      //最大值
+    qDebug() << "写入最大值大小:" << jsonPublicInfo._Max.size() << " 起始位置：" <<GY_KeyboardTools::Keyboard60_Bin_Addr::_FLASH_SAVE_ADDR ;
+    binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_MIN_VALUES_ADDR, jsonPublicInfo._Min.size(), jsonPublicInfo._Min);                                      //最小值
+    qDebug() << "写入最小值大小:" << jsonPublicInfo._Min.size() << " 起始位置：" <<GY_KeyboardTools::Keyboard60_Bin_Addr::_MIN_VALUES_ADDR ;
+    binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_DEAD_ZONE_ADDR , jsonPublicInfo._WhiteBalance.size(), jsonPublicInfo._WhiteBalance);                    //死区+白平衡
+    qDebug() << "写入白平衡大小:" << jsonPublicInfo._WhiteBalance.size() << " 起始位置：" <<GY_KeyboardTools::Keyboard60_Bin_Addr::_DEAD_ZONE_ADDR;
+    binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_AXISTYPE_SAVE_ADDR  , jsonPublicInfo._Shaft.size(), jsonPublicInfo._Shaft);                             //键轴表
+    qDebug() << "写入键轴表大小:" << jsonPublicInfo._Shaft.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_AXISTYPE_SAVE_ADDR;
+    binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_RANGEVALUE_SAVE_ADDR, jsonPublicInfo._ShaftInfo.size(), jsonPublicInfo._ShaftInfo);                     //键轴信息
+    qDebug() << "写入键轴信息大小:" << jsonPublicInfo._ShaftInfo.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_RANGEVALUE_SAVE_ADDR << " 键轴信息：" << jsonPublicInfo._ShaftInfo.toHex();
+    binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_CONFIGUR_GROUP_ADDR , jsonPublicInfo._MULTIPLE_SET.size(), jsonPublicInfo._MULTIPLE_SET);               //预多组预设
+    qDebug() << "写入多组预设大小:" << jsonPublicInfo._MULTIPLE_SET.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_CONFIGUR_GROUP_ADDR;
+    binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_RATE_OF_RETURN_ADDR , jsonPublicInfo._RETURN_SPEED.size(), jsonPublicInfo._RETURN_SPEED);               //回报率
+    qDebug() << "写入回报率大小:" << jsonPublicInfo._RETURN_SPEED.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_RATE_OF_RETURN_ADDR;
+
     //---------------------------------------判断是否要对私有内容中数据进行改动，如果没有私有数据，则公有信息只写入动画文件，不写入其他文件--------------------------------------------------------------------
     for(int i = 0; i < jsonPrivateInfo.count(); i++){
-        //---------------------------------------------------------------写入公有内容------------------------------------------------------------------------------------------------------------
-        binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_FLASH_SAVE_ADDR, jsonPublicInfo._Max.size(), jsonPublicInfo._Max);                                      //最大值
-        qDebug() << "写入最大值大小:" << jsonPublicInfo._Max.size() << " 起始位置：" <<GY_KeyboardTools::Keyboard60_Bin_Addr::_FLASH_SAVE_ADDR ;
-        binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_MIN_VALUES_ADDR, jsonPublicInfo._Min.size(), jsonPublicInfo._Min);                                      //最小值
-        qDebug() << "写入最小值大小:" << jsonPublicInfo._Min.size() << " 起始位置：" <<GY_KeyboardTools::Keyboard60_Bin_Addr::_MIN_VALUES_ADDR ;
-        binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_DEAD_ZONE_ADDR , jsonPublicInfo._WhiteBalance.size(), jsonPublicInfo._WhiteBalance);  //死区+白平衡
-        qDebug() << "写入白平衡大小:" << jsonPublicInfo._WhiteBalance.size() << " 起始位置：" <<GY_KeyboardTools::Keyboard60_Bin_Addr::_DEAD_ZONE_ADDR;
-        binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_AXISTYPE_SAVE_ADDR  , jsonPublicInfo._Shaft.size(), jsonPublicInfo._Shaft);                             //键轴表
-        qDebug() << "写入键轴表大小:" << jsonPublicInfo._Shaft.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_AXISTYPE_SAVE_ADDR;
-        binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_RANGEVALUE_SAVE_ADDR, jsonPublicInfo._ShaftInfo.size(), jsonPublicInfo._ShaftInfo);                     //键轴信息
-        qDebug() << "写入键轴信息大小:" << jsonPublicInfo._ShaftInfo.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_RANGEVALUE_SAVE_ADDR << " 键轴信息：" << jsonPublicInfo._ShaftInfo.toHex();
-        binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_CONFIGUR_GROUP_ADDR , jsonPublicInfo._MULTIPLE_SET.size(), jsonPublicInfo._MULTIPLE_SET);               //预多组预设
-        qDebug() << "写入多组预设大小:" << jsonPublicInfo._MULTIPLE_SET.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_CONFIGUR_GROUP_ADDR;
-        binFile.replace(GY_KeyboardTools::Keyboard60_Bin_Addr::_RATE_OF_RETURN_ADDR , jsonPublicInfo._RETURN_SPEED.size(), jsonPublicInfo._RETURN_SPEED);               //回报率
-        qDebug() << "写入回报率大小:" << jsonPublicInfo._RETURN_SPEED.size() << " 起始位置：" << GY_KeyboardTools::Keyboard60_Bin_Addr::_RATE_OF_RETURN_ADDR;
-
         //----------------------------------------------------比对当前json私有内容中的按键个数(记录的list数量)是否跟要写入的按键数量吻合------------------------------------------------------------------
         if(jsonPrivateInfo.first()._JsonPrivateOnlyKeyInfo.count() == jsonPublicInfo._KeyBoardCount){
             //-------------------------------------------------------------------------私有数据原样写回-----------------------------------------------------------------------------------------------

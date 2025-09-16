@@ -80,11 +80,11 @@ QMap<int, GY_KeyboardTools::KeyboardButtonInfo> GY_KeyboardTools::getKeyboarLayo
     MapKeyboard.insert(57, KeyboardButtonInfo{QPoint( 34, 85), QRect( 23, 76, 22, 18),    "Win L",  91, 0, 0, color, "00E3", keyboardLayout });
     MapKeyboard.insert(58, KeyboardButtonInfo{QPoint( 57, 85), QRect( 46, 76, 22, 18),    "Alt L", 164, 0, 0, color, "00E2", keyboardLayout });
 
-    MapKeyboard.insert(59, KeyboardButtonInfo{QPoint( 88, 85), QRect( 78, 76, 20, 18),   "Space0", 998, 0, 0, color, "0000", keyboardLayout });
-    MapKeyboard.insert(60, KeyboardButtonInfo{QPoint(108, 85), QRect( 98, 76, 20, 18),   "Space1", 998, 0, 0, color, "0000", keyboardLayout });
+    MapKeyboard.insert(59, KeyboardButtonInfo{QPoint( 88, 85), QRect( 78, 76, 20, 18),         "", 998, 0, 0, color, "0000", keyboardLayout });
+    MapKeyboard.insert(60, KeyboardButtonInfo{QPoint(108, 85), QRect( 98, 76, 20, 18),         "", 998, 0, 0, color, "0000", keyboardLayout });
     MapKeyboard.insert(61, KeyboardButtonInfo{QPoint(128, 85), QRect(118, 76, 20, 18),    "Space",  32, 0, 0, color, "002C", keyboardLayout });
-    MapKeyboard.insert(62, KeyboardButtonInfo{QPoint(148, 85), QRect(138, 76, 20, 18),   "Space2", 998, 0, 0, color, "0000", keyboardLayout });
-    MapKeyboard.insert(63, KeyboardButtonInfo{QPoint(168, 85), QRect(158, 76, 20, 18),   "Space3", 998, 0, 0, color, "0000", keyboardLayout });
+    MapKeyboard.insert(62, KeyboardButtonInfo{QPoint(148, 85), QRect(138, 76, 20, 18),         "", 998, 0, 0, color, "0000", keyboardLayout });
+    MapKeyboard.insert(63, KeyboardButtonInfo{QPoint(168, 85), QRect(158, 76, 20, 18),         "", 998, 0, 0, color, "0000", keyboardLayout });
 
     MapKeyboard.insert(64, KeyboardButtonInfo{QPoint(198, 85), QRect(187, 76, 22, 18),    "Alt R", 165, 0, 0, color, "00E6", keyboardLayout });
     MapKeyboard.insert(65, KeyboardButtonInfo{QPoint(221, 85), QRect(210, 76, 22, 18),   "Ctrl R", 163, 0, 0, color, "00E4", keyboardLayout });

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1018</width>
-    <height>444</height>
+    <width>1012</width>
+    <height>463</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -104,8 +104,8 @@ QScrollBar::sub-line:vertical {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1016</width>
-           <height>442</height>
+           <width>1010</width>
+           <height>461</height>
           </rect>
          </property>
          <property name="font">
@@ -197,7 +197,7 @@ QPushButton:pressed{
              <enum>QTabWidget::TabShape::Rounded</enum>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <property name="elideMode">
              <enum>Qt::TextElideMode::ElideNone</enum>
@@ -393,8 +393,8 @@ QPushButton:pressed{
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1012</width>
-                   <height>365</height>
+                   <width>1006</width>
+                   <height>384</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_8">
@@ -420,8 +420,8 @@ QPushButton:pressed{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>324</width>
-                       <height>363</height>
+                       <width>322</width>
+                       <height>382</height>
                       </rect>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_13">
@@ -521,8 +521,8 @@ QPushButton:pressed{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>324</width>
-                       <height>363</height>
+                       <width>322</width>
+                       <height>382</height>
                       </rect>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_10">
@@ -622,8 +622,8 @@ QPushButton:pressed{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>324</width>
-                       <height>363</height>
+                       <width>322</width>
+                       <height>382</height>
                       </rect>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_12">
@@ -775,8 +775,8 @@ QPushButton:pressed{
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>990</width>
-                   <height>378</height>
+                   <width>984</width>
+                   <height>397</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_7">
@@ -850,7 +850,224 @@ QPushButton:pressed{
                      <property name="spacing">
                       <number>0</number>
                      </property>
-                     <item row="5" column="0">
+                     <item row="7" column="0">
+                      <layout class="QHBoxLayout" name="horizontalLayout_7">
+                       <item>
+                        <widget class="QLabel" name="label_dengWei">
+                         <property name="minimumSize">
+                          <size>
+                           <width>70</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>70</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>上下灯位</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QSpinBox" name="spinBox_dengWei">
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="minimum">
+                          <number>1</number>
+                         </property>
+                         <property name="maximum">
+                          <number>4</number>
+                         </property>
+                         <property name="value">
+                          <number>3</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="3" column="0">
+                      <layout class="QHBoxLayout" name="horizontalLayout_4">
+                       <item>
+                        <widget class="QLabel" name="label_whiteBalance_B">
+                         <property name="minimumSize">
+                          <size>
+                           <width>70</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>70</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>白平衡B</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QSpinBox" name="spinBox_whiteBalance_B">
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="maximum">
+                          <number>255</number>
+                         </property>
+                         <property name="value">
+                          <number>87</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="12" column="0">
+                      <layout class="QHBoxLayout" name="horizontalLayout_3">
+                       <item>
+                        <widget class="QLabel" name="label_keyMin">
+                         <property name="minimumSize">
+                          <size>
+                           <width>70</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>70</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>按键最小值</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_keyMin">
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="value">
+                          <double>0.300000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="13" column="0">
+                      <widget class="QPushButton" name="pushButton_keyMaxorMinValue">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>微软雅黑</family>
+                         <pointsize>12</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>确认按键默认值</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="11" column="0">
+                      <layout class="QHBoxLayout" name="horizontalLayout_2">
+                       <item>
+                        <widget class="QLabel" name="label_keyMax">
+                         <property name="minimumSize">
+                          <size>
+                           <width>70</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>70</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>按键最大值</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QDoubleSpinBox" name="doubleSpinBox_keyMax">
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="value">
+                          <double>1.100000000000000</double>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="10" column="0">
                       <layout class="QHBoxLayout" name="horizontalLayout">
                        <item>
                         <widget class="QLabel" name="label_shaftInfo_2">
@@ -922,10 +1139,10 @@ QPushButton:pressed{
                        </item>
                       </layout>
                      </item>
-                     <item row="7" column="0">
-                      <layout class="QHBoxLayout" name="horizontalLayout_3">
+                     <item row="2" column="0">
+                      <layout class="QHBoxLayout" name="horizontalLayout_5">
                        <item>
-                        <widget class="QLabel" name="label_keyMin">
+                        <widget class="QLabel" name="label_whiteBalance_G">
                          <property name="minimumSize">
                           <size>
                            <width>70</width>
@@ -946,15 +1163,12 @@ QPushButton:pressed{
                           </font>
                          </property>
                          <property name="text">
-                          <string>按键最小值</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                          <string>白平衡G</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QDoubleSpinBox" name="doubleSpinBox_keyMin">
+                        <widget class="QSpinBox" name="spinBox_whiteBalance_G">
                          <property name="font">
                           <font>
                            <family>微软雅黑</family>
@@ -962,8 +1176,11 @@ QPushButton:pressed{
                            <bold>true</bold>
                           </font>
                          </property>
+                         <property name="maximum">
+                          <number>255</number>
+                         </property>
                          <property name="value">
-                          <double>0.300000000000000</double>
+                          <number>117</number>
                          </property>
                         </widget>
                        </item>
@@ -1019,10 +1236,10 @@ QPushButton:pressed{
                        </item>
                       </layout>
                      </item>
-                     <item row="2" column="0">
-                      <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <item row="5" column="0">
+                      <layout class="QHBoxLayout" name="horizontalLayout_10">
                        <item>
-                        <widget class="QLabel" name="label_whiteBalance_G">
+                        <widget class="QLabel" name="label_liangDu">
                          <property name="minimumSize">
                           <size>
                            <width>70</width>
@@ -1043,12 +1260,12 @@ QPushButton:pressed{
                           </font>
                          </property>
                          <property name="text">
-                          <string>白平衡G</string>
+                          <string>默认亮度</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QSpinBox" name="spinBox_whiteBalance_G">
+                        <widget class="QSpinBox" name="spinBox_LiangDu">
                          <property name="font">
                           <font>
                            <family>微软雅黑</family>
@@ -1060,28 +1277,40 @@ QPushButton:pressed{
                           <number>255</number>
                          </property>
                          <property name="value">
-                          <number>117</number>
+                          <number>255</number>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
-                     <item row="0" column="0">
-                      <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <item row="9" column="0">
+                      <widget class="Line" name="line">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="8" column="0">
+                      <layout class="QHBoxLayout" name="horizontalLayout_9">
                        <item>
-                        <widget class="QLabel" name="label_returnSpeed">
-                         <property name="minimumSize">
-                          <size>
-                           <width>70</width>
-                           <height>0</height>
-                          </size>
+                        <widget class="QCheckBox" name="checkBox_shiShiJiaoZhun">
+                         <property name="font">
+                          <font>
+                           <family>微软雅黑</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
                          </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>70</width>
-                           <height>16777215</height>
-                          </size>
+                         <property name="text">
+                          <string>实时校准</string>
                          </property>
+                         <property name="checked">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_returnSpeed">
                          <property name="font">
                           <font>
                            <family>微软雅黑</family>
@@ -1092,153 +1321,12 @@ QPushButton:pressed{
                          <property name="text">
                           <string>回报率</string>
                          </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QSpinBox" name="spinBox_returnSpeed">
-                         <property name="font">
-                          <font>
-                           <family>微软雅黑</family>
-                           <pointsize>10</pointsize>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="minimum">
-                          <number>1</number>
-                         </property>
-                         <property name="maximum">
-                          <number>2</number>
+                         <property name="checked">
+                          <bool>true</bool>
                          </property>
                         </widget>
                        </item>
                       </layout>
-                     </item>
-                     <item row="6" column="0">
-                      <layout class="QHBoxLayout" name="horizontalLayout_2">
-                       <item>
-                        <widget class="QLabel" name="label_keyMax">
-                         <property name="minimumSize">
-                          <size>
-                           <width>70</width>
-                           <height>0</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>70</width>
-                           <height>16777215</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>微软雅黑</family>
-                           <pointsize>10</pointsize>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="text">
-                          <string>按键最大值</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QDoubleSpinBox" name="doubleSpinBox_keyMax">
-                         <property name="font">
-                          <font>
-                           <family>微软雅黑</family>
-                           <pointsize>10</pointsize>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="value">
-                          <double>1.100000000000000</double>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </item>
-                     <item row="8" column="0">
-                      <widget class="QPushButton" name="pushButton_keyMaxorMinValue">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>40</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>40</height>
-                        </size>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <family>微软雅黑</family>
-                         <pointsize>12</pointsize>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>确认按键默认值</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="0">
-                      <layout class="QHBoxLayout" name="horizontalLayout_4">
-                       <item>
-                        <widget class="QLabel" name="label_whiteBalance_B">
-                         <property name="minimumSize">
-                          <size>
-                           <width>70</width>
-                           <height>0</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>70</width>
-                           <height>16777215</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>微软雅黑</family>
-                           <pointsize>10</pointsize>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="text">
-                          <string>白平衡B</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QSpinBox" name="spinBox_whiteBalance_B">
-                         <property name="font">
-                          <font>
-                           <family>微软雅黑</family>
-                           <pointsize>10</pointsize>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="maximum">
-                          <number>255</number>
-                         </property>
-                         <property name="value">
-                          <number>87</number>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </item>
-                     <item row="4" column="0">
-                      <widget class="Line" name="line">
-                       <property name="orientation">
-                        <enum>Qt::Orientation::Horizontal</enum>
-                       </property>
-                      </widget>
                      </item>
                     </layout>
                    </widget>

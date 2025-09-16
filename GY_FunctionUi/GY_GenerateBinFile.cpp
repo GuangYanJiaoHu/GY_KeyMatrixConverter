@@ -118,12 +118,15 @@ void GY_GenerateBinFile::on_pushButton_Export_clicked()
         jsonPublicInfo._Min  += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_keyMin->text().toDouble());    //最小值
         jsonPublicInfo._Shaft+= QByteArray::fromHex(QString("%1").arg(ui->comboBox_keyboardType->currentIndex(), 2, 16, QLatin1Char('0')).toUtf8());
     }
-    jsonPublicInfo._WhiteBalance.append(GY_KeyboardTools::getFlotaToByteArray(0.0) + GY_KeyboardTools::getFlotaToByteArray(0.0) + GY_KeyboardTools::getFlotaToByteArray(0.0) + GY_KeyboardTools::getFlotaToByteArray(0.0));
-    jsonPublicInfo._WhiteBalance.append(GY_KeyboardTools::getFlotaToByteArray(0.0) + GY_KeyboardTools::getFlotaToByteArray(0.0) + GY_KeyboardTools::getFlotaToByteArray(1.0)); //空位补0
+    jsonPublicInfo._WhiteBalance.append(GY_KeyboardTools::getFlotaToByteArray(0.0) + GY_KeyboardTools::getFlotaToByteArray(0.0)); // 上死区 下死区
     jsonPublicInfo._WhiteBalance.append(GY_KeyboardTools::getFlotaToByteArray(ui->spinBox_whiteBalance_R->text().toInt() / double(255.0)));
     jsonPublicInfo._WhiteBalance.append(GY_KeyboardTools::getFlotaToByteArray(ui->spinBox_whiteBalance_G->text().toInt() / double(255.0)));
     jsonPublicInfo._WhiteBalance.append(GY_KeyboardTools::getFlotaToByteArray(ui->spinBox_whiteBalance_B->text().toInt() / double(255.0)));
-    jsonPublicInfo._RETURN_SPEED = QByteArray::fromHex(QString("%1").arg(ui->spinBox_returnSpeed->text().toInt(), 2, 16, QLatin1Char('0')).toUtf8());//回报率
+    jsonPublicInfo._WhiteBalance.append(QByteArray::fromHex(ui->checkBox_shiShiJiaoZhun->isChecked() == 1? "01" : "02")); //实时校准 01 开 02关
+    jsonPublicInfo._WhiteBalance.append(QByteArray::fromHex(QString("%1").arg(ui->spinBox_dengWei->text().toInt(), 2, 16, QLatin1Char('0')).toUtf8())); //上下灯位 01上 02下 03上下 04关闭
+    jsonPublicInfo._WhiteBalance.append(QByteArray::fromHex(QString("%1").arg(ui->spinBox_LiangDu->text().toInt(), 2, 16, QLatin1Char('0')).toUtf8())); //亮度 01 开 02关
+
+    jsonPublicInfo._RETURN_SPEED = QByteArray::fromHex(ui->checkBox_returnSpeed->isChecked() == 1? "01" : "02");    //回报率
     jsonPublicInfo._MULTIPLE_SET = QByteArray::fromHex("01");
     jsonPublicInfo._ShaftInfo = this->getAxisInfo();
 
