@@ -167,9 +167,30 @@ float GY_KeyboardTools::getByteArrayToFloat(QByteArray data)
     return dataBate_4;
 }
 
+// 将int转换为4字节的16进制表示（存储在QByteArray中）
+QByteArray GY_KeyboardTools::getIntTo4Byte(int value) {
+    QByteArray bytes;
+    // 依次提取四个字节（大端模式）
+    bytes.append((value >> 24) & 0xFF);  // 高8位
+    bytes.append((value >> 16) & 0xFF);
+    bytes.append((value >> 8) & 0xFF);
+    bytes.append(value & 0xFF);         // 低8位
+    return bytes;
+}
 
-
-
+// 将QString转换为 固定30字节的字节数组 超出部分截断，不足部分用指定字符填充（默认空格）
+QByteArray GY_KeyboardTools::getStringToBytes(QString data, int length) {
+    char fillChar = ' ';
+    // 转换为UTF-8字节数组（也可根据需要使用toLatin1()或toLocal8Bit()）
+    QByteArray bytes = data.toUtf8();
+    // 处理长度
+    if (bytes.length() > length) {
+        bytes = bytes.left(length); // 超过30字节则截断
+    } else if (bytes.length() < length) {
+        bytes.append(QByteArray(length - bytes.length(), fillChar)); // 不足30字节则填充
+    }
+    return bytes;
+}
 
 /*
     MapKeyboard.insert( 0, KeyboardButtonInfo{QPoint(  7.00, 7), QRect(  0.00, 0, 14, 14),              "ESC",  27, 0, 0, color, "0029", keyboardLayout});

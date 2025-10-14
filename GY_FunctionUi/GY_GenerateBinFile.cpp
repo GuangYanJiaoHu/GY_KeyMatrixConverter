@@ -130,6 +130,7 @@ void GY_GenerateBinFile::on_pushButton_Export_clicked()
     jsonPublicInfo._MULTIPLE_SET = QByteArray::fromHex("01");
     jsonPublicInfo._ShaftInfo = this->getAxisInfo();
 
+
     //======================================私有文件，拼接数据=======================================================================================================================
     GY_ReadFile readJson;   //创建读写
     QList<GY_KeyboardTools::JsonPrivateInfo> jsonPrivateInfo;
@@ -165,6 +166,8 @@ void GY_GenerateBinFile::on_pushButton_Export_clicked()
 QByteArray GY_GenerateBinFile::getAxisInfo()
 {
     QByteArray axisInfo;
+
+    //---------------------------------------------------第一组键轴信息------------------------------------------------------------------------------
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxDefault->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxTop->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxBtm->text().toDouble());
@@ -185,6 +188,14 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown->text().toDouble());
 
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold->text().toDouble());
+    axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID->text().toInt());
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName->currentText(), 30);
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory->currentText(), 30);
+
+    //---------------------------------------------------第二组键轴信息------------------------------------------------------------------------------
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxDefault_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxTop_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxBtm_2->text().toDouble());
@@ -204,7 +215,14 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_acoefficientD_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_2->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_2->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_2->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_2->text().toDouble());
+    axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_2->text().toInt());
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_2->currentText(), 30);
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_2->currentText(), 30);
 
+    //---------------------------------------------------第三组键轴信息------------------------------------------------------------------------------
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxDefault_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxTop_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxBtm_3->text().toDouble());
@@ -224,7 +242,13 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_acoefficientD_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_2->text().toDouble());
-
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_3->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_3->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_3->text().toDouble());
+    axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_3->text().toInt());
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_3->currentText(), 30);
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_3->currentText(), 30);
+    //---------------------------------------------------第四组键轴信息------------------------------------------------------------------------------
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxDefault_4->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxTop_4->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxBtm_4->text().toDouble());
@@ -244,7 +268,14 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_acoefficientD_4->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_3->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_4->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_4->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_4->text().toDouble());
+    axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_4->text().toInt());
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_4->currentText(), 30);
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_4->currentText(), 30);
 
+    //---------------------------------------------------第五组键轴信息------------------------------------------------------------------------------
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxDefault_5->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxTop_5->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_maxBtm_5->text().toDouble());
@@ -264,6 +295,12 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_acoefficientD_5->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_4->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_4->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_5->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_5->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_5->text().toDouble());
+    axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_5->text().toInt());
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_5->currentText(), 30);
+    axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_5->currentText(), 30);
     return axisInfo;
 }
 
@@ -291,7 +328,7 @@ void GY_GenerateBinFile::on_comboBox_ShaftType_activated(int index)
     ui->stackedWidget->setCurrentIndex(index);
 }
 
-//获取选中得json信息
+//获取选中得json信息 web导出的json文件，用于合成颜色图片
 void GY_GenerateBinFile::on_listWidget_ReadJson_currentTextChanged(const QString &currentText)
 {
     GY_ReadFile readJson;   //创建读写
@@ -315,7 +352,7 @@ void GY_GenerateBinFile::on_listWidget_ReadJson_currentTextChanged(const QString
             // 设置画笔和画刷
             painter.setPen(Qt::NoPen);
             painter.setBrush(color);
-            painter.drawRect(mapKeyboardInfo.find(i).value()._Keyborders);
+            painter.drawRect(mapKeyboardInfo.find(i).value()._Keyborders.x(),mapKeyboardInfo.find(i).value()._Keyborders.y(), mapKeyboardInfo.find(i).value()._Keyborders.width() + 1, mapKeyboardInfo.find(i).value()._Keyborders.height() + 1);
         }
     }
     painter.end();
@@ -332,69 +369,145 @@ void GY_GenerateBinFile::on_pushButton_ReadIni_clicked()
 
     QSettings settings(filePath, QSettings::IniFormat);
     settings.beginGroup("Key_Shaft_A");
-    ui->doubleSpinBox_maxTop->setValue(       settings.value("A_MAX_Up").toDouble()        ); //最大上限值
-    ui->doubleSpinBox_maxDefault->setValue(   settings.value("A_MAX_Defalut").toDouble()   ); //最大默认值
-    ui->doubleSpinBox_maxBtm->setValue(       settings.value("A_MAX_Down").toDouble()      ); //最大下限值
-    ui->doubleSpinBox_minTop->setValue(       settings.value("A_MIN_Up").toDouble()        ); //最小上限值
-    ui->doubleSpinBox_minDefault->setValue(   settings.value("A_MAX_Default").toDouble()   ); //最小默认值
-    ui->doubleSpinBox_minBtm->setValue(       settings.value("A_MIN_Down" ).toDouble()     ); //最小下限值
-    ui->doubleSpinBox_deadZoneUp->setValue(   settings.value("A_DeadZoonUp").toDouble()    ); //上死区
-    ui->doubleSpinBox_deadZoneDown->setValue( settings.value("A_DeadZoonDown").toDouble()  ); //下死区
-    ui->doubleSpinBox_acoefficientA->setValue(settings.value("A_AcoefficientA").toDouble() ); //系数A
-    ui->doubleSpinBox_acoefficientB->setValue(settings.value("A_AcoefficientB").toDouble() ); //系数B
-    ui->doubleSpinBox_acoefficientC->setValue(settings.value("A_AcoefficientC").toDouble() ); //系数C
-    ui->doubleSpinBox_acoefficientD->setValue(settings.value("A_AcoefficientD").toDouble() ); //系数D
-    ui->doubleSpinBox_fhTop->setValue(        settings.value("A_RT_FH_Up").toDouble()      ); //RT定高上限
-    ui->doubleSpinBox_fhDnDft->setValue(      settings.value("A_RT_FH_Default").toDouble() ); //RT定高默认
-    ui->doubleSpinBox_fhBtm->setValue(        settings.value("A_RT_FH_Down").toDouble()    ); //RT定高下限
-    ui->doubleSpinBox_rtTop->setValue(        settings.value("A_RT_Up").toDouble()         ); //RT上限值
-    ui->doubleSpinBox_rtBtm->setValue(        settings.value("A_RT_Down").toDouble()       ); //RT下限值
-    ui->doubleSpinBox_rtDnDft->setValue(      settings.value("A_RT_Click").toDouble()      ); //RT触发值
-    ui->doubleSpinBox_rtUpDft->setValue(      settings.value("A_RT_Release").toDouble()    ); //RT抬起值
+    ui->doubleSpinBox_maxTop->setValue(       settings.value("A_MAX_Up").toDouble()        );      //最大上限值
+    ui->doubleSpinBox_maxDefault->setValue(   settings.value("A_MAX_Defalut").toDouble()   );      //最大默认值
+    ui->doubleSpinBox_maxBtm->setValue(       settings.value("A_MAX_Down").toDouble()      );      //最大下限值
+    ui->doubleSpinBox_minTop->setValue(       settings.value("A_MIN_Up").toDouble()        );      //最小上限值
+    ui->doubleSpinBox_minDefault->setValue(   settings.value("A_MAX_Default").toDouble()   );      //最小默认值
+    ui->doubleSpinBox_minBtm->setValue(       settings.value("A_MIN_Down" ).toDouble()     );      //最小下限值
+    ui->doubleSpinBox_deadZoneUp->setValue(   settings.value("A_DeadZoonUp").toDouble()    );      //上死区
+    ui->doubleSpinBox_deadZoneDown->setValue( settings.value("A_DeadZoonDown").toDouble()  );      //下死区
+    ui->doubleSpinBox_acoefficientA->setValue(settings.value("A_AcoefficientA").toDouble() );      //系数A
+    ui->doubleSpinBox_acoefficientB->setValue(settings.value("A_AcoefficientB").toDouble() );      //系数B
+    ui->doubleSpinBox_acoefficientC->setValue(settings.value("A_AcoefficientC").toDouble() );      //系数C
+    ui->doubleSpinBox_acoefficientD->setValue(settings.value("A_AcoefficientD").toDouble() );      //系数D
+    ui->doubleSpinBox_fhTop->setValue(        settings.value("A_RT_FH_Up").toDouble()      );      //RT定高上限
+    ui->doubleSpinBox_fhDnDft->setValue(      settings.value("A_RT_FH_Default").toDouble() );      //RT定高默认
+    ui->doubleSpinBox_fhBtm->setValue(        settings.value("A_RT_FH_Down").toDouble()    );      //RT定高下限
+    ui->doubleSpinBox_rtTop->setValue(        settings.value("A_RT_Up").toDouble()         );      //RT上限值
+    ui->doubleSpinBox_rtBtm->setValue(        settings.value("A_RT_Down").toDouble()       );      //RT下限值
+    ui->doubleSpinBox_rtDnDft->setValue(      settings.value("A_RT_Click").toDouble()      );      //RT触发值
+    ui->doubleSpinBox_rtUpDft->setValue(      settings.value("A_RT_Release").toDouble()    );      //RT抬起值
+    ui->doubleSpinBox_axisTrip->setValue(        settings.value("A_AxisTrip").toDouble()        ); //键轴键程
+    ui->doubleSpinBox_axisMinThreshold->setValue(settings.value("A_AxisMinThreshold").toDouble()); //键程最小阈值
+    ui->doubleSpinBox_axisMaxThreshold->setValue(settings.value("A_AxisMaxThreshold").toDouble()); //键程最大阈值
+    ui->spinBox_axisID->setValue(                settings.value("A_AxisID").toInt()             ); //键轴ID
+
+    ui->comboBox_axisName->clear();
+    ui->comboBox_axisFactory->clear();
+    QString A_AxisName    = settings.value("A_AxisName").toString();                               //轴名称
+    if(A_AxisName.contains(";")){
+        QStringList A_AxisName_List = A_AxisName.split(";");
+        for(int i = 0; i < A_AxisName_List.count(); i++){
+            ui->comboBox_axisName->addItem(A_AxisName_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisName->addItem(A_AxisName);
+    }
+
+    QString A_AxisFactory = settings.value("A_AxisFactory").toString();                            //轴厂商
+    if(A_AxisFactory.contains(";")){
+        QStringList A_AxisFactory_List = A_AxisFactory.split(";");
+        for(int i = 0; i < A_AxisFactory_List.count(); i++){
+            ui->comboBox_axisFactory->addItem(A_AxisFactory_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisFactory->addItem(A_AxisFactory);
+    }
     settings.endGroup();
 
     settings.beginGroup("Key_Shaft_B");
-    ui->doubleSpinBox_maxTop_2->setValue(       settings.value("B_MAX_Up").toDouble()        ); //最大上限值
-    ui->doubleSpinBox_maxDefault_2->setValue(   settings.value("B_MAX_Defalut").toDouble()   ); //最大默认值
-    ui->doubleSpinBox_maxBtm_2->setValue(       settings.value("B_MAX_Down").toDouble()      ); //最大下限值
-    ui->doubleSpinBox_minTop_2->setValue(       settings.value("B_MIN_Up").toDouble()        ); //最小上限值
-    ui->doubleSpinBox_minDefault_2->setValue(   settings.value("B_MAX_Default").toDouble()   ); //最小默认值
-    ui->doubleSpinBox_minBtm_2->setValue(       settings.value("B_MIN_Down" ).toDouble()     ); //最小下限值
-    ui->doubleSpinBox_deadZoneUp_2->setValue(   settings.value("B_DeadZoonUp").toDouble()    ); //上死区
-    ui->doubleSpinBox_deadZoneDown_2->setValue( settings.value("B_DeadZoonDown").toDouble()  ); //下死区
-    ui->doubleSpinBox_acoefficientA_2->setValue(settings.value("B_AcoefficientA").toDouble() ); //系数A
-    ui->doubleSpinBox_acoefficientB_2->setValue(settings.value("B_AcoefficientB").toDouble() ); //系数B
-    ui->doubleSpinBox_acoefficientC_2->setValue(settings.value("B_AcoefficientC").toDouble() ); //系数C
-    ui->doubleSpinBox_acoefficientD_2->setValue(settings.value("B_AcoefficientD").toDouble() ); //系数D
-    ui->doubleSpinBox_fhTop_2->setValue(        settings.value("B_RT_FH_Up").toDouble()      ); //RT定高上限
-    ui->doubleSpinBox_fhDnDft_2->setValue(      settings.value("B_RT_FH_Default").toDouble() ); //RT定高默认
-    ui->doubleSpinBox_fhBtm_2->setValue(        settings.value("B_RT_FH_Down").toDouble()    ); //RT定高下限
-    ui->doubleSpinBox_rtTop_2->setValue(        settings.value("B_RT_Up").toDouble()         ); //RT上限值
-    ui->doubleSpinBox_rtBtm_2->setValue(        settings.value("B_RT_Down").toDouble()       ); //RT下限值
-    ui->doubleSpinBox_rtDnDft_2->setValue(      settings.value("B_RT_Click").toDouble()      ); //RT触发值
-    ui->doubleSpinBox_rtUpDft_2->setValue(      settings.value("B_RT_Release").toDouble()    ); //RT抬起值
+    ui->doubleSpinBox_maxTop_2->setValue(          settings.value("B_MAX_Up").toDouble()          ); //最大上限值
+    ui->doubleSpinBox_maxDefault_2->setValue(      settings.value("B_MAX_Defalut").toDouble()     ); //最大默认值
+    ui->doubleSpinBox_maxBtm_2->setValue(          settings.value("B_MAX_Down").toDouble()        ); //最大下限值
+    ui->doubleSpinBox_minTop_2->setValue(          settings.value("B_MIN_Up").toDouble()          ); //最小上限值
+    ui->doubleSpinBox_minDefault_2->setValue(      settings.value("B_MAX_Default").toDouble()     ); //最小默认值
+    ui->doubleSpinBox_minBtm_2->setValue(          settings.value("B_MIN_Down" ).toDouble()       ); //最小下限值
+    ui->doubleSpinBox_deadZoneUp_2->setValue(      settings.value("B_DeadZoonUp").toDouble()      ); //上死区
+    ui->doubleSpinBox_deadZoneDown_2->setValue(    settings.value("B_DeadZoonDown").toDouble()    ); //下死区
+    ui->doubleSpinBox_acoefficientA_2->setValue(   settings.value("B_AcoefficientA").toDouble()   ); //系数A
+    ui->doubleSpinBox_acoefficientB_2->setValue(   settings.value("B_AcoefficientB").toDouble()   ); //系数B
+    ui->doubleSpinBox_acoefficientC_2->setValue(   settings.value("B_AcoefficientC").toDouble()   ); //系数C
+    ui->doubleSpinBox_acoefficientD_2->setValue(   settings.value("B_AcoefficientD").toDouble()   ); //系数D
+    ui->doubleSpinBox_fhTop_2->setValue(           settings.value("B_RT_FH_Up").toDouble()        ); //RT定高上限
+    ui->doubleSpinBox_fhDnDft_2->setValue(         settings.value("B_RT_FH_Default").toDouble()   ); //RT定高默认
+    ui->doubleSpinBox_fhBtm_2->setValue(           settings.value("B_RT_FH_Down").toDouble()      ); //RT定高下限
+    ui->doubleSpinBox_rtTop_2->setValue(           settings.value("B_RT_Up").toDouble()           ); //RT上限值
+    ui->doubleSpinBox_rtBtm_2->setValue(           settings.value("B_RT_Down").toDouble()         ); //RT下限值
+    ui->doubleSpinBox_rtDnDft_2->setValue(         settings.value("B_RT_Click").toDouble()        ); //RT触发值
+    ui->doubleSpinBox_rtUpDft_2->setValue(         settings.value("B_RT_Release").toDouble()      ); //RT抬起值
+    ui->doubleSpinBox_axisTrip_2->setValue(        settings.value("B_AxisTrip").toDouble()        ); //键轴键程
+    ui->doubleSpinBox_axisMinThreshold_2->setValue(settings.value("B_AxisMinThreshold").toDouble()); //键程最小阈值
+    ui->doubleSpinBox_axisMaxThreshold_2->setValue(settings.value("B_AxisMaxThreshold").toDouble()); //键程最大阈值
+    ui->spinBox_axisID_2->setValue(                settings.value("B_AxisID").toInt()             ); //键轴ID
+
+    ui->comboBox_axisName_2->clear();
+    ui->comboBox_axisFactory_2->clear();
+    QString B_AxisName    = settings.value("B_AxisName").toString();                                 //轴名称
+    if(B_AxisName.contains(";")){
+        QStringList B_AxisName_List = B_AxisName.split(";");
+        for(int i = 0; i < B_AxisName_List.count(); i++){
+            ui->comboBox_axisName_2->addItem(B_AxisName_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisName_2->addItem(B_AxisName);
+    }
+    QString B_AxisFactory = settings.value("B_AxisFactory").toString();                              //轴厂商
+    if(B_AxisFactory.contains(";")){
+        QStringList B_AxisFactory_List = B_AxisFactory.split(";");
+        for(int i = 0; i < B_AxisFactory_List.count(); i++){
+            ui->comboBox_axisFactory_2->addItem(B_AxisFactory_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisFactory_2->addItem(B_AxisFactory);
+    }
     settings.endGroup();
 
     settings.beginGroup("Key_Shaft_C");
-    ui->doubleSpinBox_maxTop_3->setValue(       settings.value("C_MAX_Up").toDouble()        ); //最大上限值
-    ui->doubleSpinBox_maxDefault_3->setValue(   settings.value("C_MAX_Defalut").toDouble()   ); //最大默认值
-    ui->doubleSpinBox_maxBtm_3->setValue(       settings.value("C_MAX_Down").toDouble()      ); //最大下限值
-    ui->doubleSpinBox_minTop_3->setValue(       settings.value("C_MIN_Up").toDouble()        ); //最小上限值
-    ui->doubleSpinBox_minDefault_3->setValue(   settings.value("C_MAX_Default").toDouble()   ); //最小默认值
-    ui->doubleSpinBox_minBtm_3->setValue(       settings.value("C_MIN_Down" ).toDouble()     ); //最小下限值
-    ui->doubleSpinBox_deadZoneUp_3->setValue(   settings.value("C_DeadZoonUp").toDouble()    ); //上死区
-    ui->doubleSpinBox_deadZoneDown_3->setValue( settings.value("C_DeadZoonDown").toDouble()  ); //下死区
-    ui->doubleSpinBox_acoefficientA_3->setValue(settings.value("C_AcoefficientA").toDouble() ); //系数A
-    ui->doubleSpinBox_acoefficientB_3->setValue(settings.value("C_AcoefficientB").toDouble() ); //系数B
-    ui->doubleSpinBox_acoefficientC_3->setValue(settings.value("C_AcoefficientC").toDouble() ); //系数C
-    ui->doubleSpinBox_acoefficientD_3->setValue(settings.value("C_AcoefficientD").toDouble() ); //系数D
-    ui->doubleSpinBox_fhTop_3->setValue(        settings.value("C_RT_FH_Up").toDouble()      ); //RT定高上限
-    ui->doubleSpinBox_fhDnDft_3->setValue(      settings.value("C_RT_FH_Default").toDouble() ); //RT定高默认
-    ui->doubleSpinBox_fhBtm_3->setValue(        settings.value("C_RT_FH_Down").toDouble()    ); //RT定高下限
-    ui->doubleSpinBox_rtTop_3->setValue(        settings.value("C_RT_Up").toDouble()         ); //RT上限值
-    ui->doubleSpinBox_rtBtm_3->setValue(        settings.value("C_RT_Down").toDouble()       ); //RT下限值
-    ui->doubleSpinBox_rtDnDft_3->setValue(      settings.value("C_RT_Click").toDouble()      ); //RT触发值
-    ui->doubleSpinBox_rtUpDft_3->setValue(      settings.value("C_RT_Release").toDouble()    ); //RT抬起值
+    ui->doubleSpinBox_maxTop_3->setValue(          settings.value("C_MAX_Up").toDouble()          ); //最大上限值
+    ui->doubleSpinBox_maxDefault_3->setValue(      settings.value("C_MAX_Defalut").toDouble()     ); //最大默认值
+    ui->doubleSpinBox_maxBtm_3->setValue(          settings.value("C_MAX_Down").toDouble()        ); //最大下限值
+    ui->doubleSpinBox_minTop_3->setValue(          settings.value("C_MIN_Up").toDouble()          ); //最小上限值
+    ui->doubleSpinBox_minDefault_3->setValue(      settings.value("C_MAX_Default").toDouble()     ); //最小默认值
+    ui->doubleSpinBox_minBtm_3->setValue(          settings.value("C_MIN_Down" ).toDouble()       ); //最小下限值
+    ui->doubleSpinBox_deadZoneUp_3->setValue(      settings.value("C_DeadZoonUp").toDouble()      ); //上死区
+    ui->doubleSpinBox_deadZoneDown_3->setValue(    settings.value("C_DeadZoonDown").toDouble()    ); //下死区
+    ui->doubleSpinBox_acoefficientA_3->setValue(   settings.value("C_AcoefficientA").toDouble()   ); //系数A
+    ui->doubleSpinBox_acoefficientB_3->setValue(   settings.value("C_AcoefficientB").toDouble()   ); //系数B
+    ui->doubleSpinBox_acoefficientC_3->setValue(   settings.value("C_AcoefficientC").toDouble()   ); //系数C
+    ui->doubleSpinBox_acoefficientD_3->setValue(   settings.value("C_AcoefficientD").toDouble()   ); //系数D
+    ui->doubleSpinBox_fhTop_3->setValue(           settings.value("C_RT_FH_Up").toDouble()        ); //RT定高上限
+    ui->doubleSpinBox_fhDnDft_3->setValue(         settings.value("C_RT_FH_Default").toDouble()   ); //RT定高默认
+    ui->doubleSpinBox_fhBtm_3->setValue(           settings.value("C_RT_FH_Down").toDouble()      ); //RT定高下限
+    ui->doubleSpinBox_rtTop_3->setValue(           settings.value("C_RT_Up").toDouble()           ); //RT上限值
+    ui->doubleSpinBox_rtBtm_3->setValue(           settings.value("C_RT_Down").toDouble()         ); //RT下限值
+    ui->doubleSpinBox_rtDnDft_3->setValue(         settings.value("C_RT_Click").toDouble()        ); //RT触发值
+    ui->doubleSpinBox_rtUpDft_3->setValue(         settings.value("C_RT_Release").toDouble()      ); //RT抬起值
+    ui->doubleSpinBox_axisTrip_3->setValue(        settings.value("C_AxisTrip").toDouble()        ); //键轴键程
+    ui->doubleSpinBox_axisMinThreshold_3->setValue(settings.value("C_AxisMinThreshold").toDouble()); //键程最小阈值
+    ui->doubleSpinBox_axisMaxThreshold_3->setValue(settings.value("C_AxisMaxThreshold").toDouble()); //键程最大阈值
+    ui->spinBox_axisID_3->setValue(                settings.value("C_AxisID").toInt()             ); //键轴ID
+
+    ui->comboBox_axisName_3->clear();
+    ui->comboBox_axisFactory_3->clear();
+    QString C_AxisName    = settings.value("C_AxisName").toString();                                 //轴名称
+    if(C_AxisName.contains(";")){
+        QStringList C_AxisName_List = C_AxisName.split(";");
+        for(int i = 0; i < C_AxisName_List.count(); i++){
+            ui->comboBox_axisName_3->addItem(C_AxisName_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisName_3->addItem(C_AxisName);
+    }
+    QString C_AxisFactory = settings.value("C_AxisFactory").toString();                              //轴厂商
+    if(C_AxisFactory.contains(";")){
+        QStringList C_AxisFactory_List = C_AxisFactory.split(";");
+        for(int i = 0; i < C_AxisFactory_List.count(); i++){
+            ui->comboBox_axisFactory_3->addItem(C_AxisFactory_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisFactory_3->addItem(C_AxisFactory);
+    }
     settings.endGroup();
 
     settings.beginGroup("Key_Shaft_D");
@@ -417,28 +530,78 @@ void GY_GenerateBinFile::on_pushButton_ReadIni_clicked()
     ui->doubleSpinBox_rtBtm_4->setValue(        settings.value("D_RT_Down").toDouble()       ); //RT下限值
     ui->doubleSpinBox_rtDnDft_4->setValue(      settings.value("D_RT_Click").toDouble()      ); //RT触发值
     ui->doubleSpinBox_rtUpDft_4->setValue(      settings.value("D_RT_Release").toDouble()    ); //RT抬起值
+    ui->doubleSpinBox_axisTrip_4->setValue(        settings.value("D_AxisTrip").toDouble()        ); //键轴键程
+    ui->doubleSpinBox_axisMinThreshold_4->setValue(settings.value("D_AxisMinThreshold").toDouble()); //键程最小阈值
+    ui->doubleSpinBox_axisMaxThreshold_4->setValue(settings.value("D_AxisMaxThreshold").toDouble()); //键程最大阈值
+    ui->spinBox_axisID_4->setValue(                settings.value("D_AxisID").toInt()             ); //键轴ID
+
+    ui->comboBox_axisName_4->clear();
+    ui->comboBox_axisFactory_4->clear();
+    QString D_AxisName = settings.value("D_AxisName").toString();                                    //轴名称
+    if(D_AxisName.contains(";")){
+        QStringList D_AxisName_List = D_AxisName.split(";");
+        for(int i = 0; i < D_AxisName_List.count(); i++){
+            ui->comboBox_axisName_4->addItem(D_AxisName_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisName_4->addItem(D_AxisName);
+    }
+    QString D_AxisFactory = settings.value("D_AxisFactory").toString();                              //轴厂商
+    if(D_AxisFactory.contains(";")){
+        QStringList D_AxisFactory_List = D_AxisFactory.split(";");
+        for(int i = 0; i < D_AxisFactory_List.count(); i++){
+            ui->comboBox_axisFactory_4->addItem(D_AxisFactory_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisFactory_4->addItem(D_AxisFactory);
+    }
     settings.endGroup();
 
     settings.beginGroup("Key_Shaft_E");
-    ui->doubleSpinBox_maxTop_5->setValue(       settings.value("E_MAX_Up").toDouble()        ); //最大上限值
-    ui->doubleSpinBox_maxDefault_5->setValue(   settings.value("E_MAX_Defalut").toDouble()   ); //最大默认值
-    ui->doubleSpinBox_maxBtm_5->setValue(       settings.value("E_MAX_Down").toDouble()      ); //最大下限值
-    ui->doubleSpinBox_minTop_5->setValue(       settings.value("E_MIN_Up").toDouble()        ); //最小上限值
-    ui->doubleSpinBox_minDefault_5->setValue(   settings.value("E_MAX_Default").toDouble()   ); //最小默认值
-    ui->doubleSpinBox_minBtm_5->setValue(       settings.value("E_MIN_Down" ).toDouble()     ); //最小下限值
-    ui->doubleSpinBox_deadZoneUp_5->setValue(   settings.value("E_DeadZoonUp").toDouble()    ); //上死区
-    ui->doubleSpinBox_deadZoneDown_5->setValue( settings.value("E_DeadZoonDown").toDouble()  ); //下死区
-    ui->doubleSpinBox_acoefficientA_5->setValue(settings.value("E_AcoefficientA").toDouble() ); //系数A
-    ui->doubleSpinBox_acoefficientB_5->setValue(settings.value("E_AcoefficientB").toDouble() ); //系数B
-    ui->doubleSpinBox_acoefficientC_5->setValue(settings.value("E_AcoefficientC").toDouble() ); //系数C
-    ui->doubleSpinBox_acoefficientD_5->setValue(settings.value("E_AcoefficientD").toDouble() ); //系数D
-    ui->doubleSpinBox_fhTop_5->setValue(        settings.value("E_RT_FH_Up").toDouble()      ); //RT定高上限
-    ui->doubleSpinBox_fhDnDft_5->setValue(      settings.value("E_RT_FH_Default").toDouble() ); //RT定高默认
-    ui->doubleSpinBox_fhBtm_5->setValue(        settings.value("E_RT_FH_Down").toDouble()    ); //RT定高下限
-    ui->doubleSpinBox_rtTop_5->setValue(        settings.value("E_RT_Up").toDouble()         ); //RT上限值
-    ui->doubleSpinBox_rtBtm_5->setValue(        settings.value("E_RT_Down").toDouble()       ); //RT下限值
-    ui->doubleSpinBox_rtDnDft_5->setValue(      settings.value("E_RT_Click").toDouble()      ); //RT触发值
-    ui->doubleSpinBox_rtUpDft_5->setValue(      settings.value("E_RT_Release").toDouble()    ); //RT抬起值
+    ui->doubleSpinBox_maxTop_5->setValue(       settings.value("E_MAX_Up").toDouble()        );      //最大上限值
+    ui->doubleSpinBox_maxDefault_5->setValue(   settings.value("E_MAX_Defalut").toDouble()   );      //最大默认值
+    ui->doubleSpinBox_maxBtm_5->setValue(       settings.value("E_MAX_Down").toDouble()      );      //最大下限值
+    ui->doubleSpinBox_minTop_5->setValue(       settings.value("E_MIN_Up").toDouble()        );      //最小上限值
+    ui->doubleSpinBox_minDefault_5->setValue(   settings.value("E_MAX_Default").toDouble()   );      //最小默认值
+    ui->doubleSpinBox_minBtm_5->setValue(       settings.value("E_MIN_Down" ).toDouble()     );      //最小下限值
+    ui->doubleSpinBox_deadZoneUp_5->setValue(   settings.value("E_DeadZoonUp").toDouble()    );      //上死区
+    ui->doubleSpinBox_deadZoneDown_5->setValue( settings.value("E_DeadZoonDown").toDouble()  );      //下死区
+    ui->doubleSpinBox_acoefficientA_5->setValue(settings.value("E_AcoefficientA").toDouble() );      //系数A
+    ui->doubleSpinBox_acoefficientB_5->setValue(settings.value("E_AcoefficientB").toDouble() );      //系数B
+    ui->doubleSpinBox_acoefficientC_5->setValue(settings.value("E_AcoefficientC").toDouble() );      //系数C
+    ui->doubleSpinBox_acoefficientD_5->setValue(settings.value("E_AcoefficientD").toDouble() );      //系数D
+    ui->doubleSpinBox_fhTop_5->setValue(        settings.value("E_RT_FH_Up").toDouble()      );      //RT定高上限
+    ui->doubleSpinBox_fhDnDft_5->setValue(      settings.value("E_RT_FH_Default").toDouble() );      //RT定高默认
+    ui->doubleSpinBox_fhBtm_5->setValue(        settings.value("E_RT_FH_Down").toDouble()    );      //RT定高下限
+    ui->doubleSpinBox_rtTop_5->setValue(        settings.value("E_RT_Up").toDouble()         );      //RT上限值
+    ui->doubleSpinBox_rtBtm_5->setValue(        settings.value("E_RT_Down").toDouble()       );      //RT下限值
+    ui->doubleSpinBox_rtDnDft_5->setValue(      settings.value("E_RT_Click").toDouble()      );      //RT触发值
+    ui->doubleSpinBox_rtUpDft_5->setValue(      settings.value("E_RT_Release").toDouble()    );      //RT抬起值
+    ui->doubleSpinBox_axisTrip_5->setValue(        settings.value("E_AxisTrip").toDouble()        ); //键轴键程
+    ui->doubleSpinBox_axisMinThreshold_5->setValue(settings.value("E_AxisMinThreshold").toDouble()); //键程最小阈值
+    ui->doubleSpinBox_axisMaxThreshold_5->setValue(settings.value("E_AxisMaxThreshold").toDouble()); //键程最大阈值
+    ui->spinBox_axisID_5->setValue(                settings.value("E_AxisID").toInt()             ); //键轴ID
+
+    ui->comboBox_axisName_5->clear();       //清空轴名称当前数据
+    ui->comboBox_axisFactory_5->clear();    //清空轴厂商当前数据
+    QString E_AxisName = settings.value("E_AxisName").toString();                                    //轴名称
+    if(E_AxisName.contains(";")){
+        QStringList E_AxisName_List = E_AxisName.split(";");
+        for(int i = 0; i < E_AxisName_List.count(); i++){
+            ui->comboBox_axisName_5->addItem(E_AxisName_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisName_5->addItem(E_AxisName);
+    }
+    QString E_AxisFactory = settings.value("E_AxisFactory").toString();                             //轴厂商
+    if(E_AxisFactory.contains(";")){
+        QStringList E_AxisFactory_List = E_AxisFactory.split(";");
+        for(int i = 0; i < E_AxisFactory_List.count(); i++){
+            ui->comboBox_axisFactory_5->addItem(E_AxisFactory_List.at(i));
+        }
+    }else{
+        ui->comboBox_axisFactory_5->addItem(E_AxisFactory);
+    }
     settings.endGroup();
     qDebug() << "配置文件导入完成";
 }
@@ -457,117 +620,198 @@ void GY_GenerateBinFile::on_pushButton_ExportIni_clicked()
 
     // 设置A组的值
     settings.beginGroup("Key_Shaft_A");
-    settings.setValue("A_MAX_Up"       , ui->doubleSpinBox_maxTop->value()        ); //最大上限值
-    settings.setValue("A_MAX_Defalut"  , ui->doubleSpinBox_maxDefault->value()    ); //最大默认值
-    settings.setValue("A_MAX_Down"     , ui->doubleSpinBox_maxBtm->value()        ); //最大下限值
-    settings.setValue("A_MIN_Up"       , ui->doubleSpinBox_minTop->value()        ); //最小上限值
-    settings.setValue("A_MAX_Default"  , ui->doubleSpinBox_minDefault->value()    ); //最小默认值
-    settings.setValue("A_MIN_Down"     , ui->doubleSpinBox_minBtm->value()        ); //最小下限值
-    settings.setValue("A_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp->value()    ); //上死区
-    settings.setValue("A_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown->value()  ); //下死区
-    settings.setValue("A_AcoefficientA", ui->doubleSpinBox_acoefficientA->value() ); //系数A
-    settings.setValue("A_AcoefficientB", ui->doubleSpinBox_acoefficientB->value() ); //系数B
-    settings.setValue("A_AcoefficientC", ui->doubleSpinBox_acoefficientC->value() ); //系数C
-    settings.setValue("A_AcoefficientD", ui->doubleSpinBox_acoefficientD->value() ); //系数D
-    settings.setValue("A_RT_FH_Up"     , ui->doubleSpinBox_fhTop->value()         ); //RT定高上限
-    settings.setValue("A_RT_FH_Default", ui->doubleSpinBox_fhDnDft->value()       ); //RT定高默认
-    settings.setValue("A_RT_FH_Down"   , ui->doubleSpinBox_fhBtm->value()         ); //RT定高下限
-    settings.setValue("A_RT_Up"        , ui->doubleSpinBox_rtTop->value()         ); //RT上限值
-    settings.setValue("A_RT_Down"      , ui->doubleSpinBox_rtBtm->value()         ); //RT下限值
-    settings.setValue("A_RT_Click"     , ui->doubleSpinBox_rtDnDft->value()       ); //RT触发值
-    settings.setValue("A_RT_Release"   , ui->doubleSpinBox_rtUpDft->value()       ); //RT抬起值
+    settings.setValue("A_MAX_Up"          , ui->doubleSpinBox_maxTop->value()        );     //最大上限值
+    settings.setValue("A_MAX_Defalut"     , ui->doubleSpinBox_maxDefault->value()    );     //最大默认值
+    settings.setValue("A_MAX_Down"        , ui->doubleSpinBox_maxBtm->value()        );     //最大下限值
+    settings.setValue("A_MIN_Up"          , ui->doubleSpinBox_minTop->value()        );     //最小上限值
+    settings.setValue("A_MAX_Default"     , ui->doubleSpinBox_minDefault->value()    );     //最小默认值
+    settings.setValue("A_MIN_Down"        , ui->doubleSpinBox_minBtm->value()        );     //最小下限值
+    settings.setValue("A_DeadZoonUp"      , ui->doubleSpinBox_deadZoneUp->value()    );     //上死区
+    settings.setValue("A_DeadZoonDown"    , ui->doubleSpinBox_deadZoneDown->value()  );     //下死区
+    settings.setValue("A_AcoefficientA"   , ui->doubleSpinBox_acoefficientA->value() );     //系数A
+    settings.setValue("A_AcoefficientB"   , ui->doubleSpinBox_acoefficientB->value() );     //系数B
+    settings.setValue("A_AcoefficientC"   , ui->doubleSpinBox_acoefficientC->value() );     //系数C
+    settings.setValue("A_AcoefficientD"   , ui->doubleSpinBox_acoefficientD->value() );     //系数D
+    settings.setValue("A_RT_FH_Up"        , ui->doubleSpinBox_fhTop->value()         );     //RT定高上限
+    settings.setValue("A_RT_FH_Default"   , ui->doubleSpinBox_fhDnDft->value()       );     //RT定高默认
+    settings.setValue("A_RT_FH_Down"      , ui->doubleSpinBox_fhBtm->value()         );     //RT定高下限
+    settings.setValue("A_RT_Up"           , ui->doubleSpinBox_rtTop->value()         );     //RT上限值
+    settings.setValue("A_RT_Down"         , ui->doubleSpinBox_rtBtm->value()         );     //RT下限值
+    settings.setValue("A_RT_Click"        , ui->doubleSpinBox_rtDnDft->value()       );     //RT触发值
+    settings.setValue("A_RT_Release"      , ui->doubleSpinBox_rtUpDft->value()       );     //RT抬起值
+    settings.setValue("A_AxisTrip"        , ui->doubleSpinBox_axisTrip->value()       );    //键轴键程
+    settings.setValue("A_AxisMinThreshold", ui->doubleSpinBox_axisMinThreshold->value());   //键程最小阈值
+    settings.setValue("A_AxisMaxThreshold", ui->doubleSpinBox_axisMaxThreshold->value());   //键程最大阈值
+    settings.setValue("A_AxisID"          , ui->spinBox_axisID->value()              );     //键轴ID
+    QString A_AxisName;
+    for(int i = 0; i < ui->comboBox_axisName->count(); i++){
+        A_AxisName += ui->comboBox_axisName->itemText(i);                                   //获取所有键轴名称
+        A_AxisName += ";";                                                                  //用于解析后做风格使用
+    }
+    QString A_AxisFactory;
+    for(int i = 0; i < ui->comboBox_axisFactory->count(); i++){
+        A_AxisFactory += ui->comboBox_axisFactory->itemText(i);                             //获取所有键轴名称
+        A_AxisFactory += ";";                                                               //用于解析后做风格使用
+    }
+    settings.setValue("A_AxisName"        , A_AxisName        );                            //RT触发值
+    settings.setValue("A_AxisFactory"     , A_AxisFactory     );                            //RT抬起值
     settings.endGroup();
 
     // 设置B组的值
     settings.beginGroup("Key_Shaft_B");
-    settings.setValue("B_MAX_Up"       , ui->doubleSpinBox_maxTop_2->value()        ); //最大上限值
-    settings.setValue("B_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_2->value()    ); //最大默认值
-    settings.setValue("B_MAX_Down"     , ui->doubleSpinBox_maxBtm_2->value()        ); //最大下限值
-    settings.setValue("B_MIN_Up"       , ui->doubleSpinBox_minTop_2->value()        ); //最小上限值
-    settings.setValue("B_MAX_Default"  , ui->doubleSpinBox_minDefault_2->value()    ); //最小默认值
-    settings.setValue("B_MIN_Down"     , ui->doubleSpinBox_minBtm_2->value()        ); //最小下限值
-    settings.setValue("B_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_2->value()    ); //上死区
-    settings.setValue("B_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_2->value()  ); //下死区
-    settings.setValue("B_AcoefficientA", ui->doubleSpinBox_acoefficientA_2->value() ); //系数A
-    settings.setValue("B_AcoefficientB", ui->doubleSpinBox_acoefficientB_2->value() ); //系数B
-    settings.setValue("B_AcoefficientC", ui->doubleSpinBox_acoefficientC_2->value() ); //系数C
-    settings.setValue("B_AcoefficientD", ui->doubleSpinBox_acoefficientD_2->value() ); //系数D
-    settings.setValue("B_RT_FH_Up"     , ui->doubleSpinBox_fhTop_2->value()         ); //RT定高上限
-    settings.setValue("B_RT_FH_Default", ui->doubleSpinBox_fhDnDft_2->value()       ); //RT定高默认
-    settings.setValue("B_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_2->value()         ); //RT定高下限
-    settings.setValue("B_RT_Up"        , ui->doubleSpinBox_rtTop_2->value()         ); //RT上限值
-    settings.setValue("B_RT_Down"      , ui->doubleSpinBox_rtBtm_2->value()         ); //RT下限值
-    settings.setValue("B_RT_Click"     , ui->doubleSpinBox_rtDnDft_2->value()       ); //RT触发值
-    settings.setValue("B_RT_Release"   , ui->doubleSpinBox_rtUpDft_2->value()       ); //RT抬起值
+    settings.setValue("B_MAX_Up"       , ui->doubleSpinBox_maxTop_2->value()        );      //最大上限值
+    settings.setValue("B_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_2->value()    );      //最大默认值
+    settings.setValue("B_MAX_Down"     , ui->doubleSpinBox_maxBtm_2->value()        );      //最大下限值
+    settings.setValue("B_MIN_Up"       , ui->doubleSpinBox_minTop_2->value()        );      //最小上限值
+    settings.setValue("B_MAX_Default"  , ui->doubleSpinBox_minDefault_2->value()    );      //最小默认值
+    settings.setValue("B_MIN_Down"     , ui->doubleSpinBox_minBtm_2->value()        );      //最小下限值
+    settings.setValue("B_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_2->value()    );      //上死区
+    settings.setValue("B_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_2->value()  );      //下死区
+    settings.setValue("B_AcoefficientA", ui->doubleSpinBox_acoefficientA_2->value() );      //系数A
+    settings.setValue("B_AcoefficientB", ui->doubleSpinBox_acoefficientB_2->value() );      //系数B
+    settings.setValue("B_AcoefficientC", ui->doubleSpinBox_acoefficientC_2->value() );      //系数C
+    settings.setValue("B_AcoefficientD", ui->doubleSpinBox_acoefficientD_2->value() );      //系数D
+    settings.setValue("B_RT_FH_Up"     , ui->doubleSpinBox_fhTop_2->value()         );      //RT定高上限
+    settings.setValue("B_RT_FH_Default", ui->doubleSpinBox_fhDnDft_2->value()       );      //RT定高默认
+    settings.setValue("B_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_2->value()         );      //RT定高下限
+    settings.setValue("B_RT_Up"        , ui->doubleSpinBox_rtTop_2->value()         );      //RT上限值
+    settings.setValue("B_RT_Down"      , ui->doubleSpinBox_rtBtm_2->value()         );      //RT下限值
+    settings.setValue("B_RT_Click"     , ui->doubleSpinBox_rtDnDft_2->value()       );      //RT触发值
+    settings.setValue("B_RT_Release"   , ui->doubleSpinBox_rtUpDft_2->value()       );      //RT抬起值
+    settings.setValue("B_AxisTrip"        , ui->doubleSpinBox_axisTrip_2->value()       );  //键轴键程
+    settings.setValue("B_AxisMinThreshold", ui->doubleSpinBox_axisMinThreshold_2->value()); //键程最小阈值
+    settings.setValue("B_AxisMaxThreshold", ui->doubleSpinBox_axisMaxThreshold_2->value()); //键程最大阈值
+    settings.setValue("B_AxisID"          , ui->spinBox_axisID_2->value()              );   //轴ID
+    QString B_AxisName;
+    for(int i = 0; i < ui->comboBox_axisName_2->count(); i++){
+        B_AxisName += ui->comboBox_axisName_2->itemText(i);                                 //获取所有键轴名称
+        B_AxisName += ";";                                                                  //用于解析后做风格使用
+    }
+    QString B_AxisFactory;
+    for(int i = 0; i < ui->comboBox_axisFactory_2->count(); i++){
+        B_AxisFactory += ui->comboBox_axisFactory_2->itemText(i);                           //获取所有键轴名称
+        B_AxisFactory += ";";                                                               //用于解析后做风格使用
+    }
+    settings.setValue("B_AxisName"        , B_AxisName        );                            //轴名称
+    settings.setValue("B_AxisFactory"     , B_AxisFactory     );                            //轴厂商
+
     settings.endGroup();
 
     // 设置C组的值
     settings.beginGroup("Key_Shaft_C");
-    settings.setValue("C_MAX_Up"       , ui->doubleSpinBox_maxTop_3->value()        ); //最大上限值
-    settings.setValue("C_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_3->value()    ); //最大默认值
-    settings.setValue("C_MAX_Down"     , ui->doubleSpinBox_maxBtm_3->value()        ); //最大下限值
-    settings.setValue("C_MIN_Up"       , ui->doubleSpinBox_minTop_3->value()        ); //最小上限值
-    settings.setValue("C_MAX_Default"  , ui->doubleSpinBox_minDefault_3->value()    ); //最小默认值
-    settings.setValue("C_MIN_Down"     , ui->doubleSpinBox_minBtm_3->value()        ); //最小下限值
-    settings.setValue("C_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_3->value()    ); //上死区
-    settings.setValue("C_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_3->value()  ); //下死区
-    settings.setValue("C_AcoefficientA", ui->doubleSpinBox_acoefficientA_3->value() ); //系数A
-    settings.setValue("C_AcoefficientB", ui->doubleSpinBox_acoefficientB_3->value() ); //系数B
-    settings.setValue("C_AcoefficientC", ui->doubleSpinBox_acoefficientC_3->value() ); //系数C
-    settings.setValue("C_AcoefficientD", ui->doubleSpinBox_acoefficientD_3->value() ); //系数D
-    settings.setValue("C_RT_FH_Up"     , ui->doubleSpinBox_fhTop_3->value()         ); //RT定高上限
-    settings.setValue("C_RT_FH_Default", ui->doubleSpinBox_fhDnDft_3->value()       ); //RT定高默认
-    settings.setValue("C_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_3->value()         ); //RT定高下限
-    settings.setValue("C_RT_Up"        , ui->doubleSpinBox_rtTop_3->value()         ); //RT上限值
-    settings.setValue("C_RT_Down"      , ui->doubleSpinBox_rtBtm_3->value()         ); //RT下限值
-    settings.setValue("C_RT_Click"     , ui->doubleSpinBox_rtDnDft_3->value()       ); //RT触发值
-    settings.setValue("C_RT_Release"   , ui->doubleSpinBox_rtUpDft_3->value()       ); //RT抬起值
+    settings.setValue("C_MAX_Up"       , ui->doubleSpinBox_maxTop_3->value()        );      //最大上限值
+    settings.setValue("C_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_3->value()    );      //最大默认值
+    settings.setValue("C_MAX_Down"     , ui->doubleSpinBox_maxBtm_3->value()        );      //最大下限值
+    settings.setValue("C_MIN_Up"       , ui->doubleSpinBox_minTop_3->value()        );      //最小上限值
+    settings.setValue("C_MAX_Default"  , ui->doubleSpinBox_minDefault_3->value()    );      //最小默认值
+    settings.setValue("C_MIN_Down"     , ui->doubleSpinBox_minBtm_3->value()        );      //最小下限值
+    settings.setValue("C_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_3->value()    );      //上死区
+    settings.setValue("C_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_3->value()  );      //下死区
+    settings.setValue("C_AcoefficientA", ui->doubleSpinBox_acoefficientA_3->value() );      //系数A
+    settings.setValue("C_AcoefficientB", ui->doubleSpinBox_acoefficientB_3->value() );      //系数B
+    settings.setValue("C_AcoefficientC", ui->doubleSpinBox_acoefficientC_3->value() );      //系数C
+    settings.setValue("C_AcoefficientD", ui->doubleSpinBox_acoefficientD_3->value() );      //系数D
+    settings.setValue("C_RT_FH_Up"     , ui->doubleSpinBox_fhTop_3->value()         );      //RT定高上限
+    settings.setValue("C_RT_FH_Default", ui->doubleSpinBox_fhDnDft_3->value()       );      //RT定高默认
+    settings.setValue("C_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_3->value()         );      //RT定高下限
+    settings.setValue("C_RT_Up"        , ui->doubleSpinBox_rtTop_3->value()         );      //RT上限值
+    settings.setValue("C_RT_Down"      , ui->doubleSpinBox_rtBtm_3->value()         );      //RT下限值
+    settings.setValue("C_RT_Click"     , ui->doubleSpinBox_rtDnDft_3->value()       );      //RT触发值
+    settings.setValue("C_RT_Release"   , ui->doubleSpinBox_rtUpDft_3->value()       );      //RT抬起值
+    settings.setValue("C_AxisTrip"        , ui->doubleSpinBox_axisTrip_3->value()       );  //键轴键程
+    settings.setValue("C_AxisMinThreshold", ui->doubleSpinBox_axisMinThreshold_3->value()); //键程最小阈值
+    settings.setValue("C_AxisMaxThreshold", ui->doubleSpinBox_axisMaxThreshold_3->value()); //键程最大阈值
+    settings.setValue("C_AxisID"          , ui->spinBox_axisID_3->value()              );   //键轴ID
+    QString C_AxisName;
+    for(int i = 0; i < ui->comboBox_axisName_3->count(); i++){
+        C_AxisName += ui->comboBox_axisName_3->itemText(i);                                 //获取所有键轴名称
+        C_AxisName += ";";                                                                  //用于解析后做风格使用
+    }
+    QString C_AxisFactory;
+    for(int i = 0; i < ui->comboBox_axisFactory_3->count(); i++){
+        C_AxisFactory += ui->comboBox_axisFactory_3->itemText(i);                           //获取所有键轴名称
+        C_AxisFactory += ";";                                                               //用于解析后做风格使用
+    }
+    settings.setValue("C_AxisName"        , C_AxisName        );                            //轴名称
+    settings.setValue("C_AxisFactory"     , C_AxisFactory     );                            //轴厂商
     settings.endGroup();
 
     // 设置D组的值
     settings.beginGroup("Key_Shaft_D");
-    settings.setValue("D_MAX_Up"       , ui->doubleSpinBox_maxTop_4->value()        ); //最大上限值
-    settings.setValue("D_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_4->value()    ); //最大默认值
-    settings.setValue("D_MAX_Down"     , ui->doubleSpinBox_maxBtm_4->value()        ); //最大下限值
-    settings.setValue("D_MIN_Up"       , ui->doubleSpinBox_minTop_4->value()        ); //最小上限值
-    settings.setValue("D_MAX_Default"  , ui->doubleSpinBox_minDefault_4->value()    ); //最小默认值
-    settings.setValue("D_MIN_Down"     , ui->doubleSpinBox_minBtm_4->value()        ); //最小下限值
-    settings.setValue("D_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_4->value()    ); //上死区
-    settings.setValue("D_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_4->value()  ); //下死区
-    settings.setValue("D_AcoefficientA", ui->doubleSpinBox_acoefficientA_4->value() ); //系数A
-    settings.setValue("D_AcoefficientB", ui->doubleSpinBox_acoefficientB_4->value() ); //系数B
-    settings.setValue("D_AcoefficientC", ui->doubleSpinBox_acoefficientC_4->value() ); //系数C
-    settings.setValue("D_AcoefficientD", ui->doubleSpinBox_acoefficientD_4->value() ); //系数D
-    settings.setValue("D_RT_FH_Up"     , ui->doubleSpinBox_fhTop_4->value()         ); //RT定高上限
-    settings.setValue("D_RT_FH_Default", ui->doubleSpinBox_fhDnDft_4->value()       ); //RT定高默认
-    settings.setValue("D_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_4->value()         ); //RT定高下限
-    settings.setValue("D_RT_Up"        , ui->doubleSpinBox_rtTop_4->value()         ); //RT上限值
-    settings.setValue("D_RT_Down"      , ui->doubleSpinBox_rtBtm_4->value()         ); //RT下限值
-    settings.setValue("D_RT_Click"     , ui->doubleSpinBox_rtDnDft_4->value()       ); //RT触发值
-    settings.setValue("D_RT_Release"   , ui->doubleSpinBox_rtUpDft_4->value()       ); //RT抬起值
+    settings.setValue("D_MAX_Up"       , ui->doubleSpinBox_maxTop_4->value()        );      //最大上限值
+    settings.setValue("D_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_4->value()    );      //最大默认值
+    settings.setValue("D_MAX_Down"     , ui->doubleSpinBox_maxBtm_4->value()        );      //最大下限值
+    settings.setValue("D_MIN_Up"       , ui->doubleSpinBox_minTop_4->value()        );      //最小上限值
+    settings.setValue("D_MAX_Default"  , ui->doubleSpinBox_minDefault_4->value()    );      //最小默认值
+    settings.setValue("D_MIN_Down"     , ui->doubleSpinBox_minBtm_4->value()        );      //最小下限值
+    settings.setValue("D_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_4->value()    );      //上死区
+    settings.setValue("D_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_4->value()  );      //下死区
+    settings.setValue("D_AcoefficientA", ui->doubleSpinBox_acoefficientA_4->value() );      //系数A
+    settings.setValue("D_AcoefficientB", ui->doubleSpinBox_acoefficientB_4->value() );      //系数B
+    settings.setValue("D_AcoefficientC", ui->doubleSpinBox_acoefficientC_4->value() );      //系数C
+    settings.setValue("D_AcoefficientD", ui->doubleSpinBox_acoefficientD_4->value() );      //系数D
+    settings.setValue("D_RT_FH_Up"     , ui->doubleSpinBox_fhTop_4->value()         );      //RT定高上限
+    settings.setValue("D_RT_FH_Default", ui->doubleSpinBox_fhDnDft_4->value()       );      //RT定高默认
+    settings.setValue("D_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_4->value()         );      //RT定高下限
+    settings.setValue("D_RT_Up"        , ui->doubleSpinBox_rtTop_4->value()         );      //RT上限值
+    settings.setValue("D_RT_Down"      , ui->doubleSpinBox_rtBtm_4->value()         );      //RT下限值
+    settings.setValue("D_RT_Click"     , ui->doubleSpinBox_rtDnDft_4->value()       );      //RT触发值
+    settings.setValue("D_RT_Release"   , ui->doubleSpinBox_rtUpDft_4->value()       );      //RT抬起值
+    settings.setValue("D_AxisTrip"        , ui->doubleSpinBox_axisTrip_4->value()       );  //键轴键程
+    settings.setValue("D_AxisMinThreshold", ui->doubleSpinBox_axisMinThreshold_4->value()); //键程最小阈值
+    settings.setValue("D_AxisMaxThreshold", ui->doubleSpinBox_axisMaxThreshold_4->value()); //键程最大阈值
+    settings.setValue("D_AxisID"          , ui->spinBox_axisID_4->value()              );   //键轴ID
+    QString D_AxisName;
+    for(int i = 0; i < ui->comboBox_axisName_4->count(); i++){
+        D_AxisName += ui->comboBox_axisName_4->itemText(i);                                 //获取所有键轴名称
+        D_AxisName += ";";                                                                  //用于解析后做风格使用
+    }
+    QString D_AxisFactory;
+    for(int i = 0; i < ui->comboBox_axisFactory_4->count(); i++){
+        D_AxisFactory += ui->comboBox_axisFactory_4->itemText(i);                           //获取所有键轴名称
+        D_AxisFactory += ";";                                                               //用于解析后做风格使用
+    }
+    settings.setValue("D_AxisName"        , D_AxisName        );                            //轴名称
+    settings.setValue("D_AxisFactory"     , D_AxisFactory     );                            //轴厂商
     settings.endGroup();
 
     // 设置E组的值
     settings.beginGroup("Key_Shaft_E");
-    settings.setValue("E_MAX_Up"       , ui->doubleSpinBox_maxTop_5->value()        ); //最大上限值
-    settings.setValue("E_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_5->value()    ); //最大默认值
-    settings.setValue("E_MAX_Down"     , ui->doubleSpinBox_maxBtm_5->value()        ); //最大下限值
-    settings.setValue("E_MIN_Up"       , ui->doubleSpinBox_minTop_5->value()        ); //最小上限值
-    settings.setValue("E_MAX_Default"  , ui->doubleSpinBox_minDefault_5->value()    ); //最小默认值
-    settings.setValue("E_MIN_Down"     , ui->doubleSpinBox_minBtm_5->value()        ); //最小下限值
-    settings.setValue("E_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_5->value()    ); //上死区
-    settings.setValue("E_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_5->value()  ); //下死区
-    settings.setValue("E_AcoefficientA", ui->doubleSpinBox_acoefficientA_5->value() ); //系数A
-    settings.setValue("E_AcoefficientB", ui->doubleSpinBox_acoefficientB_5->value() ); //系数B
-    settings.setValue("E_AcoefficientC", ui->doubleSpinBox_acoefficientC_5->value() ); //系数C
-    settings.setValue("E_AcoefficientD", ui->doubleSpinBox_acoefficientD_5->value() ); //系数D
-    settings.setValue("E_RT_FH_Up"     , ui->doubleSpinBox_fhTop_5->value()         ); //RT定高上限
-    settings.setValue("E_RT_FH_Default", ui->doubleSpinBox_fhDnDft_5->value()       ); //RT定高默认
-    settings.setValue("E_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_5->value()         ); //RT定高下限
-    settings.setValue("E_RT_Up"        , ui->doubleSpinBox_rtTop_5->value()         ); //RT上限值
-    settings.setValue("E_RT_Down"      , ui->doubleSpinBox_rtBtm_5->value()         ); //RT下限值
-    settings.setValue("E_RT_Click"     , ui->doubleSpinBox_rtDnDft_5->value()       ); //RT触发值
-    settings.setValue("E_RT_Release"   , ui->doubleSpinBox_rtUpDft_5->value()       ); //RT抬起值
+    settings.setValue("E_MAX_Up"       , ui->doubleSpinBox_maxTop_5->value()        );      //最大上限值
+    settings.setValue("E_MAX_Defalut"  , ui->doubleSpinBox_maxDefault_5->value()    );      //最大默认值
+    settings.setValue("E_MAX_Down"     , ui->doubleSpinBox_maxBtm_5->value()        );      //最大下限值
+    settings.setValue("E_MIN_Up"       , ui->doubleSpinBox_minTop_5->value()        );      //最小上限值
+    settings.setValue("E_MAX_Default"  , ui->doubleSpinBox_minDefault_5->value()    );      //最小默认值
+    settings.setValue("E_MIN_Down"     , ui->doubleSpinBox_minBtm_5->value()        );      //最小下限值
+    settings.setValue("E_DeadZoonUp"   , ui->doubleSpinBox_deadZoneUp_5->value()    );      //上死区
+    settings.setValue("E_DeadZoonDown" , ui->doubleSpinBox_deadZoneDown_5->value()  );      //下死区
+    settings.setValue("E_AcoefficientA", ui->doubleSpinBox_acoefficientA_5->value() );      //系数A
+    settings.setValue("E_AcoefficientB", ui->doubleSpinBox_acoefficientB_5->value() );      //系数B
+    settings.setValue("E_AcoefficientC", ui->doubleSpinBox_acoefficientC_5->value() );      //系数C
+    settings.setValue("E_AcoefficientD", ui->doubleSpinBox_acoefficientD_5->value() );      //系数D
+    settings.setValue("E_RT_FH_Up"     , ui->doubleSpinBox_fhTop_5->value()         );      //RT定高上限
+    settings.setValue("E_RT_FH_Default", ui->doubleSpinBox_fhDnDft_5->value()       );      //RT定高默认
+    settings.setValue("E_RT_FH_Down"   , ui->doubleSpinBox_fhBtm_5->value()         );      //RT定高下限
+    settings.setValue("E_RT_Up"        , ui->doubleSpinBox_rtTop_5->value()         );      //RT上限值
+    settings.setValue("E_RT_Down"      , ui->doubleSpinBox_rtBtm_5->value()         );      //RT下限值
+    settings.setValue("E_RT_Click"     , ui->doubleSpinBox_rtDnDft_5->value()       );      //RT触发值
+    settings.setValue("E_RT_Release"   , ui->doubleSpinBox_rtUpDft_5->value()       );      //RT抬起值
+    settings.setValue("E_AxisTrip"        , ui->doubleSpinBox_axisTrip_5->value()       );  //键轴键程
+    settings.setValue("E_AxisMinThreshold", ui->doubleSpinBox_axisMinThreshold_5->value()); //键程最小阈值
+    settings.setValue("E_AxisMaxThreshold", ui->doubleSpinBox_axisMaxThreshold_5->value()); //键程最大阈值
+    settings.setValue("E_AxisID"          , ui->spinBox_axisID_5->value()              );   //键轴ID
+    QString E_AxisName;
+    for(int i = 0; i < ui->comboBox_axisName_5->count(); i++){
+        E_AxisName += ui->comboBox_axisName_5->itemText(i);                                 //获取所有键轴名称
+        E_AxisName += ";";                                                                  //用于解析后做风格使用
+    }
+    QString E_AxisFactory;
+    for(int i = 0; i < ui->comboBox_axisFactory_5->count(); i++){
+        E_AxisFactory += ui->comboBox_axisFactory_5->itemText(i);                           //获取所有键轴名称
+        E_AxisFactory += ";";                                                               //用于解析后做风格使用
+    }
+    settings.setValue("E_AxisName"        , E_AxisName        );                            //轴名称
+    settings.setValue("E_AxisFactory"     , E_AxisFactory     );                            //轴厂商
     settings.endGroup();
 
     // 确保写入磁盘

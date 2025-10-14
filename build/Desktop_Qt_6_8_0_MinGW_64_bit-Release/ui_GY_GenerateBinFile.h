@@ -135,212 +135,272 @@ public:
     QGridLayout *gridLayout_16;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_5;
-    QLabel *label_acoefficientA;
-    QLabel *label_deadZoneDown;
-    QLabel *label_maxBtm;
+    QDoubleSpinBox *doubleSpinBox_rtUpDft;
+    QDoubleSpinBox *doubleSpinBox_fhTop;
     QDoubleSpinBox *doubleSpinBox_minTop;
-    QDoubleSpinBox *doubleSpinBox_deadZoneDown;
-    QDoubleSpinBox *doubleSpinBox_acoefficientB;
-    QDoubleSpinBox *doubleSpinBox_minDefault;
-    QDoubleSpinBox *doubleSpinBox_acoefficientA;
+    QLabel *label_rtUpDft;
     QLabel *label_acoefficientB;
-    QLabel *label_deadZoneUp;
+    QDoubleSpinBox *doubleSpinBox_maxTop;
     QDoubleSpinBox *doubleSpinBox_maxDefault;
     QLabel *label_minDefault;
-    QDoubleSpinBox *doubleSpinBox_maxBtm;
-    QLabel *label_minTop;
-    QLabel *label_maxTop;
-    QLabel *label_acoefficientC;
-    QDoubleSpinBox *doubleSpinBox_deadZoneUp;
-    QLabel *label_maxDefault;
-    QDoubleSpinBox *doubleSpinBox_acoefficientC;
-    QDoubleSpinBox *doubleSpinBox_maxTop;
-    QLabel *label_rtUpDft;
-    QDoubleSpinBox *doubleSpinBox_rtUpDft;
-    QLabel *label_rtDnDft;
     QDoubleSpinBox *doubleSpinBox_rtDnDft;
+    QLabel *label_acoefficientC;
+    QDoubleSpinBox *doubleSpinBox_deadZoneDown;
     QLabel *label_fhTop;
-    QDoubleSpinBox *doubleSpinBox_fhTop;
-    QLabel *label_fhDnDft;
-    QDoubleSpinBox *doubleSpinBox_fhDnDft;
-    QLabel *label_fhBtm;
-    QDoubleSpinBox *doubleSpinBox_fhBtm;
-    QLabel *label_rtBtm;
-    QDoubleSpinBox *doubleSpinBox_rtBtm;
+    QDoubleSpinBox *doubleSpinBox_acoefficientD;
+    QDoubleSpinBox *doubleSpinBox_acoefficientB;
+    QLabel *label_maxTop;
+    QDoubleSpinBox *doubleSpinBox_minDefault;
+    QLabel *label_axisTrip;
+    QLabel *label_minTop;
     QLabel *label_rtTop;
     QDoubleSpinBox *doubleSpinBox_rtTop;
     QLabel *label_acoefficientD;
-    QDoubleSpinBox *doubleSpinBox_acoefficientD;
+    QLabel *label_acoefficientA;
+    QDoubleSpinBox *doubleSpinBox_deadZoneUp;
+    QLabel *label_rtDnDft;
+    QDoubleSpinBox *doubleSpinBox_fhDnDft;
+    QDoubleSpinBox *doubleSpinBox_acoefficientA;
+    QDoubleSpinBox *doubleSpinBox_fhBtm;
+    QDoubleSpinBox *doubleSpinBox_axisTrip;
+    QLabel *label_fhDnDft;
+    QLabel *label_deadZoneUp;
+    QLabel *label_fhBtm;
+    QLabel *label_maxDefault;
+    QLabel *label_maxBtm;
+    QDoubleSpinBox *doubleSpinBox_acoefficientC;
     QLabel *label_minBtm;
     QDoubleSpinBox *doubleSpinBox_minBtm;
+    QDoubleSpinBox *doubleSpinBox_rtBtm;
+    QDoubleSpinBox *doubleSpinBox_maxBtm;
+    QLabel *label_rtBtm;
+    QLabel *label_deadZoneDown;
+    QLabel *label_axisMinThreshold;
+    QDoubleSpinBox *doubleSpinBox_axisMinThreshold;
+    QDoubleSpinBox *doubleSpinBox_axisMaxThreshold;
+    QLabel *label_axisMaxThreshold;
+    QLabel *label_axisID;
+    QSpinBox *spinBox_axisID;
+    QLabel *label_axisName;
+    QLabel *label_axisFactory;
+    QComboBox *comboBox_axisName;
+    QComboBox *comboBox_axisFactory;
     QWidget *page_2;
     QGridLayout *gridLayout_17;
     QGroupBox *groupBox_4;
     QGridLayout *gridLayout_18;
-    QLabel *label_minDefault_2;
-    QDoubleSpinBox *doubleSpinBox_maxDefault_2;
-    QDoubleSpinBox *doubleSpinBox_acoefficientC_2;
-    QDoubleSpinBox *doubleSpinBox_acoefficientD_2;
-    QLabel *label_acoefficientA_2;
-    QLabel *label_deadZoneDown_3;
-    QDoubleSpinBox *doubleSpinBox_maxBtm_2;
-    QDoubleSpinBox *doubleSpinBox_fhTop_2;
-    QLabel *label_rtTop_2;
-    QDoubleSpinBox *doubleSpinBox_rtTop_2;
-    QLabel *label_rtBtm_2;
-    QLabel *label_fhDnDft_2;
-    QDoubleSpinBox *doubleSpinBox_acoefficientB_2;
+    QDoubleSpinBox *doubleSpinBox_axisMinThreshold_2;
+    QDoubleSpinBox *doubleSpinBox_fhDnDft_2;
     QDoubleSpinBox *doubleSpinBox_minTop_2;
+    QLabel *label_rtDnDft_2;
+    QDoubleSpinBox *doubleSpinBox_acoefficientD_2;
     QDoubleSpinBox *doubleSpinBox_rtBtm_2;
+    QLabel *label_deadZoneDown_3;
+    QLabel *label_minBtm_2;
     QLabel *label_deadZoneUp_3;
-    QDoubleSpinBox *doubleSpinBox_deadZoneUp_2;
+    QLabel *label_rtBtm_2;
+    QDoubleSpinBox *doubleSpinBox_acoefficientA_2;
+    QLabel *label_fhDnDft_2;
+    QDoubleSpinBox *doubleSpinBox_rtTop_2;
+    QLabel *label_maxDefault_2;
+    QLabel *label_axisMinThreshold_2;
+    QLabel *label_acoefficientD_2;
+    QLabel *label_axisTrip_2;
+    QDoubleSpinBox *doubleSpinBox_axisTrip_2;
     QLabel *label_maxBtm_2;
     QLabel *label_minTop_2;
-    QLabel *label_acoefficientC_2;
-    QLabel *label_maxDefault_2;
-    QLabel *label_fhTop_2;
-    QLabel *label_acoefficientB_2;
-    QLabel *label_acoefficientD_2;
-    QLabel *label_maxTop_2;
+    QDoubleSpinBox *doubleSpinBox_axisMaxThreshold_2;
+    QLabel *label_axisMaxThreshold_2;
+    QDoubleSpinBox *doubleSpinBox_deadZoneUp_2;
     QDoubleSpinBox *doubleSpinBox_maxTop_2;
-    QLabel *label_minBtm_2;
-    QDoubleSpinBox *doubleSpinBox_minDefault_2;
-    QDoubleSpinBox *doubleSpinBox_fhDnDft_2;
     QDoubleSpinBox *doubleSpinBox_minBtm_2;
-    QDoubleSpinBox *doubleSpinBox_acoefficientA_2;
+    QLabel *label_acoefficientB_2;
+    QDoubleSpinBox *doubleSpinBox_acoefficientB_2;
+    QLabel *label_rtTop_2;
     QDoubleSpinBox *doubleSpinBox_fhBtm_2;
-    QDoubleSpinBox *doubleSpinBox_deadZoneDown_2;
-    QLabel *label_fhBtm_2;
-    QLabel *label_rtDnDft_2;
     QDoubleSpinBox *doubleSpinBox_rtDnDft_2;
+    QDoubleSpinBox *doubleSpinBox_acoefficientC_2;
+    QLabel *label_acoefficientA_2;
+    QDoubleSpinBox *doubleSpinBox_maxBtm_2;
+    QDoubleSpinBox *doubleSpinBox_deadZoneDown_2;
+    QDoubleSpinBox *doubleSpinBox_fhTop_2;
     QDoubleSpinBox *doubleSpinBox_rtUpDft_2;
+    QDoubleSpinBox *doubleSpinBox_maxDefault_2;
+    QLabel *label_maxTop_2;
+    QLabel *label_fhTop_2;
+    QDoubleSpinBox *doubleSpinBox_minDefault_2;
+    QLabel *label_acoefficientC_2;
+    QLabel *label_minDefault_2;
+    QLabel *label_fhBtm_2;
     QLabel *label_rtUpDft_2;
+    QLabel *label_axisID_2;
+    QSpinBox *spinBox_axisID_2;
+    QLabel *label_axisName_2;
+    QLabel *label_axisFactory_2;
+    QComboBox *comboBox_axisName_2;
+    QComboBox *comboBox_axisFactory_2;
     QWidget *page_3;
     QGridLayout *gridLayout_20;
     QGroupBox *groupBox_5;
     QGridLayout *gridLayout_19;
-    QDoubleSpinBox *doubleSpinBox_deadZoneUp_3;
-    QLabel *label_minDefault_3;
-    QDoubleSpinBox *doubleSpinBox_fhTop_3;
-    QDoubleSpinBox *doubleSpinBox_minTop_3;
-    QLabel *label_maxBtm_3;
-    QLabel *label_acoefficientA_3;
-    QDoubleSpinBox *doubleSpinBox_acoefficientA_3;
-    QLabel *label_acoefficientC_3;
-    QDoubleSpinBox *doubleSpinBox_acoefficientC_3;
-    QLabel *label_minTop_3;
-    QDoubleSpinBox *doubleSpinBox_deadZoneDown_3;
-    QLabel *label_maxTop_3;
-    QDoubleSpinBox *doubleSpinBox_maxBtm_3;
-    QLabel *label_deadZoneUp_2;
-    QLabel *label_maxDefault_3;
-    QDoubleSpinBox *doubleSpinBox_acoefficientB_3;
-    QLabel *label_acoefficientB_3;
-    QDoubleSpinBox *doubleSpinBox_maxDefault_3;
-    QLabel *label_deadZoneDown_2;
-    QDoubleSpinBox *doubleSpinBox_minDefault_3;
-    QDoubleSpinBox *doubleSpinBox_maxTop_3;
-    QLabel *label_fhTop_3;
-    QLabel *label_fhDnDft_3;
-    QDoubleSpinBox *doubleSpinBox_fhDnDft_3;
-    QLabel *label_fhBtm_3;
-    QDoubleSpinBox *doubleSpinBox_fhBtm_3;
-    QDoubleSpinBox *doubleSpinBox_rtBtm_3;
-    QLabel *label_rtBtm_3;
-    QLabel *label_rtTop_3;
-    QDoubleSpinBox *doubleSpinBox_rtTop_3;
-    QDoubleSpinBox *doubleSpinBox_rtDnDft_3;
-    QLabel *label_rtDnDft_3;
-    QLabel *label_rtUpDft_3;
-    QDoubleSpinBox *doubleSpinBox_rtUpDft_3;
-    QDoubleSpinBox *doubleSpinBox_acoefficientD_3;
-    QLabel *label_acoefficientD_3;
     QDoubleSpinBox *doubleSpinBox_minBtm_3;
     QLabel *label_minBtm_3;
+    QLabel *label_rtUpDft_3;
+    QDoubleSpinBox *doubleSpinBox_minTop_3;
+    QLabel *label_minDefault_3;
+    QDoubleSpinBox *doubleSpinBox_rtTop_3;
+    QDoubleSpinBox *doubleSpinBox_rtBtm_3;
+    QLabel *label_fhBtm_3;
+    QDoubleSpinBox *doubleSpinBox_deadZoneUp_3;
+    QDoubleSpinBox *doubleSpinBox_maxBtm_3;
+    QLabel *label_axisTrip_3;
+    QDoubleSpinBox *doubleSpinBox_deadZoneDown_3;
+    QLabel *label_axisMinThreshold_3;
+    QDoubleSpinBox *doubleSpinBox_minDefault_3;
+    QDoubleSpinBox *doubleSpinBox_acoefficientA_3;
+    QLabel *label_minTop_3;
+    QLabel *label_fhTop_3;
+    QLabel *label_maxTop_3;
+    QDoubleSpinBox *doubleSpinBox_maxDefault_3;
+    QLabel *label_rtDnDft_3;
+    QLabel *label_fhDnDft_3;
+    QDoubleSpinBox *doubleSpinBox_rtDnDft_3;
+    QLabel *label_deadZoneDown_2;
+    QLabel *label_deadZoneUp_2;
+    QDoubleSpinBox *doubleSpinBox_acoefficientD_3;
+    QLabel *label_acoefficientC_3;
+    QDoubleSpinBox *doubleSpinBox_maxTop_3;
+    QDoubleSpinBox *doubleSpinBox_fhDnDft_3;
+    QLabel *label_rtBtm_3;
+    QDoubleSpinBox *doubleSpinBox_rtUpDft_3;
+    QLabel *label_maxBtm_3;
+    QDoubleSpinBox *doubleSpinBox_fhTop_3;
+    QDoubleSpinBox *doubleSpinBox_fhBtm_3;
+    QLabel *label_rtTop_3;
+    QLabel *label_acoefficientA_3;
+    QLabel *label_acoefficientD_3;
+    QDoubleSpinBox *doubleSpinBox_acoefficientC_3;
+    QLabel *label_acoefficientB_3;
+    QDoubleSpinBox *doubleSpinBox_acoefficientB_3;
+    QLabel *label_maxDefault_3;
+    QLabel *label_axisMaxThreshold_3;
+    QDoubleSpinBox *doubleSpinBox_axisTrip_3;
+    QDoubleSpinBox *doubleSpinBox_axisMinThreshold_3;
+    QDoubleSpinBox *doubleSpinBox_axisMaxThreshold_3;
+    QLabel *label_axisID_3;
+    QSpinBox *spinBox_axisID_3;
+    QLabel *label_axisName_3;
+    QLabel *label_axisFactory_3;
+    QComboBox *comboBox_axisName_3;
+    QComboBox *comboBox_axisFactory_3;
     QWidget *page_4;
     QGridLayout *gridLayout_21;
     QGroupBox *groupBox_6;
     QGridLayout *gridLayout_23;
-    QLabel *label_minBtm_4;
-    QLabel *label_minDefault_4;
-    QDoubleSpinBox *doubleSpinBox_minTop_4;
-    QLabel *label_minTop_4;
-    QLabel *label_rtTop_4;
-    QLabel *label_deadZoneDown_4;
-    QDoubleSpinBox *doubleSpinBox_acoefficientB_4;
-    QDoubleSpinBox *doubleSpinBox_acoefficientA_4;
-    QLabel *label_deadZoneUp_4;
-    QLabel *label_rtBtm_4;
-    QDoubleSpinBox *doubleSpinBox_maxDefault_4;
-    QDoubleSpinBox *doubleSpinBox_fhTop_4;
-    QLabel *label_acoefficientB_4;
-    QDoubleSpinBox *doubleSpinBox_maxBtm_4;
-    QLabel *label_fhDnDft_4;
-    QDoubleSpinBox *doubleSpinBox_deadZoneDown_4;
     QDoubleSpinBox *doubleSpinBox_maxTop_4;
-    QLabel *label_maxDefault_4;
+    QDoubleSpinBox *doubleSpinBox_maxDefault_4;
+    QDoubleSpinBox *doubleSpinBox_axisMinThreshold_4;
+    QLabel *label_acoefficientB_4;
+    QLabel *label_rtDnDft_4;
+    QLabel *label_minTop_4;
+    QDoubleSpinBox *doubleSpinBox_minBtm_4;
+    QLabel *label_maxBtm_4;
+    QLabel *label_fhBtm_4;
+    QDoubleSpinBox *doubleSpinBox_rtTop_4;
+    QLabel *label_minBtm_4;
     QLabel *label_acoefficientA_4;
     QDoubleSpinBox *doubleSpinBox_acoefficientC_4;
-    QDoubleSpinBox *doubleSpinBox_minBtm_4;
-    QLabel *label_acoefficientC_4;
+    QDoubleSpinBox *doubleSpinBox_acoefficientA_4;
+    QDoubleSpinBox *doubleSpinBox_fhTop_4;
+    QLabel *label_maxDefault_4;
+    QDoubleSpinBox *doubleSpinBox_deadZoneDown_4;
+    QLabel *label_rtBtm_4;
     QDoubleSpinBox *doubleSpinBox_fhDnDft_4;
-    QLabel *label_fhTop_4;
-    QLabel *label_fhBtm_4;
-    QLabel *label_acoefficientD_4;
-    QLabel *label_maxBtm_4;
-    QDoubleSpinBox *doubleSpinBox_minDefault_4;
-    QLabel *label_maxTop_4;
-    QDoubleSpinBox *doubleSpinBox_acoefficientD_4;
-    QDoubleSpinBox *doubleSpinBox_deadZoneUp_4;
-    QDoubleSpinBox *doubleSpinBox_rtBtm_4;
-    QLabel *label_rtDnDft_4;
-    QDoubleSpinBox *doubleSpinBox_rtTop_4;
-    QDoubleSpinBox *doubleSpinBox_fhBtm_4;
-    QDoubleSpinBox *doubleSpinBox_rtDnDft_4;
+    QDoubleSpinBox *doubleSpinBox_acoefficientB_4;
+    QLabel *label_minDefault_4;
+    QLabel *label_axisTrip_4;
+    QLabel *label_axisMinThreshold_4;
+    QLabel *label_rtTop_4;
+    QDoubleSpinBox *doubleSpinBox_axisTrip_4;
     QDoubleSpinBox *doubleSpinBox_rtUpDft_4;
+    QLabel *label_fhDnDft_4;
+    QLabel *label_deadZoneDown_4;
+    QLabel *label_acoefficientD_4;
+    QDoubleSpinBox *doubleSpinBox_fhBtm_4;
+    QDoubleSpinBox *doubleSpinBox_maxBtm_4;
+    QDoubleSpinBox *doubleSpinBox_minDefault_4;
+    QDoubleSpinBox *doubleSpinBox_rtDnDft_4;
+    QDoubleSpinBox *doubleSpinBox_acoefficientD_4;
+    QLabel *label_fhTop_4;
     QLabel *label_rtUpDft_4;
+    QLabel *label_deadZoneUp_4;
+    QLabel *label_maxTop_4;
+    QDoubleSpinBox *doubleSpinBox_rtBtm_4;
+    QLabel *label_acoefficientC_4;
+    QDoubleSpinBox *doubleSpinBox_axisMaxThreshold_4;
+    QDoubleSpinBox *doubleSpinBox_deadZoneUp_4;
+    QDoubleSpinBox *doubleSpinBox_minTop_4;
+    QLabel *label_axisMaxThreshold_4;
+    QLabel *label_axisID_4;
+    QSpinBox *spinBox_axisID_4;
+    QLabel *label_axisName_4;
+    QLabel *label_axisFactory_4;
+    QComboBox *comboBox_axisName_4;
+    QComboBox *comboBox_axisFactory_4;
     QWidget *page_5;
     QGridLayout *gridLayout_24;
     QGroupBox *groupBox_7;
     QGridLayout *gridLayout_25;
-    QDoubleSpinBox *doubleSpinBox_minBtm_5;
-    QLabel *label_minBtm_5;
-    QLabel *label_acoefficientC_5;
-    QDoubleSpinBox *doubleSpinBox_deadZoneDown_5;
-    QLabel *label_deadZoneUp_5;
-    QLabel *label_acoefficientD_5;
-    QLabel *label_maxTop_5;
     QDoubleSpinBox *doubleSpinBox_minTop_5;
-    QLabel *label_minTop_5;
-    QDoubleSpinBox *doubleSpinBox_minDefault_5;
+    QLabel *label_axisMaxThreshold_5;
     QDoubleSpinBox *doubleSpinBox_acoefficientD_5;
     QDoubleSpinBox *doubleSpinBox_acoefficientB_5;
-    QDoubleSpinBox *doubleSpinBox_fhTop_5;
-    QDoubleSpinBox *doubleSpinBox_acoefficientA_5;
-    QLabel *label_acoefficientB_5;
-    QDoubleSpinBox *doubleSpinBox_maxTop_5;
-    QDoubleSpinBox *doubleSpinBox_acoefficientC_5;
-    QLabel *label_maxBtm_5;
-    QLabel *label_maxDefault_5;
-    QLabel *label_acoefficientA_5;
-    QDoubleSpinBox *doubleSpinBox_maxBtm_5;
-    QDoubleSpinBox *doubleSpinBox_deadZoneUp_5;
-    QLabel *label_deadZoneDown_5;
-    QDoubleSpinBox *doubleSpinBox_maxDefault_5;
-    QLabel *label_minDefault_5;
-    QLabel *label_fhTop_5;
-    QLabel *label_fhDnDft_5;
-    QDoubleSpinBox *doubleSpinBox_fhDnDft_5;
     QLabel *label_fhBtm_5;
-    QDoubleSpinBox *doubleSpinBox_fhBtm_5;
-    QLabel *label_rtDnDft_5;
-    QDoubleSpinBox *doubleSpinBox_rtDnDft_5;
-    QDoubleSpinBox *doubleSpinBox_rtUpDft_5;
-    QLabel *label_rtUpDft_5;
-    QDoubleSpinBox *doubleSpinBox_rtTop_5;
-    QLabel *label_rtTop_5;
-    QDoubleSpinBox *doubleSpinBox_rtBtm_5;
+    QLabel *label_axisID_5;
+    QLabel *label_maxTop_5;
+    QDoubleSpinBox *doubleSpinBox_fhDnDft_5;
+    QLabel *label_axisTrip_5;
+    QLabel *label_maxDefault_5;
+    QLabel *label_acoefficientC_5;
     QLabel *label_rtBtm_5;
+    QDoubleSpinBox *doubleSpinBox_minDefault_5;
+    QDoubleSpinBox *doubleSpinBox_rtUpDft_5;
+    QLabel *label_minBtm_5;
+    QLabel *label_deadZoneUp_5;
+    QLabel *label_deadZoneDown_5;
+    QLabel *label_rtTop_5;
+    QDoubleSpinBox *doubleSpinBox_acoefficientA_5;
+    QDoubleSpinBox *doubleSpinBox_axisMaxThreshold_5;
+    QDoubleSpinBox *doubleSpinBox_maxBtm_5;
+    QDoubleSpinBox *doubleSpinBox_fhTop_5;
+    QDoubleSpinBox *doubleSpinBox_deadZoneUp_5;
+    QLabel *label_axisFactory_5;
+    QLabel *label_rtUpDft_5;
+    QLabel *label_acoefficientD_5;
+    QLabel *label_axisName_5;
+    QLabel *label_maxBtm_5;
+    QDoubleSpinBox *doubleSpinBox_maxDefault_5;
+    QLabel *label_rtDnDft_5;
+    QLabel *label_axisMinThreshold_5;
+    QDoubleSpinBox *doubleSpinBox_minBtm_5;
+    QDoubleSpinBox *doubleSpinBox_rtTop_5;
+    QLabel *label_acoefficientA_5;
+    QDoubleSpinBox *doubleSpinBox_rtBtm_5;
+    QDoubleSpinBox *doubleSpinBox_axisTrip_5;
+    QLabel *label_fhDnDft_5;
+    QDoubleSpinBox *doubleSpinBox_maxTop_5;
+    QLabel *label_minTop_5;
+    QDoubleSpinBox *doubleSpinBox_rtDnDft_5;
+    QLabel *label_minDefault_5;
+    QLabel *label_acoefficientB_5;
+    QSpinBox *spinBox_axisID_5;
+    QDoubleSpinBox *doubleSpinBox_acoefficientC_5;
+    QDoubleSpinBox *doubleSpinBox_deadZoneDown_5;
+    QLabel *label_fhTop_5;
+    QDoubleSpinBox *doubleSpinBox_axisMinThreshold_5;
+    QDoubleSpinBox *doubleSpinBox_fhBtm_5;
+    QComboBox *comboBox_axisName_5;
+    QComboBox *comboBox_axisFactory_5;
     QWidget *tab_3;
     QPushButton *pushButton_Export;
     QWidget *layoutWidget;
@@ -1069,30 +1129,20 @@ public:
         gridLayout_5->setSpacing(0);
         gridLayout_5->setObjectName("gridLayout_5");
         gridLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_acoefficientA = new QLabel(groupBox_3);
-        label_acoefficientA->setObjectName("label_acoefficientA");
-        label_acoefficientA->setMinimumSize(QSize(60, 0));
-        label_acoefficientA->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientA->setFont(font1);
-        label_acoefficientA->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_rtUpDft = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_rtUpDft->setObjectName("doubleSpinBox_rtUpDft");
+        doubleSpinBox_rtUpDft->setFont(font1);
+        doubleSpinBox_rtUpDft->setMinimum(-100.000000000000000);
+        doubleSpinBox_rtUpDft->setValue(0.800000000000000);
 
-        gridLayout_5->addWidget(label_acoefficientA, 3, 2, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_rtUpDft, 7, 5, 1, 1);
 
-        label_deadZoneDown = new QLabel(groupBox_3);
-        label_deadZoneDown->setObjectName("label_deadZoneDown");
-        label_deadZoneDown->setMinimumSize(QSize(60, 0));
-        label_deadZoneDown->setMaximumSize(QSize(60, 16777215));
-        label_deadZoneDown->setFont(font1);
-        label_deadZoneDown->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_fhTop = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_fhTop->setObjectName("doubleSpinBox_fhTop");
+        doubleSpinBox_fhTop->setFont(font1);
+        doubleSpinBox_fhTop->setValue(3.400000000000000);
 
-        gridLayout_5->addWidget(label_deadZoneDown, 2, 2, 1, 1);
-
-        label_maxBtm = new QLabel(groupBox_3);
-        label_maxBtm->setObjectName("label_maxBtm");
-        label_maxBtm->setFont(font1);
-        label_maxBtm->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_5->addWidget(label_maxBtm, 3, 0, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_fhTop, 1, 5, 1, 1);
 
         doubleSpinBox_minTop = new QDoubleSpinBox(groupBox_3);
         doubleSpinBox_minTop->setObjectName("doubleSpinBox_minTop");
@@ -1102,41 +1152,12 @@ public:
 
         gridLayout_5->addWidget(doubleSpinBox_minTop, 4, 1, 1, 1);
 
-        doubleSpinBox_deadZoneDown = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_deadZoneDown->setObjectName("doubleSpinBox_deadZoneDown");
-        doubleSpinBox_deadZoneDown->setFont(font1);
-        doubleSpinBox_deadZoneDown->setMinimum(-100.000000000000000);
-        doubleSpinBox_deadZoneDown->setMaximum(292.000000000000000);
-        doubleSpinBox_deadZoneDown->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
-        doubleSpinBox_deadZoneDown->setValue(0.400000000000000);
+        label_rtUpDft = new QLabel(groupBox_3);
+        label_rtUpDft->setObjectName("label_rtUpDft");
+        label_rtUpDft->setFont(font1);
+        label_rtUpDft->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_5->addWidget(doubleSpinBox_deadZoneDown, 2, 3, 1, 1);
-
-        doubleSpinBox_acoefficientB = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_acoefficientB->setObjectName("doubleSpinBox_acoefficientB");
-        doubleSpinBox_acoefficientB->setFont(font1);
-        doubleSpinBox_acoefficientB->setDecimals(8);
-        doubleSpinBox_acoefficientB->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientB->setValue(57.585424000000003);
-
-        gridLayout_5->addWidget(doubleSpinBox_acoefficientB, 4, 3, 1, 1);
-
-        doubleSpinBox_minDefault = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_minDefault->setObjectName("doubleSpinBox_minDefault");
-        doubleSpinBox_minDefault->setFont(font1);
-        doubleSpinBox_minDefault->setMinimum(-100.000000000000000);
-        doubleSpinBox_minDefault->setValue(0.300000000000000);
-
-        gridLayout_5->addWidget(doubleSpinBox_minDefault, 5, 1, 1, 1);
-
-        doubleSpinBox_acoefficientA = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_acoefficientA->setObjectName("doubleSpinBox_acoefficientA");
-        doubleSpinBox_acoefficientA->setFont(font1);
-        doubleSpinBox_acoefficientA->setDecimals(8);
-        doubleSpinBox_acoefficientA->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientA->setValue(-58.513596999999997);
-
-        gridLayout_5->addWidget(doubleSpinBox_acoefficientA, 3, 3, 1, 1);
+        gridLayout_5->addWidget(label_rtUpDft, 7, 4, 1, 1);
 
         label_acoefficientB = new QLabel(groupBox_3);
         label_acoefficientB->setObjectName("label_acoefficientB");
@@ -1147,14 +1168,13 @@ public:
 
         gridLayout_5->addWidget(label_acoefficientB, 4, 2, 1, 1);
 
-        label_deadZoneUp = new QLabel(groupBox_3);
-        label_deadZoneUp->setObjectName("label_deadZoneUp");
-        label_deadZoneUp->setMinimumSize(QSize(60, 0));
-        label_deadZoneUp->setMaximumSize(QSize(60, 16777215));
-        label_deadZoneUp->setFont(font1);
-        label_deadZoneUp->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_maxTop = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_maxTop->setObjectName("doubleSpinBox_maxTop");
+        doubleSpinBox_maxTop->setFont(font1);
+        doubleSpinBox_maxTop->setMinimum(-100.000000000000000);
+        doubleSpinBox_maxTop->setValue(1.200000000000000);
 
-        gridLayout_5->addWidget(label_deadZoneUp, 1, 2, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_maxTop, 1, 1, 1, 1);
 
         doubleSpinBox_maxDefault = new QDoubleSpinBox(groupBox_3);
         doubleSpinBox_maxDefault->setObjectName("doubleSpinBox_maxDefault");
@@ -1171,27 +1191,13 @@ public:
 
         gridLayout_5->addWidget(label_minDefault, 5, 0, 1, 1);
 
-        doubleSpinBox_maxBtm = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_maxBtm->setObjectName("doubleSpinBox_maxBtm");
-        doubleSpinBox_maxBtm->setFont(font1);
-        doubleSpinBox_maxBtm->setMinimum(-100.000000000000000);
-        doubleSpinBox_maxBtm->setValue(0.900000000000000);
+        doubleSpinBox_rtDnDft = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_rtDnDft->setObjectName("doubleSpinBox_rtDnDft");
+        doubleSpinBox_rtDnDft->setFont(font1);
+        doubleSpinBox_rtDnDft->setMinimum(-100.000000000000000);
+        doubleSpinBox_rtDnDft->setValue(1.500000000000000);
 
-        gridLayout_5->addWidget(doubleSpinBox_maxBtm, 3, 1, 1, 1);
-
-        label_minTop = new QLabel(groupBox_3);
-        label_minTop->setObjectName("label_minTop");
-        label_minTop->setFont(font1);
-        label_minTop->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_5->addWidget(label_minTop, 4, 0, 1, 1);
-
-        label_maxTop = new QLabel(groupBox_3);
-        label_maxTop->setObjectName("label_maxTop");
-        label_maxTop->setFont(font1);
-        label_maxTop->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_5->addWidget(label_maxTop, 1, 0, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_rtDnDft, 6, 5, 1, 1);
 
         label_acoefficientC = new QLabel(groupBox_3);
         label_acoefficientC->setObjectName("label_acoefficientC");
@@ -1202,71 +1208,15 @@ public:
 
         gridLayout_5->addWidget(label_acoefficientC, 5, 2, 1, 1);
 
-        doubleSpinBox_deadZoneUp = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_deadZoneUp->setObjectName("doubleSpinBox_deadZoneUp");
-        doubleSpinBox_deadZoneUp->setFont(font1);
-        doubleSpinBox_deadZoneUp->setMinimum(-100.000000000000000);
-        doubleSpinBox_deadZoneUp->setMaximum(282.000000000000000);
-        doubleSpinBox_deadZoneUp->setValue(0.400000000000000);
+        doubleSpinBox_deadZoneDown = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_deadZoneDown->setObjectName("doubleSpinBox_deadZoneDown");
+        doubleSpinBox_deadZoneDown->setFont(font1);
+        doubleSpinBox_deadZoneDown->setMinimum(-100.000000000000000);
+        doubleSpinBox_deadZoneDown->setMaximum(292.000000000000000);
+        doubleSpinBox_deadZoneDown->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
+        doubleSpinBox_deadZoneDown->setValue(0.400000000000000);
 
-        gridLayout_5->addWidget(doubleSpinBox_deadZoneUp, 1, 3, 1, 1);
-
-        label_maxDefault = new QLabel(groupBox_3);
-        label_maxDefault->setObjectName("label_maxDefault");
-        label_maxDefault->setFont(font1);
-        label_maxDefault->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_5->addWidget(label_maxDefault, 2, 0, 1, 1);
-
-        doubleSpinBox_acoefficientC = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_acoefficientC->setObjectName("doubleSpinBox_acoefficientC");
-        doubleSpinBox_acoefficientC->setFont(font1);
-        doubleSpinBox_acoefficientC->setProperty("showGroupSeparator", QVariant(false));
-        doubleSpinBox_acoefficientC->setDecimals(8);
-        doubleSpinBox_acoefficientC->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientC->setMaximum(100.000000000000000);
-        doubleSpinBox_acoefficientC->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
-        doubleSpinBox_acoefficientC->setValue(-32.666967000000000);
-
-        gridLayout_5->addWidget(doubleSpinBox_acoefficientC, 5, 3, 1, 1);
-
-        doubleSpinBox_maxTop = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_maxTop->setObjectName("doubleSpinBox_maxTop");
-        doubleSpinBox_maxTop->setFont(font1);
-        doubleSpinBox_maxTop->setMinimum(-100.000000000000000);
-        doubleSpinBox_maxTop->setValue(1.200000000000000);
-
-        gridLayout_5->addWidget(doubleSpinBox_maxTop, 1, 1, 1, 1);
-
-        label_rtUpDft = new QLabel(groupBox_3);
-        label_rtUpDft->setObjectName("label_rtUpDft");
-        label_rtUpDft->setFont(font1);
-        label_rtUpDft->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_5->addWidget(label_rtUpDft, 7, 4, 1, 1);
-
-        doubleSpinBox_rtUpDft = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_rtUpDft->setObjectName("doubleSpinBox_rtUpDft");
-        doubleSpinBox_rtUpDft->setFont(font1);
-        doubleSpinBox_rtUpDft->setMinimum(-100.000000000000000);
-        doubleSpinBox_rtUpDft->setValue(0.800000000000000);
-
-        gridLayout_5->addWidget(doubleSpinBox_rtUpDft, 7, 5, 1, 1);
-
-        label_rtDnDft = new QLabel(groupBox_3);
-        label_rtDnDft->setObjectName("label_rtDnDft");
-        label_rtDnDft->setFont(font1);
-        label_rtDnDft->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_5->addWidget(label_rtDnDft, 6, 4, 1, 1);
-
-        doubleSpinBox_rtDnDft = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_rtDnDft->setObjectName("doubleSpinBox_rtDnDft");
-        doubleSpinBox_rtDnDft->setFont(font1);
-        doubleSpinBox_rtDnDft->setMinimum(-100.000000000000000);
-        doubleSpinBox_rtDnDft->setValue(1.500000000000000);
-
-        gridLayout_5->addWidget(doubleSpinBox_rtDnDft, 6, 5, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_deadZoneDown, 2, 3, 1, 1);
 
         label_fhTop = new QLabel(groupBox_3);
         label_fhTop->setObjectName("label_fhTop");
@@ -1275,57 +1225,52 @@ public:
 
         gridLayout_5->addWidget(label_fhTop, 1, 4, 1, 1);
 
-        doubleSpinBox_fhTop = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_fhTop->setObjectName("doubleSpinBox_fhTop");
-        doubleSpinBox_fhTop->setFont(font1);
-        doubleSpinBox_fhTop->setValue(3.400000000000000);
+        doubleSpinBox_acoefficientD = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_acoefficientD->setObjectName("doubleSpinBox_acoefficientD");
+        doubleSpinBox_acoefficientD->setFont(font1);
+        doubleSpinBox_acoefficientD->setDecimals(8);
+        doubleSpinBox_acoefficientD->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientD->setValue(34.716805999999998);
 
-        gridLayout_5->addWidget(doubleSpinBox_fhTop, 1, 5, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_acoefficientD, 6, 3, 1, 1);
 
-        label_fhDnDft = new QLabel(groupBox_3);
-        label_fhDnDft->setObjectName("label_fhDnDft");
-        label_fhDnDft->setFont(font1);
-        label_fhDnDft->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_acoefficientB = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_acoefficientB->setObjectName("doubleSpinBox_acoefficientB");
+        doubleSpinBox_acoefficientB->setFont(font1);
+        doubleSpinBox_acoefficientB->setDecimals(8);
+        doubleSpinBox_acoefficientB->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientB->setValue(57.585424000000003);
 
-        gridLayout_5->addWidget(label_fhDnDft, 2, 4, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_acoefficientB, 4, 3, 1, 1);
 
-        doubleSpinBox_fhDnDft = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_fhDnDft->setObjectName("doubleSpinBox_fhDnDft");
-        doubleSpinBox_fhDnDft->setFont(font1);
-        doubleSpinBox_fhDnDft->setMinimum(-100.000000000000000);
-        doubleSpinBox_fhDnDft->setValue(1.700000000000000);
+        label_maxTop = new QLabel(groupBox_3);
+        label_maxTop->setObjectName("label_maxTop");
+        label_maxTop->setFont(font1);
+        label_maxTop->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_5->addWidget(doubleSpinBox_fhDnDft, 2, 5, 1, 1);
+        gridLayout_5->addWidget(label_maxTop, 1, 0, 1, 1);
 
-        label_fhBtm = new QLabel(groupBox_3);
-        label_fhBtm->setObjectName("label_fhBtm");
-        label_fhBtm->setFont(font1);
-        label_fhBtm->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_minDefault = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_minDefault->setObjectName("doubleSpinBox_minDefault");
+        doubleSpinBox_minDefault->setFont(font1);
+        doubleSpinBox_minDefault->setMinimum(-100.000000000000000);
+        doubleSpinBox_minDefault->setValue(0.300000000000000);
 
-        gridLayout_5->addWidget(label_fhBtm, 3, 4, 1, 1);
+        gridLayout_5->addWidget(doubleSpinBox_minDefault, 5, 1, 1, 1);
 
-        doubleSpinBox_fhBtm = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_fhBtm->setObjectName("doubleSpinBox_fhBtm");
-        doubleSpinBox_fhBtm->setFont(font1);
-        doubleSpinBox_fhBtm->setMinimum(-100.000000000000000);
-        doubleSpinBox_fhBtm->setValue(0.100000000000000);
+        label_axisTrip = new QLabel(groupBox_3);
+        label_axisTrip->setObjectName("label_axisTrip");
+        label_axisTrip->setFont(font1);
+        label_axisTrip->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_5->addWidget(doubleSpinBox_fhBtm, 3, 5, 1, 1);
+        gridLayout_5->addWidget(label_axisTrip, 7, 0, 1, 1);
 
-        label_rtBtm = new QLabel(groupBox_3);
-        label_rtBtm->setObjectName("label_rtBtm");
-        label_rtBtm->setFont(font1);
-        label_rtBtm->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_minTop = new QLabel(groupBox_3);
+        label_minTop->setObjectName("label_minTop");
+        label_minTop->setFont(font1);
+        label_minTop->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_5->addWidget(label_rtBtm, 5, 4, 1, 1);
-
-        doubleSpinBox_rtBtm = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_rtBtm->setObjectName("doubleSpinBox_rtBtm");
-        doubleSpinBox_rtBtm->setFont(font1);
-        doubleSpinBox_rtBtm->setMinimum(-100.000000000000000);
-        doubleSpinBox_rtBtm->setValue(0.010000000000000);
-
-        gridLayout_5->addWidget(doubleSpinBox_rtBtm, 5, 5, 1, 1);
+        gridLayout_5->addWidget(label_minTop, 4, 0, 1, 1);
 
         label_rtTop = new QLabel(groupBox_3);
         label_rtTop->setObjectName("label_rtTop");
@@ -1351,14 +1296,112 @@ public:
 
         gridLayout_5->addWidget(label_acoefficientD, 6, 2, 1, 1);
 
-        doubleSpinBox_acoefficientD = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_acoefficientD->setObjectName("doubleSpinBox_acoefficientD");
-        doubleSpinBox_acoefficientD->setFont(font1);
-        doubleSpinBox_acoefficientD->setDecimals(8);
-        doubleSpinBox_acoefficientD->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientD->setValue(34.716805999999998);
+        label_acoefficientA = new QLabel(groupBox_3);
+        label_acoefficientA->setObjectName("label_acoefficientA");
+        label_acoefficientA->setMinimumSize(QSize(60, 0));
+        label_acoefficientA->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientA->setFont(font1);
+        label_acoefficientA->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_5->addWidget(doubleSpinBox_acoefficientD, 6, 3, 1, 1);
+        gridLayout_5->addWidget(label_acoefficientA, 3, 2, 1, 1);
+
+        doubleSpinBox_deadZoneUp = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_deadZoneUp->setObjectName("doubleSpinBox_deadZoneUp");
+        doubleSpinBox_deadZoneUp->setFont(font1);
+        doubleSpinBox_deadZoneUp->setMinimum(-100.000000000000000);
+        doubleSpinBox_deadZoneUp->setMaximum(282.000000000000000);
+        doubleSpinBox_deadZoneUp->setValue(0.400000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_deadZoneUp, 1, 3, 1, 1);
+
+        label_rtDnDft = new QLabel(groupBox_3);
+        label_rtDnDft->setObjectName("label_rtDnDft");
+        label_rtDnDft->setFont(font1);
+        label_rtDnDft->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_rtDnDft, 6, 4, 1, 1);
+
+        doubleSpinBox_fhDnDft = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_fhDnDft->setObjectName("doubleSpinBox_fhDnDft");
+        doubleSpinBox_fhDnDft->setFont(font1);
+        doubleSpinBox_fhDnDft->setMinimum(-100.000000000000000);
+        doubleSpinBox_fhDnDft->setValue(1.700000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_fhDnDft, 2, 5, 1, 1);
+
+        doubleSpinBox_acoefficientA = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_acoefficientA->setObjectName("doubleSpinBox_acoefficientA");
+        doubleSpinBox_acoefficientA->setFont(font1);
+        doubleSpinBox_acoefficientA->setDecimals(8);
+        doubleSpinBox_acoefficientA->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientA->setValue(-58.513596999999997);
+
+        gridLayout_5->addWidget(doubleSpinBox_acoefficientA, 3, 3, 1, 1);
+
+        doubleSpinBox_fhBtm = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_fhBtm->setObjectName("doubleSpinBox_fhBtm");
+        doubleSpinBox_fhBtm->setFont(font1);
+        doubleSpinBox_fhBtm->setMinimum(-100.000000000000000);
+        doubleSpinBox_fhBtm->setValue(0.100000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_fhBtm, 3, 5, 1, 1);
+
+        doubleSpinBox_axisTrip = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_axisTrip->setObjectName("doubleSpinBox_axisTrip");
+        doubleSpinBox_axisTrip->setFont(font1);
+        doubleSpinBox_axisTrip->setMinimum(-100.000000000000000);
+        doubleSpinBox_axisTrip->setValue(0.100000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_axisTrip, 7, 1, 1, 1);
+
+        label_fhDnDft = new QLabel(groupBox_3);
+        label_fhDnDft->setObjectName("label_fhDnDft");
+        label_fhDnDft->setFont(font1);
+        label_fhDnDft->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_fhDnDft, 2, 4, 1, 1);
+
+        label_deadZoneUp = new QLabel(groupBox_3);
+        label_deadZoneUp->setObjectName("label_deadZoneUp");
+        label_deadZoneUp->setMinimumSize(QSize(60, 0));
+        label_deadZoneUp->setMaximumSize(QSize(60, 16777215));
+        label_deadZoneUp->setFont(font1);
+        label_deadZoneUp->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_deadZoneUp, 1, 2, 1, 1);
+
+        label_fhBtm = new QLabel(groupBox_3);
+        label_fhBtm->setObjectName("label_fhBtm");
+        label_fhBtm->setFont(font1);
+        label_fhBtm->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_fhBtm, 3, 4, 1, 1);
+
+        label_maxDefault = new QLabel(groupBox_3);
+        label_maxDefault->setObjectName("label_maxDefault");
+        label_maxDefault->setFont(font1);
+        label_maxDefault->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_maxDefault, 2, 0, 1, 1);
+
+        label_maxBtm = new QLabel(groupBox_3);
+        label_maxBtm->setObjectName("label_maxBtm");
+        label_maxBtm->setFont(font1);
+        label_maxBtm->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_maxBtm, 3, 0, 1, 1);
+
+        doubleSpinBox_acoefficientC = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_acoefficientC->setObjectName("doubleSpinBox_acoefficientC");
+        doubleSpinBox_acoefficientC->setFont(font1);
+        doubleSpinBox_acoefficientC->setProperty("showGroupSeparator", QVariant(false));
+        doubleSpinBox_acoefficientC->setDecimals(8);
+        doubleSpinBox_acoefficientC->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientC->setMaximum(100.000000000000000);
+        doubleSpinBox_acoefficientC->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
+        doubleSpinBox_acoefficientC->setValue(-32.666967000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_acoefficientC, 5, 3, 1, 1);
 
         label_minBtm = new QLabel(groupBox_3);
         label_minBtm->setObjectName("label_minBtm");
@@ -1374,6 +1417,113 @@ public:
         doubleSpinBox_minBtm->setValue(0.200000000000000);
 
         gridLayout_5->addWidget(doubleSpinBox_minBtm, 6, 1, 1, 1);
+
+        doubleSpinBox_rtBtm = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_rtBtm->setObjectName("doubleSpinBox_rtBtm");
+        doubleSpinBox_rtBtm->setFont(font1);
+        doubleSpinBox_rtBtm->setMinimum(-100.000000000000000);
+        doubleSpinBox_rtBtm->setValue(0.010000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_rtBtm, 5, 5, 1, 1);
+
+        doubleSpinBox_maxBtm = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_maxBtm->setObjectName("doubleSpinBox_maxBtm");
+        doubleSpinBox_maxBtm->setFont(font1);
+        doubleSpinBox_maxBtm->setMinimum(-100.000000000000000);
+        doubleSpinBox_maxBtm->setValue(0.900000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_maxBtm, 3, 1, 1, 1);
+
+        label_rtBtm = new QLabel(groupBox_3);
+        label_rtBtm->setObjectName("label_rtBtm");
+        label_rtBtm->setFont(font1);
+        label_rtBtm->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_rtBtm, 5, 4, 1, 1);
+
+        label_deadZoneDown = new QLabel(groupBox_3);
+        label_deadZoneDown->setObjectName("label_deadZoneDown");
+        label_deadZoneDown->setMinimumSize(QSize(60, 0));
+        label_deadZoneDown->setMaximumSize(QSize(60, 16777215));
+        label_deadZoneDown->setFont(font1);
+        label_deadZoneDown->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_deadZoneDown, 2, 2, 1, 1);
+
+        label_axisMinThreshold = new QLabel(groupBox_3);
+        label_axisMinThreshold->setObjectName("label_axisMinThreshold");
+        label_axisMinThreshold->setFont(font1);
+        label_axisMinThreshold->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_axisMinThreshold, 8, 0, 1, 1);
+
+        doubleSpinBox_axisMinThreshold = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_axisMinThreshold->setObjectName("doubleSpinBox_axisMinThreshold");
+        doubleSpinBox_axisMinThreshold->setFont(font1);
+        doubleSpinBox_axisMinThreshold->setMinimum(-100.000000000000000);
+        doubleSpinBox_axisMinThreshold->setValue(0.200000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_axisMinThreshold, 8, 1, 1, 1);
+
+        doubleSpinBox_axisMaxThreshold = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_axisMaxThreshold->setObjectName("doubleSpinBox_axisMaxThreshold");
+        doubleSpinBox_axisMaxThreshold->setFont(font1);
+        doubleSpinBox_axisMaxThreshold->setMinimum(-100.000000000000000);
+        doubleSpinBox_axisMaxThreshold->setValue(0.300000000000000);
+
+        gridLayout_5->addWidget(doubleSpinBox_axisMaxThreshold, 9, 1, 1, 1);
+
+        label_axisMaxThreshold = new QLabel(groupBox_3);
+        label_axisMaxThreshold->setObjectName("label_axisMaxThreshold");
+        label_axisMaxThreshold->setFont(font1);
+        label_axisMaxThreshold->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_axisMaxThreshold, 9, 0, 1, 1);
+
+        label_axisID = new QLabel(groupBox_3);
+        label_axisID->setObjectName("label_axisID");
+        label_axisID->setFont(font1);
+        label_axisID->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_axisID, 7, 2, 1, 1);
+
+        spinBox_axisID = new QSpinBox(groupBox_3);
+        spinBox_axisID->setObjectName("spinBox_axisID");
+        spinBox_axisID->setFont(font1);
+        spinBox_axisID->setMinimum(1);
+        spinBox_axisID->setMaximum(65535);
+
+        gridLayout_5->addWidget(spinBox_axisID, 7, 3, 1, 1);
+
+        label_axisName = new QLabel(groupBox_3);
+        label_axisName->setObjectName("label_axisName");
+        label_axisName->setFont(font1);
+        label_axisName->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_axisName, 8, 2, 1, 1);
+
+        label_axisFactory = new QLabel(groupBox_3);
+        label_axisFactory->setObjectName("label_axisFactory");
+        label_axisFactory->setFont(font1);
+        label_axisFactory->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_5->addWidget(label_axisFactory, 9, 2, 1, 1);
+
+        comboBox_axisName = new QComboBox(groupBox_3);
+        comboBox_axisName->addItem(QString());
+        comboBox_axisName->addItem(QString());
+        comboBox_axisName->setObjectName("comboBox_axisName");
+        comboBox_axisName->setFont(font2);
+
+        gridLayout_5->addWidget(comboBox_axisName, 8, 3, 1, 1);
+
+        comboBox_axisFactory = new QComboBox(groupBox_3);
+        comboBox_axisFactory->addItem(QString());
+        comboBox_axisFactory->addItem(QString());
+        comboBox_axisFactory->setObjectName("comboBox_axisFactory");
+        comboBox_axisFactory->setFont(font2);
+
+        gridLayout_5->addWidget(comboBox_axisFactory, 9, 3, 1, 1);
 
 
         gridLayout_16->addWidget(groupBox_3, 0, 0, 1, 1);
@@ -1394,28 +1544,33 @@ public:
         gridLayout_18->setSpacing(0);
         gridLayout_18->setObjectName("gridLayout_18");
         gridLayout_18->setContentsMargins(0, 0, 0, 0);
-        label_minDefault_2 = new QLabel(groupBox_4);
-        label_minDefault_2->setObjectName("label_minDefault_2");
-        label_minDefault_2->setFont(font1);
-        label_minDefault_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_axisMinThreshold_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_axisMinThreshold_2->setObjectName("doubleSpinBox_axisMinThreshold_2");
+        doubleSpinBox_axisMinThreshold_2->setFont(font1);
+        doubleSpinBox_axisMinThreshold_2->setValue(0.200000000000000);
 
-        gridLayout_18->addWidget(label_minDefault_2, 12, 0, 1, 1);
+        gridLayout_18->addWidget(doubleSpinBox_axisMinThreshold_2, 16, 1, 1, 1);
 
-        doubleSpinBox_maxDefault_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_maxDefault_2->setObjectName("doubleSpinBox_maxDefault_2");
-        doubleSpinBox_maxDefault_2->setFont(font1);
-        doubleSpinBox_maxDefault_2->setValue(1.000000000000000);
+        doubleSpinBox_fhDnDft_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_fhDnDft_2->setObjectName("doubleSpinBox_fhDnDft_2");
+        doubleSpinBox_fhDnDft_2->setFont(font1);
+        doubleSpinBox_fhDnDft_2->setValue(1.700000000000000);
 
-        gridLayout_18->addWidget(doubleSpinBox_maxDefault_2, 7, 1, 1, 1);
+        gridLayout_18->addWidget(doubleSpinBox_fhDnDft_2, 7, 5, 1, 1);
 
-        doubleSpinBox_acoefficientC_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_acoefficientC_2->setObjectName("doubleSpinBox_acoefficientC_2");
-        doubleSpinBox_acoefficientC_2->setFont(font1);
-        doubleSpinBox_acoefficientC_2->setDecimals(8);
-        doubleSpinBox_acoefficientC_2->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientC_2->setValue(-27.174517999999999);
+        doubleSpinBox_minTop_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_minTop_2->setObjectName("doubleSpinBox_minTop_2");
+        doubleSpinBox_minTop_2->setFont(font1);
+        doubleSpinBox_minTop_2->setValue(0.700000000000000);
 
-        gridLayout_18->addWidget(doubleSpinBox_acoefficientC_2, 12, 3, 1, 1);
+        gridLayout_18->addWidget(doubleSpinBox_minTop_2, 11, 1, 1, 1);
+
+        label_rtDnDft_2 = new QLabel(groupBox_4);
+        label_rtDnDft_2->setObjectName("label_rtDnDft_2");
+        label_rtDnDft_2->setFont(font1);
+        label_rtDnDft_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_rtDnDft_2, 14, 4, 1, 1);
 
         doubleSpinBox_acoefficientD_2 = new QDoubleSpinBox(groupBox_4);
         doubleSpinBox_acoefficientD_2->setObjectName("doubleSpinBox_acoefficientD_2");
@@ -1426,14 +1581,12 @@ public:
 
         gridLayout_18->addWidget(doubleSpinBox_acoefficientD_2, 14, 3, 1, 1);
 
-        label_acoefficientA_2 = new QLabel(groupBox_4);
-        label_acoefficientA_2->setObjectName("label_acoefficientA_2");
-        label_acoefficientA_2->setMinimumSize(QSize(60, 0));
-        label_acoefficientA_2->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientA_2->setFont(font1);
-        label_acoefficientA_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_rtBtm_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_rtBtm_2->setObjectName("doubleSpinBox_rtBtm_2");
+        doubleSpinBox_rtBtm_2->setFont(font1);
+        doubleSpinBox_rtBtm_2->setValue(0.200000000000000);
 
-        gridLayout_18->addWidget(label_acoefficientA_2, 10, 2, 1, 1);
+        gridLayout_18->addWidget(doubleSpinBox_rtBtm_2, 12, 5, 1, 1);
 
         label_deadZoneDown_3 = new QLabel(groupBox_4);
         label_deadZoneDown_3->setObjectName("label_deadZoneDown_3");
@@ -1444,69 +1597,12 @@ public:
 
         gridLayout_18->addWidget(label_deadZoneDown_3, 7, 2, 1, 1);
 
-        doubleSpinBox_maxBtm_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_maxBtm_2->setObjectName("doubleSpinBox_maxBtm_2");
-        doubleSpinBox_maxBtm_2->setFont(font1);
-        doubleSpinBox_maxBtm_2->setValue(0.750000000000000);
+        label_minBtm_2 = new QLabel(groupBox_4);
+        label_minBtm_2->setObjectName("label_minBtm_2");
+        label_minBtm_2->setFont(font1);
+        label_minBtm_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_18->addWidget(doubleSpinBox_maxBtm_2, 10, 1, 1, 1);
-
-        doubleSpinBox_fhTop_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_fhTop_2->setObjectName("doubleSpinBox_fhTop_2");
-        doubleSpinBox_fhTop_2->setFont(font1);
-        doubleSpinBox_fhTop_2->setValue(3.400000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_fhTop_2, 6, 5, 1, 1);
-
-        label_rtTop_2 = new QLabel(groupBox_4);
-        label_rtTop_2->setObjectName("label_rtTop_2");
-        label_rtTop_2->setFont(font1);
-        label_rtTop_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_18->addWidget(label_rtTop_2, 11, 4, 1, 1);
-
-        doubleSpinBox_rtTop_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_rtTop_2->setObjectName("doubleSpinBox_rtTop_2");
-        doubleSpinBox_rtTop_2->setFont(font1);
-        doubleSpinBox_rtTop_2->setValue(1.500000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_rtTop_2, 11, 5, 1, 1);
-
-        label_rtBtm_2 = new QLabel(groupBox_4);
-        label_rtBtm_2->setObjectName("label_rtBtm_2");
-        label_rtBtm_2->setFont(font1);
-        label_rtBtm_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_18->addWidget(label_rtBtm_2, 12, 4, 1, 1);
-
-        label_fhDnDft_2 = new QLabel(groupBox_4);
-        label_fhDnDft_2->setObjectName("label_fhDnDft_2");
-        label_fhDnDft_2->setFont(font1);
-        label_fhDnDft_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_18->addWidget(label_fhDnDft_2, 7, 4, 1, 1);
-
-        doubleSpinBox_acoefficientB_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_acoefficientB_2->setObjectName("doubleSpinBox_acoefficientB_2");
-        doubleSpinBox_acoefficientB_2->setFont(font1);
-        doubleSpinBox_acoefficientB_2->setDecimals(8);
-        doubleSpinBox_acoefficientB_2->setValue(42.174745000000001);
-
-        gridLayout_18->addWidget(doubleSpinBox_acoefficientB_2, 11, 3, 1, 1);
-
-        doubleSpinBox_minTop_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_minTop_2->setObjectName("doubleSpinBox_minTop_2");
-        doubleSpinBox_minTop_2->setFont(font1);
-        doubleSpinBox_minTop_2->setValue(0.700000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_minTop_2, 11, 1, 1, 1);
-
-        doubleSpinBox_rtBtm_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_rtBtm_2->setObjectName("doubleSpinBox_rtBtm_2");
-        doubleSpinBox_rtBtm_2->setFont(font1);
-        doubleSpinBox_rtBtm_2->setValue(0.200000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_rtBtm_2, 12, 5, 1, 1);
+        gridLayout_18->addWidget(label_minBtm_2, 14, 0, 1, 1);
 
         label_deadZoneUp_3 = new QLabel(groupBox_4);
         label_deadZoneUp_3->setObjectName("label_deadZoneUp_3");
@@ -1517,14 +1613,72 @@ public:
 
         gridLayout_18->addWidget(label_deadZoneUp_3, 6, 2, 1, 1);
 
-        doubleSpinBox_deadZoneUp_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_deadZoneUp_2->setObjectName("doubleSpinBox_deadZoneUp_2");
-        doubleSpinBox_deadZoneUp_2->setFont(font1);
-        doubleSpinBox_deadZoneUp_2->setMinimum(0.000000000000000);
-        doubleSpinBox_deadZoneUp_2->setMaximum(282.000000000000000);
-        doubleSpinBox_deadZoneUp_2->setValue(0.400000000000000);
+        label_rtBtm_2 = new QLabel(groupBox_4);
+        label_rtBtm_2->setObjectName("label_rtBtm_2");
+        label_rtBtm_2->setFont(font1);
+        label_rtBtm_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_18->addWidget(doubleSpinBox_deadZoneUp_2, 6, 3, 1, 1);
+        gridLayout_18->addWidget(label_rtBtm_2, 12, 4, 1, 1);
+
+        doubleSpinBox_acoefficientA_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_acoefficientA_2->setObjectName("doubleSpinBox_acoefficientA_2");
+        doubleSpinBox_acoefficientA_2->setFont(font1);
+        doubleSpinBox_acoefficientA_2->setDecimals(8);
+        doubleSpinBox_acoefficientA_2->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientA_2->setValue(-49.041291999999999);
+
+        gridLayout_18->addWidget(doubleSpinBox_acoefficientA_2, 10, 3, 1, 1);
+
+        label_fhDnDft_2 = new QLabel(groupBox_4);
+        label_fhDnDft_2->setObjectName("label_fhDnDft_2");
+        label_fhDnDft_2->setFont(font1);
+        label_fhDnDft_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_fhDnDft_2, 7, 4, 1, 1);
+
+        doubleSpinBox_rtTop_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_rtTop_2->setObjectName("doubleSpinBox_rtTop_2");
+        doubleSpinBox_rtTop_2->setFont(font1);
+        doubleSpinBox_rtTop_2->setValue(1.500000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_rtTop_2, 11, 5, 1, 1);
+
+        label_maxDefault_2 = new QLabel(groupBox_4);
+        label_maxDefault_2->setObjectName("label_maxDefault_2");
+        label_maxDefault_2->setFont(font1);
+        label_maxDefault_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_maxDefault_2, 7, 0, 1, 1);
+
+        label_axisMinThreshold_2 = new QLabel(groupBox_4);
+        label_axisMinThreshold_2->setObjectName("label_axisMinThreshold_2");
+        label_axisMinThreshold_2->setFont(font1);
+        label_axisMinThreshold_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_axisMinThreshold_2, 16, 0, 1, 1);
+
+        label_acoefficientD_2 = new QLabel(groupBox_4);
+        label_acoefficientD_2->setObjectName("label_acoefficientD_2");
+        label_acoefficientD_2->setMinimumSize(QSize(60, 0));
+        label_acoefficientD_2->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientD_2->setFont(font1);
+        label_acoefficientD_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_acoefficientD_2, 14, 2, 1, 1);
+
+        label_axisTrip_2 = new QLabel(groupBox_4);
+        label_axisTrip_2->setObjectName("label_axisTrip_2");
+        label_axisTrip_2->setFont(font1);
+        label_axisTrip_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_axisTrip_2, 15, 0, 1, 1);
+
+        doubleSpinBox_axisTrip_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_axisTrip_2->setObjectName("doubleSpinBox_axisTrip_2");
+        doubleSpinBox_axisTrip_2->setFont(font1);
+        doubleSpinBox_axisTrip_2->setValue(0.200000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_axisTrip_2, 15, 1, 1, 1);
 
         label_maxBtm_2 = new QLabel(groupBox_4);
         label_maxBtm_2->setObjectName("label_maxBtm_2");
@@ -1540,28 +1694,42 @@ public:
 
         gridLayout_18->addWidget(label_minTop_2, 11, 0, 1, 1);
 
-        label_acoefficientC_2 = new QLabel(groupBox_4);
-        label_acoefficientC_2->setObjectName("label_acoefficientC_2");
-        label_acoefficientC_2->setMinimumSize(QSize(60, 0));
-        label_acoefficientC_2->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientC_2->setFont(font1);
-        label_acoefficientC_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_axisMaxThreshold_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_axisMaxThreshold_2->setObjectName("doubleSpinBox_axisMaxThreshold_2");
+        doubleSpinBox_axisMaxThreshold_2->setFont(font1);
+        doubleSpinBox_axisMaxThreshold_2->setValue(0.200000000000000);
 
-        gridLayout_18->addWidget(label_acoefficientC_2, 12, 2, 1, 1);
+        gridLayout_18->addWidget(doubleSpinBox_axisMaxThreshold_2, 17, 1, 1, 1);
 
-        label_maxDefault_2 = new QLabel(groupBox_4);
-        label_maxDefault_2->setObjectName("label_maxDefault_2");
-        label_maxDefault_2->setFont(font1);
-        label_maxDefault_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_axisMaxThreshold_2 = new QLabel(groupBox_4);
+        label_axisMaxThreshold_2->setObjectName("label_axisMaxThreshold_2");
+        label_axisMaxThreshold_2->setFont(font1);
+        label_axisMaxThreshold_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_18->addWidget(label_maxDefault_2, 7, 0, 1, 1);
+        gridLayout_18->addWidget(label_axisMaxThreshold_2, 17, 0, 1, 1);
 
-        label_fhTop_2 = new QLabel(groupBox_4);
-        label_fhTop_2->setObjectName("label_fhTop_2");
-        label_fhTop_2->setFont(font1);
-        label_fhTop_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_deadZoneUp_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_deadZoneUp_2->setObjectName("doubleSpinBox_deadZoneUp_2");
+        doubleSpinBox_deadZoneUp_2->setFont(font1);
+        doubleSpinBox_deadZoneUp_2->setMinimum(0.000000000000000);
+        doubleSpinBox_deadZoneUp_2->setMaximum(282.000000000000000);
+        doubleSpinBox_deadZoneUp_2->setValue(0.400000000000000);
 
-        gridLayout_18->addWidget(label_fhTop_2, 6, 4, 1, 1);
+        gridLayout_18->addWidget(doubleSpinBox_deadZoneUp_2, 6, 3, 1, 1);
+
+        doubleSpinBox_maxTop_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_maxTop_2->setObjectName("doubleSpinBox_maxTop_2");
+        doubleSpinBox_maxTop_2->setFont(font1);
+        doubleSpinBox_maxTop_2->setValue(1.200000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_maxTop_2, 6, 1, 1, 1);
+
+        doubleSpinBox_minBtm_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_minBtm_2->setObjectName("doubleSpinBox_minBtm_2");
+        doubleSpinBox_minBtm_2->setFont(font1);
+        doubleSpinBox_minBtm_2->setValue(0.200000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_minBtm_2, 14, 1, 1, 1);
 
         label_acoefficientB_2 = new QLabel(groupBox_4);
         label_acoefficientB_2->setObjectName("label_acoefficientB_2");
@@ -1572,65 +1740,20 @@ public:
 
         gridLayout_18->addWidget(label_acoefficientB_2, 11, 2, 1, 1);
 
-        label_acoefficientD_2 = new QLabel(groupBox_4);
-        label_acoefficientD_2->setObjectName("label_acoefficientD_2");
-        label_acoefficientD_2->setMinimumSize(QSize(60, 0));
-        label_acoefficientD_2->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientD_2->setFont(font1);
-        label_acoefficientD_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_acoefficientB_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_acoefficientB_2->setObjectName("doubleSpinBox_acoefficientB_2");
+        doubleSpinBox_acoefficientB_2->setFont(font1);
+        doubleSpinBox_acoefficientB_2->setDecimals(8);
+        doubleSpinBox_acoefficientB_2->setValue(42.174745000000001);
 
-        gridLayout_18->addWidget(label_acoefficientD_2, 14, 2, 1, 1);
+        gridLayout_18->addWidget(doubleSpinBox_acoefficientB_2, 11, 3, 1, 1);
 
-        label_maxTop_2 = new QLabel(groupBox_4);
-        label_maxTop_2->setObjectName("label_maxTop_2");
-        label_maxTop_2->setFont(font1);
-        label_maxTop_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_rtTop_2 = new QLabel(groupBox_4);
+        label_rtTop_2->setObjectName("label_rtTop_2");
+        label_rtTop_2->setFont(font1);
+        label_rtTop_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_18->addWidget(label_maxTop_2, 6, 0, 1, 1);
-
-        doubleSpinBox_maxTop_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_maxTop_2->setObjectName("doubleSpinBox_maxTop_2");
-        doubleSpinBox_maxTop_2->setFont(font1);
-        doubleSpinBox_maxTop_2->setValue(1.200000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_maxTop_2, 6, 1, 1, 1);
-
-        label_minBtm_2 = new QLabel(groupBox_4);
-        label_minBtm_2->setObjectName("label_minBtm_2");
-        label_minBtm_2->setFont(font1);
-        label_minBtm_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_18->addWidget(label_minBtm_2, 14, 0, 1, 1);
-
-        doubleSpinBox_minDefault_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_minDefault_2->setObjectName("doubleSpinBox_minDefault_2");
-        doubleSpinBox_minDefault_2->setFont(font1);
-        doubleSpinBox_minDefault_2->setValue(0.400000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_minDefault_2, 12, 1, 1, 1);
-
-        doubleSpinBox_fhDnDft_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_fhDnDft_2->setObjectName("doubleSpinBox_fhDnDft_2");
-        doubleSpinBox_fhDnDft_2->setFont(font1);
-        doubleSpinBox_fhDnDft_2->setValue(1.700000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_fhDnDft_2, 7, 5, 1, 1);
-
-        doubleSpinBox_minBtm_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_minBtm_2->setObjectName("doubleSpinBox_minBtm_2");
-        doubleSpinBox_minBtm_2->setFont(font1);
-        doubleSpinBox_minBtm_2->setValue(0.200000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_minBtm_2, 14, 1, 1, 1);
-
-        doubleSpinBox_acoefficientA_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_acoefficientA_2->setObjectName("doubleSpinBox_acoefficientA_2");
-        doubleSpinBox_acoefficientA_2->setFont(font1);
-        doubleSpinBox_acoefficientA_2->setDecimals(8);
-        doubleSpinBox_acoefficientA_2->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientA_2->setValue(-49.041291999999999);
-
-        gridLayout_18->addWidget(doubleSpinBox_acoefficientA_2, 10, 3, 1, 1);
+        gridLayout_18->addWidget(label_rtTop_2, 11, 4, 1, 1);
 
         doubleSpinBox_fhBtm_2 = new QDoubleSpinBox(groupBox_4);
         doubleSpinBox_fhBtm_2->setObjectName("doubleSpinBox_fhBtm_2");
@@ -1638,6 +1761,38 @@ public:
         doubleSpinBox_fhBtm_2->setValue(0.700000000000000);
 
         gridLayout_18->addWidget(doubleSpinBox_fhBtm_2, 10, 5, 1, 1);
+
+        doubleSpinBox_rtDnDft_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_rtDnDft_2->setObjectName("doubleSpinBox_rtDnDft_2");
+        doubleSpinBox_rtDnDft_2->setFont(font1);
+        doubleSpinBox_rtDnDft_2->setValue(1.500000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_rtDnDft_2, 14, 5, 1, 1);
+
+        doubleSpinBox_acoefficientC_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_acoefficientC_2->setObjectName("doubleSpinBox_acoefficientC_2");
+        doubleSpinBox_acoefficientC_2->setFont(font1);
+        doubleSpinBox_acoefficientC_2->setDecimals(8);
+        doubleSpinBox_acoefficientC_2->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientC_2->setValue(-27.174517999999999);
+
+        gridLayout_18->addWidget(doubleSpinBox_acoefficientC_2, 12, 3, 1, 1);
+
+        label_acoefficientA_2 = new QLabel(groupBox_4);
+        label_acoefficientA_2->setObjectName("label_acoefficientA_2");
+        label_acoefficientA_2->setMinimumSize(QSize(60, 0));
+        label_acoefficientA_2->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientA_2->setFont(font1);
+        label_acoefficientA_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_acoefficientA_2, 10, 2, 1, 1);
+
+        doubleSpinBox_maxBtm_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_maxBtm_2->setObjectName("doubleSpinBox_maxBtm_2");
+        doubleSpinBox_maxBtm_2->setFont(font1);
+        doubleSpinBox_maxBtm_2->setValue(0.750000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_maxBtm_2, 10, 1, 1, 1);
 
         doubleSpinBox_deadZoneDown_2 = new QDoubleSpinBox(groupBox_4);
         doubleSpinBox_deadZoneDown_2->setObjectName("doubleSpinBox_deadZoneDown_2");
@@ -1649,6 +1804,64 @@ public:
 
         gridLayout_18->addWidget(doubleSpinBox_deadZoneDown_2, 7, 3, 1, 1);
 
+        doubleSpinBox_fhTop_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_fhTop_2->setObjectName("doubleSpinBox_fhTop_2");
+        doubleSpinBox_fhTop_2->setFont(font1);
+        doubleSpinBox_fhTop_2->setValue(3.400000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_fhTop_2, 6, 5, 1, 1);
+
+        doubleSpinBox_rtUpDft_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_rtUpDft_2->setObjectName("doubleSpinBox_rtUpDft_2");
+        doubleSpinBox_rtUpDft_2->setFont(font1);
+        doubleSpinBox_rtUpDft_2->setValue(0.800000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_rtUpDft_2, 15, 5, 1, 1);
+
+        doubleSpinBox_maxDefault_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_maxDefault_2->setObjectName("doubleSpinBox_maxDefault_2");
+        doubleSpinBox_maxDefault_2->setFont(font1);
+        doubleSpinBox_maxDefault_2->setValue(1.000000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_maxDefault_2, 7, 1, 1, 1);
+
+        label_maxTop_2 = new QLabel(groupBox_4);
+        label_maxTop_2->setObjectName("label_maxTop_2");
+        label_maxTop_2->setFont(font1);
+        label_maxTop_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_maxTop_2, 6, 0, 1, 1);
+
+        label_fhTop_2 = new QLabel(groupBox_4);
+        label_fhTop_2->setObjectName("label_fhTop_2");
+        label_fhTop_2->setFont(font1);
+        label_fhTop_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_fhTop_2, 6, 4, 1, 1);
+
+        doubleSpinBox_minDefault_2 = new QDoubleSpinBox(groupBox_4);
+        doubleSpinBox_minDefault_2->setObjectName("doubleSpinBox_minDefault_2");
+        doubleSpinBox_minDefault_2->setFont(font1);
+        doubleSpinBox_minDefault_2->setValue(0.400000000000000);
+
+        gridLayout_18->addWidget(doubleSpinBox_minDefault_2, 12, 1, 1, 1);
+
+        label_acoefficientC_2 = new QLabel(groupBox_4);
+        label_acoefficientC_2->setObjectName("label_acoefficientC_2");
+        label_acoefficientC_2->setMinimumSize(QSize(60, 0));
+        label_acoefficientC_2->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientC_2->setFont(font1);
+        label_acoefficientC_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_acoefficientC_2, 12, 2, 1, 1);
+
+        label_minDefault_2 = new QLabel(groupBox_4);
+        label_minDefault_2->setObjectName("label_minDefault_2");
+        label_minDefault_2->setFont(font1);
+        label_minDefault_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_minDefault_2, 12, 0, 1, 1);
+
         label_fhBtm_2 = new QLabel(groupBox_4);
         label_fhBtm_2->setObjectName("label_fhBtm_2");
         label_fhBtm_2->setFont(font1);
@@ -1656,33 +1869,55 @@ public:
 
         gridLayout_18->addWidget(label_fhBtm_2, 10, 4, 1, 1);
 
-        label_rtDnDft_2 = new QLabel(groupBox_4);
-        label_rtDnDft_2->setObjectName("label_rtDnDft_2");
-        label_rtDnDft_2->setFont(font1);
-        label_rtDnDft_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_18->addWidget(label_rtDnDft_2, 14, 4, 1, 1);
-
-        doubleSpinBox_rtDnDft_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_rtDnDft_2->setObjectName("doubleSpinBox_rtDnDft_2");
-        doubleSpinBox_rtDnDft_2->setFont(font1);
-        doubleSpinBox_rtDnDft_2->setValue(1.500000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_rtDnDft_2, 14, 5, 1, 1);
-
-        doubleSpinBox_rtUpDft_2 = new QDoubleSpinBox(groupBox_4);
-        doubleSpinBox_rtUpDft_2->setObjectName("doubleSpinBox_rtUpDft_2");
-        doubleSpinBox_rtUpDft_2->setFont(font1);
-        doubleSpinBox_rtUpDft_2->setValue(0.800000000000000);
-
-        gridLayout_18->addWidget(doubleSpinBox_rtUpDft_2, 18, 5, 1, 1);
-
         label_rtUpDft_2 = new QLabel(groupBox_4);
         label_rtUpDft_2->setObjectName("label_rtUpDft_2");
         label_rtUpDft_2->setFont(font1);
         label_rtUpDft_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_18->addWidget(label_rtUpDft_2, 18, 4, 1, 1);
+        gridLayout_18->addWidget(label_rtUpDft_2, 15, 4, 1, 1);
+
+        label_axisID_2 = new QLabel(groupBox_4);
+        label_axisID_2->setObjectName("label_axisID_2");
+        label_axisID_2->setFont(font1);
+        label_axisID_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_axisID_2, 15, 2, 1, 1);
+
+        spinBox_axisID_2 = new QSpinBox(groupBox_4);
+        spinBox_axisID_2->setObjectName("spinBox_axisID_2");
+        spinBox_axisID_2->setFont(font1);
+        spinBox_axisID_2->setMinimum(1);
+        spinBox_axisID_2->setMaximum(65535);
+
+        gridLayout_18->addWidget(spinBox_axisID_2, 15, 3, 1, 1);
+
+        label_axisName_2 = new QLabel(groupBox_4);
+        label_axisName_2->setObjectName("label_axisName_2");
+        label_axisName_2->setFont(font1);
+        label_axisName_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_axisName_2, 16, 2, 1, 1);
+
+        label_axisFactory_2 = new QLabel(groupBox_4);
+        label_axisFactory_2->setObjectName("label_axisFactory_2");
+        label_axisFactory_2->setFont(font1);
+        label_axisFactory_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_18->addWidget(label_axisFactory_2, 17, 2, 1, 1);
+
+        comboBox_axisName_2 = new QComboBox(groupBox_4);
+        comboBox_axisName_2->addItem(QString());
+        comboBox_axisName_2->setObjectName("comboBox_axisName_2");
+        comboBox_axisName_2->setFont(font2);
+
+        gridLayout_18->addWidget(comboBox_axisName_2, 16, 3, 1, 1);
+
+        comboBox_axisFactory_2 = new QComboBox(groupBox_4);
+        comboBox_axisFactory_2->addItem(QString());
+        comboBox_axisFactory_2->setObjectName("comboBox_axisFactory_2");
+        comboBox_axisFactory_2->setFont(font2);
+
+        gridLayout_18->addWidget(comboBox_axisFactory_2, 17, 3, 1, 1);
 
 
         gridLayout_17->addWidget(groupBox_4, 0, 0, 1, 1);
@@ -1703,283 +1938,6 @@ public:
         gridLayout_19->setSpacing(0);
         gridLayout_19->setObjectName("gridLayout_19");
         gridLayout_19->setContentsMargins(0, 0, 0, 0);
-        doubleSpinBox_deadZoneUp_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_deadZoneUp_3->setObjectName("doubleSpinBox_deadZoneUp_3");
-        doubleSpinBox_deadZoneUp_3->setFont(font1);
-        doubleSpinBox_deadZoneUp_3->setMinimum(0.000000000000000);
-        doubleSpinBox_deadZoneUp_3->setMaximum(282.000000000000000);
-        doubleSpinBox_deadZoneUp_3->setValue(0.400000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_deadZoneUp_3, 0, 3, 1, 1);
-
-        label_minDefault_3 = new QLabel(groupBox_5);
-        label_minDefault_3->setObjectName("label_minDefault_3");
-        label_minDefault_3->setFont(font1);
-        label_minDefault_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_minDefault_3, 5, 0, 1, 1);
-
-        doubleSpinBox_fhTop_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_fhTop_3->setObjectName("doubleSpinBox_fhTop_3");
-        doubleSpinBox_fhTop_3->setFont(font1);
-        doubleSpinBox_fhTop_3->setValue(3.400000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_fhTop_3, 0, 5, 1, 1);
-
-        doubleSpinBox_minTop_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_minTop_3->setObjectName("doubleSpinBox_minTop_3");
-        doubleSpinBox_minTop_3->setFont(font1);
-        doubleSpinBox_minTop_3->setValue(0.700000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_minTop_3, 4, 1, 1, 1);
-
-        label_maxBtm_3 = new QLabel(groupBox_5);
-        label_maxBtm_3->setObjectName("label_maxBtm_3");
-        label_maxBtm_3->setFont(font1);
-        label_maxBtm_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_maxBtm_3, 3, 0, 1, 1);
-
-        label_acoefficientA_3 = new QLabel(groupBox_5);
-        label_acoefficientA_3->setObjectName("label_acoefficientA_3");
-        label_acoefficientA_3->setMinimumSize(QSize(60, 0));
-        label_acoefficientA_3->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientA_3->setFont(font1);
-        label_acoefficientA_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_acoefficientA_3, 3, 2, 1, 1);
-
-        doubleSpinBox_acoefficientA_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_acoefficientA_3->setObjectName("doubleSpinBox_acoefficientA_3");
-        doubleSpinBox_acoefficientA_3->setFont(font1);
-        doubleSpinBox_acoefficientA_3->setDecimals(8);
-        doubleSpinBox_acoefficientA_3->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientA_3->setValue(-50.977710000000002);
-
-        gridLayout_19->addWidget(doubleSpinBox_acoefficientA_3, 3, 3, 1, 1);
-
-        label_acoefficientC_3 = new QLabel(groupBox_5);
-        label_acoefficientC_3->setObjectName("label_acoefficientC_3");
-        label_acoefficientC_3->setMinimumSize(QSize(60, 0));
-        label_acoefficientC_3->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientC_3->setFont(font1);
-        label_acoefficientC_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_acoefficientC_3, 5, 2, 1, 1);
-
-        doubleSpinBox_acoefficientC_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_acoefficientC_3->setObjectName("doubleSpinBox_acoefficientC_3");
-        doubleSpinBox_acoefficientC_3->setFont(font1);
-        doubleSpinBox_acoefficientC_3->setDecimals(8);
-        doubleSpinBox_acoefficientC_3->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientC_3->setValue(-28.290683000000001);
-
-        gridLayout_19->addWidget(doubleSpinBox_acoefficientC_3, 5, 3, 1, 1);
-
-        label_minTop_3 = new QLabel(groupBox_5);
-        label_minTop_3->setObjectName("label_minTop_3");
-        label_minTop_3->setFont(font1);
-        label_minTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_minTop_3, 4, 0, 1, 1);
-
-        doubleSpinBox_deadZoneDown_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_deadZoneDown_3->setObjectName("doubleSpinBox_deadZoneDown_3");
-        doubleSpinBox_deadZoneDown_3->setFont(font1);
-        doubleSpinBox_deadZoneDown_3->setMinimum(0.000000000000000);
-        doubleSpinBox_deadZoneDown_3->setMaximum(292.000000000000000);
-        doubleSpinBox_deadZoneDown_3->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
-        doubleSpinBox_deadZoneDown_3->setValue(0.400000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_deadZoneDown_3, 1, 3, 1, 1);
-
-        label_maxTop_3 = new QLabel(groupBox_5);
-        label_maxTop_3->setObjectName("label_maxTop_3");
-        label_maxTop_3->setFont(font1);
-        label_maxTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_maxTop_3, 0, 0, 1, 1);
-
-        doubleSpinBox_maxBtm_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_maxBtm_3->setObjectName("doubleSpinBox_maxBtm_3");
-        doubleSpinBox_maxBtm_3->setFont(font1);
-        doubleSpinBox_maxBtm_3->setValue(0.900000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_maxBtm_3, 3, 1, 1, 1);
-
-        label_deadZoneUp_2 = new QLabel(groupBox_5);
-        label_deadZoneUp_2->setObjectName("label_deadZoneUp_2");
-        label_deadZoneUp_2->setMinimumSize(QSize(60, 0));
-        label_deadZoneUp_2->setMaximumSize(QSize(60, 16777215));
-        label_deadZoneUp_2->setFont(font1);
-        label_deadZoneUp_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_deadZoneUp_2, 0, 2, 1, 1);
-
-        label_maxDefault_3 = new QLabel(groupBox_5);
-        label_maxDefault_3->setObjectName("label_maxDefault_3");
-        label_maxDefault_3->setFont(font1);
-        label_maxDefault_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_maxDefault_3, 1, 0, 1, 1);
-
-        doubleSpinBox_acoefficientB_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_acoefficientB_3->setObjectName("doubleSpinBox_acoefficientB_3");
-        doubleSpinBox_acoefficientB_3->setFont(font1);
-        doubleSpinBox_acoefficientB_3->setDecimals(8);
-        doubleSpinBox_acoefficientB_3->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientB_3->setValue(45.580283999999999);
-
-        gridLayout_19->addWidget(doubleSpinBox_acoefficientB_3, 4, 3, 1, 1);
-
-        label_acoefficientB_3 = new QLabel(groupBox_5);
-        label_acoefficientB_3->setObjectName("label_acoefficientB_3");
-        label_acoefficientB_3->setMinimumSize(QSize(60, 0));
-        label_acoefficientB_3->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientB_3->setFont(font1);
-        label_acoefficientB_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_acoefficientB_3, 4, 2, 1, 1);
-
-        doubleSpinBox_maxDefault_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_maxDefault_3->setObjectName("doubleSpinBox_maxDefault_3");
-        doubleSpinBox_maxDefault_3->setFont(font1);
-        doubleSpinBox_maxDefault_3->setValue(1.000000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_maxDefault_3, 1, 1, 1, 1);
-
-        label_deadZoneDown_2 = new QLabel(groupBox_5);
-        label_deadZoneDown_2->setObjectName("label_deadZoneDown_2");
-        label_deadZoneDown_2->setMinimumSize(QSize(60, 0));
-        label_deadZoneDown_2->setMaximumSize(QSize(60, 16777215));
-        label_deadZoneDown_2->setFont(font1);
-        label_deadZoneDown_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_deadZoneDown_2, 1, 2, 1, 1);
-
-        doubleSpinBox_minDefault_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_minDefault_3->setObjectName("doubleSpinBox_minDefault_3");
-        doubleSpinBox_minDefault_3->setFont(font1);
-        doubleSpinBox_minDefault_3->setValue(0.400000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_minDefault_3, 5, 1, 1, 1);
-
-        doubleSpinBox_maxTop_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_maxTop_3->setObjectName("doubleSpinBox_maxTop_3");
-        doubleSpinBox_maxTop_3->setFont(font1);
-        doubleSpinBox_maxTop_3->setValue(1.200000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_maxTop_3, 0, 1, 1, 1);
-
-        label_fhTop_3 = new QLabel(groupBox_5);
-        label_fhTop_3->setObjectName("label_fhTop_3");
-        label_fhTop_3->setFont(font1);
-        label_fhTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_fhTop_3, 0, 4, 1, 1);
-
-        label_fhDnDft_3 = new QLabel(groupBox_5);
-        label_fhDnDft_3->setObjectName("label_fhDnDft_3");
-        label_fhDnDft_3->setFont(font1);
-        label_fhDnDft_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_fhDnDft_3, 1, 4, 1, 1);
-
-        doubleSpinBox_fhDnDft_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_fhDnDft_3->setObjectName("doubleSpinBox_fhDnDft_3");
-        doubleSpinBox_fhDnDft_3->setFont(font1);
-        doubleSpinBox_fhDnDft_3->setValue(1.700000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_fhDnDft_3, 1, 5, 1, 1);
-
-        label_fhBtm_3 = new QLabel(groupBox_5);
-        label_fhBtm_3->setObjectName("label_fhBtm_3");
-        label_fhBtm_3->setFont(font1);
-        label_fhBtm_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_fhBtm_3, 3, 4, 1, 1);
-
-        doubleSpinBox_fhBtm_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_fhBtm_3->setObjectName("doubleSpinBox_fhBtm_3");
-        doubleSpinBox_fhBtm_3->setFont(font1);
-        doubleSpinBox_fhBtm_3->setValue(0.700000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_fhBtm_3, 3, 5, 1, 1);
-
-        doubleSpinBox_rtBtm_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_rtBtm_3->setObjectName("doubleSpinBox_rtBtm_3");
-        doubleSpinBox_rtBtm_3->setFont(font1);
-        doubleSpinBox_rtBtm_3->setValue(0.200000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_rtBtm_3, 5, 5, 1, 1);
-
-        label_rtBtm_3 = new QLabel(groupBox_5);
-        label_rtBtm_3->setObjectName("label_rtBtm_3");
-        label_rtBtm_3->setFont(font1);
-        label_rtBtm_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_rtBtm_3, 5, 4, 1, 1);
-
-        label_rtTop_3 = new QLabel(groupBox_5);
-        label_rtTop_3->setObjectName("label_rtTop_3");
-        label_rtTop_3->setFont(font1);
-        label_rtTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_rtTop_3, 4, 4, 1, 1);
-
-        doubleSpinBox_rtTop_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_rtTop_3->setObjectName("doubleSpinBox_rtTop_3");
-        doubleSpinBox_rtTop_3->setFont(font1);
-        doubleSpinBox_rtTop_3->setValue(1.500000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_rtTop_3, 4, 5, 1, 1);
-
-        doubleSpinBox_rtDnDft_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_rtDnDft_3->setObjectName("doubleSpinBox_rtDnDft_3");
-        doubleSpinBox_rtDnDft_3->setFont(font1);
-        doubleSpinBox_rtDnDft_3->setValue(1.500000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_rtDnDft_3, 6, 5, 1, 1);
-
-        label_rtDnDft_3 = new QLabel(groupBox_5);
-        label_rtDnDft_3->setObjectName("label_rtDnDft_3");
-        label_rtDnDft_3->setFont(font1);
-        label_rtDnDft_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_rtDnDft_3, 6, 4, 1, 1);
-
-        label_rtUpDft_3 = new QLabel(groupBox_5);
-        label_rtUpDft_3->setObjectName("label_rtUpDft_3");
-        label_rtUpDft_3->setFont(font1);
-        label_rtUpDft_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_rtUpDft_3, 7, 4, 1, 1);
-
-        doubleSpinBox_rtUpDft_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_rtUpDft_3->setObjectName("doubleSpinBox_rtUpDft_3");
-        doubleSpinBox_rtUpDft_3->setFont(font1);
-        doubleSpinBox_rtUpDft_3->setValue(0.800000000000000);
-
-        gridLayout_19->addWidget(doubleSpinBox_rtUpDft_3, 7, 5, 1, 1);
-
-        doubleSpinBox_acoefficientD_3 = new QDoubleSpinBox(groupBox_5);
-        doubleSpinBox_acoefficientD_3->setObjectName("doubleSpinBox_acoefficientD_3");
-        doubleSpinBox_acoefficientD_3->setFont(font1);
-        doubleSpinBox_acoefficientD_3->setDecimals(8);
-        doubleSpinBox_acoefficientD_3->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientD_3->setValue(34.805883999999999);
-
-        gridLayout_19->addWidget(doubleSpinBox_acoefficientD_3, 6, 3, 1, 1);
-
-        label_acoefficientD_3 = new QLabel(groupBox_5);
-        label_acoefficientD_3->setObjectName("label_acoefficientD_3");
-        label_acoefficientD_3->setMinimumSize(QSize(60, 0));
-        label_acoefficientD_3->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientD_3->setFont(font1);
-        label_acoefficientD_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_19->addWidget(label_acoefficientD_3, 6, 2, 1, 1);
-
         doubleSpinBox_minBtm_3 = new QDoubleSpinBox(groupBox_5);
         doubleSpinBox_minBtm_3->setObjectName("doubleSpinBox_minBtm_3");
         doubleSpinBox_minBtm_3->setFont(font1);
@@ -1993,6 +1951,368 @@ public:
         label_minBtm_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
         gridLayout_19->addWidget(label_minBtm_3, 6, 0, 1, 1);
+
+        label_rtUpDft_3 = new QLabel(groupBox_5);
+        label_rtUpDft_3->setObjectName("label_rtUpDft_3");
+        label_rtUpDft_3->setFont(font1);
+        label_rtUpDft_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_rtUpDft_3, 7, 4, 1, 1);
+
+        doubleSpinBox_minTop_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_minTop_3->setObjectName("doubleSpinBox_minTop_3");
+        doubleSpinBox_minTop_3->setFont(font1);
+        doubleSpinBox_minTop_3->setValue(0.700000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_minTop_3, 4, 1, 1, 1);
+
+        label_minDefault_3 = new QLabel(groupBox_5);
+        label_minDefault_3->setObjectName("label_minDefault_3");
+        label_minDefault_3->setFont(font1);
+        label_minDefault_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_minDefault_3, 5, 0, 1, 1);
+
+        doubleSpinBox_rtTop_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_rtTop_3->setObjectName("doubleSpinBox_rtTop_3");
+        doubleSpinBox_rtTop_3->setFont(font1);
+        doubleSpinBox_rtTop_3->setValue(1.500000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_rtTop_3, 4, 5, 1, 1);
+
+        doubleSpinBox_rtBtm_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_rtBtm_3->setObjectName("doubleSpinBox_rtBtm_3");
+        doubleSpinBox_rtBtm_3->setFont(font1);
+        doubleSpinBox_rtBtm_3->setValue(0.200000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_rtBtm_3, 5, 5, 1, 1);
+
+        label_fhBtm_3 = new QLabel(groupBox_5);
+        label_fhBtm_3->setObjectName("label_fhBtm_3");
+        label_fhBtm_3->setFont(font1);
+        label_fhBtm_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_fhBtm_3, 3, 4, 1, 1);
+
+        doubleSpinBox_deadZoneUp_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_deadZoneUp_3->setObjectName("doubleSpinBox_deadZoneUp_3");
+        doubleSpinBox_deadZoneUp_3->setFont(font1);
+        doubleSpinBox_deadZoneUp_3->setMinimum(0.000000000000000);
+        doubleSpinBox_deadZoneUp_3->setMaximum(282.000000000000000);
+        doubleSpinBox_deadZoneUp_3->setValue(0.400000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_deadZoneUp_3, 0, 3, 1, 1);
+
+        doubleSpinBox_maxBtm_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_maxBtm_3->setObjectName("doubleSpinBox_maxBtm_3");
+        doubleSpinBox_maxBtm_3->setFont(font1);
+        doubleSpinBox_maxBtm_3->setValue(0.900000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_maxBtm_3, 3, 1, 1, 1);
+
+        label_axisTrip_3 = new QLabel(groupBox_5);
+        label_axisTrip_3->setObjectName("label_axisTrip_3");
+        label_axisTrip_3->setFont(font1);
+        label_axisTrip_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_axisTrip_3, 7, 0, 1, 1);
+
+        doubleSpinBox_deadZoneDown_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_deadZoneDown_3->setObjectName("doubleSpinBox_deadZoneDown_3");
+        doubleSpinBox_deadZoneDown_3->setFont(font1);
+        doubleSpinBox_deadZoneDown_3->setMinimum(0.000000000000000);
+        doubleSpinBox_deadZoneDown_3->setMaximum(292.000000000000000);
+        doubleSpinBox_deadZoneDown_3->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
+        doubleSpinBox_deadZoneDown_3->setValue(0.400000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_deadZoneDown_3, 1, 3, 1, 1);
+
+        label_axisMinThreshold_3 = new QLabel(groupBox_5);
+        label_axisMinThreshold_3->setObjectName("label_axisMinThreshold_3");
+        label_axisMinThreshold_3->setFont(font1);
+        label_axisMinThreshold_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_axisMinThreshold_3, 8, 0, 1, 1);
+
+        doubleSpinBox_minDefault_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_minDefault_3->setObjectName("doubleSpinBox_minDefault_3");
+        doubleSpinBox_minDefault_3->setFont(font1);
+        doubleSpinBox_minDefault_3->setValue(0.400000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_minDefault_3, 5, 1, 1, 1);
+
+        doubleSpinBox_acoefficientA_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_acoefficientA_3->setObjectName("doubleSpinBox_acoefficientA_3");
+        doubleSpinBox_acoefficientA_3->setFont(font1);
+        doubleSpinBox_acoefficientA_3->setDecimals(8);
+        doubleSpinBox_acoefficientA_3->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientA_3->setValue(-50.977710000000002);
+
+        gridLayout_19->addWidget(doubleSpinBox_acoefficientA_3, 3, 3, 1, 1);
+
+        label_minTop_3 = new QLabel(groupBox_5);
+        label_minTop_3->setObjectName("label_minTop_3");
+        label_minTop_3->setFont(font1);
+        label_minTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_minTop_3, 4, 0, 1, 1);
+
+        label_fhTop_3 = new QLabel(groupBox_5);
+        label_fhTop_3->setObjectName("label_fhTop_3");
+        label_fhTop_3->setFont(font1);
+        label_fhTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_fhTop_3, 0, 4, 1, 1);
+
+        label_maxTop_3 = new QLabel(groupBox_5);
+        label_maxTop_3->setObjectName("label_maxTop_3");
+        label_maxTop_3->setFont(font1);
+        label_maxTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_maxTop_3, 0, 0, 1, 1);
+
+        doubleSpinBox_maxDefault_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_maxDefault_3->setObjectName("doubleSpinBox_maxDefault_3");
+        doubleSpinBox_maxDefault_3->setFont(font1);
+        doubleSpinBox_maxDefault_3->setValue(1.000000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_maxDefault_3, 1, 1, 1, 1);
+
+        label_rtDnDft_3 = new QLabel(groupBox_5);
+        label_rtDnDft_3->setObjectName("label_rtDnDft_3");
+        label_rtDnDft_3->setFont(font1);
+        label_rtDnDft_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_rtDnDft_3, 6, 4, 1, 1);
+
+        label_fhDnDft_3 = new QLabel(groupBox_5);
+        label_fhDnDft_3->setObjectName("label_fhDnDft_3");
+        label_fhDnDft_3->setFont(font1);
+        label_fhDnDft_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_fhDnDft_3, 1, 4, 1, 1);
+
+        doubleSpinBox_rtDnDft_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_rtDnDft_3->setObjectName("doubleSpinBox_rtDnDft_3");
+        doubleSpinBox_rtDnDft_3->setFont(font1);
+        doubleSpinBox_rtDnDft_3->setValue(1.500000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_rtDnDft_3, 6, 5, 1, 1);
+
+        label_deadZoneDown_2 = new QLabel(groupBox_5);
+        label_deadZoneDown_2->setObjectName("label_deadZoneDown_2");
+        label_deadZoneDown_2->setMinimumSize(QSize(60, 0));
+        label_deadZoneDown_2->setMaximumSize(QSize(60, 16777215));
+        label_deadZoneDown_2->setFont(font1);
+        label_deadZoneDown_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_deadZoneDown_2, 1, 2, 1, 1);
+
+        label_deadZoneUp_2 = new QLabel(groupBox_5);
+        label_deadZoneUp_2->setObjectName("label_deadZoneUp_2");
+        label_deadZoneUp_2->setMinimumSize(QSize(60, 0));
+        label_deadZoneUp_2->setMaximumSize(QSize(60, 16777215));
+        label_deadZoneUp_2->setFont(font1);
+        label_deadZoneUp_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_deadZoneUp_2, 0, 2, 1, 1);
+
+        doubleSpinBox_acoefficientD_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_acoefficientD_3->setObjectName("doubleSpinBox_acoefficientD_3");
+        doubleSpinBox_acoefficientD_3->setFont(font1);
+        doubleSpinBox_acoefficientD_3->setDecimals(8);
+        doubleSpinBox_acoefficientD_3->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientD_3->setValue(34.805883999999999);
+
+        gridLayout_19->addWidget(doubleSpinBox_acoefficientD_3, 6, 3, 1, 1);
+
+        label_acoefficientC_3 = new QLabel(groupBox_5);
+        label_acoefficientC_3->setObjectName("label_acoefficientC_3");
+        label_acoefficientC_3->setMinimumSize(QSize(60, 0));
+        label_acoefficientC_3->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientC_3->setFont(font1);
+        label_acoefficientC_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_acoefficientC_3, 5, 2, 1, 1);
+
+        doubleSpinBox_maxTop_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_maxTop_3->setObjectName("doubleSpinBox_maxTop_3");
+        doubleSpinBox_maxTop_3->setFont(font1);
+        doubleSpinBox_maxTop_3->setValue(1.200000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_maxTop_3, 0, 1, 1, 1);
+
+        doubleSpinBox_fhDnDft_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_fhDnDft_3->setObjectName("doubleSpinBox_fhDnDft_3");
+        doubleSpinBox_fhDnDft_3->setFont(font1);
+        doubleSpinBox_fhDnDft_3->setValue(1.700000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_fhDnDft_3, 1, 5, 1, 1);
+
+        label_rtBtm_3 = new QLabel(groupBox_5);
+        label_rtBtm_3->setObjectName("label_rtBtm_3");
+        label_rtBtm_3->setFont(font1);
+        label_rtBtm_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_rtBtm_3, 5, 4, 1, 1);
+
+        doubleSpinBox_rtUpDft_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_rtUpDft_3->setObjectName("doubleSpinBox_rtUpDft_3");
+        doubleSpinBox_rtUpDft_3->setFont(font1);
+        doubleSpinBox_rtUpDft_3->setValue(0.800000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_rtUpDft_3, 7, 5, 1, 1);
+
+        label_maxBtm_3 = new QLabel(groupBox_5);
+        label_maxBtm_3->setObjectName("label_maxBtm_3");
+        label_maxBtm_3->setFont(font1);
+        label_maxBtm_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_maxBtm_3, 3, 0, 1, 1);
+
+        doubleSpinBox_fhTop_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_fhTop_3->setObjectName("doubleSpinBox_fhTop_3");
+        doubleSpinBox_fhTop_3->setFont(font1);
+        doubleSpinBox_fhTop_3->setValue(3.400000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_fhTop_3, 0, 5, 1, 1);
+
+        doubleSpinBox_fhBtm_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_fhBtm_3->setObjectName("doubleSpinBox_fhBtm_3");
+        doubleSpinBox_fhBtm_3->setFont(font1);
+        doubleSpinBox_fhBtm_3->setValue(0.700000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_fhBtm_3, 3, 5, 1, 1);
+
+        label_rtTop_3 = new QLabel(groupBox_5);
+        label_rtTop_3->setObjectName("label_rtTop_3");
+        label_rtTop_3->setFont(font1);
+        label_rtTop_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_rtTop_3, 4, 4, 1, 1);
+
+        label_acoefficientA_3 = new QLabel(groupBox_5);
+        label_acoefficientA_3->setObjectName("label_acoefficientA_3");
+        label_acoefficientA_3->setMinimumSize(QSize(60, 0));
+        label_acoefficientA_3->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientA_3->setFont(font1);
+        label_acoefficientA_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_acoefficientA_3, 3, 2, 1, 1);
+
+        label_acoefficientD_3 = new QLabel(groupBox_5);
+        label_acoefficientD_3->setObjectName("label_acoefficientD_3");
+        label_acoefficientD_3->setMinimumSize(QSize(60, 0));
+        label_acoefficientD_3->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientD_3->setFont(font1);
+        label_acoefficientD_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_acoefficientD_3, 6, 2, 1, 1);
+
+        doubleSpinBox_acoefficientC_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_acoefficientC_3->setObjectName("doubleSpinBox_acoefficientC_3");
+        doubleSpinBox_acoefficientC_3->setFont(font1);
+        doubleSpinBox_acoefficientC_3->setDecimals(8);
+        doubleSpinBox_acoefficientC_3->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientC_3->setValue(-28.290683000000001);
+
+        gridLayout_19->addWidget(doubleSpinBox_acoefficientC_3, 5, 3, 1, 1);
+
+        label_acoefficientB_3 = new QLabel(groupBox_5);
+        label_acoefficientB_3->setObjectName("label_acoefficientB_3");
+        label_acoefficientB_3->setMinimumSize(QSize(60, 0));
+        label_acoefficientB_3->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientB_3->setFont(font1);
+        label_acoefficientB_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_acoefficientB_3, 4, 2, 1, 1);
+
+        doubleSpinBox_acoefficientB_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_acoefficientB_3->setObjectName("doubleSpinBox_acoefficientB_3");
+        doubleSpinBox_acoefficientB_3->setFont(font1);
+        doubleSpinBox_acoefficientB_3->setDecimals(8);
+        doubleSpinBox_acoefficientB_3->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientB_3->setValue(45.580283999999999);
+
+        gridLayout_19->addWidget(doubleSpinBox_acoefficientB_3, 4, 3, 1, 1);
+
+        label_maxDefault_3 = new QLabel(groupBox_5);
+        label_maxDefault_3->setObjectName("label_maxDefault_3");
+        label_maxDefault_3->setFont(font1);
+        label_maxDefault_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_maxDefault_3, 1, 0, 1, 1);
+
+        label_axisMaxThreshold_3 = new QLabel(groupBox_5);
+        label_axisMaxThreshold_3->setObjectName("label_axisMaxThreshold_3");
+        label_axisMaxThreshold_3->setFont(font1);
+        label_axisMaxThreshold_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_axisMaxThreshold_3, 9, 0, 1, 1);
+
+        doubleSpinBox_axisTrip_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_axisTrip_3->setObjectName("doubleSpinBox_axisTrip_3");
+        doubleSpinBox_axisTrip_3->setFont(font1);
+        doubleSpinBox_axisTrip_3->setValue(0.200000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_axisTrip_3, 7, 1, 1, 1);
+
+        doubleSpinBox_axisMinThreshold_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_axisMinThreshold_3->setObjectName("doubleSpinBox_axisMinThreshold_3");
+        doubleSpinBox_axisMinThreshold_3->setFont(font1);
+        doubleSpinBox_axisMinThreshold_3->setValue(0.200000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_axisMinThreshold_3, 8, 1, 1, 1);
+
+        doubleSpinBox_axisMaxThreshold_3 = new QDoubleSpinBox(groupBox_5);
+        doubleSpinBox_axisMaxThreshold_3->setObjectName("doubleSpinBox_axisMaxThreshold_3");
+        doubleSpinBox_axisMaxThreshold_3->setFont(font1);
+        doubleSpinBox_axisMaxThreshold_3->setValue(0.200000000000000);
+
+        gridLayout_19->addWidget(doubleSpinBox_axisMaxThreshold_3, 9, 1, 1, 1);
+
+        label_axisID_3 = new QLabel(groupBox_5);
+        label_axisID_3->setObjectName("label_axisID_3");
+        label_axisID_3->setFont(font1);
+        label_axisID_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_axisID_3, 7, 2, 1, 1);
+
+        spinBox_axisID_3 = new QSpinBox(groupBox_5);
+        spinBox_axisID_3->setObjectName("spinBox_axisID_3");
+        spinBox_axisID_3->setFont(font1);
+        spinBox_axisID_3->setMinimum(1);
+        spinBox_axisID_3->setMaximum(65535);
+
+        gridLayout_19->addWidget(spinBox_axisID_3, 7, 3, 1, 1);
+
+        label_axisName_3 = new QLabel(groupBox_5);
+        label_axisName_3->setObjectName("label_axisName_3");
+        label_axisName_3->setFont(font1);
+        label_axisName_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_axisName_3, 8, 2, 1, 1);
+
+        label_axisFactory_3 = new QLabel(groupBox_5);
+        label_axisFactory_3->setObjectName("label_axisFactory_3");
+        label_axisFactory_3->setFont(font1);
+        label_axisFactory_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_19->addWidget(label_axisFactory_3, 9, 2, 1, 1);
+
+        comboBox_axisName_3 = new QComboBox(groupBox_5);
+        comboBox_axisName_3->addItem(QString());
+        comboBox_axisName_3->setObjectName("comboBox_axisName_3");
+        comboBox_axisName_3->setFont(font2);
+
+        gridLayout_19->addWidget(comboBox_axisName_3, 8, 3, 1, 1);
+
+        comboBox_axisFactory_3 = new QComboBox(groupBox_5);
+        comboBox_axisFactory_3->addItem(QString());
+        comboBox_axisFactory_3->setObjectName("comboBox_axisFactory_3");
+        comboBox_axisFactory_3->setFont(font2);
+
+        gridLayout_19->addWidget(comboBox_axisFactory_3, 9, 3, 1, 1);
 
 
         gridLayout_20->addWidget(groupBox_5, 0, 0, 1, 1);
@@ -2013,83 +2333,12 @@ public:
         gridLayout_23->setSpacing(0);
         gridLayout_23->setObjectName("gridLayout_23");
         gridLayout_23->setContentsMargins(0, 0, 0, 0);
-        label_minBtm_4 = new QLabel(groupBox_6);
-        label_minBtm_4->setObjectName("label_minBtm_4");
-        label_minBtm_4->setFont(font1);
-        label_minBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_maxTop_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_maxTop_4->setObjectName("doubleSpinBox_maxTop_4");
+        doubleSpinBox_maxTop_4->setFont(font1);
+        doubleSpinBox_maxTop_4->setValue(1.200000000000000);
 
-        gridLayout_23->addWidget(label_minBtm_4, 7, 0, 1, 1);
-
-        label_minDefault_4 = new QLabel(groupBox_6);
-        label_minDefault_4->setObjectName("label_minDefault_4");
-        label_minDefault_4->setFont(font1);
-        label_minDefault_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_23->addWidget(label_minDefault_4, 5, 0, 1, 1);
-
-        doubleSpinBox_minTop_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_minTop_4->setObjectName("doubleSpinBox_minTop_4");
-        doubleSpinBox_minTop_4->setFont(font1);
-        doubleSpinBox_minTop_4->setValue(0.700000000000000);
-
-        gridLayout_23->addWidget(doubleSpinBox_minTop_4, 4, 1, 1, 1);
-
-        label_minTop_4 = new QLabel(groupBox_6);
-        label_minTop_4->setObjectName("label_minTop_4");
-        label_minTop_4->setFont(font1);
-        label_minTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_23->addWidget(label_minTop_4, 4, 0, 1, 1);
-
-        label_rtTop_4 = new QLabel(groupBox_6);
-        label_rtTop_4->setObjectName("label_rtTop_4");
-        label_rtTop_4->setFont(font1);
-        label_rtTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_23->addWidget(label_rtTop_4, 4, 4, 1, 1);
-
-        label_deadZoneDown_4 = new QLabel(groupBox_6);
-        label_deadZoneDown_4->setObjectName("label_deadZoneDown_4");
-        label_deadZoneDown_4->setMinimumSize(QSize(60, 0));
-        label_deadZoneDown_4->setMaximumSize(QSize(60, 16777215));
-        label_deadZoneDown_4->setFont(font1);
-        label_deadZoneDown_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_23->addWidget(label_deadZoneDown_4, 1, 2, 1, 1);
-
-        doubleSpinBox_acoefficientB_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_acoefficientB_4->setObjectName("doubleSpinBox_acoefficientB_4");
-        doubleSpinBox_acoefficientB_4->setFont(font1);
-        doubleSpinBox_acoefficientB_4->setDecimals(8);
-        doubleSpinBox_acoefficientB_4->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientB_4->setValue(47.644582999999997);
-
-        gridLayout_23->addWidget(doubleSpinBox_acoefficientB_4, 4, 3, 1, 1);
-
-        doubleSpinBox_acoefficientA_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_acoefficientA_4->setObjectName("doubleSpinBox_acoefficientA_4");
-        doubleSpinBox_acoefficientA_4->setFont(font1);
-        doubleSpinBox_acoefficientA_4->setDecimals(8);
-        doubleSpinBox_acoefficientA_4->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientA_4->setValue(-52.257868000000002);
-
-        gridLayout_23->addWidget(doubleSpinBox_acoefficientA_4, 3, 3, 1, 1);
-
-        label_deadZoneUp_4 = new QLabel(groupBox_6);
-        label_deadZoneUp_4->setObjectName("label_deadZoneUp_4");
-        label_deadZoneUp_4->setMinimumSize(QSize(60, 0));
-        label_deadZoneUp_4->setMaximumSize(QSize(60, 16777215));
-        label_deadZoneUp_4->setFont(font1);
-        label_deadZoneUp_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_23->addWidget(label_deadZoneUp_4, 0, 2, 1, 1);
-
-        label_rtBtm_4 = new QLabel(groupBox_6);
-        label_rtBtm_4->setObjectName("label_rtBtm_4");
-        label_rtBtm_4->setFont(font1);
-        label_rtBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_23->addWidget(label_rtBtm_4, 5, 4, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_maxTop_4, 0, 1, 1, 1);
 
         doubleSpinBox_maxDefault_4 = new QDoubleSpinBox(groupBox_6);
         doubleSpinBox_maxDefault_4->setObjectName("doubleSpinBox_maxDefault_4");
@@ -2098,12 +2347,12 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_maxDefault_4, 1, 1, 1, 1);
 
-        doubleSpinBox_fhTop_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_fhTop_4->setObjectName("doubleSpinBox_fhTop_4");
-        doubleSpinBox_fhTop_4->setFont(font1);
-        doubleSpinBox_fhTop_4->setValue(3.500000000000000);
+        doubleSpinBox_axisMinThreshold_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_axisMinThreshold_4->setObjectName("doubleSpinBox_axisMinThreshold_4");
+        doubleSpinBox_axisMinThreshold_4->setFont(font1);
+        doubleSpinBox_axisMinThreshold_4->setValue(0.200000000000000);
 
-        gridLayout_23->addWidget(doubleSpinBox_fhTop_4, 0, 5, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_axisMinThreshold_4, 9, 1, 1, 1);
 
         label_acoefficientB_4 = new QLabel(groupBox_6);
         label_acoefficientB_4->setObjectName("label_acoefficientB_4");
@@ -2114,43 +2363,54 @@ public:
 
         gridLayout_23->addWidget(label_acoefficientB_4, 4, 2, 1, 1);
 
-        doubleSpinBox_maxBtm_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_maxBtm_4->setObjectName("doubleSpinBox_maxBtm_4");
-        doubleSpinBox_maxBtm_4->setFont(font1);
-        doubleSpinBox_maxBtm_4->setValue(0.900000000000000);
+        label_rtDnDft_4 = new QLabel(groupBox_6);
+        label_rtDnDft_4->setObjectName("label_rtDnDft_4");
+        label_rtDnDft_4->setFont(font1);
+        label_rtDnDft_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(doubleSpinBox_maxBtm_4, 3, 1, 1, 1);
+        gridLayout_23->addWidget(label_rtDnDft_4, 7, 4, 1, 1);
 
-        label_fhDnDft_4 = new QLabel(groupBox_6);
-        label_fhDnDft_4->setObjectName("label_fhDnDft_4");
-        label_fhDnDft_4->setFont(font1);
-        label_fhDnDft_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_minTop_4 = new QLabel(groupBox_6);
+        label_minTop_4->setObjectName("label_minTop_4");
+        label_minTop_4->setFont(font1);
+        label_minTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(label_fhDnDft_4, 1, 4, 1, 1);
+        gridLayout_23->addWidget(label_minTop_4, 4, 0, 1, 1);
 
-        doubleSpinBox_deadZoneDown_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_deadZoneDown_4->setObjectName("doubleSpinBox_deadZoneDown_4");
-        doubleSpinBox_deadZoneDown_4->setFont(font1);
-        doubleSpinBox_deadZoneDown_4->setMinimum(0.000000000000000);
-        doubleSpinBox_deadZoneDown_4->setMaximum(292.000000000000000);
-        doubleSpinBox_deadZoneDown_4->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
-        doubleSpinBox_deadZoneDown_4->setValue(0.400000000000000);
+        doubleSpinBox_minBtm_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_minBtm_4->setObjectName("doubleSpinBox_minBtm_4");
+        doubleSpinBox_minBtm_4->setFont(font1);
+        doubleSpinBox_minBtm_4->setValue(0.200000000000000);
 
-        gridLayout_23->addWidget(doubleSpinBox_deadZoneDown_4, 1, 3, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_minBtm_4, 7, 1, 1, 1);
 
-        doubleSpinBox_maxTop_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_maxTop_4->setObjectName("doubleSpinBox_maxTop_4");
-        doubleSpinBox_maxTop_4->setFont(font1);
-        doubleSpinBox_maxTop_4->setValue(1.200000000000000);
+        label_maxBtm_4 = new QLabel(groupBox_6);
+        label_maxBtm_4->setObjectName("label_maxBtm_4");
+        label_maxBtm_4->setFont(font1);
+        label_maxBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(doubleSpinBox_maxTop_4, 0, 1, 1, 1);
+        gridLayout_23->addWidget(label_maxBtm_4, 3, 0, 1, 1);
 
-        label_maxDefault_4 = new QLabel(groupBox_6);
-        label_maxDefault_4->setObjectName("label_maxDefault_4");
-        label_maxDefault_4->setFont(font1);
-        label_maxDefault_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_fhBtm_4 = new QLabel(groupBox_6);
+        label_fhBtm_4->setObjectName("label_fhBtm_4");
+        label_fhBtm_4->setFont(font1);
+        label_fhBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(label_maxDefault_4, 1, 0, 1, 1);
+        gridLayout_23->addWidget(label_fhBtm_4, 3, 4, 1, 1);
+
+        doubleSpinBox_rtTop_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_rtTop_4->setObjectName("doubleSpinBox_rtTop_4");
+        doubleSpinBox_rtTop_4->setFont(font1);
+        doubleSpinBox_rtTop_4->setValue(1.500000000000000);
+
+        gridLayout_23->addWidget(doubleSpinBox_rtTop_4, 4, 5, 1, 1);
+
+        label_minBtm_4 = new QLabel(groupBox_6);
+        label_minBtm_4->setObjectName("label_minBtm_4");
+        label_minBtm_4->setFont(font1);
+        label_minBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_minBtm_4, 7, 0, 1, 1);
 
         label_acoefficientA_4 = new QLabel(groupBox_6);
         label_acoefficientA_4->setObjectName("label_acoefficientA_4");
@@ -2170,21 +2430,45 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_acoefficientC_4, 5, 3, 1, 1);
 
-        doubleSpinBox_minBtm_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_minBtm_4->setObjectName("doubleSpinBox_minBtm_4");
-        doubleSpinBox_minBtm_4->setFont(font1);
-        doubleSpinBox_minBtm_4->setValue(0.200000000000000);
+        doubleSpinBox_acoefficientA_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_acoefficientA_4->setObjectName("doubleSpinBox_acoefficientA_4");
+        doubleSpinBox_acoefficientA_4->setFont(font1);
+        doubleSpinBox_acoefficientA_4->setDecimals(8);
+        doubleSpinBox_acoefficientA_4->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientA_4->setValue(-52.257868000000002);
 
-        gridLayout_23->addWidget(doubleSpinBox_minBtm_4, 7, 1, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_acoefficientA_4, 3, 3, 1, 1);
 
-        label_acoefficientC_4 = new QLabel(groupBox_6);
-        label_acoefficientC_4->setObjectName("label_acoefficientC_4");
-        label_acoefficientC_4->setMinimumSize(QSize(60, 0));
-        label_acoefficientC_4->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientC_4->setFont(font1);
-        label_acoefficientC_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_fhTop_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_fhTop_4->setObjectName("doubleSpinBox_fhTop_4");
+        doubleSpinBox_fhTop_4->setFont(font1);
+        doubleSpinBox_fhTop_4->setValue(3.500000000000000);
 
-        gridLayout_23->addWidget(label_acoefficientC_4, 5, 2, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_fhTop_4, 0, 5, 1, 1);
+
+        label_maxDefault_4 = new QLabel(groupBox_6);
+        label_maxDefault_4->setObjectName("label_maxDefault_4");
+        label_maxDefault_4->setFont(font1);
+        label_maxDefault_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_maxDefault_4, 1, 0, 1, 1);
+
+        doubleSpinBox_deadZoneDown_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_deadZoneDown_4->setObjectName("doubleSpinBox_deadZoneDown_4");
+        doubleSpinBox_deadZoneDown_4->setFont(font1);
+        doubleSpinBox_deadZoneDown_4->setMinimum(0.000000000000000);
+        doubleSpinBox_deadZoneDown_4->setMaximum(292.000000000000000);
+        doubleSpinBox_deadZoneDown_4->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
+        doubleSpinBox_deadZoneDown_4->setValue(0.400000000000000);
+
+        gridLayout_23->addWidget(doubleSpinBox_deadZoneDown_4, 1, 3, 1, 1);
+
+        label_rtBtm_4 = new QLabel(groupBox_6);
+        label_rtBtm_4->setObjectName("label_rtBtm_4");
+        label_rtBtm_4->setFont(font1);
+        label_rtBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_rtBtm_4, 5, 4, 1, 1);
 
         doubleSpinBox_fhDnDft_4 = new QDoubleSpinBox(groupBox_6);
         doubleSpinBox_fhDnDft_4->setObjectName("doubleSpinBox_fhDnDft_4");
@@ -2193,19 +2477,72 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_fhDnDft_4, 1, 5, 1, 1);
 
-        label_fhTop_4 = new QLabel(groupBox_6);
-        label_fhTop_4->setObjectName("label_fhTop_4");
-        label_fhTop_4->setFont(font1);
-        label_fhTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_acoefficientB_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_acoefficientB_4->setObjectName("doubleSpinBox_acoefficientB_4");
+        doubleSpinBox_acoefficientB_4->setFont(font1);
+        doubleSpinBox_acoefficientB_4->setDecimals(8);
+        doubleSpinBox_acoefficientB_4->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientB_4->setValue(47.644582999999997);
 
-        gridLayout_23->addWidget(label_fhTop_4, 0, 4, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_acoefficientB_4, 4, 3, 1, 1);
 
-        label_fhBtm_4 = new QLabel(groupBox_6);
-        label_fhBtm_4->setObjectName("label_fhBtm_4");
-        label_fhBtm_4->setFont(font1);
-        label_fhBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_minDefault_4 = new QLabel(groupBox_6);
+        label_minDefault_4->setObjectName("label_minDefault_4");
+        label_minDefault_4->setFont(font1);
+        label_minDefault_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(label_fhBtm_4, 3, 4, 1, 1);
+        gridLayout_23->addWidget(label_minDefault_4, 5, 0, 1, 1);
+
+        label_axisTrip_4 = new QLabel(groupBox_6);
+        label_axisTrip_4->setObjectName("label_axisTrip_4");
+        label_axisTrip_4->setFont(font1);
+        label_axisTrip_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_axisTrip_4, 8, 0, 1, 1);
+
+        label_axisMinThreshold_4 = new QLabel(groupBox_6);
+        label_axisMinThreshold_4->setObjectName("label_axisMinThreshold_4");
+        label_axisMinThreshold_4->setFont(font1);
+        label_axisMinThreshold_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_axisMinThreshold_4, 9, 0, 1, 1);
+
+        label_rtTop_4 = new QLabel(groupBox_6);
+        label_rtTop_4->setObjectName("label_rtTop_4");
+        label_rtTop_4->setFont(font1);
+        label_rtTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_rtTop_4, 4, 4, 1, 1);
+
+        doubleSpinBox_axisTrip_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_axisTrip_4->setObjectName("doubleSpinBox_axisTrip_4");
+        doubleSpinBox_axisTrip_4->setFont(font1);
+        doubleSpinBox_axisTrip_4->setValue(0.200000000000000);
+
+        gridLayout_23->addWidget(doubleSpinBox_axisTrip_4, 8, 1, 1, 1);
+
+        doubleSpinBox_rtUpDft_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_rtUpDft_4->setObjectName("doubleSpinBox_rtUpDft_4");
+        doubleSpinBox_rtUpDft_4->setFont(font1);
+        doubleSpinBox_rtUpDft_4->setValue(0.800000000000000);
+
+        gridLayout_23->addWidget(doubleSpinBox_rtUpDft_4, 8, 5, 1, 1);
+
+        label_fhDnDft_4 = new QLabel(groupBox_6);
+        label_fhDnDft_4->setObjectName("label_fhDnDft_4");
+        label_fhDnDft_4->setFont(font1);
+        label_fhDnDft_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_fhDnDft_4, 1, 4, 1, 1);
+
+        label_deadZoneDown_4 = new QLabel(groupBox_6);
+        label_deadZoneDown_4->setObjectName("label_deadZoneDown_4");
+        label_deadZoneDown_4->setMinimumSize(QSize(60, 0));
+        label_deadZoneDown_4->setMaximumSize(QSize(60, 16777215));
+        label_deadZoneDown_4->setFont(font1);
+        label_deadZoneDown_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_deadZoneDown_4, 1, 2, 1, 1);
 
         label_acoefficientD_4 = new QLabel(groupBox_6);
         label_acoefficientD_4->setObjectName("label_acoefficientD_4");
@@ -2216,12 +2553,19 @@ public:
 
         gridLayout_23->addWidget(label_acoefficientD_4, 7, 2, 1, 1);
 
-        label_maxBtm_4 = new QLabel(groupBox_6);
-        label_maxBtm_4->setObjectName("label_maxBtm_4");
-        label_maxBtm_4->setFont(font1);
-        label_maxBtm_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_fhBtm_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_fhBtm_4->setObjectName("doubleSpinBox_fhBtm_4");
+        doubleSpinBox_fhBtm_4->setFont(font1);
+        doubleSpinBox_fhBtm_4->setValue(0.700000000000000);
 
-        gridLayout_23->addWidget(label_maxBtm_4, 3, 0, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_fhBtm_4, 3, 5, 1, 1);
+
+        doubleSpinBox_maxBtm_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_maxBtm_4->setObjectName("doubleSpinBox_maxBtm_4");
+        doubleSpinBox_maxBtm_4->setFont(font1);
+        doubleSpinBox_maxBtm_4->setValue(0.900000000000000);
+
+        gridLayout_23->addWidget(doubleSpinBox_maxBtm_4, 3, 1, 1, 1);
 
         doubleSpinBox_minDefault_4 = new QDoubleSpinBox(groupBox_6);
         doubleSpinBox_minDefault_4->setObjectName("doubleSpinBox_minDefault_4");
@@ -2230,12 +2574,12 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_minDefault_4, 5, 1, 1, 1);
 
-        label_maxTop_4 = new QLabel(groupBox_6);
-        label_maxTop_4->setObjectName("label_maxTop_4");
-        label_maxTop_4->setFont(font1);
-        label_maxTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_rtDnDft_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_rtDnDft_4->setObjectName("doubleSpinBox_rtDnDft_4");
+        doubleSpinBox_rtDnDft_4->setFont(font1);
+        doubleSpinBox_rtDnDft_4->setValue(1.500000000000000);
 
-        gridLayout_23->addWidget(label_maxTop_4, 0, 0, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_rtDnDft_4, 7, 5, 1, 1);
 
         doubleSpinBox_acoefficientD_4 = new QDoubleSpinBox(groupBox_6);
         doubleSpinBox_acoefficientD_4->setObjectName("doubleSpinBox_acoefficientD_4");
@@ -2246,6 +2590,59 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_acoefficientD_4, 7, 3, 1, 1);
 
+        label_fhTop_4 = new QLabel(groupBox_6);
+        label_fhTop_4->setObjectName("label_fhTop_4");
+        label_fhTop_4->setFont(font1);
+        label_fhTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_fhTop_4, 0, 4, 1, 1);
+
+        label_rtUpDft_4 = new QLabel(groupBox_6);
+        label_rtUpDft_4->setObjectName("label_rtUpDft_4");
+        label_rtUpDft_4->setFont(font1);
+        label_rtUpDft_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_rtUpDft_4, 8, 4, 1, 1);
+
+        label_deadZoneUp_4 = new QLabel(groupBox_6);
+        label_deadZoneUp_4->setObjectName("label_deadZoneUp_4");
+        label_deadZoneUp_4->setMinimumSize(QSize(60, 0));
+        label_deadZoneUp_4->setMaximumSize(QSize(60, 16777215));
+        label_deadZoneUp_4->setFont(font1);
+        label_deadZoneUp_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_deadZoneUp_4, 0, 2, 1, 1);
+
+        label_maxTop_4 = new QLabel(groupBox_6);
+        label_maxTop_4->setObjectName("label_maxTop_4");
+        label_maxTop_4->setFont(font1);
+        label_maxTop_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_maxTop_4, 0, 0, 1, 1);
+
+        doubleSpinBox_rtBtm_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_rtBtm_4->setObjectName("doubleSpinBox_rtBtm_4");
+        doubleSpinBox_rtBtm_4->setFont(font1);
+        doubleSpinBox_rtBtm_4->setValue(0.200000000000000);
+
+        gridLayout_23->addWidget(doubleSpinBox_rtBtm_4, 5, 5, 1, 1);
+
+        label_acoefficientC_4 = new QLabel(groupBox_6);
+        label_acoefficientC_4->setObjectName("label_acoefficientC_4");
+        label_acoefficientC_4->setMinimumSize(QSize(60, 0));
+        label_acoefficientC_4->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientC_4->setFont(font1);
+        label_acoefficientC_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_23->addWidget(label_acoefficientC_4, 5, 2, 1, 1);
+
+        doubleSpinBox_axisMaxThreshold_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_axisMaxThreshold_4->setObjectName("doubleSpinBox_axisMaxThreshold_4");
+        doubleSpinBox_axisMaxThreshold_4->setFont(font1);
+        doubleSpinBox_axisMaxThreshold_4->setValue(0.200000000000000);
+
+        gridLayout_23->addWidget(doubleSpinBox_axisMaxThreshold_4, 11, 1, 1, 1);
+
         doubleSpinBox_deadZoneUp_4 = new QDoubleSpinBox(groupBox_6);
         doubleSpinBox_deadZoneUp_4->setObjectName("doubleSpinBox_deadZoneUp_4");
         doubleSpinBox_deadZoneUp_4->setFont(font1);
@@ -2255,54 +2652,62 @@ public:
 
         gridLayout_23->addWidget(doubleSpinBox_deadZoneUp_4, 0, 3, 1, 1);
 
-        doubleSpinBox_rtBtm_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_rtBtm_4->setObjectName("doubleSpinBox_rtBtm_4");
-        doubleSpinBox_rtBtm_4->setFont(font1);
-        doubleSpinBox_rtBtm_4->setValue(0.200000000000000);
+        doubleSpinBox_minTop_4 = new QDoubleSpinBox(groupBox_6);
+        doubleSpinBox_minTop_4->setObjectName("doubleSpinBox_minTop_4");
+        doubleSpinBox_minTop_4->setFont(font1);
+        doubleSpinBox_minTop_4->setValue(0.700000000000000);
 
-        gridLayout_23->addWidget(doubleSpinBox_rtBtm_4, 5, 5, 1, 1);
+        gridLayout_23->addWidget(doubleSpinBox_minTop_4, 4, 1, 1, 1);
 
-        label_rtDnDft_4 = new QLabel(groupBox_6);
-        label_rtDnDft_4->setObjectName("label_rtDnDft_4");
-        label_rtDnDft_4->setFont(font1);
-        label_rtDnDft_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_axisMaxThreshold_4 = new QLabel(groupBox_6);
+        label_axisMaxThreshold_4->setObjectName("label_axisMaxThreshold_4");
+        label_axisMaxThreshold_4->setFont(font1);
+        label_axisMaxThreshold_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(label_rtDnDft_4, 7, 4, 1, 1);
+        gridLayout_23->addWidget(label_axisMaxThreshold_4, 11, 0, 1, 1);
 
-        doubleSpinBox_rtTop_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_rtTop_4->setObjectName("doubleSpinBox_rtTop_4");
-        doubleSpinBox_rtTop_4->setFont(font1);
-        doubleSpinBox_rtTop_4->setValue(1.500000000000000);
+        label_axisID_4 = new QLabel(groupBox_6);
+        label_axisID_4->setObjectName("label_axisID_4");
+        label_axisID_4->setFont(font1);
+        label_axisID_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(doubleSpinBox_rtTop_4, 4, 5, 1, 1);
+        gridLayout_23->addWidget(label_axisID_4, 8, 2, 1, 1);
 
-        doubleSpinBox_fhBtm_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_fhBtm_4->setObjectName("doubleSpinBox_fhBtm_4");
-        doubleSpinBox_fhBtm_4->setFont(font1);
-        doubleSpinBox_fhBtm_4->setValue(0.700000000000000);
+        spinBox_axisID_4 = new QSpinBox(groupBox_6);
+        spinBox_axisID_4->setObjectName("spinBox_axisID_4");
+        spinBox_axisID_4->setFont(font1);
+        spinBox_axisID_4->setMinimum(1);
+        spinBox_axisID_4->setMaximum(65535);
 
-        gridLayout_23->addWidget(doubleSpinBox_fhBtm_4, 3, 5, 1, 1);
+        gridLayout_23->addWidget(spinBox_axisID_4, 8, 3, 1, 1);
 
-        doubleSpinBox_rtDnDft_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_rtDnDft_4->setObjectName("doubleSpinBox_rtDnDft_4");
-        doubleSpinBox_rtDnDft_4->setFont(font1);
-        doubleSpinBox_rtDnDft_4->setValue(1.500000000000000);
+        label_axisName_4 = new QLabel(groupBox_6);
+        label_axisName_4->setObjectName("label_axisName_4");
+        label_axisName_4->setFont(font1);
+        label_axisName_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(doubleSpinBox_rtDnDft_4, 7, 5, 1, 1);
+        gridLayout_23->addWidget(label_axisName_4, 9, 2, 1, 1);
 
-        doubleSpinBox_rtUpDft_4 = new QDoubleSpinBox(groupBox_6);
-        doubleSpinBox_rtUpDft_4->setObjectName("doubleSpinBox_rtUpDft_4");
-        doubleSpinBox_rtUpDft_4->setFont(font1);
-        doubleSpinBox_rtUpDft_4->setValue(0.800000000000000);
+        label_axisFactory_4 = new QLabel(groupBox_6);
+        label_axisFactory_4->setObjectName("label_axisFactory_4");
+        label_axisFactory_4->setFont(font1);
+        label_axisFactory_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_23->addWidget(doubleSpinBox_rtUpDft_4, 11, 5, 1, 1);
+        gridLayout_23->addWidget(label_axisFactory_4, 11, 2, 1, 1);
 
-        label_rtUpDft_4 = new QLabel(groupBox_6);
-        label_rtUpDft_4->setObjectName("label_rtUpDft_4");
-        label_rtUpDft_4->setFont(font1);
-        label_rtUpDft_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        comboBox_axisName_4 = new QComboBox(groupBox_6);
+        comboBox_axisName_4->addItem(QString());
+        comboBox_axisName_4->setObjectName("comboBox_axisName_4");
+        comboBox_axisName_4->setFont(font2);
 
-        gridLayout_23->addWidget(label_rtUpDft_4, 11, 4, 1, 1);
+        gridLayout_23->addWidget(comboBox_axisName_4, 9, 3, 1, 1);
+
+        comboBox_axisFactory_4 = new QComboBox(groupBox_6);
+        comboBox_axisFactory_4->addItem(QString());
+        comboBox_axisFactory_4->setObjectName("comboBox_axisFactory_4");
+        comboBox_axisFactory_4->setFont(font2);
+
+        gridLayout_23->addWidget(comboBox_axisFactory_4, 11, 3, 1, 1);
 
 
         gridLayout_21->addWidget(groupBox_6, 0, 0, 1, 1);
@@ -2323,64 +2728,6 @@ public:
         gridLayout_25->setSpacing(0);
         gridLayout_25->setObjectName("gridLayout_25");
         gridLayout_25->setContentsMargins(0, 0, 0, 0);
-        doubleSpinBox_minBtm_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_minBtm_5->setObjectName("doubleSpinBox_minBtm_5");
-        doubleSpinBox_minBtm_5->setFont(font1);
-        doubleSpinBox_minBtm_5->setValue(0.200000000000000);
-
-        gridLayout_25->addWidget(doubleSpinBox_minBtm_5, 8, 1, 1, 1);
-
-        label_minBtm_5 = new QLabel(groupBox_7);
-        label_minBtm_5->setObjectName("label_minBtm_5");
-        label_minBtm_5->setFont(font1);
-        label_minBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_25->addWidget(label_minBtm_5, 8, 0, 1, 1);
-
-        label_acoefficientC_5 = new QLabel(groupBox_7);
-        label_acoefficientC_5->setObjectName("label_acoefficientC_5");
-        label_acoefficientC_5->setMinimumSize(QSize(60, 0));
-        label_acoefficientC_5->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientC_5->setFont(font1);
-        label_acoefficientC_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_25->addWidget(label_acoefficientC_5, 6, 2, 1, 1);
-
-        doubleSpinBox_deadZoneDown_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_deadZoneDown_5->setObjectName("doubleSpinBox_deadZoneDown_5");
-        doubleSpinBox_deadZoneDown_5->setFont(font1);
-        doubleSpinBox_deadZoneDown_5->setMinimum(0.000000000000000);
-        doubleSpinBox_deadZoneDown_5->setMaximum(292.000000000000000);
-        doubleSpinBox_deadZoneDown_5->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
-        doubleSpinBox_deadZoneDown_5->setValue(0.400000000000000);
-
-        gridLayout_25->addWidget(doubleSpinBox_deadZoneDown_5, 1, 3, 1, 1);
-
-        label_deadZoneUp_5 = new QLabel(groupBox_7);
-        label_deadZoneUp_5->setObjectName("label_deadZoneUp_5");
-        label_deadZoneUp_5->setMinimumSize(QSize(60, 0));
-        label_deadZoneUp_5->setMaximumSize(QSize(60, 16777215));
-        label_deadZoneUp_5->setFont(font1);
-        label_deadZoneUp_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_25->addWidget(label_deadZoneUp_5, 0, 2, 1, 1);
-
-        label_acoefficientD_5 = new QLabel(groupBox_7);
-        label_acoefficientD_5->setObjectName("label_acoefficientD_5");
-        label_acoefficientD_5->setMinimumSize(QSize(60, 0));
-        label_acoefficientD_5->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientD_5->setFont(font1);
-        label_acoefficientD_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_25->addWidget(label_acoefficientD_5, 8, 2, 1, 1);
-
-        label_maxTop_5 = new QLabel(groupBox_7);
-        label_maxTop_5->setObjectName("label_maxTop_5");
-        label_maxTop_5->setFont(font1);
-        label_maxTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_25->addWidget(label_maxTop_5, 0, 0, 1, 1);
-
         doubleSpinBox_minTop_5 = new QDoubleSpinBox(groupBox_7);
         doubleSpinBox_minTop_5->setObjectName("doubleSpinBox_minTop_5");
         doubleSpinBox_minTop_5->setFont(font1);
@@ -2388,19 +2735,12 @@ public:
 
         gridLayout_25->addWidget(doubleSpinBox_minTop_5, 5, 1, 1, 1);
 
-        label_minTop_5 = new QLabel(groupBox_7);
-        label_minTop_5->setObjectName("label_minTop_5");
-        label_minTop_5->setFont(font1);
-        label_minTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_axisMaxThreshold_5 = new QLabel(groupBox_7);
+        label_axisMaxThreshold_5->setObjectName("label_axisMaxThreshold_5");
+        label_axisMaxThreshold_5->setFont(font1);
+        label_axisMaxThreshold_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(label_minTop_5, 5, 0, 1, 1);
-
-        doubleSpinBox_minDefault_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_minDefault_5->setObjectName("doubleSpinBox_minDefault_5");
-        doubleSpinBox_minDefault_5->setFont(font1);
-        doubleSpinBox_minDefault_5->setValue(0.400000000000000);
-
-        gridLayout_25->addWidget(doubleSpinBox_minDefault_5, 6, 1, 1, 1);
+        gridLayout_25->addWidget(label_axisMaxThreshold_5, 11, 0, 1, 1);
 
         doubleSpinBox_acoefficientD_5 = new QDoubleSpinBox(groupBox_7);
         doubleSpinBox_acoefficientD_5->setObjectName("doubleSpinBox_acoefficientD_5");
@@ -2420,53 +2760,40 @@ public:
 
         gridLayout_25->addWidget(doubleSpinBox_acoefficientB_5, 5, 3, 1, 1);
 
-        doubleSpinBox_fhTop_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_fhTop_5->setObjectName("doubleSpinBox_fhTop_5");
-        doubleSpinBox_fhTop_5->setFont(font1);
-        doubleSpinBox_fhTop_5->setValue(3.400000000000000);
+        label_fhBtm_5 = new QLabel(groupBox_7);
+        label_fhBtm_5->setObjectName("label_fhBtm_5");
+        label_fhBtm_5->setFont(font1);
+        label_fhBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(doubleSpinBox_fhTop_5, 0, 5, 1, 1);
+        gridLayout_25->addWidget(label_fhBtm_5, 3, 4, 1, 1);
 
-        doubleSpinBox_acoefficientA_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_acoefficientA_5->setObjectName("doubleSpinBox_acoefficientA_5");
-        doubleSpinBox_acoefficientA_5->setFont(font1);
-        doubleSpinBox_acoefficientA_5->setDecimals(8);
-        doubleSpinBox_acoefficientA_5->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientA_5->setValue(-63.264502000000000);
+        label_axisID_5 = new QLabel(groupBox_7);
+        label_axisID_5->setObjectName("label_axisID_5");
+        label_axisID_5->setFont(font1);
+        label_axisID_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(doubleSpinBox_acoefficientA_5, 3, 3, 1, 1);
+        gridLayout_25->addWidget(label_axisID_5, 9, 2, 1, 1);
 
-        label_acoefficientB_5 = new QLabel(groupBox_7);
-        label_acoefficientB_5->setObjectName("label_acoefficientB_5");
-        label_acoefficientB_5->setMinimumSize(QSize(60, 0));
-        label_acoefficientB_5->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientB_5->setFont(font1);
-        label_acoefficientB_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_maxTop_5 = new QLabel(groupBox_7);
+        label_maxTop_5->setObjectName("label_maxTop_5");
+        label_maxTop_5->setFont(font1);
+        label_maxTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(label_acoefficientB_5, 5, 2, 1, 1);
+        gridLayout_25->addWidget(label_maxTop_5, 0, 0, 1, 1);
 
-        doubleSpinBox_maxTop_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_maxTop_5->setObjectName("doubleSpinBox_maxTop_5");
-        doubleSpinBox_maxTop_5->setFont(font1);
-        doubleSpinBox_maxTop_5->setValue(1.200000000000000);
+        doubleSpinBox_fhDnDft_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_fhDnDft_5->setObjectName("doubleSpinBox_fhDnDft_5");
+        doubleSpinBox_fhDnDft_5->setFont(font1);
+        doubleSpinBox_fhDnDft_5->setValue(1.700000000000000);
 
-        gridLayout_25->addWidget(doubleSpinBox_maxTop_5, 0, 1, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_fhDnDft_5, 1, 5, 1, 1);
 
-        doubleSpinBox_acoefficientC_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_acoefficientC_5->setObjectName("doubleSpinBox_acoefficientC_5");
-        doubleSpinBox_acoefficientC_5->setFont(font1);
-        doubleSpinBox_acoefficientC_5->setDecimals(8);
-        doubleSpinBox_acoefficientC_5->setMinimum(-100.000000000000000);
-        doubleSpinBox_acoefficientC_5->setValue(-34.003731999999999);
+        label_axisTrip_5 = new QLabel(groupBox_7);
+        label_axisTrip_5->setObjectName("label_axisTrip_5");
+        label_axisTrip_5->setFont(font1);
+        label_axisTrip_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(doubleSpinBox_acoefficientC_5, 6, 3, 1, 1);
-
-        label_maxBtm_5 = new QLabel(groupBox_7);
-        label_maxBtm_5->setObjectName("label_maxBtm_5");
-        label_maxBtm_5->setFont(font1);
-        label_maxBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_25->addWidget(label_maxBtm_5, 3, 0, 1, 1);
+        gridLayout_25->addWidget(label_axisTrip_5, 9, 0, 1, 1);
 
         label_maxDefault_5 = new QLabel(groupBox_7);
         label_maxDefault_5->setObjectName("label_maxDefault_5");
@@ -2475,30 +2802,51 @@ public:
 
         gridLayout_25->addWidget(label_maxDefault_5, 1, 0, 1, 1);
 
-        label_acoefficientA_5 = new QLabel(groupBox_7);
-        label_acoefficientA_5->setObjectName("label_acoefficientA_5");
-        label_acoefficientA_5->setMinimumSize(QSize(60, 0));
-        label_acoefficientA_5->setMaximumSize(QSize(60, 16777215));
-        label_acoefficientA_5->setFont(font1);
-        label_acoefficientA_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_acoefficientC_5 = new QLabel(groupBox_7);
+        label_acoefficientC_5->setObjectName("label_acoefficientC_5");
+        label_acoefficientC_5->setMinimumSize(QSize(60, 0));
+        label_acoefficientC_5->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientC_5->setFont(font1);
+        label_acoefficientC_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(label_acoefficientA_5, 3, 2, 1, 1);
+        gridLayout_25->addWidget(label_acoefficientC_5, 6, 2, 1, 1);
 
-        doubleSpinBox_maxBtm_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_maxBtm_5->setObjectName("doubleSpinBox_maxBtm_5");
-        doubleSpinBox_maxBtm_5->setFont(font1);
-        doubleSpinBox_maxBtm_5->setValue(0.900000000000000);
+        label_rtBtm_5 = new QLabel(groupBox_7);
+        label_rtBtm_5->setObjectName("label_rtBtm_5");
+        label_rtBtm_5->setFont(font1);
+        label_rtBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(doubleSpinBox_maxBtm_5, 3, 1, 1, 1);
+        gridLayout_25->addWidget(label_rtBtm_5, 6, 4, 1, 1);
 
-        doubleSpinBox_deadZoneUp_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_deadZoneUp_5->setObjectName("doubleSpinBox_deadZoneUp_5");
-        doubleSpinBox_deadZoneUp_5->setFont(font1);
-        doubleSpinBox_deadZoneUp_5->setMinimum(0.000000000000000);
-        doubleSpinBox_deadZoneUp_5->setMaximum(282.000000000000000);
-        doubleSpinBox_deadZoneUp_5->setValue(0.400000000000000);
+        doubleSpinBox_minDefault_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_minDefault_5->setObjectName("doubleSpinBox_minDefault_5");
+        doubleSpinBox_minDefault_5->setFont(font1);
+        doubleSpinBox_minDefault_5->setValue(0.400000000000000);
 
-        gridLayout_25->addWidget(doubleSpinBox_deadZoneUp_5, 0, 3, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_minDefault_5, 6, 1, 1, 1);
+
+        doubleSpinBox_rtUpDft_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_rtUpDft_5->setObjectName("doubleSpinBox_rtUpDft_5");
+        doubleSpinBox_rtUpDft_5->setFont(font1);
+        doubleSpinBox_rtUpDft_5->setValue(0.800000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_rtUpDft_5, 9, 5, 1, 1);
+
+        label_minBtm_5 = new QLabel(groupBox_7);
+        label_minBtm_5->setObjectName("label_minBtm_5");
+        label_minBtm_5->setFont(font1);
+        label_minBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_minBtm_5, 8, 0, 1, 1);
+
+        label_deadZoneUp_5 = new QLabel(groupBox_7);
+        label_deadZoneUp_5->setObjectName("label_deadZoneUp_5");
+        label_deadZoneUp_5->setMinimumSize(QSize(60, 0));
+        label_deadZoneUp_5->setMaximumSize(QSize(60, 16777215));
+        label_deadZoneUp_5->setFont(font1);
+        label_deadZoneUp_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_deadZoneUp_5, 0, 2, 1, 1);
 
         label_deadZoneDown_5 = new QLabel(groupBox_7);
         label_deadZoneDown_5->setObjectName("label_deadZoneDown_5");
@@ -2509,75 +2857,58 @@ public:
 
         gridLayout_25->addWidget(label_deadZoneDown_5, 1, 2, 1, 1);
 
-        doubleSpinBox_maxDefault_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_maxDefault_5->setObjectName("doubleSpinBox_maxDefault_5");
-        doubleSpinBox_maxDefault_5->setFont(font1);
-        doubleSpinBox_maxDefault_5->setValue(1.000000000000000);
+        label_rtTop_5 = new QLabel(groupBox_7);
+        label_rtTop_5->setObjectName("label_rtTop_5");
+        label_rtTop_5->setFont(font1);
+        label_rtTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(doubleSpinBox_maxDefault_5, 1, 1, 1, 1);
+        gridLayout_25->addWidget(label_rtTop_5, 5, 4, 1, 1);
 
-        label_minDefault_5 = new QLabel(groupBox_7);
-        label_minDefault_5->setObjectName("label_minDefault_5");
-        label_minDefault_5->setFont(font1);
-        label_minDefault_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_acoefficientA_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_acoefficientA_5->setObjectName("doubleSpinBox_acoefficientA_5");
+        doubleSpinBox_acoefficientA_5->setFont(font1);
+        doubleSpinBox_acoefficientA_5->setDecimals(8);
+        doubleSpinBox_acoefficientA_5->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientA_5->setValue(-63.264502000000000);
 
-        gridLayout_25->addWidget(label_minDefault_5, 6, 0, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_acoefficientA_5, 3, 3, 1, 1);
 
-        label_fhTop_5 = new QLabel(groupBox_7);
-        label_fhTop_5->setObjectName("label_fhTop_5");
-        label_fhTop_5->setFont(font1);
-        label_fhTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_axisMaxThreshold_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_axisMaxThreshold_5->setObjectName("doubleSpinBox_axisMaxThreshold_5");
+        doubleSpinBox_axisMaxThreshold_5->setFont(font1);
+        doubleSpinBox_axisMaxThreshold_5->setValue(0.200000000000000);
 
-        gridLayout_25->addWidget(label_fhTop_5, 0, 4, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_axisMaxThreshold_5, 11, 1, 1, 1);
 
-        label_fhDnDft_5 = new QLabel(groupBox_7);
-        label_fhDnDft_5->setObjectName("label_fhDnDft_5");
-        label_fhDnDft_5->setFont(font1);
-        label_fhDnDft_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_maxBtm_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_maxBtm_5->setObjectName("doubleSpinBox_maxBtm_5");
+        doubleSpinBox_maxBtm_5->setFont(font1);
+        doubleSpinBox_maxBtm_5->setValue(0.900000000000000);
 
-        gridLayout_25->addWidget(label_fhDnDft_5, 1, 4, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_maxBtm_5, 3, 1, 1, 1);
 
-        doubleSpinBox_fhDnDft_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_fhDnDft_5->setObjectName("doubleSpinBox_fhDnDft_5");
-        doubleSpinBox_fhDnDft_5->setFont(font1);
-        doubleSpinBox_fhDnDft_5->setValue(1.700000000000000);
+        doubleSpinBox_fhTop_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_fhTop_5->setObjectName("doubleSpinBox_fhTop_5");
+        doubleSpinBox_fhTop_5->setFont(font1);
+        doubleSpinBox_fhTop_5->setValue(3.400000000000000);
 
-        gridLayout_25->addWidget(doubleSpinBox_fhDnDft_5, 1, 5, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_fhTop_5, 0, 5, 1, 1);
 
-        label_fhBtm_5 = new QLabel(groupBox_7);
-        label_fhBtm_5->setObjectName("label_fhBtm_5");
-        label_fhBtm_5->setFont(font1);
-        label_fhBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_deadZoneUp_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_deadZoneUp_5->setObjectName("doubleSpinBox_deadZoneUp_5");
+        doubleSpinBox_deadZoneUp_5->setFont(font1);
+        doubleSpinBox_deadZoneUp_5->setMinimum(0.000000000000000);
+        doubleSpinBox_deadZoneUp_5->setMaximum(282.000000000000000);
+        doubleSpinBox_deadZoneUp_5->setValue(0.400000000000000);
 
-        gridLayout_25->addWidget(label_fhBtm_5, 3, 4, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_deadZoneUp_5, 0, 3, 1, 1);
 
-        doubleSpinBox_fhBtm_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_fhBtm_5->setObjectName("doubleSpinBox_fhBtm_5");
-        doubleSpinBox_fhBtm_5->setFont(font1);
-        doubleSpinBox_fhBtm_5->setValue(0.700000000000000);
+        label_axisFactory_5 = new QLabel(groupBox_7);
+        label_axisFactory_5->setObjectName("label_axisFactory_5");
+        label_axisFactory_5->setFont(font1);
+        label_axisFactory_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(doubleSpinBox_fhBtm_5, 3, 5, 1, 1);
-
-        label_rtDnDft_5 = new QLabel(groupBox_7);
-        label_rtDnDft_5->setObjectName("label_rtDnDft_5");
-        label_rtDnDft_5->setFont(font1);
-        label_rtDnDft_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        gridLayout_25->addWidget(label_rtDnDft_5, 8, 4, 1, 1);
-
-        doubleSpinBox_rtDnDft_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_rtDnDft_5->setObjectName("doubleSpinBox_rtDnDft_5");
-        doubleSpinBox_rtDnDft_5->setFont(font1);
-        doubleSpinBox_rtDnDft_5->setValue(1.500000000000000);
-
-        gridLayout_25->addWidget(doubleSpinBox_rtDnDft_5, 8, 5, 1, 1);
-
-        doubleSpinBox_rtUpDft_5 = new QDoubleSpinBox(groupBox_7);
-        doubleSpinBox_rtUpDft_5->setObjectName("doubleSpinBox_rtUpDft_5");
-        doubleSpinBox_rtUpDft_5->setFont(font1);
-        doubleSpinBox_rtUpDft_5->setValue(0.800000000000000);
-
-        gridLayout_25->addWidget(doubleSpinBox_rtUpDft_5, 9, 5, 1, 1);
+        gridLayout_25->addWidget(label_axisFactory_5, 11, 2, 1, 1);
 
         label_rtUpDft_5 = new QLabel(groupBox_7);
         label_rtUpDft_5->setObjectName("label_rtUpDft_5");
@@ -2586,6 +2917,57 @@ public:
 
         gridLayout_25->addWidget(label_rtUpDft_5, 9, 4, 1, 1);
 
+        label_acoefficientD_5 = new QLabel(groupBox_7);
+        label_acoefficientD_5->setObjectName("label_acoefficientD_5");
+        label_acoefficientD_5->setMinimumSize(QSize(60, 0));
+        label_acoefficientD_5->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientD_5->setFont(font1);
+        label_acoefficientD_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_acoefficientD_5, 8, 2, 1, 1);
+
+        label_axisName_5 = new QLabel(groupBox_7);
+        label_axisName_5->setObjectName("label_axisName_5");
+        label_axisName_5->setFont(font1);
+        label_axisName_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_axisName_5, 10, 2, 1, 1);
+
+        label_maxBtm_5 = new QLabel(groupBox_7);
+        label_maxBtm_5->setObjectName("label_maxBtm_5");
+        label_maxBtm_5->setFont(font1);
+        label_maxBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_maxBtm_5, 3, 0, 1, 1);
+
+        doubleSpinBox_maxDefault_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_maxDefault_5->setObjectName("doubleSpinBox_maxDefault_5");
+        doubleSpinBox_maxDefault_5->setFont(font1);
+        doubleSpinBox_maxDefault_5->setValue(1.000000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_maxDefault_5, 1, 1, 1, 1);
+
+        label_rtDnDft_5 = new QLabel(groupBox_7);
+        label_rtDnDft_5->setObjectName("label_rtDnDft_5");
+        label_rtDnDft_5->setFont(font1);
+        label_rtDnDft_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_rtDnDft_5, 8, 4, 1, 1);
+
+        label_axisMinThreshold_5 = new QLabel(groupBox_7);
+        label_axisMinThreshold_5->setObjectName("label_axisMinThreshold_5");
+        label_axisMinThreshold_5->setFont(font1);
+        label_axisMinThreshold_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_axisMinThreshold_5, 10, 0, 1, 1);
+
+        doubleSpinBox_minBtm_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_minBtm_5->setObjectName("doubleSpinBox_minBtm_5");
+        doubleSpinBox_minBtm_5->setFont(font1);
+        doubleSpinBox_minBtm_5->setValue(0.200000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_minBtm_5, 8, 1, 1, 1);
+
         doubleSpinBox_rtTop_5 = new QDoubleSpinBox(groupBox_7);
         doubleSpinBox_rtTop_5->setObjectName("doubleSpinBox_rtTop_5");
         doubleSpinBox_rtTop_5->setFont(font1);
@@ -2593,12 +2975,14 @@ public:
 
         gridLayout_25->addWidget(doubleSpinBox_rtTop_5, 5, 5, 1, 1);
 
-        label_rtTop_5 = new QLabel(groupBox_7);
-        label_rtTop_5->setObjectName("label_rtTop_5");
-        label_rtTop_5->setFont(font1);
-        label_rtTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_acoefficientA_5 = new QLabel(groupBox_7);
+        label_acoefficientA_5->setObjectName("label_acoefficientA_5");
+        label_acoefficientA_5->setMinimumSize(QSize(60, 0));
+        label_acoefficientA_5->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientA_5->setFont(font1);
+        label_acoefficientA_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_25->addWidget(label_rtTop_5, 5, 4, 1, 1);
+        gridLayout_25->addWidget(label_acoefficientA_5, 3, 2, 1, 1);
 
         doubleSpinBox_rtBtm_5 = new QDoubleSpinBox(groupBox_7);
         doubleSpinBox_rtBtm_5->setObjectName("doubleSpinBox_rtBtm_5");
@@ -2607,12 +2991,118 @@ public:
 
         gridLayout_25->addWidget(doubleSpinBox_rtBtm_5, 6, 5, 1, 1);
 
-        label_rtBtm_5 = new QLabel(groupBox_7);
-        label_rtBtm_5->setObjectName("label_rtBtm_5");
-        label_rtBtm_5->setFont(font1);
-        label_rtBtm_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        doubleSpinBox_axisTrip_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_axisTrip_5->setObjectName("doubleSpinBox_axisTrip_5");
+        doubleSpinBox_axisTrip_5->setFont(font1);
+        doubleSpinBox_axisTrip_5->setValue(0.200000000000000);
 
-        gridLayout_25->addWidget(label_rtBtm_5, 6, 4, 1, 1);
+        gridLayout_25->addWidget(doubleSpinBox_axisTrip_5, 9, 1, 1, 1);
+
+        label_fhDnDft_5 = new QLabel(groupBox_7);
+        label_fhDnDft_5->setObjectName("label_fhDnDft_5");
+        label_fhDnDft_5->setFont(font1);
+        label_fhDnDft_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_fhDnDft_5, 1, 4, 1, 1);
+
+        doubleSpinBox_maxTop_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_maxTop_5->setObjectName("doubleSpinBox_maxTop_5");
+        doubleSpinBox_maxTop_5->setFont(font1);
+        doubleSpinBox_maxTop_5->setValue(1.200000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_maxTop_5, 0, 1, 1, 1);
+
+        label_minTop_5 = new QLabel(groupBox_7);
+        label_minTop_5->setObjectName("label_minTop_5");
+        label_minTop_5->setFont(font1);
+        label_minTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_minTop_5, 5, 0, 1, 1);
+
+        doubleSpinBox_rtDnDft_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_rtDnDft_5->setObjectName("doubleSpinBox_rtDnDft_5");
+        doubleSpinBox_rtDnDft_5->setFont(font1);
+        doubleSpinBox_rtDnDft_5->setValue(1.500000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_rtDnDft_5, 8, 5, 1, 1);
+
+        label_minDefault_5 = new QLabel(groupBox_7);
+        label_minDefault_5->setObjectName("label_minDefault_5");
+        label_minDefault_5->setFont(font1);
+        label_minDefault_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_minDefault_5, 6, 0, 1, 1);
+
+        label_acoefficientB_5 = new QLabel(groupBox_7);
+        label_acoefficientB_5->setObjectName("label_acoefficientB_5");
+        label_acoefficientB_5->setMinimumSize(QSize(60, 0));
+        label_acoefficientB_5->setMaximumSize(QSize(60, 16777215));
+        label_acoefficientB_5->setFont(font1);
+        label_acoefficientB_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_acoefficientB_5, 5, 2, 1, 1);
+
+        spinBox_axisID_5 = new QSpinBox(groupBox_7);
+        spinBox_axisID_5->setObjectName("spinBox_axisID_5");
+        spinBox_axisID_5->setFont(font1);
+        spinBox_axisID_5->setMinimum(1);
+        spinBox_axisID_5->setMaximum(65535);
+
+        gridLayout_25->addWidget(spinBox_axisID_5, 9, 3, 1, 1);
+
+        doubleSpinBox_acoefficientC_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_acoefficientC_5->setObjectName("doubleSpinBox_acoefficientC_5");
+        doubleSpinBox_acoefficientC_5->setFont(font1);
+        doubleSpinBox_acoefficientC_5->setDecimals(8);
+        doubleSpinBox_acoefficientC_5->setMinimum(-100.000000000000000);
+        doubleSpinBox_acoefficientC_5->setValue(-34.003731999999999);
+
+        gridLayout_25->addWidget(doubleSpinBox_acoefficientC_5, 6, 3, 1, 1);
+
+        doubleSpinBox_deadZoneDown_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_deadZoneDown_5->setObjectName("doubleSpinBox_deadZoneDown_5");
+        doubleSpinBox_deadZoneDown_5->setFont(font1);
+        doubleSpinBox_deadZoneDown_5->setMinimum(0.000000000000000);
+        doubleSpinBox_deadZoneDown_5->setMaximum(292.000000000000000);
+        doubleSpinBox_deadZoneDown_5->setStepType(QAbstractSpinBox::StepType::DefaultStepType);
+        doubleSpinBox_deadZoneDown_5->setValue(0.400000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_deadZoneDown_5, 1, 3, 1, 1);
+
+        label_fhTop_5 = new QLabel(groupBox_7);
+        label_fhTop_5->setObjectName("label_fhTop_5");
+        label_fhTop_5->setFont(font1);
+        label_fhTop_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_25->addWidget(label_fhTop_5, 0, 4, 1, 1);
+
+        doubleSpinBox_axisMinThreshold_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_axisMinThreshold_5->setObjectName("doubleSpinBox_axisMinThreshold_5");
+        doubleSpinBox_axisMinThreshold_5->setFont(font1);
+        doubleSpinBox_axisMinThreshold_5->setValue(0.200000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_axisMinThreshold_5, 10, 1, 1, 1);
+
+        doubleSpinBox_fhBtm_5 = new QDoubleSpinBox(groupBox_7);
+        doubleSpinBox_fhBtm_5->setObjectName("doubleSpinBox_fhBtm_5");
+        doubleSpinBox_fhBtm_5->setFont(font1);
+        doubleSpinBox_fhBtm_5->setValue(0.700000000000000);
+
+        gridLayout_25->addWidget(doubleSpinBox_fhBtm_5, 3, 5, 1, 1);
+
+        comboBox_axisName_5 = new QComboBox(groupBox_7);
+        comboBox_axisName_5->addItem(QString());
+        comboBox_axisName_5->setObjectName("comboBox_axisName_5");
+        comboBox_axisName_5->setFont(font2);
+
+        gridLayout_25->addWidget(comboBox_axisName_5, 10, 3, 1, 1);
+
+        comboBox_axisFactory_5 = new QComboBox(groupBox_7);
+        comboBox_axisFactory_5->addItem(QString());
+        comboBox_axisFactory_5->setObjectName("comboBox_axisFactory_5");
+        comboBox_axisFactory_5->setFont(font2);
+
+        gridLayout_25->addWidget(comboBox_axisFactory_5, 11, 3, 1, 1);
 
 
         gridLayout_24->addWidget(groupBox_7, 0, 0, 1, 1);
@@ -2689,7 +3179,7 @@ public:
         retranslateUi(GY_GenerateBinFile);
 
         tabWidget->setCurrentIndex(2);
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(GY_GenerateBinFile);
@@ -2730,105 +3220,157 @@ public:
         pushButton_ReadIni->setText(QCoreApplication::translate("GY_GenerateBinFile", "\345\215\225\347\213\254\345\257\274\345\205\245ini\351\205\215\347\275\256", nullptr));
         pushButton_ExportIni->setText(QCoreApplication::translate("GY_GenerateBinFile", "\345\257\274\345\207\272ini\351\205\215\347\275\256\346\226\207\344\273\266", nullptr));
         groupBox_3->setTitle(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\344\275\223\344\277\241\346\201\257A", nullptr));
-        label_acoefficientA->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
-        label_deadZoneDown->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
-        label_maxBtm->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
-        label_acoefficientB->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
-        label_deadZoneUp->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
-        label_minDefault->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
-        label_minTop->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
-        label_maxTop->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
-        label_acoefficientC->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
-        label_maxDefault->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
         label_rtUpDft->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
-        label_rtDnDft->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
+        label_acoefficientB->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
+        label_minDefault->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
+        label_acoefficientC->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
         label_fhTop->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
-        label_fhDnDft->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
-        label_fhBtm->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
-        label_rtBtm->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
+        label_maxTop->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
+        label_axisTrip->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264\351\224\256\347\250\213", nullptr));
+        label_minTop->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
         label_rtTop->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
         label_acoefficientD->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
+        label_acoefficientA->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
+        label_rtDnDft->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
+        label_fhDnDft->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
+        label_deadZoneUp->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
+        label_fhBtm->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
+        label_maxDefault->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
+        label_maxBtm->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
         label_minBtm->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
+        label_rtBtm->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
+        label_deadZoneDown->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
+        label_axisMinThreshold->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\260\217\351\230\210\345\200\274", nullptr));
+        label_axisMaxThreshold->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\244\247\351\230\210\345\200\274", nullptr));
+        label_axisID->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264ID", nullptr));
+        label_axisName->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\220\215\347\247\260", nullptr));
+        label_axisFactory->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\216\202\345\225\206", nullptr));
+        comboBox_axisName->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "\344\270\207\347\243\201\347\216\213", nullptr));
+        comboBox_axisName->setItemText(1, QCoreApplication::translate("GY_GenerateBinFile", "\347\243\201\347\216\211\350\275\264", nullptr));
+
+        comboBox_axisFactory->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "TTC", nullptr));
+        comboBox_axisFactory->setItemText(1, QCoreApplication::translate("GY_GenerateBinFile", "\344\275\263\350\276\276\351\232\206", nullptr));
+
         groupBox_4->setTitle(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\344\275\223\344\277\241\346\201\257B", nullptr));
-        label_minDefault_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
-        label_acoefficientA_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
+        label_rtDnDft_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
         label_deadZoneDown_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
-        label_rtTop_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
+        label_minBtm_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
+        label_deadZoneUp_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
         label_rtBtm_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
         label_fhDnDft_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
-        label_deadZoneUp_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
+        label_maxDefault_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
+        label_axisMinThreshold_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\260\217\351\230\210\345\200\274", nullptr));
+        label_acoefficientD_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
+        label_axisTrip_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264\351\224\256\347\250\213", nullptr));
         label_maxBtm_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
         label_minTop_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
-        label_acoefficientC_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
-        label_maxDefault_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
-        label_fhTop_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
+        label_axisMaxThreshold_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\244\247\351\230\210\345\200\274", nullptr));
         label_acoefficientB_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
-        label_acoefficientD_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
+        label_rtTop_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
+        label_acoefficientA_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
         label_maxTop_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
-        label_minBtm_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
+        label_fhTop_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
+        label_acoefficientC_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
+        label_minDefault_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
         label_fhBtm_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
-        label_rtDnDft_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
         label_rtUpDft_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
+        label_axisID_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264ID", nullptr));
+        label_axisName_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\220\215\347\247\260", nullptr));
+        label_axisFactory_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\216\202\345\225\206", nullptr));
+        comboBox_axisName_2->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "\344\270\207\347\243\201\347\216\213", nullptr));
+
+        comboBox_axisFactory_2->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "TTC", nullptr));
+
         groupBox_5->setTitle(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\344\275\223\344\277\241\346\201\257C", nullptr));
-        label_minDefault_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
-        label_maxBtm_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
-        label_acoefficientA_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
-        label_acoefficientC_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
-        label_minTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
-        label_maxTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
-        label_deadZoneUp_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
-        label_maxDefault_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
-        label_acoefficientB_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
-        label_deadZoneDown_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
-        label_fhTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
-        label_fhDnDft_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
-        label_fhBtm_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
-        label_rtBtm_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
-        label_rtTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
-        label_rtDnDft_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
-        label_rtUpDft_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
-        label_acoefficientD_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
         label_minBtm_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
+        label_rtUpDft_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
+        label_minDefault_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
+        label_fhBtm_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
+        label_axisTrip_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264\351\224\256\347\250\213", nullptr));
+        label_axisMinThreshold_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\260\217\351\230\210\345\200\274", nullptr));
+        label_minTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
+        label_fhTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
+        label_maxTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
+        label_rtDnDft_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
+        label_fhDnDft_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
+        label_deadZoneDown_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
+        label_deadZoneUp_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
+        label_acoefficientC_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
+        label_rtBtm_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
+        label_maxBtm_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
+        label_rtTop_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
+        label_acoefficientA_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
+        label_acoefficientD_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
+        label_acoefficientB_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
+        label_maxDefault_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
+        label_axisMaxThreshold_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\244\247\351\230\210\345\200\274", nullptr));
+        label_axisID_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264ID", nullptr));
+        label_axisName_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\220\215\347\247\260", nullptr));
+        label_axisFactory_3->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\216\202\345\225\206", nullptr));
+        comboBox_axisName_3->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "\344\270\207\347\243\201\347\216\213", nullptr));
+
+        comboBox_axisFactory_3->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "TTC", nullptr));
+
         groupBox_6->setTitle(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\344\275\223\344\277\241\346\201\257D", nullptr));
-        label_minBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
-        label_minDefault_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
-        label_minTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
-        label_rtTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
-        label_deadZoneDown_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
-        label_deadZoneUp_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
-        label_rtBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
         label_acoefficientB_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
-        label_fhDnDft_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
-        label_maxDefault_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
-        label_acoefficientA_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
-        label_acoefficientC_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
-        label_fhTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
-        label_fhBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
-        label_acoefficientD_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
-        label_maxBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
-        label_maxTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
         label_rtDnDft_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
+        label_minTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
+        label_maxBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
+        label_fhBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
+        label_minBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
+        label_acoefficientA_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
+        label_maxDefault_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
+        label_rtBtm_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
+        label_minDefault_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
+        label_axisTrip_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264\351\224\256\347\250\213", nullptr));
+        label_axisMinThreshold_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\260\217\351\230\210\345\200\274", nullptr));
+        label_rtTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
+        label_fhDnDft_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
+        label_deadZoneDown_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
+        label_acoefficientD_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
+        label_fhTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
         label_rtUpDft_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
+        label_deadZoneUp_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
+        label_maxTop_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
+        label_acoefficientC_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
+        label_axisMaxThreshold_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\244\247\351\230\210\345\200\274", nullptr));
+        label_axisID_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264ID", nullptr));
+        label_axisName_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\220\215\347\247\260", nullptr));
+        label_axisFactory_4->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\216\202\345\225\206", nullptr));
+        comboBox_axisName_4->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "\344\270\207\347\243\201\347\216\213", nullptr));
+
+        comboBox_axisFactory_4->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "TTC", nullptr));
+
         groupBox_7->setTitle(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\344\275\223\344\277\241\346\201\257E", nullptr));
-        label_minBtm_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
-        label_acoefficientC_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
-        label_deadZoneUp_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
-        label_acoefficientD_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
-        label_maxTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
-        label_minTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
-        label_acoefficientB_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
-        label_maxBtm_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
-        label_maxDefault_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
-        label_acoefficientA_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
-        label_deadZoneDown_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
-        label_minDefault_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
-        label_fhTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
-        label_fhDnDft_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
+        label_axisMaxThreshold_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\244\247\351\230\210\345\200\274", nullptr));
         label_fhBtm_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\213\351\231\220", nullptr));
-        label_rtDnDft_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
-        label_rtUpDft_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
-        label_rtTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
+        label_axisID_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264ID", nullptr));
+        label_maxTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\212\351\231\220\345\200\274", nullptr));
+        label_axisTrip_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\350\275\264\351\224\256\347\250\213", nullptr));
+        label_maxDefault_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\351\273\230\350\256\244\345\200\274", nullptr));
+        label_acoefficientC_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260C", nullptr));
         label_rtBtm_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\213\351\231\220\345\200\274", nullptr));
+        label_minBtm_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\213\351\231\220\345\200\274", nullptr));
+        label_deadZoneUp_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\212\346\255\273\345\214\272", nullptr));
+        label_deadZoneDown_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\213\346\255\273\345\214\272", nullptr));
+        label_rtTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\344\270\212\351\231\220\345\200\274", nullptr));
+        label_axisFactory_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\216\202\345\225\206", nullptr));
+        label_rtUpDft_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\346\212\254\350\265\267\345\200\274", nullptr));
+        label_acoefficientD_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260D", nullptr));
+        label_axisName_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\350\275\264\345\220\215\347\247\260", nullptr));
+        label_maxBtm_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\244\247\344\270\213\351\231\220\345\200\274", nullptr));
+        label_rtDnDft_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\350\247\246\345\217\221\345\200\274", nullptr));
+        label_axisMinThreshold_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\250\213\346\234\200\345\260\217\351\230\210\345\200\274", nullptr));
+        label_acoefficientA_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260A", nullptr));
+        label_fhDnDft_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\351\273\230\350\256\244", nullptr));
+        label_minTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\344\270\212\351\231\220\345\200\274", nullptr));
+        label_minDefault_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\346\234\200\345\260\217\351\273\230\350\256\244\345\200\274", nullptr));
+        label_acoefficientB_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "\347\263\273\346\225\260B", nullptr));
+        label_fhTop_5->setText(QCoreApplication::translate("GY_GenerateBinFile", "RT\345\256\232\351\253\230\344\270\212\351\231\220", nullptr));
+        comboBox_axisName_5->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "\344\270\207\347\243\201\347\216\213", nullptr));
+
+        comboBox_axisFactory_5->setItemText(0, QCoreApplication::translate("GY_GenerateBinFile", "TTC", nullptr));
+
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("GY_GenerateBinFile", "\344\277\241\346\201\257\351\205\215\347\275\256", nullptr));
         pushButton_Export->setText(QCoreApplication::translate("GY_GenerateBinFile", "\344\270\200\351\224\256\345\257\274\345\207\272\351\205\215\347\275\256", nullptr));
         label_dynamic_2->setText(QCoreApplication::translate("GY_GenerateBinFile", "\351\224\256\347\233\230\347\261\273\345\236\213\357\274\232", nullptr));

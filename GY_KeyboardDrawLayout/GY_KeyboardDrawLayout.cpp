@@ -40,6 +40,7 @@ GY_KeyboardDrawLayout::~GY_KeyboardDrawLayout()
     delete ui;
 }
 
+
 //设置键盘类型
 void GY_KeyboardDrawLayout::setKeyboardType(GY_KeyboardTools::KeyboardType keyboardType)
 {
@@ -243,7 +244,6 @@ void GY_KeyboardDrawLayout::setAnimationSimulate(QString path, bool isAnimation,
                 this->setDrawKeyBoard(painter, item._Keyborders, Qt::gray, item._KeyCenterPoint, lightColor, item._KeyName, Qt::yellow);
             }
         }
-
 
         QList<QString> listColor;
         for(int i = 0; i < mapKeyboardInfo.first()._KeyboardLayout._ButtonCount; i++){
@@ -458,14 +458,11 @@ void GY_KeyboardDrawLayout::mousePressEvent(QMouseEvent *event)
             pixmap.fill(QColor(0, 0, 0));  // 背景色修改
             for(QMap<int, GY_KeyboardTools::KeyboardButtonInfo>::iterator item = mapKeyboardInfo.begin(); item != mapKeyboardInfo.end(); ++item){
                 if(item.value()._Keyborders.contains(pos)){
-                    qDebug() << "包含当前颜色:" << item.value()._KeyName << item.value()._KeyCustomizeColor;
                     item.value()._KeyCustomizeColor = Qt::black;    //初始化黑色
                 }
                 if(item.value()._KeyCustomizeColor == Qt::black){
-                    qDebug() << "包含当前颜色 黑色:" << item.value()._KeyName << item.value()._KeyCustomizeColor;
                     this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, Qt::white, item.value()._KeyName, Qt::yellow);
                 }else{
-                    qDebug() << "包含当前颜色 = 红色:" << item.value()._KeyName << item.value()._KeyCustomizeColor;
                     this->setDrawKeyBoard(painter, item.value()._Keyborders, Qt::gray, item.value()._KeyCenterPoint, Qt::white, item.value()._KeyName, Qt::yellow, true, true, item.value()._KeyCustomizeColor);
                 }
             }

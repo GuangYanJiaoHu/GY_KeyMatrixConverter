@@ -35,7 +35,6 @@
 */
 
 
-
 class GY_KeyboardTools : public QObject
 {
     Q_OBJECT
@@ -57,7 +56,7 @@ public:
         _AXISTYPE_SAVE_ADDR         =  3 * 4096,            // 0X003000 AxisType 存储地址    键轴表
         _AXISTYPE_SAVE_ADDR_END     =  3 * 4096 + 70,       // * AxisType 存储地址    键轴表
         _RANGEVALUE_SAVE_ADDR       =  4 * 4096,            // 0X004000 RangeValue存储地址 键轴信息
-        _RANGEVALUE_SAVE_ADDR_END   =  4 * 4096 + 340,      // * 存储了5组轴信息 每组有17个float类型数据  共占340位 17（17个数据）x5（5组）   x4(float类型) 后边有从1~255顺序出现的数据是干扰项，不用管
+        _RANGEVALUE_SAVE_ADDR_END   =  4 * 4096 + 760,      // * 存储了5组轴信息 每组有17个float类型数据  共占340位 17（17个数据）x5（5组）   x4(float类型) 后边有从1~255顺序出现的数据是干扰项，不用管
         _CONFIGUR_GROUP_ADDR        =  5 * 4096,            // 0X005000 当前预设配置组编号
         _CONFIGUR_GROUP_ADDR_END    =  5 * 4096 + 1,        // * 多组预设 当前的组  01~07  目前只占一位 后续可能合并部分存储
         _RATE_OF_RETURN_ADDR        =  6 * 4096,            // 0X006000 usb回报率
@@ -158,12 +157,12 @@ public:
 
     static QByteArray getFlotaToByteArray(float data);                         //浮点转字节型
     static float getByteArrayToFloat(QByteArray data);                         //字节转浮点型
-    static QByteArray getAnimationDynamic(QString path);                          //读取动态动画内容
-    static QByteArray getAnimationStatic(QString path);                           //读取静态动画内容
-    static QByteArray getDynamicFillZero(QByteArray data, int sector = 4);             //动态动画补零 sector 扇区数量
-    static QByteArray getStaticFillZero(QByteArray data, int sector = 4);              //静态动画补零
-
-
+    static QByteArray getAnimationDynamic(QString path);                       //读取动态动画内容
+    static QByteArray getAnimationStatic(QString path);                        //读取静态动画内容
+    static QByteArray getDynamicFillZero(QByteArray data, int sector = 4);     //动态动画补零 sector 扇区数量
+    static QByteArray getStaticFillZero(QByteArray data, int sector = 4);      //静态动画补零
+    static QByteArray getIntTo4Byte(int value);                                //int类型转为4字节
+    static QByteArray getStringToBytes(QString data, int length = 30);         //QString 转 30长度 字节
 private:
 
 

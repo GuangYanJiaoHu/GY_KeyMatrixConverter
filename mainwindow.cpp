@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     ui->tabWidget->setCurrentIndex(0);  //显示第一页
 
     //键盘通信hid 蓝牙 2.4
@@ -14,9 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(communicate, &GY_Communicate::signalsDeviceConnect,   this, [=](const Device &deviceInfo){
         qDebug() << "键盘连接：" ;
         communicate->WriteAllKeyboard("FE 05 FF"); // 默认亮度，满亮度
-        // communicate->WriteAllKeyboard("FE 03 00");
-        // QThread::msleep(5);
-        // communicate->WriteAllKeyboard("FE 83 00");
     });
     connect(communicate, &GY_Communicate::signalsDeviceDisconnect,this, [=](const Device &deviceInfo){qDebug() << "键盘断开连接：" ;});
 
@@ -54,8 +50,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticExport,              keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticExport);                 //静态动画导出
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicExport,             keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicExport);                //动态动画导出
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationStaticWebExport,           keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationStaticWebExport);              //静态动画网页版导出
-
-
     connect(animationSettingUi, &GY_AnimationSettingUi::signalAnimationDynamicPixmapSize,         keyboardDrawLayout, &GY_KeyboardDrawLayout::slotAnimationDynamicPixmapSize);            //动态动画导出
     connect(keyboardDrawLayout, &GY_KeyboardDrawLayout::signalKeyboardDrawLayoutUpdateSimulatePos,animationSettingUi, &GY_AnimationSettingUi::slotKeyboardDrawLayoutUpdateSimulatePos);   //更改模拟位置完成
 
