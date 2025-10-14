@@ -189,8 +189,8 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown->text().toDouble());
 
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip->text().toDouble());
-    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold->text().toDouble());
     axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID->text().toInt());
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName->currentText(), 30);
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory->currentText(), 30);
@@ -216,8 +216,9 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_2->text().toDouble());
-    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_2->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_2->text().toDouble());
+
     axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_2->text().toInt());
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_2->currentText(), 30);
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_2->currentText(), 30);
@@ -243,8 +244,8 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_2->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_3->text().toDouble());
-    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_3->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_3->text().toInt());
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_3->currentText(), 30);
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_3->currentText(), 30);
@@ -269,8 +270,9 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_3->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_4->text().toDouble());
-    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_4->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_4->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_4->text().toDouble());
+
     axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_4->text().toInt());
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_4->currentText(), 30);
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_4->currentText(), 30);
@@ -296,8 +298,8 @@ QByteArray GY_GenerateBinFile::getAxisInfo()
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneUp_4->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_deadZoneDown_4->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisTrip_5->text().toDouble());
-    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_5->text().toDouble());
     axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMaxThreshold_5->text().toDouble());
+    axisInfo += GY_KeyboardTools::getFlotaToByteArray(ui->doubleSpinBox_axisMinThreshold_5->text().toDouble());
     axisInfo += GY_KeyboardTools::getIntTo4Byte(ui->spinBox_axisID_5->text().toInt());
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisName_5->currentText(), 30);
     axisInfo += GY_KeyboardTools::getStringToBytes(ui->comboBox_axisFactory_5->currentText(), 30);

@@ -3179,7 +3179,7 @@ public:
         retranslateUi(GY_GenerateBinFile);
 
         tabWidget->setCurrentIndex(2);
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(GY_GenerateBinFile);
